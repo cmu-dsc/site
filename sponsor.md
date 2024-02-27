@@ -7,9 +7,9 @@ Being the largest data science organization at Carnegie Mellon, we offer excitin
 
 We are proud to be sponsored by 
 
-![](/img/janest.png){:class="img-responsive"} 
+![](/img/sponsors/janest.png){:class="img-responsive"} 
 
-![](/img/twosigma.png){:class="img-responsive"} 
+![](/img/sponsors/twosigma.png){:class="img-responsive"} 
 
 
 &nbsp;
