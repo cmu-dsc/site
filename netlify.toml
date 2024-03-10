@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/pokerai/*"
+  to = "https://poker-splash.netlify.app/pokerai/:splat"
+  status = 200
