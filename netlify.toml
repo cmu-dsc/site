@@ -2,3 +2,8 @@
   from = "/pokerai/*"
   to = "https://poker-splash.netlify.app/:splat"
   status = 200
+
+[[redirects]]
+  from = "/datathon/*"
+  to = "https://datathon-splash.netlify.app/:splat"
+  status = 200
