@@ -1,0 +1,39 @@
+{
+  "semester": "Spring 2019",
+  "members": [
+    {
+      "name": "Jessica Lee",
+      "title": "President",
+      "image": "/images/alumni/jessica.jpg",
+      "bio": "CS '21, now PhD Student @ U.C. Berkeley",
+      "linkedin": "https://www.linkedin.com/in/jessica-annie-lee"
+    },
+    {
+      "name": "Husni Almoubayyed",
+      "title": "VP of Projects",
+      "image": "/images/alumni/husni.jpg",
+      "bio": "PhD Physics '21, now AI Engineering Manager @ Carnegie Learning",
+      "linkedin": "https://www.linkedin.com/in/husnialmoubayyed"
+    },
+    {
+      "name": "Tony Wang",
+      "title": "VP of Finance",
+      "image": "/images/alumni/tony.jpeg",
+      "bio": "BSCF '21, now Quantitative Trader @ GTS",
+      "linkedin": "https://www.linkedin.com/in/zheyew"
+    },
+    {
+      "name": "Qiyun Chen",
+      "title": "VP of Outreach",
+      "bio": "StatML '22, now Software Engineer @ Two Sigma",
+      "linkedin": "https://www.linkedin.com/in/qiyun-chen-313a16193"
+    },
+    {
+      "name": "Jerry Li",
+      "title": "VP of Marketing",
+      "image": "/images/alumni/jerry.jpg",
+      "bio": "Econ & StatML '22, now Senior Business Analyst @ McKinsey",
+      "linkedin": "https://www.linkedin.com/in/lijerryjr"
+    }
+  ]
+}

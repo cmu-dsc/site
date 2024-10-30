@@ -18,9 +18,13 @@ export default defineConfig({
         output: {
           manualChunks: {
             tsparticles: ['tsparticles'],
+            board: ['/src/pages/board.astro'],
           },
         },
       },
+    },
+    ssr: {
+      noExternal: ['tsparticles'],
     },
   },
 });

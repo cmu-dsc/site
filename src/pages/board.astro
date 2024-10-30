@@ -1,11 +1,17 @@
 ---
+import { Image } from "astro:assets";
 import GithubIcon from "../icons/github.svg?raw";
 import LinkedInIcon from "../icons/linkedin.svg?raw";
 import Layout from "../layouts/Layout.astro";
 
+import fall2019 from "../data/board/fall2019.json";
+import fall2020 from "../data/board/fall2020.json";
 import fall2021 from "../data/board/fall2021.json";
 import fall2023 from "../data/board/fall2023.json";
 import fall2024 from "../data/board/fall2024.json";
+import spring2019 from "../data/board/spring2019.json";
+import spring2020 from "../data/board/spring2020.json";
+import spring2021 from "../data/board/spring2021.json";
 import spring2023 from "../data/board/spring2023.json";
 import spring2024 from "../data/board/spring2024.json";
 
@@ -29,6 +35,11 @@ const boardData: SemesterData[] = [
   fall2023,
   spring2023,
   fall2021,
+  spring2021,
+  fall2020,
+  spring2020,
+  fall2019,
+  spring2019,
 ];
 const semesters = boardData.map((data) => data.semester);
 ---
@@ -43,17 +54,23 @@ const semesters = boardData.map((data) => data.semester);
       <!-- Semester Tabs -->
       <div class="relative mb-8 -mx-8">
         <div class="overflow-x-auto scrollbar-hide px-8">
-          <div class="flex min-w-max border-b md:justify-center">
+          <div class="flex min-w-max border-b md:justify-center gap-4">
             {
-              semesters.map((semester, index) => (
-                <button
-                  class="semester-tab px-6 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap"
-                  data-semester={semester}
-                  data-active={index === 0}
-                >
-                  {semester}
-                </button>
-              ))
+              semesters.map((semester, index) => {
+                const [term, year] = semester.split(" ");
+                return (
+                  <button
+                    class="semester-tab px-4 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap flex flex-col items-center text-center"
+                    data-semester={semester}
+                    data-active={index === 0}
+                  >
+                    <span class="text-xs uppercase tracking-wider opacity-60">
+                      {term}
+                    </span>
+                    <span>{year}</span>
+                  </button>
+                );
+              })
             }
           </div>
         </div>
@@ -71,9 +88,13 @@ const semesters = boardData.map((data) => data.semester);
               <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col transform transition-all duration-200 hover:scale-[1.02] hover:shadow-lg">
                 <div class="relative w-full pb-[100%] flex-shrink-0">
                   {member.image ? (
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
+                      width={300}
+                      height={300}
+                      format="webp"
+                      loading="lazy"
                       class="absolute top-0 left-0 w-full h-full object-cover"
                     />
                   ) : (
@@ -170,6 +191,24 @@ const semesters = boardData.map((data) => data.semester);
           }, 150);
         });
       });
+
+      // Preload all images after critical content is loaded
+      window.requestIdleCallback(() => {
+        const allImages = Array.from(
+          document.querySelectorAll(".semester-content img[data-src]"),
+        )
+          .map((img) => img.getAttribute("data-src"))
+          .filter((src): src is string => src !== null);
+
+        allImages.forEach((src) => {
+          const link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "image";
+          link.href = src;
+          link.setAttribute("importance", "low");
+          document.head.appendChild(link);
+        });
+      });
     });
   </script>
 
@@ -184,8 +223,9 @@ const semesters = boardData.map((data) => data.semester);
       color: #082b57/60;
     }
 
-    .semester-tab:hover {
+    .semester-tab[data-active="false"]:hover {
       color: #082b57;
+      border-color: #082b57/20;
     }
 
     .semester-content {
