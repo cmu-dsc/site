@@ -12,8 +12,50 @@
       "name": "Raaka Mukhopadhyay",
       "title": "Co-President",
       "image": "/images/alumni/raaka.jpg",
-      "bio": "StatML '24, now Project Coordinator at Five Rings",
+      "bio": "StatML '24",
       "linkedin": "https://www.linkedin.com/in/raaka/"
+    },
+    {
+      "name": "Almutwakel Hassan",
+      "title": "Co-VP of Workshops",
+      "image": "/images/board/al.png",
+      "bio": "AI '25",
+      "linkedin": "https://www.linkedin.com/in/almutwakel"
+    },
+    {
+      "name": "Dongkyun Kim",
+      "title": "Co-VP of Workshops",
+      "image": "/images/board/dk.jpg",
+      "bio": "StatML '24",
+      "linkedin": "https://www.linkedin.com/in/dongkyun-kim"
+    },
+    {
+      "name": "Jei Park",
+      "title": "VP of Outreach",
+      "image": "/images/board/jei.png",
+      "bio": "StatML '24",
+      "linkedin": "https://www.linkedin.com/in/jehyo-jei-park"
+    },
+    {
+      "name": "Mengrou Shou",
+      "title": "VP of Internal Affairs",
+      "image": "/images/alumni/meng.jpg",
+      "bio": "Computer Science '25",
+      "linkedin": "https://www.linkedin.com/in/mengrou-shou"
+    },
+    {
+      "name": "Anisha Chatterjee",
+      "title": "VP of Events",
+      "image": "/images/alumni/anisha.jpeg",
+      "bio": "AI '25",
+      "linkedin": "https://www.linkedin.com/in/anisha-chatterjee"
+    },
+    {
+      "name": "Jeremy Li",
+      "title": "VP of Communications",
+      "image": "/images/alumni/jeremy.jpg",
+      "bio": "StatML '24",
+      "linkedin": "https://www.linkedin.com/in/jiabin-jeremy-li/"
     }
   ]
 }
