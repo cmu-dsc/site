@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MailIcon from "../icons/mail.svg?raw";
+import DiscordIcon from "../icons/discord.svg?raw";
+---
+
+<Layout title="CMU Data Science Club">
+	<main
+		class="flex min-h-screen flex-col items-center justify-center text-center p-4"
+	>
+		<h1 class="text-5xl font-bold mb-4 text-[#082b57]">
+			CMU Data Science Club
+		</h1>
+
+		<p class="text-xl mb-8 max-w-2xl text-[#082b57]/80">
+			Empowering CMU students to explore, learn, and collaborate in the field of
+			data science through hands-on projects, workshops, and competitions.
+		</p>
+
+		<div class="space-x-4 mb-12">
+			<a
+				href="https://tartanconnect.cmu.edu/datascience/club_signup"
+				class="bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center"
+			>
+				<span class="w-5 h-5 mr-2" set:html={MailIcon} />
+				Join our Mailing List
+			</a>
+			<a
+				href="https://discord.gg/zCvq2ejkk5"
+				class="bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center"
+			>
+				<span class="w-5 h-5 mr-2" set:html={DiscordIcon} />
+				Join our Discord
+			</a>
+		</div>
+
+		<iframe
+			src="https://lu.ma/embed/calendar/cal-cfbbkSaJOwbvylo/events?lt=light"
+			width="600"
+			height="450"
+			frameborder="0"
+			style="border: 1px solid #bfcbda88; border-radius: 4px; margin: 0 auto;"
+			allowfullscreen=""
+			aria-hidden="false"
+			tabindex="0"></iframe>
+	</main>
+</Layout>
