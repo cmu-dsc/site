@@ -1,0 +1,99 @@
+{
+  "semester": "Spring 2024",
+  "members": [
+    {
+      "name": "Almutwakel Hassan",
+      "title": "President",
+      "image": "/images/board/al.png",
+      "bio": "AI '25",
+      "github": "https://github.com/almutwakel",
+      "linkedin": "https://www.linkedin.com/in/almutwakel"
+    },
+    {
+      "name": "Clement Ou",
+      "title": "Competitions Director",
+      "image": "/images/board/clement.jpg",
+      "bio": "StatML '25",
+      "github": "https://github.com/clementou",
+      "linkedin": "https://linkedin.com/in/clementou"
+    },
+    {
+      "name": "Grace Lin",
+      "title": "Internal Affairs Director",
+      "image": "/images/board/grace.png",
+      "bio": "StatML '26",
+      "github": "https://github.com/gxlin2",
+      "linkedin": "https://www.linkedin.com/in/gracexlin"
+    },
+    {
+      "name": "Jei Park",
+      "title": "Outreach Director",
+      "image": "/images/board/jei.png",
+      "bio": "Stats '24",
+      "github": "https://github.com/jeih",
+      "linkedin": "https://www.linkedin.com/in/jehyo-jei-park"
+    },
+    {
+      "name": "Dongkyun Kim",
+      "title": "Workshop Co-Director",
+      "image": "/images/board/dk.jpg",
+      "bio": "AI '25",
+      "github": "https://github.com/dongkyunk",
+      "linkedin": "https://www.linkedin.com/in/dongkyun-k"
+    },
+    {
+      "name": "Eyob Dagnachew",
+      "title": "Workshop Co-Director",
+      "image": "/images/board/eyob.jpg",
+      "bio": "StatML '25",
+      "linkedin": "https://www.linkedin.com/in/eyob-dagnachew"
+    },
+    {
+      "name": "Suha Niyas",
+      "title": "Design Co-Director",
+      "image": "/images/alumni/suha.jpg",
+      "bio": "Stats '24, now Data Science Engineer at Qorvo",
+      "linkedin": "https://www.linkedin.com/in/suha-niyas/"
+    },
+    {
+      "name": "Varrshitha Kumar",
+      "title": "Design Co-Director",
+      "image": "/images/board/varr.jpeg",
+      "bio": "StatML '27",
+      "github": "https://github.com/varrkumar",
+      "linkedin": "https://www.linkedin.com/in/varrkumar"
+    },
+    {
+      "name": "Noelani Phillips",
+      "title": "Mentorship Director",
+      "image": "/images/alumni/noelani.jpg",
+      "bio": "StatML '25",
+      "github": "https://github.com/bobofishbo",
+      "linkedin": "https://www.linkedin.com/in/noelaniphillips2025"
+    },
+    {
+      "name": "Emily Yu",
+      "title": "Development Director",
+      "image": "/images/board/emily.png",
+      "bio": "IS '26",
+      "github": "https://github.com/emshyu",
+      "linkedin": "https://www.linkedin.com/in/emily-yu-a28148204"
+    },
+    {
+      "name": "Juny Kim",
+      "title": "Social Director",
+      "image": "/images/board/juny.png",
+      "bio": "StatML '25",
+      "github": "https://github.com/jkim999",
+      "linkedin": "https://www.linkedin.com/in/junykim1"
+    },
+    {
+      "name": "Oliver Yun",
+      "title": "Finance Director",
+      "image": "/images/board/oliver.jpg",
+      "bio": "StatML '27",
+      "github": "https://github.com/oliveryun11",
+      "linkedin": "https://www.linkedin.com/in/oliver-yun-474b77289"
+    }
+  ]
+}

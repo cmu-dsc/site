@@ -1,0 +1,151 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-50 relative">
+    <div id="tsparticles" class="absolute inset-0 -z-10"></div>
+
+    <header
+      class="fixed top-0 left-0 right-0 p-4 z-10 transition-transform duration-300"
+      id="header"
+    >
+      <nav class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="/">
+            <img
+              src="/images/dsc.svg"
+              alt="CMU DSC Logo"
+              class="h-8 w-8 mr-2"
+            />
+          </a>
+          <a href="/" class="text-[#082b57] font-semibold">
+            CMU Data Science Club
+          </a>
+        </div>
+
+        <div class="space-x-6">
+          <a
+            href="/board"
+            class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
+            >Board</a
+          >
+          <a
+            href="https://poker.cmudsc.com"
+            class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
+            >Poker AI</a
+          >
+          <a
+            href="/datathon"
+            class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
+            >Datathon</a
+          >
+          <a
+            href="/sponsor"
+            class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
+            >Sponsor</a
+          >
+          <a
+            href="https://discord.gg/zCvq2ejkk5"
+            class="bg-[#082b57] text-white px-4 py-1.5 rounded-full hover:bg-[#082b57]/80 transition-colors text-sm"
+          >
+            Join Discord
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <slot />
+
+    <script is:inline>
+      tsParticles.load("tsparticles", {
+        particles: {
+          number: { value: 100, density: { enable: true, value_area: 800 } },
+          color: { value: "#082b57" },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.5,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 1,
+              minimumValue: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 2,
+              minimumValue: 0.1,
+              sync: false,
+            },
+          },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#082b57",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: { default: "bounce" },
+            attract: { enable: false, rotateX: 600, rotateY: 1200 },
+          },
+        },
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onHover: { enable: true, mode: "grab" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 140, links: { opacity: 1 } },
+          },
+        },
+        background: {
+          color: "#f9fafb",
+        },
+        detectRetina: true,
+      });
+    </script>
+
+    <script is:inline>
+      let lastScrollY = window.scrollY;
+      const header = document.getElementById("header");
+
+      window.addEventListener("scroll", () => {
+        if (lastScrollY < window.scrollY) {
+          // Scrolling down
+          header.style.transform = "translateY(-100%)";
+        } else {
+          // Scrolling up
+          header.style.transform = "translateY(0)";
+        }
+        lastScrollY = window.scrollY;
+      });
+    </script>
+  </body>
+</html>

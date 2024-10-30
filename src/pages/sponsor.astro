@@ -1,0 +1,146 @@
+---
+import MailIcon from "../icons/mail.svg?raw";
+import Layout from "../layouts/Layout.astro";
+
+const sponsors = {
+  gold: [
+    {
+      name: "Jump Trading",
+      logo: "/images/sponsors/jump-trading.png",
+      url: "https://www.jumptrading.com/",
+    },
+    {
+      name: "BNY",
+      logo: "/images/sponsors/bny.png",
+      url: "https://www.bny.com/corporate/global/en.html",
+    },
+  ],
+  silver: [
+    {
+      name: "Hudson River Trading",
+      logo: "/images/sponsors/hrt.png",
+      url: "https://www.hudsonrivertrading.com/",
+    },
+  ],
+  bronze: [
+    {
+      name: "Jane Street",
+      logo: "/images/sponsors/jane-street.png",
+      url: "https://www.janestreet.com/",
+    },
+    {
+      name: "Bloomberg",
+      logo: "/images/sponsors/bloomberg.png",
+      url: "https://www.bloomberg.com/",
+    },
+    {
+      name: "Two Sigma",
+      logo: "/images/sponsors/two-sigma.png",
+      url: "https://www.twosigma.com/",
+    },
+  ],
+};
+---
+
+<Layout title="Sponsors - CMU Data Science Club">
+  <main class="min-h-screen p-8 pt-24">
+    <div class="max-w-6xl mx-auto space-y-8">
+      <!-- Gold Tier -->
+      <div
+        class="relative bg-gradient-to-b from-amber-50 to-transparent p-8 rounded-xl"
+      >
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
+          Gold Sponsors
+        </h2>
+        <div class="flex justify-center gap-12">
+          {
+            sponsors.gold.map((sponsor) => (
+              <a
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-white w-80 h-40 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-8"
+              >
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  class="max-w-full max-h-full object-contain"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Silver Tier -->
+      <div
+        class="relative bg-gradient-to-b from-gray-50 to-transparent p-8 rounded-xl"
+      >
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
+          Silver Sponsors
+        </h2>
+        <div class="flex justify-center gap-10">
+          {
+            sponsors.silver.map((sponsor) => (
+              <a
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-white w-64 h-32 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-6"
+              >
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  class="max-w-full max-h-full object-contain"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Bronze Tier -->
+      <div
+        class="relative bg-gradient-to-b from-orange-50 to-transparent p-8 rounded-xl"
+      >
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
+          Bronze Sponsors
+        </h2>
+        <div class="flex justify-center gap-8">
+          {
+            sponsors.bronze.map((sponsor) => (
+              <a
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-white w-48 h-24 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-4"
+              >
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  class="max-w-full max-h-full object-contain"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Sponsorship CTA -->
+      <div class="bg-[#082b57]/5 p-12 rounded-xl text-center">
+        <h2 class="text-2xl font-bold text-[#082b57] mb-6">Become a Sponsor</h2>
+        <p class="text-[#082b57]/80 mb-8 max-w-2xl mx-auto">
+          Support the next generation of data scientists and connect with
+          talented CMU students. Learn more about our sponsorship opportunities.
+        </p>
+        <a
+          href="mailto:datascienceclub@andrew.cmu.edu"
+          class="bg-[#082b57] text-white px-8 py-3 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center"
+        >
+          <span class="w-5 h-5 mr-2" set:html={MailIcon} />
+          Contact Us About Sponsorship
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
