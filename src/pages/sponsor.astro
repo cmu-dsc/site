@@ -52,14 +52,14 @@ const sponsors = {
         <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
           Gold Sponsors
         </h2>
-        <div class="flex justify-center gap-12">
+        <div class="flex flex-col sm:flex-row justify-center gap-8">
           {
             sponsors.gold.map((sponsor) => (
               <a
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-white w-80 h-40 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-8"
+                class="bg-white w-full sm:w-80 h-40 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-8"
               >
                 <img
                   src={sponsor.logo}
@@ -79,14 +79,14 @@ const sponsors = {
         <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
           Silver Sponsors
         </h2>
-        <div class="flex justify-center gap-10">
+        <div class="flex flex-col sm:flex-row justify-center gap-8">
           {
             sponsors.silver.map((sponsor) => (
               <a
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-white w-64 h-32 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-6"
+                class="bg-white w-full sm:w-64 h-32 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-6"
               >
                 <img
                   src={sponsor.logo}
@@ -106,14 +106,14 @@ const sponsors = {
         <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
           Bronze Sponsors
         </h2>
-        <div class="flex justify-center gap-8">
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
           {
             sponsors.bronze.map((sponsor) => (
               <a
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-white w-48 h-24 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-4"
+                class="bg-white w-full sm:w-48 h-24 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-4"
               >
                 <img
                   src={sponsor.logo}
