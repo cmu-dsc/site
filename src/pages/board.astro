@@ -88,15 +88,23 @@ const semesters = boardData.map((data) => data.semester);
               <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col transform transition-all duration-200 hover:scale-[1.02] hover:shadow-lg">
                 <div class="relative w-full pb-[100%] flex-shrink-0">
                   {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={300}
-                      height={300}
-                      format="webp"
-                      loading="lazy"
-                      class="absolute top-0 left-0 w-full h-full object-cover"
-                    />
+                    <picture>
+                      <source
+                        srcset={member.image
+                          .replace("/images/", "/optimized-images/")
+                          .replace(/\.(png|jpg|jpeg)$/, ".webp")}
+                        type="image/webp"
+                      />
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={300}
+                        height={300}
+                        format="webp"
+                        loading="lazy"
+                        class="absolute top-0 left-0 w-full h-full object-cover"
+                      />
+                    </picture>
                   ) : (
                     <div class="absolute top-0 left-0 w-full h-full bg-gray-200 flex items-center justify-center">
                       <div class="text-4xl text-gray-400">
