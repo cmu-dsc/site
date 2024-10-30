@@ -5,5 +5,22 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  compressHTML: true,
+  build: {
+    inlineStylesheets: 'auto',
+  },
+  vite: {
+    build: {
+      cssMinify: true,
+      minify: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            tsparticles: ['tsparticles'],
+          },
+        },
+      },
+    },
+  },
 });

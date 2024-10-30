@@ -1,13 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import GithubIcon from "../icons/github.svg?raw";
 import LinkedInIcon from "../icons/linkedin.svg?raw";
+import Layout from "../layouts/Layout.astro";
 
+import fall2023 from "../data/board/fall2023.json";
 import fall2024 from "../data/board/fall2024.json";
 import spring2024 from "../data/board/spring2024.json";
-import fall2023 from "../data/board/fall2023.json";
 
-const boardData = [fall2024, spring2024, fall2023];
+interface BoardMember {
+  name: string;
+  title: string;
+  image: string;
+  bio: string;
+  github?: string;
+  linkedin?: string;
+}
+
+interface SemesterData {
+  semester: string;
+  members: BoardMember[];
+}
+
+const boardData: SemesterData[] = [fall2024, spring2024, fall2023];
 const semesters = boardData.map((data) => data.semester);
 ---
 
