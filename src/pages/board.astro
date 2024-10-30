@@ -41,19 +41,21 @@ const semesters = boardData.map((data) => data.semester);
       </h1>
 
       <!-- Semester Tabs -->
-      <div class="flex justify-center overflow-x-auto scrollbar-hide mb-8">
-        <div class="flex min-w-max border-b">
-          {
-            semesters.map((semester, index) => (
-              <button
-                class="semester-tab px-6 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap"
-                data-semester={semester}
-                data-active={index === 0}
-              >
-                {semester}
-              </button>
-            ))
-          }
+      <div class="relative mb-8 -mx-8">
+        <div class="overflow-x-auto scrollbar-hide px-8">
+          <div class="flex min-w-max border-b md:justify-center">
+            {
+              semesters.map((semester, index) => (
+                <button
+                  class="semester-tab px-6 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap"
+                  data-semester={semester}
+                  data-active={index === 0}
+                >
+                  {semester}
+                </button>
+              ))
+            }
+          </div>
         </div>
       </div>
 
@@ -128,6 +130,12 @@ const semesters = boardData.map((data) => data.semester);
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Set initial active state for the first tab
+      const firstTab = document.querySelector(".semester-tab") as HTMLElement;
+      if (firstTab) {
+        firstTab.setAttribute("data-active", "true");
+      }
+
       const tabs = document.querySelectorAll(".semester-tab");
       const contents = document.querySelectorAll(".semester-content");
 
@@ -159,7 +167,7 @@ const semesters = boardData.map((data) => data.semester);
                 (content as HTMLElement).style.display = "none";
               }
             });
-          }, 150); // Match this with the duration-300 class
+          }, 150);
         });
       });
     });
@@ -193,7 +201,7 @@ const semesters = boardData.map((data) => data.semester);
       transition: all 0.2s ease-in-out;
     }
 
-    /* New styles for scrolling */
+    /* Hide scrollbar */
     .scrollbar-hide {
       -ms-overflow-style: none;
       scrollbar-width: none;
@@ -203,9 +211,8 @@ const semesters = boardData.map((data) => data.semester);
       display: none;
     }
 
-    /* Move border-b from individual tabs to container */
     .semester-tab {
-      margin-bottom: -2px; /* Compensate for the border-b on the container */
+      border-bottom-width: 2px;
     }
   </style>
 </Layout>
