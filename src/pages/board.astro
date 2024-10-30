@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 
 import fall2023 from "../data/board/fall2023.json";
 import fall2024 from "../data/board/fall2024.json";
+import spring2023 from "../data/board/spring2023.json";
 import spring2024 from "../data/board/spring2024.json";
 
 interface BoardMember {
@@ -21,7 +22,7 @@ interface SemesterData {
   members: BoardMember[];
 }
 
-const boardData: SemesterData[] = [fall2024, spring2024, fall2023];
+const boardData: SemesterData[] = [fall2024, spring2024, fall2023, spring2023];
 const semesters = boardData.map((data) => data.semester);
 ---
 

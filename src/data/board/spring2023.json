@@ -1,5 +1,5 @@
 {
-  "semester": "Fall 2023",
+  "semester": "Spring 2023",
   "members": [
     {
       "name": "Raaka Mukhopadhyay",
@@ -16,32 +16,25 @@
       "linkedin": "https://www.linkedin.com/in/idris-wardere"
     },
     {
-      "name": "Almutwakel Hassan",
-      "title": "Co-VP of Workshops",
-      "image": "/images/board/al.png",
-      "bio": "AI '25",
-      "linkedin": "https://www.linkedin.com/in/almutwakel"
+      "name": "Mengrou Shou",
+      "title": "VP of Internal Affairs",
+      "image": "/images/alumni/meng.jpg",
+      "bio": "CS '24",
+      "linkedin": "https://www.linkedin.com/in/mshou/"
     },
     {
       "name": "Dongkyun Kim",
-      "title": "Co-VP of Workshops",
+      "title": "VP of Content",
       "image": "/images/board/dk.jpg",
       "bio": "AI '25",
       "linkedin": "https://www.linkedin.com/in/dongkyun-kim"
     },
     {
-      "name": "Jei Park",
-      "title": "VP of Outreach",
-      "image": "/images/board/jei.png",
-      "bio": "StatML '24",
-      "linkedin": "https://www.linkedin.com/in/jehyo-jei-park"
-    },
-    {
-      "name": "Mengrou Shou",
-      "title": "VP of Internal Affairs",
-      "image": "/images/alumni/meng.jpg",
-      "bio": "CS '24",
-      "linkedin": "https://www.linkedin.com/in/mengrou-shou"
+      "name": "Almutwakel Hassan",
+      "title": "VP of Content",
+      "image": "/images/board/al.png",
+      "bio": "AI '25",
+      "linkedin": "https://www.linkedin.com/in/almutwakel"
     },
     {
       "name": "Anisha Chatterjee",
@@ -52,10 +45,17 @@
     },
     {
       "name": "Jeremy Li",
-      "title": "VP of Communications",
+      "title": "VP of Events",
       "image": "/images/alumni/jeremy.jpg",
       "bio": "StatML '25",
-      "linkedin": "https://www.linkedin.com/in/jiabin-jeremy-li/"
+      "linkedin": "https://www.linkedin.com/in/jiabin-jeremy-li"
+    },
+    {
+      "name": "Jet Wu",
+      "title": "VP of Events",
+      "image": "/images/alumni/jet.jpg",
+      "bio": "StatML '26",
+      "linkedin": "https://www.linkedin.com/in/jet-wu-cmu"
     }
   ]
 }
