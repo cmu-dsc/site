@@ -1,0 +1,45 @@
+{
+  "semester": "Fall 2021",
+  "members": [
+    {
+      "name": "Bonnie Chan",
+      "title": "Co-President",
+      "image": "/images/alumni/bonnie.jpg",
+      "bio": "StatML '23, now Senior MTS @ AT&T",
+      "linkedin": "https://www.linkedin.com/in/chan-bonnie"
+    },
+    {
+      "name": "Owen Mo",
+      "title": "Co-President",
+      "image": "/images/alumni/owen.png",
+      "bio": "CS '23"
+    },
+    {
+      "name": "Fiona Xie",
+      "title": "VP of Outreach",
+      "image": "/images/alumni/fiona.jpg",
+      "bio": "AI '23, now Software Engineer @ Netflix"
+    },
+    {
+      "name": "Raaka Mukhopadhyay",
+      "title": "VP of Marketing",
+      "image": "/images/alumni/raaka.jpg",
+      "bio": "StatML '24, now Project Coordinator @ Five Rings",
+      "linkedin": "https://www.linkedin.com/in/raaka/"
+    },
+    {
+      "name": "Roshan Ram",
+      "title": "VP of Projects",
+      "image": "/images/alumni/roshan.jpeg",
+      "bio": "IS '23, now Machine Learning Engineer @ Bland AI",
+      "linkedin": "https://www.linkedin.com/in/roshanr11"
+    },
+    {
+      "name": "Mengrou Shou",
+      "title": "VP of Developments",
+      "image": "/images/alumni/meng.jpg",
+      "bio": "CS '24",
+      "linkedin": "https://www.linkedin.com/in/mshou/"
+    }
+  ]
+}

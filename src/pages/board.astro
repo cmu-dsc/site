@@ -3,6 +3,7 @@ import GithubIcon from "../icons/github.svg?raw";
 import LinkedInIcon from "../icons/linkedin.svg?raw";
 import Layout from "../layouts/Layout.astro";
 
+import fall2021 from "../data/board/fall2021.json";
 import fall2023 from "../data/board/fall2023.json";
 import fall2024 from "../data/board/fall2024.json";
 import spring2023 from "../data/board/spring2023.json";
@@ -11,7 +12,7 @@ import spring2024 from "../data/board/spring2024.json";
 interface BoardMember {
   name: string;
   title: string;
-  image: string;
+  image?: string;
   bio: string;
   github?: string;
   linkedin?: string;
@@ -22,7 +23,13 @@ interface SemesterData {
   members: BoardMember[];
 }
 
-const boardData: SemesterData[] = [fall2024, spring2024, fall2023, spring2023];
+const boardData: SemesterData[] = [
+  fall2024,
+  spring2024,
+  fall2023,
+  spring2023,
+  fall2021,
+];
 const semesters = boardData.map((data) => data.semester);
 ---
 
@@ -34,18 +41,20 @@ const semesters = boardData.map((data) => data.semester);
       </h1>
 
       <!-- Semester Tabs -->
-      <div class="flex justify-center mb-8">
-        {
-          semesters.map((semester, index) => (
-            <button
-              class="semester-tab px-6 py-2 text-[#082b57] font-medium border-b-2 transition-colors"
-              data-semester={semester}
-              data-active={index === 0}
-            >
-              {semester}
-            </button>
-          ))
-        }
+      <div class="flex justify-center overflow-x-auto scrollbar-hide mb-8">
+        <div class="flex min-w-max border-b">
+          {
+            semesters.map((semester, index) => (
+              <button
+                class="semester-tab px-6 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap"
+                data-semester={semester}
+                data-active={index === 0}
+              >
+                {semester}
+              </button>
+            ))
+          }
+        </div>
       </div>
 
       <!-- Board Members Grid -->
@@ -59,11 +68,22 @@ const semesters = boardData.map((data) => data.semester);
             {data.members.map((member) => (
               <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col transform transition-all duration-200 hover:scale-[1.02] hover:shadow-lg">
                 <div class="relative w-full pb-[100%] flex-shrink-0">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    class="absolute top-0 left-0 w-full h-full object-cover"
-                  />
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      class="absolute top-0 left-0 w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div class="absolute top-0 left-0 w-full h-full bg-gray-200 flex items-center justify-center">
+                      <div class="text-4xl text-gray-400">
+                        {member.name
+                          .split(" ")
+                          .map((word) => word[0])
+                          .join("")}
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div class="p-4 flex flex-col flex-grow">
                   <div class="flex-grow">
@@ -171,6 +191,21 @@ const semesters = boardData.map((data) => data.semester);
     /* Add smooth transitions for card hover effects */
     .semester-content > div {
       transition: all 0.2s ease-in-out;
+    }
+
+    /* New styles for scrolling */
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Move border-b from individual tabs to container */
+    .semester-tab {
+      margin-bottom: -2px; /* Compensate for the border-b on the container */
     }
   </style>
 </Layout>
