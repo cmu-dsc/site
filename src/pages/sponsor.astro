@@ -47,7 +47,7 @@ const sponsors = {
     <div class="max-w-6xl mx-auto space-y-8">
       <!-- Gold Tier -->
       <div
-        class="relative bg-gradient-to-b from-amber-50 to-transparent p-8 rounded-xl"
+        class="relative bg-gradient-to-b from-amber-500/10 to-transparent p-8 rounded-xl"
       >
         <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
           Gold Sponsors
@@ -59,7 +59,7 @@ const sponsors = {
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-white w-full sm:w-80 h-40 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-8"
+                class="bg-white/20 backdrop-blur-sm w-full sm:w-80 h-40 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-8 border border-white/10"
               >
                 <img
                   src={sponsor.logo}
@@ -74,7 +74,7 @@ const sponsors = {
 
       <!-- Silver Tier -->
       <div
-        class="relative bg-gradient-to-b from-gray-50 to-transparent p-8 rounded-xl"
+        class="relative bg-gradient-to-b from-gray-500/10 to-transparent p-8 rounded-xl"
       >
         <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
           Silver Sponsors
@@ -86,7 +86,7 @@ const sponsors = {
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-white w-full sm:w-64 h-32 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-6"
+                class="bg-white/20 backdrop-blur-sm w-full sm:w-64 h-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-6 border border-white/10"
               >
                 <img
                   src={sponsor.logo}
@@ -101,7 +101,7 @@ const sponsors = {
 
       <!-- Bronze Tier -->
       <div
-        class="relative bg-gradient-to-b from-orange-50 to-transparent p-8 rounded-xl"
+        class="relative bg-gradient-to-b from-orange-500/10 to-transparent p-8 rounded-xl"
       >
         <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
           Bronze Sponsors
@@ -113,7 +113,7 @@ const sponsors = {
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-white w-full sm:w-48 h-24 rounded-lg shadow-md hover:shadow-xl transition-shadow flex items-center justify-center p-4"
+                class="bg-white/20 backdrop-blur-sm w-full sm:w-48 h-24 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-4 border border-white/10"
               >
                 <img
                   src={sponsor.logo}
@@ -144,3 +144,43 @@ const sponsors = {
     </div>
   </main>
 </Layout>
+
+<style>
+  /* Glass effect styles */
+  a[href^="http"] {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  a[href^="http"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 1px;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  a[href^="http"]:hover::before {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+  }
+</style>

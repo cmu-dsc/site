@@ -19,6 +19,10 @@ interface SemesterData {
 }
 
 const eventData: SemesterData[] = [fall2024, spring2024] as SemesterData[];
+// Sort events within each semester by date in descending order
+eventData.forEach(semester => {
+  semester.events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+});
 const semesters = eventData.map((data) => data.semester);
 
 const tagOrder = [
@@ -33,12 +37,12 @@ const tagOrder = [
 type TagType = (typeof tagOrder)[number];
 
 const tagColors = {
-  social: "bg-red-100 text-red-800",
-  workshop: "bg-green-100 text-green-800",
-  speaker: "bg-yellow-100 text-yellow-800",
-  competition: "bg-orange-100 text-orange-800",
-  career: "bg-blue-100 text-blue-800",
-  technical: "bg-purple-100 text-purple-800",
+  social: "bg-red-100/60 text-red-800",
+  workshop: "bg-green-100/60 text-green-800",
+  speaker: "bg-yellow-100/60 text-yellow-800",
+  competition: "bg-orange-100/60 text-orange-800",
+  career: "bg-blue-100/60 text-blue-800",
+  technical: "bg-purple-100/60 text-purple-800",
 } as const;
 
 const tagNames = {
@@ -94,17 +98,21 @@ const tagNames = {
             }`}
           >
             <div class="overflow-x-auto">
-              <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-md">
+              <table class="min-w-full bg-white/20 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-white/10">
                 <thead class="bg-[#082b57] text-white">
                   <tr>
-                    <th class="px-6 py-3 text-left hidden md:table-cell">Date</th>
+                    <th class="px-6 py-3 text-left hidden md:table-cell">
+                      Date
+                    </th>
                     <th class="px-6 py-3 text-left">Event</th>
-                    <th class="px-6 py-3 text-center hidden md:table-cell">Resources</th>
+                    <th class="px-6 py-3 text-center hidden md:table-cell">
+                      Resources
+                    </th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-200">
+                <tbody class="divide-y divide-gray-300/60">
                   {data.events.map((event) => (
-                    <tr class="hover:bg-gray-50">
+                    <tr class="hover:bg-white/30 transition-colors duration-200">
                       <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
                         {new Date(event.date + "T12:00:00").toLocaleDateString(
                           "en-US",
@@ -118,15 +126,14 @@ const tagNames = {
                         <div class="flex flex-col gap-2">
                           {/* Mobile-only date */}
                           <div class="text-sm text-gray-500 md:hidden">
-                            {new Date(event.date + "T12:00:00").toLocaleDateString(
-                              "en-US",
-                              {
-                                month: "short",
-                                day: "numeric",
-                              },
-                            )}
+                            {new Date(
+                              event.date + "T12:00:00",
+                            ).toLocaleDateString("en-US", {
+                              month: "short",
+                              day: "numeric",
+                            })}
                           </div>
-                          
+
                           <div class="flex items-center gap-3 flex-wrap">
                             <div class="font-medium text-[#082b57]">
                               {event.title}
@@ -138,7 +145,7 @@ const tagNames = {
                               )
                               .map((tag) => (
                                 <span
-                                  class={`text-xs px-2 py-1 rounded-full ${tagColors[tag]}`}
+                                  class={`text-xs px-2 py-1 rounded-full backdrop-blur-sm ${tagColors[tag]}`}
                                 >
                                   {tagNames[tag]}
                                 </span>
@@ -147,7 +154,7 @@ const tagNames = {
                           <div class="text-sm text-gray-600 line-clamp-2 hover:line-clamp-none">
                             {event.description}
                           </div>
-                          
+
                           {/* Mobile-only resources */}
                           <div class="flex gap-2 md:hidden mt-2">
                             {event.slides && (
@@ -157,7 +164,7 @@ const tagNames = {
                                 rel="noopener noreferrer"
                                 class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
                               >
-                                <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                   Slides
                                 </span>
                               </a>
@@ -169,7 +176,7 @@ const tagNames = {
                                 rel="noopener noreferrer"
                                 class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
                               >
-                                <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                   Notebook
                                 </span>
                               </a>
@@ -181,7 +188,7 @@ const tagNames = {
                                 rel="noopener noreferrer"
                                 class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
                               >
-                                <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                   Recording
                                 </span>
                               </a>
@@ -198,7 +205,7 @@ const tagNames = {
                               rel="noopener noreferrer"
                               class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
                             >
-                              <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                              <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                 Slides
                               </span>
                             </a>
@@ -210,7 +217,7 @@ const tagNames = {
                               rel="noopener noreferrer"
                               class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
                             >
-                              <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                              <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                 Notebook
                               </span>
                             </a>
@@ -222,7 +229,7 @@ const tagNames = {
                               rel="noopener noreferrer"
                               class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
                             >
-                              <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                              <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                 Recording
                               </span>
                             </a>
@@ -332,5 +339,57 @@ const tagNames = {
     .hover\:line-clamp-none:hover {
       -webkit-line-clamp: unset;
     }
+
+    /* Add these new glass effect styles */
+    table {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    table::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 0.5rem;
+      padding: 1px;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.05)
+      );
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* Update tag colors to be more translucent */
+    :root {
+      --tag-social: rgba(254, 226, 226, 0.6);
+      --tag-workshop: rgba(220, 252, 231, 0.6);
+      --tag-speaker: rgba(254, 249, 195, 0.6);
+      --tag-competition: rgba(254, 215, 170, 0.6);
+      --tag-career: rgba(219, 234, 254, 0.6);
+      --tag-technical: rgba(233, 213, 255, 0.6);
+    }
   </style>
+
+  <script>
+    // Update tagColors to use CSS variables
+    const tagColors = {
+      social: "bg-red-100/60 text-red-800",
+      workshop: "bg-green-100/60 text-green-800",
+      speaker: "bg-yellow-100/60 text-yellow-800",
+      competition: "bg-orange-100/60 text-orange-800",
+      career: "bg-blue-100/60 text-blue-800",
+      technical: "bg-purple-100/60 text-purple-800",
+    };
+  </script>
 </Layout>
