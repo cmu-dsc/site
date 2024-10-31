@@ -20,8 +20,10 @@ interface SemesterData {
 
 const eventData: SemesterData[] = [fall2024, spring2024] as SemesterData[];
 // Sort events within each semester by date in descending order
-eventData.forEach(semester => {
-  semester.events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+eventData.forEach((semester) => {
+  semester.events.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 });
 const semesters = eventData.map((data) => data.semester);
 
@@ -163,6 +165,9 @@ const tagNames = {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                                data-umami-event="Resource Download"
+                                data-umami-event-type="Slides"
+                                data-umami-event-title={event.title}
                               >
                                 <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                   Slides
@@ -175,6 +180,9 @@ const tagNames = {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                                data-umami-event="Resource Download"
+                                data-umami-event-type="Notebook"
+                                data-umami-event-title={event.title}
                               >
                                 <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                   Notebook
@@ -187,6 +195,9 @@ const tagNames = {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                                data-umami-event="Resource Download"
+                                data-umami-event-type="Recording"
+                                data-umami-event-title={event.title}
                               >
                                 <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                   Recording
@@ -204,6 +215,9 @@ const tagNames = {
                               target="_blank"
                               rel="noopener noreferrer"
                               class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                              data-umami-event="Resource Download"
+                              data-umami-event-type="Slides"
+                              data-umami-event-title={event.title}
                             >
                               <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                 Slides
@@ -216,6 +230,9 @@ const tagNames = {
                               target="_blank"
                               rel="noopener noreferrer"
                               class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                              data-umami-event="Resource Download"
+                              data-umami-event-type="Notebook"
+                              data-umami-event-title={event.title}
                             >
                               <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                 Notebook
@@ -228,6 +245,9 @@ const tagNames = {
                               target="_blank"
                               rel="noopener noreferrer"
                               class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                              data-umami-event="Resource Download"
+                              data-umami-event-type="Recording"
+                              data-umami-event-title={event.title}
                             >
                               <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
                                 Recording

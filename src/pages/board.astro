@@ -133,6 +133,9 @@ const semesters = boardData.map((data) => data.semester);
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-gray-600 hover:text-[#082b57] transition-colors"
+                        data-umami-event="Board Social Click"
+                        data-umami-event-platform="GitHub"
+                        data-umami-event-member={member.name}
                       >
                         <div class="w-5 h-5" set:html={GithubIcon} />
                       </a>
@@ -143,6 +146,9 @@ const semesters = boardData.map((data) => data.semester);
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-gray-600 hover:text-[#082b57] transition-colors"
+                        data-umami-event="Board Social Click"
+                        data-umami-event-platform="LinkedIn"
+                        data-umami-event-member={member.name}
                       >
                         <div class="w-5 h-5" set:html={LinkedInIcon} />
                       </a>
@@ -253,7 +259,7 @@ const semesters = boardData.map((data) => data.semester);
     }
 
     .semester-content > div::before {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
       border-radius: 0.5rem;
@@ -263,11 +269,11 @@ const semesters = boardData.map((data) => data.semester);
         rgba(255, 255, 255, 0.2),
         rgba(255, 255, 255, 0.05)
       );
-      -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
-      mask: 
-        linear-gradient(#fff 0 0) content-box, 
+      mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;

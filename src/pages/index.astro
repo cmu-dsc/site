@@ -23,6 +23,7 @@ import Layout from "../layouts/Layout.astro";
 			<a
 				href="https://tartanconnect.cmu.edu/datascience/club_signup"
 				class="bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center justify-center"
+				data-umami-event="Mailing List Signup"
 			>
 				<span class="w-5 h-5 mr-2" set:html={MailIcon} />
 				Join our Mailing List
@@ -34,6 +35,8 @@ import Layout from "../layouts/Layout.astro";
 					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
 					target="_blank"
 					rel="noopener noreferrer"
+					data-umami-event="Social Click"
+					data-umami-event-platform="Discord"
 				>
 					<span class="w-8 h-8 block" set:html={DiscordIcon} />
 				</a>
@@ -42,6 +45,8 @@ import Layout from "../layouts/Layout.astro";
 					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
 					target="_blank"
 					rel="noopener noreferrer"
+					data-umami-event="Social Click"
+					data-umami-event-platform="Instagram"
 				>
 					<span class="w-8 h-8 block" set:html={InstagramIcon} />
 				</a>
@@ -50,6 +55,8 @@ import Layout from "../layouts/Layout.astro";
 					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
 					target="_blank"
 					rel="noopener noreferrer"
+					data-umami-event="Social Click"
+					data-umami-event-platform="Github"
 				>
 					<span class="w-8 h-8 block" set:html={GithubIcon} />
 				</a>
