@@ -1,0 +1,141 @@
+{
+  "semester": "Spring 2024",
+  "events": [
+    {
+      "title": "Bloomberg Data Info Session",
+      "description": "Learn about data science opportunities at Bloomberg and network with their recruiting team.",
+      "date": "2024-01-31",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "title": "Soccer Match Prediction Workshop",
+      "description": "Learn how to build machine learning models to predict soccer match outcomes using historical data and statistics.",
+      "date": "2024-02-09",
+      "slides": "https://docs.google.com/presentation/d/17rlWtxh5ZlnjQoy5ciYLmy19nxXvthol/edit?usp=sharing&ouid=107214303712024226303&rtpof=true&sd=true",
+      "notebook": "https://drive.google.com/file/d/1F_nT_edcn0HrAllrdUST4u0UlWW54itL/view?usp=sharing",
+      "tags": [
+        "technical",
+        "workshop"
+      ]
+    },
+    {
+      "title": "DSC S24 Intro Social",
+      "description": "Join us for our Spring 2024 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "date": "2024-02-16",
+      "tags": [
+        "social"
+      ]
+    },
+    {
+      "title": "Career Workshop",
+      "description": "Get tips on resume building, interview preparation, and navigating the data science job market.",
+      "date": "2024-03-01",
+      "tags": [
+        "career",
+        "workshop"
+      ]
+    },
+    {
+      "title": "Climatehack.AI Workshop",
+      "description": "Join us as a CMU team that qualified for the Climatehack.AI finals presents their approach to weather prediction and shares insights from their competition experience.",
+      "date": "2024-03-15",
+      "tags": [
+        "workshop",
+        "competition",
+        "technical"
+      ]
+    },
+    {
+      "title": "Poker AI: RL Workshop",
+      "description": "Introduction to reinforcement learning concepts and how they can be applied to develop poker playing agents.",
+      "date": "2024-03-22",
+      "slides": "https://docs.google.com/presentation/d/13tGN6wy6z-Wj3emWWs3h0eGRi4KFiz92hZOt6QlMDWk/edit?usp=sharing",
+      "recording": "https://cmu.zoom.us/rec/share/jPhKPpJ9BXD41FGyT0ipzUVEFppJH82Jm5O05QcJyRfyDEVyXjykZ_ZVk3exHcEb.cTPZLOuDT7TBt2Il?startTime=1711141356000",
+      "tags": [
+        "technical",
+        "competition",
+        "workshop"
+      ]
+    },
+    {
+      "title": "Poker AI: Poker Workshop",
+      "description": "Learn poker fundamentals, game theory optimal play, and strategies that will help you develop stronger poker AI agents.",
+      "date": "2024-03-29",
+      "slides": "https://docs.google.com/presentation/d/1uETchM2ZeU-GrrFKMF1HxdKPYubtTH4oQ_NyD7ux5CA/edit?usp=sharing",
+      "recording": "https://cmu.zoom.us/j/98360847053?pwd=ZXJiWDdNZlJ4RzFSbUdRMDA5YXFGQT09",
+      "tags": [
+        "technical",
+        "competition",
+        "workshop"
+      ]
+    },
+    {
+      "title": "Poker AI: Sam Ganzfried",
+      "description": "Join us for a talk with Sam Ganzfried, an expert in game theory and poker AI, as he discusses advanced poker AI strategies.",
+      "date": "2024-03-29",
+      "slides": "https://drive.google.com/file/d/1EeZlP7PfAZPQv2eqBWjdPfLTSL2Lk6UV/view?usp=sharing",
+      "recording": "https://drive.google.com/file/d/1hj5oERrFyN4qenGxkN5v0CWv0QZeVo2O/view?usp=sharing",
+      "tags": [
+        "technical",
+        "competition",
+        "speaker"
+      ]
+    },
+    {
+      "title": "Poker AI: Jump Trading",
+      "description": "Learn about how poker strategies and game theory are applied in quantitative trading from Jump Trading professionals.",
+      "date": "2024-03-30",
+      "tags": [
+        "career",
+        "competition"
+      ]
+    },
+    {
+      "title": "Poker AI: Tuomas Sandholm",
+      "description": "Special guest lecture by Prof. Tuomas Sandholm on the development of Libratus and the future of poker AI.",
+      "date": "2024-03-30",
+      "tags": [
+        "technical",
+        "speaker",
+        "competition"
+      ]
+    },
+    {
+      "title": "Poker AI: Winner Workshop",
+      "description": "Winning team from the Poker AI competition presents their approach and technical implementation details.",
+      "date": "2024-04-05",
+      "tags": [
+        "technical",
+        "competition"
+      ]
+    },
+    {
+      "title": "Youssef Kallel: MLE @ Apple",
+      "description": "Join us for an insightful talk with Youssef Kallel about his experience as a Machine Learning Engineer at Apple.",
+      "date": "2024-04-15",
+      "tags": [
+        "career",
+        "speaker"
+      ]
+    },
+    {
+      "title": "Michael Yoder: NLP & Hate Speech",
+      "description": "Learn about cutting-edge NLP techniques for detecting and analyzing hate speech with Dr. Michael Yoder.",
+      "date": "2024-04-26",
+      "tags": [
+        "technical",
+        "speaker"
+      ]
+    },
+    {
+      "title": "Mentor-Mentee Social GBM",
+      "description": "Connect with your DSC mentors and mentees while enjoying food and fun activities with the data science community.",
+      "date": "2024-05-03",
+      "tags": [
+        "social"
+      ]
+    }
+  ]
+}

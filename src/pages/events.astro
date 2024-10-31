@@ -1,0 +1,336 @@
+---
+import fall2024 from "../data/events/fall2024.json";
+import spring2024 from "../data/events/spring2024.json";
+import Layout from "../layouts/Layout.astro";
+
+interface Event {
+  title: string;
+  description: string;
+  date: string;
+  slides?: string;
+  notebook?: string;
+  recording?: string;
+  tags: TagType[];
+}
+
+interface SemesterData {
+  semester: string;
+  events: Event[];
+}
+
+const eventData: SemesterData[] = [fall2024, spring2024] as SemesterData[];
+const semesters = eventData.map((data) => data.semester);
+
+const tagOrder = [
+  "social",
+  "workshop",
+  "speaker",
+  "competition",
+  "career",
+  "technical",
+] as const;
+
+type TagType = (typeof tagOrder)[number];
+
+const tagColors = {
+  social: "bg-red-100 text-red-800",
+  workshop: "bg-green-100 text-green-800",
+  speaker: "bg-yellow-100 text-yellow-800",
+  competition: "bg-orange-100 text-orange-800",
+  career: "bg-blue-100 text-blue-800",
+  technical: "bg-purple-100 text-purple-800",
+} as const;
+
+const tagNames = {
+  social: "Social",
+  workshop: "Workshop",
+  speaker: "Guest Speaker",
+  competition: "Competition",
+  career: "Career",
+  technical: "Technical",
+} as const;
+---
+
+<Layout title="Past Events - CMU Data Science Club">
+  <main class="min-h-screen p-8 pt-24">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-[#082b57] mb-8 text-center">
+        Past Events
+      </h1>
+
+      <!-- Semester Tabs -->
+      <div class="relative mb-8 -mx-8">
+        <div class="overflow-x-auto scrollbar-hide px-8">
+          <div class="flex min-w-max border-b md:justify-center gap-4">
+            {
+              semesters.map((semester, index) => {
+                const [term, year] = semester.split(" ");
+                return (
+                  <button
+                    class="semester-tab px-4 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap flex flex-col items-center text-center"
+                    data-semester={semester}
+                    data-active={index === 0}
+                  >
+                    <span class="text-xs uppercase tracking-wider opacity-60">
+                      {term}
+                    </span>
+                    <span>{year}</span>
+                  </button>
+                );
+              })
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Content -->
+      {
+        eventData.map((data, index) => (
+          <div
+            class="semester-content transition-opacity duration-150"
+            data-semester={data.semester}
+            style={`opacity: ${index === 0 ? "1" : "0"}; display: ${
+              index === 0 ? "block" : "none"
+            }`}
+          >
+            <div class="overflow-x-auto">
+              <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-md">
+                <thead class="bg-[#082b57] text-white">
+                  <tr>
+                    <th class="px-6 py-3 text-left hidden md:table-cell">Date</th>
+                    <th class="px-6 py-3 text-left">Event</th>
+                    <th class="px-6 py-3 text-center hidden md:table-cell">Resources</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  {data.events.map((event) => (
+                    <tr class="hover:bg-gray-50">
+                      <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
+                        {new Date(event.date + "T12:00:00").toLocaleDateString(
+                          "en-US",
+                          {
+                            month: "short",
+                            day: "numeric",
+                          },
+                        )}
+                      </td>
+                      <td class="px-6 py-4">
+                        <div class="flex flex-col gap-2">
+                          {/* Mobile-only date */}
+                          <div class="text-sm text-gray-500 md:hidden">
+                            {new Date(event.date + "T12:00:00").toLocaleDateString(
+                              "en-US",
+                              {
+                                month: "short",
+                                day: "numeric",
+                              },
+                            )}
+                          </div>
+                          
+                          <div class="flex items-center gap-3 flex-wrap">
+                            <div class="font-medium text-[#082b57]">
+                              {event.title}
+                            </div>
+                            {event.tags
+                              .sort(
+                                (a, b) =>
+                                  tagOrder.indexOf(a) - tagOrder.indexOf(b),
+                              )
+                              .map((tag) => (
+                                <span
+                                  class={`text-xs px-2 py-1 rounded-full ${tagColors[tag]}`}
+                                >
+                                  {tagNames[tag]}
+                                </span>
+                              ))}
+                          </div>
+                          <div class="text-sm text-gray-600 line-clamp-2 hover:line-clamp-none">
+                            {event.description}
+                          </div>
+                          
+                          {/* Mobile-only resources */}
+                          <div class="flex gap-2 md:hidden mt-2">
+                            {event.slides && (
+                              <a
+                                href={event.slides}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                              >
+                                <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                  Slides
+                                </span>
+                              </a>
+                            )}
+                            {event.notebook && (
+                              <a
+                                href={event.notebook}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                              >
+                                <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                  Notebook
+                                </span>
+                              </a>
+                            )}
+                            {event.recording && (
+                              <a
+                                href={event.recording}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                              >
+                                <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                  Recording
+                                </span>
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-6 py-4 hidden md:table-cell">
+                        <div class="flex justify-center gap-4">
+                          {event.slides && (
+                            <a
+                              href={event.slides}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                            >
+                              <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                Slides
+                              </span>
+                            </a>
+                          )}
+                          {event.notebook && (
+                            <a
+                              href={event.notebook}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                            >
+                              <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                Notebook
+                              </span>
+                            </a>
+                          )}
+                          {event.recording && (
+                            <a
+                              href={event.recording}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+                            >
+                              <span class="bg-[#082b57]/10 px-3 py-1 rounded-full text-sm">
+                                Recording
+                              </span>
+                            </a>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Set initial active state for the first tab
+      const firstTab = document.querySelector(".semester-tab") as HTMLElement;
+      if (firstTab) {
+        firstTab.setAttribute("data-active", "true");
+      }
+
+      const tabs = document.querySelectorAll(".semester-tab");
+      const contents = document.querySelectorAll(".semester-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Update tab styles
+          tabs.forEach((t) => t.setAttribute("data-active", "false"));
+          tab.setAttribute("data-active", "true");
+
+          // Show/hide content with animation
+          const selectedSemester = tab.getAttribute("data-semester");
+
+          // First, fade out all contents
+          contents.forEach((content) => {
+            (content as HTMLElement).style.opacity = "0";
+          });
+
+          // Wait for fade out, then switch contents
+          setTimeout(() => {
+            contents.forEach((content) => {
+              const contentSemester = content.getAttribute("data-semester");
+              if (contentSemester === selectedSemester) {
+                (content as HTMLElement).style.display = "block";
+                // Trigger reflow
+                (content as HTMLElement).offsetHeight;
+                // Fade in
+                (content as HTMLElement).style.opacity = "1";
+              } else {
+                (content as HTMLElement).style.display = "none";
+              }
+            });
+          }, 150);
+        });
+      });
+    });
+  </script>
+
+  <style>
+    .semester-tab[data-active="true"] {
+      border-color: #082b57;
+      color: #082b57;
+    }
+
+    .semester-tab[data-active="false"] {
+      border-color: transparent;
+      color: #082b57/60;
+    }
+
+    .semester-tab[data-active="false"]:hover {
+      color: #082b57;
+      border-color: #082b57/20;
+    }
+
+    .semester-content {
+      pointer-events: none;
+    }
+
+    .semester-content[style*="display: block"] {
+      pointer-events: auto;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .semester-tab {
+      border-bottom-width: 2px;
+    }
+
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .hover\:line-clamp-none:hover {
+      -webkit-line-clamp: unset;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,91 @@
+{
+  "semester": "Fall 2024",
+  "events": [
+    {
+      "title": "DSC F24 Intro Social",
+      "description": "Join us for our Fall 2024 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "date": "2024-09-06",
+      "slides": "https://docs.google.com/presentation/d/1fR75KwgSavPHKf_qibeRfSpp4rizqgszT1HfGX9ikAU/edit?usp=sharing",
+      "tags": [
+        "social"
+      ]
+    },
+    {
+      "title": "Intro to PyTorch",
+      "description": "Learn the fundamentals of PyTorch, including tensors, neural networks, and how to build basic deep learning models.",
+      "date": "2024-09-13",
+      "slides": "https://docs.google.com/presentation/d/1mwNXaPf7rpXLNKJmzK_-9Qtt_AduSaQbtg1C6eVrNW0/edit?usp=sharing",
+      "notebook": "https://colab.research.google.com/drive/1k-x340TK3NN9bb23vnEDJ9DdF554Ht2C?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
+    },
+    {
+      "title": "Career Workshop",
+      "description": "Get tips on resume building, interview preparation, and navigating the data science job market.",
+      "date": "2024-09-20",
+      "slides": "https://docs.google.com/presentation/d/1DH8GZ0GBWCdSWvOxNjG7WMQxuZB81WHnPnTCcUpwXJQ/edit?usp=sharing",
+      "tags": [
+        "workshop",
+        "career"
+      ]
+    },
+    {
+      "title": "Ian Watson: A Journey Through Data Science",
+      "description": "Join us for an insightful talk with Ian Watson as he shares his experiences and career path in data science.",
+      "date": "2024-09-27",
+      "slides": "https://drive.google.com/file/d/1o71ntqiA8s09LmoT1WU4jliehq1P5UPg/view?usp=sharing",
+      "tags": [
+        "speaker",
+        "career"
+      ]
+    },
+    {
+      "title": "DSC Alumni Career Panel",
+      "description": "Hear from successful DSC alumni about their career journeys, challenges, and advice for aspiring data scientists.",
+      "date": "2024-10-04",
+      "slides": "https://docs.google.com/presentation/d/1BwOv3mU7FwyMV6Tl_iEiOpM3Twrn-MzAljYF9kyfLAE/edit?usp=sharing",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "title": "Nick Singh: Acing the Data Science Interview",
+      "description": "Learn interview strategies and tips from Nick Singh, author of 'Ace the Data Science Interview'.",
+      "date": "2024-10-09",
+      "slides": "https://docs.google.com/presentation/d/1Ce8PSpXjXFjZalGfFDJJ6gReHIpoGMurPVCqWxpSBxo/edit#slide=id.g25e1308b38e_0_0",
+      "tags": [
+        "speaker",
+        "career"
+      ]
+    },
+    {
+      "title": "Bloomberg Data Info Session",
+      "description": "Learn about data science opportunities at Bloomberg and network with their recruiting team.",
+      "date": "2024-10-23",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "title": "Nang Ang: Breaking into Y Combinator",
+      "description": "Discover insights about startup culture and entrepreneurship from Nathan Ang, a CMU and Y Combinator alumnus.",
+      "date": "2024-10-25",
+      "tags": [
+        "career",
+        "speaker"
+      ]
+    },
+    {
+      "title": "Big Data Workshop",
+      "description": "Explore big data technologies and learn how to process and analyze large-scale datasets effectively.",
+      "date": "2024-11-01",
+      "slides": "https://docs.google.com/presentation/d/1aYf1mGZHSW9wTi1W3d0MnN-KlhjVocyaMxWb6Xg5DuI/edit?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
+    }
+  ]
+}

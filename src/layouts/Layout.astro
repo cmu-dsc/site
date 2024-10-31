@@ -4,6 +4,27 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const menuItems = [
+  { href: "/", label: "Home", description: "Return to homepage" },
+  { href: "/board", label: "Board", description: "Meet our team" },
+  {
+    href: "/events",
+    label: "Events",
+    description: "Previous workshops & activities",
+  },
+  {
+    href: "#poker",
+    label: "Poker AI",
+    description: "Learn about our AI competition",
+  },
+  {
+    href: "/datathon",
+    label: "Datathon",
+    description: "Annual data science competition",
+  },
+  { href: "/sponsor", label: "Sponsor", description: "See our sponsors" },
+];
 ---
 
 <html lang="en">
@@ -87,31 +108,16 @@ const { title } = Astro.props;
 
       <!-- Desktop Navigation -->
       <div class="md:flex hidden items-center space-x-6">
-        <a
-          href="/board"
-          class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
-          >Board</a
-        >
-        <a
-          href="https://github.com/cmu-dsc/workshops"
-          class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
-          >Workshops</a
-        >
-        <a
-          href="#poker"
-          class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
-          >Poker AI</a
-        >
-        <a
-          href="/datathon"
-          class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
-          >Datathon</a
-        >
-        <a
-          href="/sponsor"
-          class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
-          >Sponsor</a
-        >
+        {
+          menuItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
+            >
+              {item.label}
+            </a>
+          ))
+        }
         <a
           href="https://discord.gg/zCvq2ejkk5"
           class="bg-[#082b57] text-white px-4 py-1.5 rounded-full hover:bg-[#082b57]/80 transition-colors text-sm"
@@ -124,14 +130,14 @@ const { title } = Astro.props;
     <!-- Mobile Navigation -->
     <div
       id="mobile-menu"
-      class="fixed md:hidden top-0 right-0 h-screen w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-20"
+      class="fixed md:hidden top-0 right-0 h-screen w-full sm:w-80 bg-white/80 backdrop-blur-lg shadow-2xl transform translate-x-full transition-all duration-300 ease-in-out z-20"
     >
-      <div class="flex flex-col items-end p-6 space-y-6 h-full">
-        <div class="w-full flex justify-between items-center mb-8">
-          <span class="text-[#082b57] font-semibold">Menu</span>
+      <div class="flex flex-col p-8 space-y-4 h-full relative">
+        <div class="w-full flex justify-between items-center mb-6">
+          <span class="text-[#082b57] font-bold text-xl">Menu</span>
           <button
             id="close-menu-button"
-            class="text-[#082b57] p-2 hover:bg-gray-100 rounded-lg"
+            class="text-[#082b57] p-2 hover:bg-[#082b57]/10 rounded-full transition-colors"
             aria-label="Close menu"
           >
             <svg
@@ -148,39 +154,44 @@ const { title } = Astro.props;
             </svg>
           </button>
         </div>
-        <a
-          href="/board"
-          class="bg-[#082b57] text-white px-4 py-3 rounded-lg hover:bg-[#082b57]/80 transition-colors text-sm w-full text-center"
-          >Board</a
-        >
-        <a
-          href="https://github.com/cmu-dsc/workshops"
-          class="bg-[#082b57] text-white px-4 py-3 rounded-lg hover:bg-[#082b57]/80 transition-colors text-sm w-full text-center"
-          >Workshops</a
-        >
-        <a
-          href="https://poker.cmudsc.com"
-          class="bg-[#082b57] text-white px-4 py-3 rounded-lg hover:bg-[#082b57]/80 transition-colors text-sm w-full text-center"
-          >Poker AI</a
-        >
-        <a
-          href="/datathon"
-          class="bg-[#082b57] text-white px-4 py-3 rounded-lg hover:bg-[#082b57]/80 transition-colors text-sm w-full text-center"
-          >Datathon</a
-        >
-        <a
-          href="/sponsor"
-          class="bg-[#082b57] text-white px-4 py-3 rounded-lg hover:bg-[#082b57]/80 transition-colors text-sm w-full text-center"
-          >Sponsor</a
-        >
-        <a
-          href="https://discord.gg/zCvq2ejkk5"
-          class="bg-[#082b57] text-white px-4 py-3 rounded-lg hover:bg-[#082b57]/80 transition-colors text-sm w-full text-center"
-          >Join Discord</a
-        >
+
+        <!-- Menu Items -->
+        <div class="space-y-3">
+          {
+            menuItems.map((item, index) => (
+              <a href={item.href} class="group block">
+                <div class="bg-[#082b57]/5 hover:bg-[#082b57]/10 p-4 rounded-xl transition-all duration-200 transform hover:translate-x-2">
+                  <div class="font-medium text-[#082b57]">{item.label}</div>
+                  <div class="text-sm text-[#082b57]/60 group-hover:text-[#082b57]/80 transition-colors">
+                    {item.description}
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-auto">
+          <a
+            href="https://discord.gg/zCvq2ejkk5"
+            class="bg-[#082b57] text-white p-4 rounded-xl hover:bg-[#082b57]/80 transition-colors text-center block"
+          >
+            <div class="font-medium">Join our Discord</div>
+            <div class="text-sm text-white/80">
+              Connect with fellow data scientists
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </header>
+
+  <div
+    id="menu-backdrop"
+    class="fixed inset-0 bg-black/0 pointer-events-none transition-all duration-300 md:hidden"
+  >
+  </div>
 
   <slot />
 
@@ -272,14 +283,20 @@ const { title } = Astro.props;
 
       function toggleMenu(open: boolean) {
         isMenuOpen = open;
-        if (!mobileMenu) return;
+        const backdrop = document.getElementById("menu-backdrop");
+
+        if (!mobileMenu || !backdrop) return;
 
         if (isMenuOpen) {
-          mobileMenu.style.transform = "translateX(0)";
           document.body.style.overflow = "hidden";
+          mobileMenu.style.transform = "translateX(0)";
+          backdrop.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+          backdrop.style.pointerEvents = "auto";
         } else {
-          mobileMenu.style.transform = "translateX(100%)";
           document.body.style.overflow = "";
+          mobileMenu.style.transform = "translateX(100%)";
+          backdrop.style.backgroundColor = "rgba(0, 0, 0, 0)";
+          backdrop.style.pointerEvents = "none";
         }
       }
 
