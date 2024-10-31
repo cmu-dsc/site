@@ -42,7 +42,7 @@ def main():
 
     # Process all images in input directory
     for input_path in input_dir.glob("*"):
-        if input_path.suffix.lower() in (".png", ".jpg", ".jpeg", ".gif"):
+        if input_path.suffix.lower() in (".png", ".jpg", ".jpeg", ".gif", ".webp"):
             output_path = output_dir / f"{input_path.stem}.webp"
             print(f"Processing: {input_path.name}")
             optimize_image(str(input_path), str(output_path))
