@@ -1,5 +1,7 @@
 ---
 import DiscordIcon from "../icons/discord.svg?raw";
+import GithubIcon from "../icons/github.svg?raw";
+import InstagramIcon from "../icons/instagram.svg?raw";
 import MailIcon from "../icons/mail.svg?raw";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -17,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
 			data science through hands-on projects, workshops, and competitions.
 		</p>
 
-		<div class="flex flex-col sm:flex-row gap-4 sm:space-x-4 mb-12">
+		<div class="flex flex-col items-center gap-6 mb-8">
 			<a
 				href="https://tartanconnect.cmu.edu/datascience/club_signup"
 				class="bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center justify-center"
@@ -25,13 +27,33 @@ import Layout from "../layouts/Layout.astro";
 				<span class="w-5 h-5 mr-2" set:html={MailIcon} />
 				Join our Mailing List
 			</a>
-			<a
-				href="https://discord.gg/zCvq2ejkk5"
-				class="bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center justify-center"
-			>
-				<span class="w-5 h-5 mr-2" set:html={DiscordIcon} />
-				Join our Discord
-			</a>
+
+			<div class="flex gap-6">
+				<a
+					href="https://discord.gg/zCvq2ejkk5"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span class="w-8 h-8 block" set:html={DiscordIcon} />
+				</a>
+				<a
+					href="https://instagram.com/cmudsc"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span class="w-8 h-8 block" set:html={InstagramIcon} />
+				</a>
+				<a
+					href="https://github.com/cmu-dsc"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span class="w-8 h-8 block" set:html={GithubIcon} />
+				</a>
+			</div>
 		</div>
 
 		<iframe
