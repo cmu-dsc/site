@@ -103,7 +103,9 @@
     {
       "name": "Vincent Huai",
       "title": "Junior Outreach Director",
-      "bio": "I'm a sophomore majoring in statistics and machine learning."
+      "image": "/images/board/vincent.jpeg",
+      "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
+      "linkedin": "https://www.linkedin.com/in/vincent-huai"
     }
   ]
 }
