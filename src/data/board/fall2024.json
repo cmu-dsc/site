@@ -92,7 +92,7 @@
       "name": "Yeonji Baek",
       "title": "Social Director",
       "image": "/images/board/yeonji.jpg",
-      "bio": "I'm a junior majoring in statistics and machine learning.",
+      "bio": "Hello guys. I'm Yeonji, and I'm a junior majoring in statistics and machine learning. I love NYT sudoku and sports photography. Thanks",
       "linkedin": "https://www.linkedin.com/in/yeonji-baek/"
     },
     {
@@ -106,6 +106,19 @@
       "image": "/images/board/vincent.jpeg",
       "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
       "linkedin": "https://www.linkedin.com/in/vincent-huai"
+    },
+    {
+      "name": "Tor Taepaisitphongse",
+      "title": "Events Director",
+      "bio": "I'm a sophomore majoring in Information Systems.",
+      "linkedin": "https://www.linkedin.com/in/ctae",
+      "github": "https://github.com/Tor4848"
+    },
+    {
+      "name": "Preetham Manapuri",
+      "title": "Projects Director",
+      "bio": "I'm a freshman majoring in Computer Science.",
+      "linkedin": "https://www.linkedin.com/in/preetham-manapuri"
     }
   ]
 }
