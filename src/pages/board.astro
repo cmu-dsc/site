@@ -1,19 +1,10 @@
 ---
 import { Image } from "astro:assets";
+import alumniData from "../data/alumni.json";
+import boardData from "../data/board.json";
 import GithubIcon from "../icons/github.svg?raw";
 import LinkedInIcon from "../icons/linkedin.svg?raw";
 import Layout from "../layouts/Layout.astro";
-
-import fall2019 from "../data/board/fall2019.json";
-import fall2020 from "../data/board/fall2020.json";
-import fall2021 from "../data/board/fall2021.json";
-import fall2023 from "../data/board/fall2023.json";
-import fall2024 from "../data/board/fall2024.json";
-import spring2019 from "../data/board/spring2019.json";
-import spring2020 from "../data/board/spring2020.json";
-import spring2021 from "../data/board/spring2021.json";
-import spring2023 from "../data/board/spring2023.json";
-import spring2024 from "../data/board/spring2024.json";
 
 interface BoardMember {
   name: string;
@@ -24,24 +15,22 @@ interface BoardMember {
   linkedin?: string;
 }
 
-interface SemesterData {
-  semester: string;
-  members: BoardMember[];
+interface AlumniMember {
+  name: string;
+  major: string;
+  gradYear: string;
+  currentTitle?: string;
+  boardPositions: {
+    title: string;
+    semesters: string[];
+  }[];
+  image?: string;
+  github?: string;
+  linkedin?: string;
 }
 
-const boardData: SemesterData[] = [
-  fall2024,
-  spring2024,
-  fall2023,
-  spring2023,
-  fall2021,
-  spring2021,
-  fall2020,
-  spring2020,
-  fall2019,
-  spring2019,
-];
-const semesters = boardData.map((data) => data.semester);
+const board = boardData as BoardMember[];
+const alumni = alumniData as AlumniMember[];
 ---
 
 <Layout title="Board - CMU Data Science Club">
@@ -51,176 +40,239 @@ const semesters = boardData.map((data) => data.semester);
         Our Board
       </h1>
 
-      <!-- Semester Tabs -->
+      <!-- Simplified Tabs -->
       <div class="relative mb-8 -mx-8">
         <div class="overflow-x-auto scrollbar-hide px-8">
-          <div class="flex min-w-max border-b md:justify-center gap-4">
-            {
-              semesters.map((semester, index) => {
-                const [term, year] = semester.split(" ");
-                return (
-                  <button
-                    class="semester-tab px-4 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap flex flex-col items-center text-center"
-                    data-semester={semester}
-                    data-active={index === 0}
-                  >
-                    <span class="text-xs uppercase tracking-wider opacity-60">
-                      {term}
-                    </span>
-                    <span>{year}</span>
-                  </button>
-                );
-              })
-            }
+          <div class="flex justify-center gap-4 border-b">
+            <button
+              class="semester-tab px-4 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap"
+              data-tab="current"
+              data-active="true"
+            >
+              Current Board
+            </button>
+            <button
+              class="semester-tab px-4 py-2 text-[#082b57] font-medium border-b-2 whitespace-nowrap"
+              data-tab="alumni"
+              data-active="false"
+            >
+              Alumni
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Board Members Grid -->
-      {
-        boardData.map((data, index) => (
-          <div
-            class="semester-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 transition-opacity duration-150"
-            data-semester={data.semester}
-            style={`opacity: ${index === 0 ? "1" : "0"}; display: ${index === 0 ? "grid" : "none"}`}
-          >
-            {data.members.map((member) => (
-              <div class="bg-white/20 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl hover:bg-white/30 border border-white/10">
-                <div class="relative w-full pb-[100%] flex-shrink-0">
-                  {member.image ? (
-                    <picture>
-                      <source
-                        srcset={member.image
-                          .replace("/images/", "/optimized-images/")
-                          .replace(/\.(png|jpg|jpeg)$/, ".webp")}
-                        type="image/webp"
-                      />
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={300}
-                        height={300}
-                        format="webp"
-                        loading="lazy"
-                        class="absolute top-0 left-0 w-full h-full object-cover"
-                      />
-                    </picture>
-                  ) : (
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-200/50 backdrop-blur-sm flex items-center justify-center">
-                      <div class="text-4xl text-gray-500">
-                        {member.name
-                          .split(" ")
-                          .map((word) => word[0])
-                          .join("")}
-                      </div>
+      <!-- Current Board Grid -->
+      <div
+        class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 transition-opacity duration-150"
+        data-tab="current"
+        style="opacity: 1; display: grid;"
+      >
+        {
+          board.map((member) => (
+            <div class="bg-white/20 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl hover:bg-white/30 border border-white/10">
+              <div class="relative w-full pb-[100%] flex-shrink-0">
+                {member.image ? (
+                  <picture>
+                    <source
+                      srcset={member.image
+                        .replace("/images/", "/optimized-images/")
+                        .replace(/\.(png|jpg|jpeg)$/, ".webp")}
+                      type="image/webp"
+                    />
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={300}
+                      height={300}
+                      format="webp"
+                      loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover"
+                    />
+                  </picture>
+                ) : (
+                  <div class="absolute top-0 left-0 w-full h-full bg-gray-200/50 backdrop-blur-sm flex items-center justify-center">
+                    <div class="text-4xl text-gray-500">
+                      {member.name
+                        .split(" ")
+                        .map((word) => word[0])
+                        .join("")}
                     </div>
+                  </div>
+                )}
+              </div>
+              <div class="p-4 flex flex-col flex-grow">
+                <div class="flex-grow">
+                  <h3 class="text-lg font-semibold text-[#082b57]">
+                    {member.name}
+                  </h3>
+                  <p class="text-[#082b57]/80 font-medium text-sm">
+                    {member.title}
+                  </p>
+                  <p class="text-gray-600 mt-2 text-sm">{member.bio}</p>
+                </div>
+                <div class="flex gap-3 mt-3 pt-3 border-t">
+                  {member?.github && (
+                    <a
+                      href={member?.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-600 hover:text-[#082b57] transition-colors"
+                      data-umami-event="Board Social Click"
+                      data-umami-event-platform="GitHub"
+                      data-umami-event-member={member.name}
+                    >
+                      <div class="w-5 h-5" set:html={GithubIcon} />
+                    </a>
+                  )}
+                  {member?.linkedin && (
+                    <a
+                      href={member?.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-600 hover:text-[#082b57] transition-colors"
+                      data-umami-event="Board Social Click"
+                      data-umami-event-platform="LinkedIn"
+                      data-umami-event-member={member.name}
+                    >
+                      <div class="w-5 h-5" set:html={LinkedInIcon} />
+                    </a>
                   )}
                 </div>
-                <div class="p-4 flex flex-col flex-grow">
-                  <div class="flex-grow">
-                    <h3 class="text-lg font-semibold text-[#082b57]">
-                      {member.name}
-                    </h3>
-                    <p class="text-[#082b57]/80 font-medium text-sm">
-                      {member.title}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Alumni Grid -->
+      <div
+        class="tab-content grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 transition-opacity duration-150"
+        data-tab="alumni"
+        style="opacity: 0; display: none;"
+      >
+        {
+          alumni.map((member) => (
+            <div class="bg-white/20 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl hover:bg-white/30 border border-white/10">
+              <div class="relative w-full pb-[100%] flex-shrink-0">
+                {member.image ? (
+                  <picture>
+                    <source
+                      srcset={member.image
+                        .replace("/images/", "/optimized-images/")
+                        .replace(/\.(png|jpg|jpeg)$/, ".webp")}
+                      type="image/webp"
+                    />
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={150}
+                      height={150}
+                      format="webp"
+                      loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover"
+                    />
+                  </picture>
+                ) : (
+                  <div class="absolute top-0 left-0 w-full h-full bg-gray-200/50 backdrop-blur-sm flex items-center justify-center">
+                    <div class="text-3xl text-gray-500">
+                      {member.name
+                        .split(" ")
+                        .map((word) => word[0])
+                        .join("")}
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div class="p-3 flex flex-col flex-grow">
+                <div class="flex-grow">
+                  <h3 class="text-base font-semibold text-[#082b57]">
+                    {member.name}
+                  </h3>
+                  <p class="text-[#082b57]/80 font-medium text-xs">
+                    {member.major}, {member.gradYear}
+                  </p>
+                  <div class="mt-1.5">
+                    {member.boardPositions.map((position) => (
+                      <div class="text-xs text-gray-600">
+                        <span class="font-medium">{position.title}</span>
+                        <span class="text-gray-500">
+                          {" "}
+                          ({position.semesters.join(", ")})
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  {member.currentTitle && (
+                    <p class="text-gray-600 text-xs mt-1.5">
+                      {member.currentTitle}
                     </p>
-                    <p class="text-gray-600 mt-2 text-sm">{member.bio}</p>
-                  </div>
-                  <div class="flex gap-3 mt-3 pt-3 border-t">
-                    {member?.github && (
-                      <a
-                        href={member?.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-gray-600 hover:text-[#082b57] transition-colors"
-                        data-umami-event="Board Social Click"
-                        data-umami-event-platform="GitHub"
-                        data-umami-event-member={member.name}
-                      >
-                        <div class="w-5 h-5" set:html={GithubIcon} />
-                      </a>
-                    )}
-                    {member?.linkedin && (
-                      <a
-                        href={member?.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-gray-600 hover:text-[#082b57] transition-colors"
-                        data-umami-event="Board Social Click"
-                        data-umami-event-platform="LinkedIn"
-                        data-umami-event-member={member.name}
-                      >
-                        <div class="w-5 h-5" set:html={LinkedInIcon} />
-                      </a>
-                    )}
-                  </div>
+                  )}
+                </div>
+                <div class="flex gap-2 mt-2 pt-2 border-t">
+                  {member?.github && (
+                    <a
+                      href={member?.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-600 hover:text-[#082b57] transition-colors"
+                      data-umami-event="Alumni Social Click"
+                      data-umami-event-platform="GitHub"
+                      data-umami-event-member={member.name}
+                    >
+                      <div class="w-4 h-4" set:html={GithubIcon} />
+                    </a>
+                  )}
+                  {member?.linkedin && (
+                    <a
+                      href={member?.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-600 hover:text-[#082b57] transition-colors"
+                      data-umami-event="Alumni Social Click"
+                      data-umami-event-platform="LinkedIn"
+                      data-umami-event-member={member.name}
+                    >
+                      <div class="w-4 h-4" set:html={LinkedInIcon} />
+                    </a>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
-        ))
-      }
+            </div>
+          ))
+        }
+      </div>
     </div>
   </main>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Set initial active state for the first tab
-      const firstTab = document.querySelector(".semester-tab") as HTMLElement;
-      if (firstTab) {
-        firstTab.setAttribute("data-active", "true");
-      }
-
-      const tabs = document.querySelectorAll(".semester-tab");
-      const contents = document.querySelectorAll(".semester-content");
+      const tabs = document.querySelectorAll("[data-tab]");
+      const contents = document.querySelectorAll(".tab-content");
 
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
+          const targetTab = tab.getAttribute("data-tab");
+
           // Update tab styles
           tabs.forEach((t) => t.setAttribute("data-active", "false"));
           tab.setAttribute("data-active", "true");
 
           // Show/hide content with animation
-          const selectedSemester = tab.getAttribute("data-semester");
-
-          // First, fade out all contents
           contents.forEach((content) => {
-            (content as HTMLElement).style.opacity = "0";
-          });
-
-          // Wait for fade out, then switch contents
-          setTimeout(() => {
-            contents.forEach((content) => {
-              const contentSemester = content.getAttribute("data-semester");
-              if (contentSemester === selectedSemester) {
-                (content as HTMLElement).style.display = "grid";
-                // Trigger reflow
-                (content as HTMLElement).offsetHeight;
-                // Fade in
+            const contentTab = content.getAttribute("data-tab");
+            if (contentTab === targetTab) {
+              (content as HTMLElement).style.display = "grid";
+              setTimeout(() => {
                 (content as HTMLElement).style.opacity = "1";
-              } else {
+              }, 10);
+            } else {
+              (content as HTMLElement).style.opacity = "0";
+              setTimeout(() => {
                 (content as HTMLElement).style.display = "none";
-              }
-            });
-          }, 150);
-        });
-      });
-
-      // Preload all images after critical content is loaded
-      window.requestIdleCallback(() => {
-        const allImages = Array.from(
-          document.querySelectorAll(".semester-content img[data-src]"),
-        )
-          .map((img) => img.getAttribute("data-src"))
-          .filter((src): src is string => src !== null);
-
-        allImages.forEach((src) => {
-          const link = document.createElement("link");
-          link.rel = "preload";
-          link.as = "image";
-          link.href = src;
-          link.setAttribute("importance", "low");
-          document.head.appendChild(link);
+              }, 150);
+            }
+          });
         });
       });
     });

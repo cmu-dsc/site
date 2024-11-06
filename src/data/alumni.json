@@ -1,0 +1,343 @@
+[
+  {
+    "name": "Noelani Phillips",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2025",
+    "image": "/images/alumni/noelani.jpg",
+    "boardPositions": [
+      {
+        "title": "Mentorship Director",
+        "semesters": [
+          "S24"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/noelaniphillips2025"
+  },
+  {
+    "name": "Suha Niyas",
+    "major": "Statistics",
+    "gradYear": "2024",
+    "image": "/images/alumni/suha.jpg",
+    "currentTitle": "Data Science Engineer at Qorvo",
+    "boardPositions": [
+      {
+        "title": "Design Director",
+        "semesters": [
+          "S24"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/suha-niyas"
+  },
+  {
+    "name": "Raaka Mukhopadhyay",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2024",
+    "image": "/images/alumni/raaka.jpg",
+    "currentTitle": "Project Coordinator at Five Rings",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "F23",
+          "S23"
+        ]
+      },
+      {
+        "title": "VP of Marketing",
+        "semesters": [
+          "F21"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/raaka"
+  },
+  {
+    "name": "Idris Wardere",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2025",
+    "image": "/images/alumni/idris.jpg",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "F23",
+          "S23"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/idris-wardere"
+  },
+  {
+    "name": "Mengrou Shou",
+    "major": "Computer Science",
+    "gradYear": "2024",
+    "image": "/images/alumni/meng.jpg",
+    "boardPositions": [
+      {
+        "title": "VP of Internal Affairs",
+        "semesters": [
+          "F23",
+          "S23"
+        ]
+      },
+      {
+        "title": "VP of Developments",
+        "semesters": [
+          "F21"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/mshou"
+  },
+  {
+    "name": "Anisha Chatterjee",
+    "major": "Artificial Intelligence",
+    "gradYear": "2025",
+    "image": "/images/alumni/anisha.jpeg",
+    "boardPositions": [
+      {
+        "title": "VP of Events",
+        "semesters": [
+          "F23",
+          "S23"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/anisha-chatterjee"
+  },
+  {
+    "name": "Jeremy Li",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2025",
+    "image": "/images/alumni/jeremy.jpg",
+    "boardPositions": [
+      {
+        "title": "VP of Communications",
+        "semesters": [
+          "F23"
+        ]
+      },
+      {
+        "title": "VP of Events",
+        "semesters": [
+          "S23"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/jiabin-jeremy-li"
+  },
+  {
+    "name": "Jet Wu",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2026",
+    "image": "/images/alumni/jet.jpg",
+    "boardPositions": [
+      {
+        "title": "VP of Events",
+        "semesters": [
+          "S23"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/jet-wu-cmu"
+  },
+  {
+    "name": "Bonnie Chan",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2023",
+    "image": "/images/alumni/bonnie.jpg",
+    "currentTitle": "Senior MTS at AT&T",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "F21"
+        ]
+      },
+      {
+        "title": "VP of Marketing",
+        "semesters": [
+          "S21",
+          "F20"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/chan-bonnie"
+  },
+  {
+    "name": "Owen Mo",
+    "major": "Computer Science",
+    "gradYear": "2023",
+    "image": "/images/alumni/owen.png",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "F21"
+        ]
+      },
+      {
+        "title": "VP of Developments",
+        "semesters": [
+          "S21",
+          "F20"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fiona Xie",
+    "major": "Artificial Intelligence",
+    "gradYear": "2023",
+    "image": "/images/alumni/fiona.jpg",
+    "currentTitle": "Software Engineer at Netflix",
+    "boardPositions": [
+      {
+        "title": "VP of Outreach",
+        "semesters": [
+          "F21",
+          "S21",
+          "F20"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Roshan Ram",
+    "major": "Information Systems",
+    "gradYear": "2023",
+    "image": "/images/alumni/roshan.jpeg",
+    "currentTitle": "Machine Learning Engineer at Bland AI",
+    "boardPositions": [
+      {
+        "title": "VP of Projects",
+        "semesters": [
+          "F21"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/roshanr11"
+  },
+  {
+    "name": "Qiyun Chen",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2022",
+    "currentTitle": "Software Engineer at Two Sigma",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "S21",
+          "F20"
+        ]
+      },
+      {
+        "title": "VP of Outreach",
+        "semesters": [
+          "S20",
+          "F19",
+          "S19"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/qiyun-chen-313a16193"
+  },
+  {
+    "name": "Jerry Li",
+    "major": "Economics, Statistics and Machine Learning",
+    "gradYear": "2022",
+    "currentTitle": "Senior Business Analyst at McKinsey",
+    "image": "/images/alumni/jerry.jpg",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "S21",
+          "F20"
+        ]
+      },
+      {
+        "title": "VP of Marketing",
+        "semesters": [
+          "S20",
+          "F19",
+          "S19"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/lijerryjr"
+  },
+  {
+    "name": "Max Hirsch",
+    "major": "Math",
+    "gradYear": "2023",
+    "currentTitle": "PhD Student at U.C. Berkeley",
+    "image": "/images/alumni/max.jpg",
+    "boardPositions": [
+      {
+        "title": "VP of Projects",
+        "semesters": [
+          "S21",
+          "F20"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/max-hirsch"
+  },
+  {
+    "name": "Jessica Lee",
+    "major": "Computer Science",
+    "gradYear": "2021",
+    "currentTitle": "PhD Student at U.C. Berkeley",
+    "image": "/images/alumni/jessica.jpg",
+    "boardPositions": [
+      {
+        "title": "President",
+        "semesters": [
+          "S20",
+          "F19",
+          "S19"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/jessica-annie-lee"
+  },
+  {
+    "name": "Husni Almoubayyed",
+    "major": "PhD Physics",
+    "gradYear": "2021",
+    "currentTitle": "AI Engineering Manager at Carnegie Learning",
+    "image": "/images/alumni/husni.jpg",
+    "boardPositions": [
+      {
+        "title": "VP of Projects",
+        "semesters": [
+          "S20",
+          "F19",
+          "S19"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/husnialmoubayyed"
+  },
+  {
+    "name": "Tony Wang",
+    "major": "Computational Finance",
+    "gradYear": "2021",
+    "currentTitle": "Quantitative Trader at GTS",
+    "image": "/images/alumni/tony.jpeg",
+    "boardPositions": [
+      {
+        "title": "VP of Finance",
+        "semesters": [
+          "S20",
+          "F19",
+          "S19"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/zheyew"
+  }
+]
