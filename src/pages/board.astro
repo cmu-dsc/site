@@ -192,9 +192,9 @@ const alumni = alumniData as AlumniMember[];
                   <p class="text-[#082b57]/80 font-medium text-xs">
                     {member.major}, {member.gradYear}
                   </p>
-                  <div class="mt-1.5">
+                  <div class="mt-1.5 mb-3 space-y-0.5">
                     {member.boardPositions.map((position) => (
-                      <div class="text-xs text-gray-600">
+                      <div class="text-xs text-gray-700">
                         <span class="font-medium">{position.title}</span>
                         <span class="text-gray-500">
                           {" "}
@@ -203,13 +203,13 @@ const alumni = alumniData as AlumniMember[];
                       </div>
                     ))}
                   </div>
-                  {member.currentTitle && (
-                    <p class="text-gray-600 text-xs mt-1.5">
-                      {member.currentTitle}
-                    </p>
-                  )}
                 </div>
-                <div class="flex gap-2 mt-2 pt-2 border-t">
+                {member.currentTitle && (
+                  <p class="text-xs text-gray-600 mb-2 italic">
+                    Currently: {member.currentTitle}
+                  </p>
+                )}
+                <div class="flex gap-2 mt-auto pt-2 border-t">
                   {member?.github && (
                     <a
                       href={member?.github}
