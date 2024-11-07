@@ -100,7 +100,7 @@ const tagNames = {
             }`}
           >
             <div class="bg-white/10 backdrop-blur-sm rounded-lg border border-white/5 overflow-hidden">
-              <div class="divide-y divide-white/10">
+              <div class="divide-y md:divide-y-0 divide-gray-300/80">
                 {data.events.map((event) => (
                   <div class="group hover:bg-white/10 transition-all duration-200">
                     <div class="p-4 md:p-6 flex flex-col md:flex-row gap-6">
@@ -316,15 +316,16 @@ const tagNames = {
       --tag-technical: rgba(233, 213, 255, 0.6);
     }
 
-    /* Optional: Add a subtle animation for the resource buttons */
+    /* Remove the group-based hover animation */
     @media (min-width: 768px) {
-      .group .inline-flex {
+      .inline-flex {
         opacity: 0.7;
         transform: translateY(0);
         transition: all 0.2s ease-out;
       }
       
-      .group:hover .inline-flex {
+      /* Change from .group:hover to individual hover */
+      .inline-flex:hover {
         opacity: 1;
         transform: translateY(-2px);
       }
