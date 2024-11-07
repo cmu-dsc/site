@@ -1,6 +1,8 @@
 ---
 import fall2024 from "../data/events/fall2024.json";
 import spring2024 from "../data/events/spring2024.json";
+import spring2023 from "../data/events/spring2023.json";
+import fall2023 from "../data/events/fall2023.json";
 import Layout from "../layouts/Layout.astro";
 
 interface Event {
@@ -18,7 +20,7 @@ interface SemesterData {
   events: Event[];
 }
 
-const eventData: SemesterData[] = [fall2024, spring2024] as SemesterData[];
+const eventData: SemesterData[] = [fall2024, spring2024, fall2023, spring2023] as SemesterData[];
 // Sort events within each semester by date in descending order
 eventData.forEach((semester) => {
   semester.events.sort(
