@@ -24,4 +24,4 @@
   status = 200
 
 [functions."github-contributions"]
-  schedule = "@every 6h"
+  schedule = "0 */6 * * *"
