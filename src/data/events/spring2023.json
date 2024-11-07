@@ -1,0 +1,53 @@
+{
+  "semester": "Spring 2023",
+  "events": [
+    {
+      "title": "Intro to PyTorch",
+      "description": "Learn the fundamentals of PyTorch, including tensors, neural networks, and how to build basic deep learning models.",
+      "date": "2023-02-25",
+      "slides": "https://docs.google.com/presentation/d/1GDByplSSWzfNlgx-BD876XsICvo9xM11CBk1TiCS9l4/edit?usp=sharing",
+      "notebook": "https://drive.google.com/file/d/1PyDjUQpChdJWBi6xjbnuD6xlmvkw44qr/view?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
+    },
+    {
+      "title": "Text Generation Models Workshop",
+      "description": "Explore modern text generation models like GPT and learn about the underlying transformer architecture, training approaches, and practical applications.",
+      "date": "2023-04-08",
+      "slides": "https://docs.google.com/presentation/d/1pA9L8FzwQcNANXFPE0htV9txg8OmX2H261IfI1MtQXM/edit?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
+    },
+    {
+      "title": "Weights and Biases Workshop",
+      "description": "Learn how to use Weights & Biases (W&B) for experiment tracking, visualization, and collaboration in machine learning projects.",
+      "date": "2023-03-16",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
+    },
+    {
+      "title": "DSC S23 Intro Social",
+      "description": "Join us for our Spring 2023 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "date": "2023-02-02",
+      "tags": [
+        "social"
+      ],
+      "slides": "https://docs.google.com/presentation/d/1BD4RqdypllItBo9w_kI-tBwODVtsJ-01C_od9V_0IsA/edit?usp=sharing"
+    },
+    {
+      "title": "DSC S23 Mentor/Mentee Social",
+      "description": "Connect with your DSC mentors and mentees while enjoying food and fun activities with the data science community.",
+      "date": "2023-02-16",
+      "tags": [
+        "social"
+      ],
+      "slides": "https://docs.google.com/presentation/d/1ZKodlxQ1YhL4AmXQW7irS2sg_tx0JSiObQoxbGA4YEE/edit?usp=sharing"
+    }
+  ]
+}

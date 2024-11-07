@@ -1,0 +1,43 @@
+{
+  "semester": "Fall 2023",
+  "events": [
+    {
+      "title": "DSC F23 Intro Social",
+      "description": "Join us for our Fall 2023 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "date": "2023-09-12",
+      "tags": [
+        "social"
+      ],
+      "slides": "https://docs.google.com/presentation/d/1KDQ7j_WMha-PlCQJqC4ARlCh1IFITlM5WnwpAvydL-Q/edit?usp=sharing"
+    },
+    {
+      "title": "March Madness Workshop",
+      "date": "2023-09-23",
+      "description": "Learn how to build machine learning models to predict March Madness basketball tournament outcomes using historical data and statistics.",
+      "tags": [
+        "technical",
+        "workshop"
+      ],
+      "notebook": "https://colab.research.google.com/drive/1mx_8JykoBo3F_4ZB__5zAbN4TBdj0UOv?usp=sharing"
+    },
+    {
+      "title": "Nick Singh, DataLemur: Acing the Data Science Interview",
+      "description": "Learn interview strategies and tips from Nick Singh, author of 'Ace the Data Science Interview'.",
+      "date": "2023-09-26",
+      "tags": [
+        "speaker",
+        "career"
+      ]
+    },
+    {
+      "title": "Deep Learning Workshop",
+      "description": "Learn the fundamentals of deep learning, including neural network architectures, training techniques, and practical applications using modern frameworks.",
+      "date": "2023-11-04",
+      "tags": [
+        "technical",
+        "workshop"
+      ],
+      "slides": "https://docs.google.com/presentation/d/15640Z7_T7BMh2Q6NBDDia0Loqc59qf2idQx2W7AL3wA/edit?usp=sharing"
+    }
+  ]
+}

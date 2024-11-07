@@ -10,11 +10,11 @@
       ]
     },
     {
-      "title": "Soccer Match Prediction Workshop",
+      "title": "Soccer Analysis Workshop",
       "description": "Learn how to build machine learning models to predict soccer match outcomes using historical data and statistics.",
       "date": "2024-02-09",
       "slides": "https://docs.google.com/presentation/d/17rlWtxh5ZlnjQoy5ciYLmy19nxXvthol/edit?usp=sharing&ouid=107214303712024226303&rtpof=true&sd=true",
-      "notebook": "https://drive.google.com/file/d/1F_nT_edcn0HrAllrdUST4u0UlWW54itL/view?usp=sharing",
+      "notebook": "https://drive.google.com/file/d/1T_EQYVQl1cQZzG8pJDlCo2lRrdDnTS9R/view?usp=sharing",
       "tags": [
         "technical",
         "workshop"
@@ -35,7 +35,8 @@
       "tags": [
         "career",
         "workshop"
-      ]
+      ],
+      "slides": "https://docs.google.com/presentation/d/1DqA1-c_JHn_Wx5MU6XFjTL59zivIc9IoK_pyehL3TYw/edit?usp=sharing"
     },
     {
       "title": "Climatehack.AI Workshop",
