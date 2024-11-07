@@ -2,3 +2,26 @@
   from = "/datathon/*"
   to = "https://datathon-splash.netlify.app/:splat"
   status = 200
+
+[build]
+  command = "bun run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  command = "bun run dev"
+  targetPort = 4321
+  port = 8888
+  publish = "dist"
+  framework = "astro"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions."github-contributions"]
+  schedule = "@every 6h"

@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GithubContributionGraph from "../components/GithubContributionGraph.astro";
+---
+
+<Layout title="Projects - CMU Data Science Club">
+  <main class="min-h-screen p-8 pt-24">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-[#082b57] mb-8 text-center">
+        Our Projects
+      </h1>
+
+      <!-- GitHub Activity -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-4 text-center">
+          Organization Activity
+        </h2>
+        <div class="flex justify-center">
+          <div class="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 inline-block">
+            <GithubContributionGraph />
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Project cards will go here -->
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Glass effect styles */
+  .backdrop-blur-sm {
+    position: relative;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .backdrop-blur-sm::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 1px;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+</style>

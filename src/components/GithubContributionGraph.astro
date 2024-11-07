@@ -1,0 +1,262 @@
+---
+interface ContributionDay {
+  date: string;
+  count: number;
+  level: 0 | 1 | 2 | 3 | 4;
+}
+
+// Add loading state
+let contributions: ContributionDay[] = [];
+let error = false;
+
+try {
+  const baseUrl = import.meta.env.DEV ? "http://localhost:8888" : "";
+  const response = await fetch(
+    `${baseUrl}/.netlify/functions/github-contributions`,
+    {
+      signal: AbortSignal.timeout(10000), // 10 second timeout
+    }
+  );
+  
+  if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+  contributions = await response.json();
+} catch (e) {
+  console.error("Failed to fetch contributions:", e);
+  error = true;
+}
+
+const totalContributions = contributions.reduce(
+  (sum, day) => sum + day.count,
+  0,
+);
+
+const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
+  switch (level) {
+    case 0:
+      return "bg-gray-100";
+    case 1:
+      return "bg-green-200";
+    case 2:
+      return "bg-green-300";
+    case 3:
+      return "bg-green-500";
+    case 4:
+      return "bg-green-700";
+  }
+};
+
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+const weekdays = ["", "Mon", "", "Wed", "", "Fri", ""];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+// Organize contributions by week properly
+const weeks: ContributionDay[][] = [];
+let monthLabels: { label: string; index: number }[] = [];
+let lastMonth = -1;
+
+// Sort contributions by date
+const sortedContributions = [...contributions].sort(
+  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+);
+
+// Create a map of date to contribution
+const contributionMap = new Map(
+  sortedContributions.map((contribution) => [contribution.date, contribution]),
+);
+
+// Generate all dates for the last year
+const today = new Date();
+const oneYearAgo = new Date();
+oneYearAgo.setFullYear(today.getFullYear() - 1);
+
+// Start from the first Sunday before or on oneYearAgo
+const startDate = new Date(oneYearAgo);
+startDate.setDate(startDate.getDate() - startDate.getDay());
+
+// Create weeks array
+let currentWeek: ContributionDay[] = [];
+let currentDate = new Date(startDate);
+
+while (currentDate <= today) {
+  const dateStr = currentDate.toISOString().split("T")[0];
+  const month = currentDate.getMonth();
+
+  // Track month labels at the start of each month
+  if (month !== lastMonth) {
+    monthLabels.push({
+      label: months[month],
+      index: weeks.length,
+    });
+    lastMonth = month;
+  }
+
+  // Add contribution data or empty day
+  const contribution = contributionMap.get(dateStr) || {
+    date: dateStr,
+    count: 0,
+    level: 0,
+  };
+
+  currentWeek.push(contribution);
+
+  // Start new week on Saturday
+  if (currentDate.getDay() === 6) {
+    // Ensure week has exactly 7 days
+    while (currentWeek.length < 7) {
+      const paddingDate = new Date(currentDate);
+      paddingDate.setDate(paddingDate.getDate() + (7 - currentWeek.length));
+      const paddingDateStr = paddingDate.toISOString().split("T")[0];
+      currentWeek.push({
+        date: paddingDateStr,
+        count: 0,
+        level: 0,
+      });
+    }
+
+    weeks.push(currentWeek);
+    currentWeek = [];
+  }
+
+  currentDate.setDate(currentDate.getDate() + 1);
+}
+
+// Handle the last partial week if it exists
+if (currentWeek.length > 0) {
+  // Pad the last week to 7 days
+  while (currentWeek.length < 7) {
+    const paddingDate = new Date(currentDate);
+    paddingDate.setDate(paddingDate.getDate() + (7 - currentWeek.length));
+    const paddingDateStr = paddingDate.toISOString().split("T")[0];
+    currentWeek.push({
+      date: paddingDateStr,
+      count: 0,
+      level: 0,
+    });
+  }
+  weeks.push(currentWeek);
+}
+
+// Calculate the number of weeks needed
+const totalWeeks = Math.ceil(
+  (today.getTime() - startDate.getTime()) / (7 * 24 * 60 * 60 * 1000),
+);
+
+// Track month labels with correct positioning
+monthLabels = [];
+let currentMonth = -1;
+
+weeks.forEach((week, weekIndex) => {
+  const firstDayOfWeek = new Date(week[0].date);
+  const lastDayOfWeek = new Date(week[6].date);
+
+  // Check if this week contains the start of a month
+  for (let day of week) {
+    const date = new Date(day.date);
+    if (date.getMonth() !== currentMonth && date.getDate() === 1) {
+      monthLabels.push({
+        label: months[date.getMonth()],
+        index: weekIndex,
+      });
+      currentMonth = date.getMonth();
+      break;
+    }
+  }
+});
+---
+
+<div class="space-y-2">
+  {error ? (
+    <div class="text-sm text-red-600">
+      Failed to load contribution data. Please try again later.
+    </div>
+  ) : contributions.length === 0 ? (
+    <div class="animate-pulse">
+      <div class="h-4 bg-gray-200 rounded w-60 mb-4"></div>
+      <div class="grid grid-cols-52 gap-1">
+        {Array(52 * 7).fill(0).map(() => (
+          <div class="w-3 h-3 bg-gray-100 rounded-sm"></div>
+        ))}
+      </div>
+    </div>
+  ) : (
+    <div class="relative">
+      <!-- Month labels with adjusted alignment -->
+      <div class="relative flex ml-10 mb-1 text-xs text-gray-500 h-4">
+        {
+          monthLabels.map(({ label, index }) => (
+            <div class="absolute z-10" style={`left: ${index * 13}px`}>
+              {label}
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="flex">
+        <!-- Weekday labels (Mon, Wed, Fri only) -->
+        <div
+          class="flex flex-col justify-between text-xs text-gray-500 mr-2"
+          style="height: 91px"
+        >
+          {weekdays.map((day) => <div>{day}</div>)}
+        </div>
+
+        <!-- Contribution grid -->
+        <div
+          class="inline-grid grid-rows-7 gap-1"
+          style={`grid-template-columns: repeat(${weeks.length}, minmax(0, 1fr)); width: ${weeks.length * 13}px;`}
+        >
+          {
+            weekdays.map((_, dayIndex) =>
+              weeks.map((week) => (
+                <div
+                  class={`w-3 h-3 rounded-sm ${getContributionColor(week[dayIndex]?.level || 0)} relative group cursor-pointer`}
+                >
+                  <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+                    {week[dayIndex]?.count || 0} contribution
+                    {(week[dayIndex]?.count || 0) !== 1 ? "s" : ""} on{" "}
+                    {formatDate(week[dayIndex]?.date || "")}
+                  </div>
+                </div>
+              )),
+            )
+          }
+        </div>
+      </div>
+
+      <!-- Legend aligned with actual grid width -->
+      <div
+        class="flex items-center justify-end gap-2 mt-2 text-xs text-gray-500"
+        style={`width: ${weeks.length * 13}px; margin-left: 37px;`}
+      >
+        <span>Less</span>
+        {
+          ([0, 1, 2, 3, 4] as const).map((level) => (
+            <div class={`w-3 h-3 rounded-sm ${getContributionColor(level)}`} />
+          ))
+        }
+        <span>More</span>
+      </div>
+    </div>
+  )}
+</div>
