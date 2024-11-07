@@ -10,6 +10,7 @@ let error: { type: string; message: string } | null = null;
 
 try {
   const baseUrl = import.meta.env.DEV ? "http://localhost:8888" : "";
+  console.log(baseUrl);
   const response = await fetch(
     `${baseUrl}/.netlify/functions/github-contributions`,
     {
