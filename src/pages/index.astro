@@ -22,11 +22,18 @@ import Layout from "../layouts/Layout.astro";
 		<div class="flex flex-col items-center gap-6 mb-8">
 			<a
 				href="https://tartanconnect.cmu.edu/datascience/club_signup"
-				class="bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center justify-center"
+				class="relative inline-flex items-center justify-center group"
 				data-umami-event="Mailing List Signup"
 			>
-				<span class="w-5 h-5 mr-2" set:html={MailIcon} />
-				Join our Mailing List
+				<span
+					class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-md opacity-0 group-hover:opacity-75 transition-opacity duration-300"
+				></span>
+				<span
+					class="relative bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/90 transition-colors inline-flex items-center justify-center"
+				>
+					<span class="w-5 h-5 mr-2" set:html={MailIcon} />
+					Join our Mailing List
+				</span>
 			</a>
 
 			<div class="flex gap-6">

@@ -72,17 +72,19 @@ const menuItems = [
   <div id="tsparticles" class="absolute inset-0 -z-10"></div>
 
   <header
-    class="fixed top-0 left-0 right-0 p-4 z-10 transition-transform duration-300"
+    class="fixed top-0 left-0 right-0 p-4 z-10 transition-all duration-300"
     id="header"
   >
     <nav class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="flex items-center">
-        <a href="/">
-          <img src="/images/dsc.svg" alt="CMU DSC Logo" class="h-8 w-8 mr-2" />
+      <div class="flex items-center group">
+        <a href="/" class="relative transform transition-all duration-300 hover:-rotate-6">
+          <img src="/images/dsc.svg" alt="CMU DSC Logo" class="h-10 w-10 mr-3" />
+          <div class="absolute inset-0 bg-blue-400/20 rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </a>
-        <a href="/" class="text-[#082b57] font-semibold">
+        <a href="/" class="text-[#082b57] font-bold text-lg relative overflow-hidden">
           <span class="md:inline hidden">CMU Data Science Club</span>
           <span class="md:hidden">CMU DSC</span>
+          <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
         </a>
       </div>
 
@@ -107,22 +109,26 @@ const menuItems = [
       </button>
 
       <!-- Desktop Navigation -->
-      <div class="md:flex hidden items-center space-x-6">
+      <div class="md:flex hidden items-center space-x-8">
         {
           menuItems.map((item) => (
             <a
               href={item.href}
-              class="text-[#082b57]/80 hover:text-[#082b57] transition-colors"
+              class="text-[#082b57] hover:text-blue-600 transition-all duration-300 relative group py-2 font-medium"
             >
-              {item.label}
+              <span class="relative z-10">{item.label}</span>
+              <span class="absolute inset-0 bg-blue-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300" />
             </a>
           ))
         }
         <a
           href="https://discord.gg/zCvq2ejkk5"
-          class="bg-[#082b57] text-white px-4 py-1.5 rounded-full hover:bg-[#082b57]/80 transition-colors text-sm"
+          class="relative inline-flex items-center justify-center group"
         >
-          Join Discord
+          <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-md opacity-0 group-hover:opacity-75 transition-opacity duration-300"></span>
+          <span class="relative bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/90 transition-all duration-300 text-sm font-medium">
+            Join Discord
+          </span>
         </a>
       </div>
     </nav>

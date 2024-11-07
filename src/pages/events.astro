@@ -99,79 +99,47 @@ const tagNames = {
               index === 0 ? "block" : "none"
             }`}
           >
-            <div class="overflow-x-auto">
-              <table class="min-w-full bg-white/20 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-white/10">
-                <thead class="bg-[#082b57] text-white">
-                  <tr>
-                    <th class="px-6 py-3 text-left hidden md:table-cell">
-                      Date
-                    </th>
-                    <th class="px-6 py-3 text-left">Event</th>
-                    <th class="px-6 py-3 text-center hidden md:table-cell">
-                      Resources
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-300/60">
-                  {data.events.map((event) => (
-                    <tr class="hover:bg-white/30 transition-colors duration-200">
-                      <td class="px-6 py-4 whitespace-nowrap hidden md:table-cell">
-                        {new Date(event.date + "T12:00:00").toLocaleDateString(
-                          "en-US",
-                          {
-                            month: "short",
-                            day: "numeric",
-                          },
-                        )}
-                      </td>
-                      <td class="px-6 py-4">
-                        <div class="flex flex-col gap-2">
-                          {/* Mobile-only date */}
-                          <div class="text-sm text-gray-500 md:hidden">
-                            {new Date(
-                              event.date + "T12:00:00",
-                            ).toLocaleDateString("en-US", {
-                              month: "short",
-                              day: "numeric",
-                            })}
-                          </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg border border-white/5 overflow-hidden">
+              <div class="divide-y divide-white/10">
+                {data.events.map((event) => (
+                  <div class="group hover:bg-white/10 transition-all duration-200">
+                    <div class="p-4 md:p-6 flex flex-col md:flex-row gap-6">
+                      {/* Date Column */}
+                      <div class="md:w-32 shrink-0">
+                        <time class="text-[#082b57] font-medium">
+                          {new Date(event.date + "T12:00:00").toLocaleDateString("en-US", {
+                            month: "long",
+                            day: "numeric"
+                          })}
+                        </time>
+                      </div>
 
-                          <div class="flex items-center gap-3 flex-wrap">
-                            <div class="font-medium text-[#082b57]">
-                              {event.title}
-                            </div>
-                            {event.tags
-                              .sort(
-                                (a, b) =>
-                                  tagOrder.indexOf(a) - tagOrder.indexOf(b),
-                              )
-                              .map((tag) => (
-                                <span
-                                  class={`text-xs px-2 py-1 rounded-full backdrop-blur-sm ${tagColors[tag]}`}
-                                >
-                                  {tagNames[tag]}
-                                </span>
-                              ))}
-                          </div>
-                          <div class="text-sm text-gray-600 line-clamp-2 hover:line-clamp-none">
-                            {event.description}
-                          </div>
-
-                          {/* Mobile-only resources */}
-                          <div class="flex gap-2 md:hidden mt-2">
+                      {/* Content Column */}
+                      <div class="flex-1">
+                        <div class="flex flex-wrap gap-2 mb-2">
+                          {event.tags.map((tag) => (
+                            <span class={`text-xs px-2 py-0.5 rounded-full ${tagColors[tag]}`}>
+                              {tagNames[tag]}
+                            </span>
+                          ))}
+                        </div>
+                        <h3 class="font-medium text-lg text-[#082b57] mb-2">{event.title}</h3>
+                        <p class="text-sm text-gray-600 mb-4">{event.description}</p>
+                        
+                        {/* Resources Section */}
+                        {(event.slides || event.notebook || event.recording) && (
+                          <div class="flex flex-wrap gap-3 mt-2">
                             {event.slides && (
                               <a
                                 href={event.slides}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
-                                data-umami-event="Resource Download"
-                                data-umami-event-type="Slides"
-                                data-umami-event-title={event.title}
+                                class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
                               >
-                                <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
-                                  Slides
-                                </span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Slides
                               </a>
                             )}
                             {event.notebook && (
@@ -179,14 +147,12 @@ const tagNames = {
                                 href={event.notebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
-                                data-umami-event="Resource Download"
-                                data-umami-event-type="Notebook"
-                                data-umami-event-title={event.title}
+                                class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
                               >
-                                <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
-                                  Notebook
-                                </span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                                Notebook
                               </a>
                             )}
                             {event.recording && (
@@ -194,72 +160,22 @@ const tagNames = {
                                 href={event.recording}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
-                                data-umami-event="Resource Download"
-                                data-umami-event-type="Recording"
-                                data-umami-event-title={event.title}
+                                class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
                               >
-                                <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
-                                  Recording
-                                </span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                Recording
                               </a>
                             )}
                           </div>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 hidden md:table-cell">
-                        <div class="flex justify-center gap-4">
-                          {event.slides && (
-                            <a
-                              href={event.slides}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
-                              data-umami-event="Resource Download"
-                              data-umami-event-type="Slides"
-                              data-umami-event-title={event.title}
-                            >
-                              <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
-                                Slides
-                              </span>
-                            </a>
-                          )}
-                          {event.notebook && (
-                            <a
-                              href={event.notebook}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
-                              data-umami-event="Resource Download"
-                              data-umami-event-type="Notebook"
-                              data-umami-event-title={event.title}
-                            >
-                              <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
-                                Notebook
-                              </span>
-                            </a>
-                          )}
-                          {event.recording && (
-                            <a
-                              href={event.recording}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
-                              data-umami-event="Resource Download"
-                              data-umami-event-type="Recording"
-                              data-umami-event-title={event.title}
-                            >
-                              <span class="bg-[#082b57]/10 backdrop-blur-sm px-3 py-1 rounded-full text-sm hover:bg-[#082b57]/20 transition-colors">
-                                Recording
-                              </span>
-                            </a>
-                          )}
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))
@@ -398,6 +314,20 @@ const tagNames = {
       --tag-competition: rgba(254, 215, 170, 0.6);
       --tag-career: rgba(219, 234, 254, 0.6);
       --tag-technical: rgba(233, 213, 255, 0.6);
+    }
+
+    /* Optional: Add a subtle animation for the resource buttons */
+    @media (min-width: 768px) {
+      .group .inline-flex {
+        opacity: 0.7;
+        transform: translateY(0);
+        transition: all 0.2s ease-out;
+      }
+      
+      .group:hover .inline-flex {
+        opacity: 1;
+        transform: translateY(-2px);
+      }
     }
   </style>
 
