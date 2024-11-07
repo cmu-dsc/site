@@ -85,6 +85,14 @@ const fetchAllPages = async (baseUrl: string, token: string) => {
 
 const handler: Handler = async (event, context) => {
   try {
+    // Add debug logging at the start
+    console.log('Starting github-contributions function');
+    console.log('Environment variables present:', {
+      hasGithubToken: !!process.env.GITHUB_TOKEN,
+      hasSiteId: !!process.env.SITE_ID,
+      hasNetlifyToken: !!process.env.NETLIFY_API_TOKEN
+    });
+
     // Check for cached data first
     try {
       const cachedResponse = await fetch(
@@ -226,6 +234,13 @@ const handler: Handler = async (event, context) => {
     };
   } catch (error) {
     console.error('Handler error:', error);
+    // Add more detailed error information
+    if (error instanceof Error) {
+      console.error('Error name:', error.name);
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
+    
     // Return cached data as fallback if available, even if expired
     try {
       const cachedResponse = await fetch(
