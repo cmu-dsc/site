@@ -15,9 +15,7 @@ let contributions: ContributionDay[] = [];
 let error: { type: string; message: string } | null = null;
 
 try {
-  // const baseUrl = import.meta.env.DEV ? "http://localhost:8888" : "https://cmudsc.com";
   const baseUrl = "https://cmudsc.com";
-  console.log(baseUrl);
   const response = await fetch(
     `${baseUrl}/.netlify/functions/github-contributions`,
     {
@@ -85,6 +83,9 @@ const months = [
   "Dec",
 ];
 
+// Initialize totalContributions with 0
+export let totalContributions = 0;
+
 // Generate dates and organize contributions
 const today = new Date();
 const oneYearAgo = new Date();
@@ -93,9 +94,20 @@ oneYearAgo.setFullYear(today.getFullYear() - 1);
 const startDate = new Date(oneYearAgo);
 startDate.setDate(startDate.getDate() - startDate.getDay());
 
-const sortedContributions = [...contributions].sort(
-  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
-);
+// Add null check for contributions
+const sortedContributions = contributions?.length
+  ? [...contributions].sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+    )
+  : [];
+
+// Calculate totalContributions only if we have data
+if (sortedContributions.length > 0) {
+  totalContributions = sortedContributions.reduce(
+    (sum, day) => sum + day.count,
+    0,
+  );
+}
 
 const contributionMap = new Map(
   sortedContributions.map((contribution) => [contribution.date, contribution]),
@@ -179,6 +191,10 @@ weeks.forEach((week, weekIndex) => {
 });
 ---
 
+<!-- Add this hidden div to store the total -->
+<div id="total-contributions" data-total={totalContributions} class="hidden">
+</div>
+
 <div class="space-y-2">
   {
     error ? (
@@ -261,7 +277,9 @@ weeks.forEach((week, weekIndex) => {
           <div class="flex items-center justify-center gap-2 mt-4 text-xs text-gray-500 md:justify-end md:pr-2">
             <span>Less</span>
             {[0, 1, 2, 3, 4].map((level) => (
-              <div class={`w-3 h-3 rounded-sm ${getContributionColor(level as 0 | 1 | 2 | 3 | 4)}`} />
+              <div
+                class={`w-3 h-3 rounded-sm ${getContributionColor(level as 0 | 1 | 2 | 3 | 4)}`}
+              />
             ))}
             <span>More</span>
           </div>

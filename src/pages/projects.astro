@@ -1,8 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import GithubContributionGraph from "../components/GithubContributionGraph.astro";
+import Layout from "../layouts/Layout.astro";
 
-// Import the getContributionColor function or define it here
 const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
   switch (level) {
     case 0:
@@ -32,18 +31,38 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
           Organization Activity
         </h2>
         <div class="flex flex-col items-center">
-          <div class="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 w-full overflow-x-auto md:overflow-visible mb-4">
-            <div class="min-w-fit flex justify-center">
-              <GithubContributionGraph showLegend={false} />
+          <!-- Scrollable container with graph -->
+          <div class="w-full overflow-x-auto md:overflow-visible">
+            <div class="min-w-[800px] md:w-[800px] mx-auto">
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 mb-4"
+              >
+                <div class="flex justify-center">
+                  <GithubContributionGraph showLegend={false} />
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Legend moved outside -->
-          <div class="flex items-center justify-center gap-2 text-xs text-gray-500">
-            <span>Less</span>
-            {[0, 1, 2, 3, 4].map((level) => (
-              <div class={`w-3 h-3 rounded-sm ${getContributionColor(level)}`} />
-            ))}
-            <span>More</span>
+          <!-- Count and Legend outside scroll container -->
+          <div class="w-full md:w-[800px] mx-auto px-2">
+            <div
+              class="flex flex-col md:flex-row md:items-center md:justify-between gap-2"
+            >
+              <div id="contribution-count" class="text-sm text-gray-600">
+                Loading contributions...
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-500">
+                <span>Less</span>
+                {
+                  ([0, 1, 2, 3, 4] as const).map((level) => (
+                    <div
+                      class={`w-3 h-3 rounded-sm ${getContributionColor(level)}`}
+                    />
+                  ))
+                }
+                <span>More</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -55,6 +74,16 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
     </div>
   </main>
 </Layout>
+
+<script>
+  // Update the contribution count after the component loads
+  const totalEl = document.getElementById("total-contributions");
+  const countEl = document.getElementById("contribution-count");
+  if (totalEl && countEl) {
+    const total = totalEl.dataset.total;
+    countEl.textContent = `${Number(total).toLocaleString()} contributions in the last year`;
+  }
+</script>
 
 <style>
   /* Glass effect styles */
