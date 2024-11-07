@@ -1,6 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import GithubContributionGraph from "../components/GithubContributionGraph.astro";
+
+// Import the getContributionColor function or define it here
+const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
+  switch (level) {
+    case 0:
+      return "bg-gray-100";
+    case 1:
+      return "bg-green-200";
+    case 2:
+      return "bg-green-300";
+    case 3:
+      return "bg-green-500";
+    case 4:
+      return "bg-green-700";
+  }
+};
 ---
 
 <Layout title="Projects - CMU Data Science Club">
@@ -15,9 +31,19 @@ import GithubContributionGraph from "../components/GithubContributionGraph.astro
         <h2 class="text-2xl font-semibold text-[#082b57] mb-4 text-center">
           Organization Activity
         </h2>
-        <div class="flex justify-center">
-          <div class="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 inline-block">
-            <GithubContributionGraph />
+        <div class="flex flex-col items-center">
+          <div class="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 w-full overflow-x-auto md:overflow-visible mb-4">
+            <div class="min-w-fit flex justify-center">
+              <GithubContributionGraph showLegend={false} />
+            </div>
+          </div>
+          <!-- Legend moved outside -->
+          <div class="flex items-center justify-center gap-2 text-xs text-gray-500">
+            <span>Less</span>
+            {[0, 1, 2, 3, 4].map((level) => (
+              <div class={`w-3 h-3 rounded-sm ${getContributionColor(level)}`} />
+            ))}
+            <span>More</span>
           </div>
         </div>
       </div>

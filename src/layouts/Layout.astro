@@ -272,17 +272,27 @@ const menuItems = [
   <script is:inline>
     let lastScrollY = window.scrollY;
     const header = document.getElementById("header");
-
-    window.addEventListener("scroll", () => {
-      if (lastScrollY < window.scrollY) {
-        // Scrolling down
-        header.style.transform = "translateY(-100%)";
+    
+    // Only apply hide/show behavior on non-mobile devices
+    const handleScroll = () => {
+      if (window.innerWidth >= 768) { // md breakpoint in Tailwind
+        if (lastScrollY < window.scrollY) {
+          // Scrolling down
+          header.style.transform = "translateY(-100%)";
+        } else {
+          // Scrolling up
+          header.style.transform = "translateY(0)";
+        }
       } else {
-        // Scrolling up
+        // Always show on mobile
         header.style.transform = "translateY(0)";
       }
       lastScrollY = window.scrollY;
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Also check on resize in case user switches between mobile/desktop
+    window.addEventListener("resize", handleScroll);
   </script>
 
   <script>

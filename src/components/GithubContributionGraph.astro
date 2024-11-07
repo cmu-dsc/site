@@ -1,4 +1,10 @@
 ---
+interface Props {
+  showLegend?: boolean;
+}
+
+const { showLegend = true } = Astro.props;
+
 interface ContributionDay {
   date: string;
   count: number;
@@ -9,21 +15,22 @@ let contributions: ContributionDay[] = [];
 let error: { type: string; message: string } | null = null;
 
 try {
-  const baseUrl = import.meta.env.DEV ? "http://localhost:8888" : "https://cmudsc.com";
+  // const baseUrl = import.meta.env.DEV ? "http://localhost:8888" : "https://cmudsc.com";
+  const baseUrl = "https://cmudsc.com";
   console.log(baseUrl);
   const response = await fetch(
     `${baseUrl}/.netlify/functions/github-contributions`,
     {
       signal: AbortSignal.timeout(10000),
-    }
+    },
   );
-  
+
   if (!response.ok) {
     const errorData = await response.json();
     if (response.status === 429) {
       error = {
-        type: 'RATE_LIMIT',
-        message: `GitHub API rate limit exceeded. Please try again after ${new Date(errorData.resetTime).toLocaleTimeString()}.`
+        type: "RATE_LIMIT",
+        message: `GitHub API rate limit exceeded. Please try again after ${new Date(errorData.resetTime).toLocaleTimeString()}.`,
       };
     } else {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -33,8 +40,8 @@ try {
   }
 } catch (e) {
   error = {
-    type: 'GENERAL',
-    message: 'Failed to load contribution data. Please try again later.'
+    type: "GENERAL",
+    message: "Failed to load contribution data. Please try again later.",
   };
 }
 
@@ -63,7 +70,20 @@ const formatDate = (dateStr: string) => {
 };
 
 const weekdays = ["", "Mon", "", "Wed", "", "Fri", ""];
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 // Generate dates and organize contributions
 const today = new Date();
@@ -74,11 +94,11 @@ const startDate = new Date(oneYearAgo);
 startDate.setDate(startDate.getDate() - startDate.getDay());
 
 const sortedContributions = [...contributions].sort(
-  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
 );
 
 const contributionMap = new Map(
-  sortedContributions.map((contribution) => [contribution.date, contribution])
+  sortedContributions.map((contribution) => [contribution.date, contribution]),
 );
 
 // Create weeks array
@@ -160,66 +180,93 @@ weeks.forEach((week, weekIndex) => {
 ---
 
 <div class="space-y-2">
-  {error ? (
-    <div class="text-sm text-red-600">
-      {error.type === 'RATE_LIMIT' ? (
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          {error.message}
-        </div>
-      ) : (
-        error.message
-      )}
-    </div>
-  ) : contributions.length === 0 ? (
-    <div class="animate-pulse">
-      <div class="h-4 bg-gray-200 rounded w-60 mb-4"></div>
-      <div class="grid grid-cols-52 gap-1">
-        {Array(52 * 7).fill(0).map(() => (
-          <div class="w-3 h-3 bg-gray-100 rounded-sm"></div>
-        ))}
-      </div>
-    </div>
-  ) : (
-    <div class="relative">
-      <div class="relative flex ml-10 mb-1 text-xs text-gray-500 h-4">
-        {monthLabels.map(({ label, index }) => (
-          <div class="absolute z-10" style={`left: ${index * 13}px`}>
-            {label}
+  {
+    error ? (
+      <div class="text-sm text-red-600">
+        {error.type === "RATE_LIMIT" ? (
+          <div class="flex items-center gap-2">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            {error.message}
           </div>
-        ))}
+        ) : (
+          error.message
+        )}
       </div>
-
-      <div class="flex">
-        <div class="flex flex-col justify-between text-xs text-gray-500 mr-2" style="height: 91px">
-          {weekdays.map((day) => <div>{day}</div>)}
+    ) : contributions.length === 0 ? (
+      <div class="animate-pulse">
+        <div class="h-4 bg-gray-200 rounded w-60 mb-4" />
+        <div class="grid grid-cols-52 gap-1">
+          {Array(52 * 7)
+            .fill(0)
+            .map(() => (
+              <div class="w-3 h-3 bg-gray-100 rounded-sm" />
+            ))}
         </div>
-
-        <div class="inline-grid grid-rows-7 gap-1" 
-          style={`grid-template-columns: repeat(${weeks.length}, minmax(0, 1fr)); width: ${weeks.length * 13}px;`}>
-          {weekdays.map((_, dayIndex) =>
-            weeks.map((week) => (
-              <div class={`w-3 h-3 rounded-sm ${getContributionColor(week[dayIndex]?.level || 0)} relative group cursor-pointer`}>
-                <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
-                  {week[dayIndex]?.count || 0} contribution{(week[dayIndex]?.count || 0) !== 1 ? "s" : ""} on{" "}
-                  {formatDate(week[dayIndex]?.date || "")}
-                </div>
+      </div>
+    ) : (
+      <div class="relative flex flex-col">
+        <div class="min-w-fit">
+          <div class="relative flex ml-10 mb-1 text-xs text-gray-500 h-4">
+            {monthLabels.map(({ label, index }) => (
+              <div class="absolute z-10" style={`left: ${index * 13}px`}>
+                {label}
               </div>
-            ))
-          )}
-        </div>
-      </div>
+            ))}
+          </div>
 
-      <div class="flex items-center justify-end gap-2 mt-2 text-xs text-gray-500"
-        style={`width: ${weeks.length * 13}px; margin-left: 37px;`}>
-        <span>Less</span>
-        {([0, 1, 2, 3, 4] as const).map((level) => (
-          <div class={`w-3 h-3 rounded-sm ${getContributionColor(level)}`} />
-        ))}
-        <span>More</span>
+          <div class="flex">
+            <div
+              class="flex flex-col justify-between text-xs text-gray-500 mr-2"
+              style="height: 91px"
+            >
+              {weekdays.map((day) => (
+                <div>{day}</div>
+              ))}
+            </div>
+
+            <div
+              class="inline-grid grid-rows-7 gap-1"
+              style={`grid-template-columns: repeat(${weeks.length}, minmax(0, 1fr)); width: ${weeks.length * 13}px;`}
+            >
+              {weekdays.map((_, dayIndex) =>
+                weeks.map((week) => (
+                  <div
+                    class={`w-3 h-3 rounded-sm ${getContributionColor(week[dayIndex]?.level || 0)} relative group cursor-pointer`}
+                  >
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+                      {week[dayIndex]?.count || 0} contribution
+                      {(week[dayIndex]?.count || 0) !== 1 ? "s" : ""} on{" "}
+                      {formatDate(week[dayIndex]?.date || "")}
+                    </div>
+                  </div>
+                )),
+              )}
+            </div>
+          </div>
+        </div>
+
+        {showLegend && (
+          <div class="flex items-center justify-center gap-2 mt-4 text-xs text-gray-500 md:justify-end md:pr-2">
+            <span>Less</span>
+            {[0, 1, 2, 3, 4].map((level) => (
+              <div class={`w-3 h-3 rounded-sm ${getContributionColor(level as 0 | 1 | 2 | 3 | 4)}`} />
+            ))}
+            <span>More</span>
+          </div>
+        )}
       </div>
-    </div>
-  )}
+    )
+  }
 </div>
