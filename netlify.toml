@@ -23,5 +23,5 @@
   to = "/index.html"
   status = 200
 
-[functions."github-contributions"]
+[functions."github-contributions-scheduled"]
   schedule = "0 */6 * * *"
