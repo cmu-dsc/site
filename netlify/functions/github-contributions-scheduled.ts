@@ -16,6 +16,13 @@ interface RateLimitResponse {
   };
 }
 
+interface Contributor {
+  login: string;
+  avatar_url: string;
+  contributions: number;
+  html_url: string;
+}
+
 const fetchAllPages = async (baseUrl: string, token: string) => {
   let page = 1;
   let allData: any[] = [];
@@ -77,6 +84,40 @@ const getContributionLevel = (count: number, max: number): 0 | 1 | 2 | 3 | 4 => 
   if (normalized <= 0.5) return 2;
   if (normalized <= 0.75) return 3;
   return 4;
+};
+
+const fetchContributors = async (token: string): Promise<Contributor[]> => {
+  const contributors = new Map<string, Contributor>();
+  
+  const repos = await fetchAllPages(
+    'https://api.github.com/orgs/cmu-dsc/repos',
+    token
+  );
+
+  for (const repo of repos) {
+    const repoContributors = await fetchAllPages(
+      `https://api.github.com/repos/cmu-dsc/${repo.name}/contributors`,
+      token
+    );
+
+    repoContributors.forEach((contributor: any) => {
+      if (contributors.has(contributor.login)) {
+        const existing = contributors.get(contributor.login)!;
+        existing.contributions += contributor.contributions;
+      } else {
+        contributors.set(contributor.login, {
+          login: contributor.login,
+          avatar_url: contributor.avatar_url,
+          contributions: contributor.contributions,
+          html_url: contributor.html_url,
+        });
+      }
+    });
+  }
+
+  return Array.from(contributors.values())
+    .sort((a, b) => b.contributions - a.contributions)
+    .slice(0, 8); // Get top 8 contributors
 };
 
 export const handler: Handler = async (event, context) => {
@@ -151,6 +192,10 @@ export const handler: Handler = async (event, context) => {
       }))
       .sort((a, b) => a.date.localeCompare(b.date));
 
+    const [topContributors] = await Promise.all([
+      fetchContributors(process.env.GITHUB_TOKEN!),
+    ]);
+
     // Cache the results
     const cacheResponse = await fetch(
       `https://api.netlify.com/api/v1/sites/${process.env.SITE_ID}/metadata`,
@@ -162,6 +207,7 @@ export const handler: Handler = async (event, context) => {
         },
         body: JSON.stringify({
           github_contributions: contributions,
+          github_contributors: topContributors,
           last_updated: Math.floor(Date.now() / 1000),
         }),
       }

@@ -1,0 +1,63 @@
+---
+interface Contributor {
+  login: string;
+  avatar_url: string;
+  contributions: number;
+  html_url: string;
+}
+
+let contributors: Contributor[] = [];
+let error: { type: string; message: string } | null = null;
+
+try {
+  const baseUrl = "https://cmudsc.com";
+  const response = await fetch(
+    `${baseUrl}/.netlify/functions/github-contributors`,
+    {
+      signal: AbortSignal.timeout(10000),
+    },
+  );
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  contributors = await response.json();
+} catch (e) {
+  error = {
+    type: "GENERAL",
+    message: "Failed to load contributor data. Please try again later.",
+  };
+}
+---
+
+<div class="w-full md:w-[800px] mx-auto">
+  {
+    error ? (
+      <div class="text-sm text-red-600">{error.message}</div>
+    ) : (
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {contributors.map((contributor) => (
+          <a
+            href={contributor.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center p-4 bg-white/20 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/30 transition-colors"
+          >
+            <img
+              src={contributor.avatar_url}
+              alt={contributor.login}
+              class="w-16 h-16 rounded-full mb-2"
+            />
+            <div class="text-sm font-medium text-gray-700 text-center">
+              {contributor.login}
+            </div>
+            <div class="text-xs text-gray-500">
+              {contributor.contributions} contributions
+            </div>
+          </a>
+        ))}
+      </div>
+    )
+  }
+</div>

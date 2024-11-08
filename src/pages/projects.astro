@@ -2,6 +2,7 @@
 import GithubContributionGraph from "../components/GithubContributionGraph.astro";
 import Layout from "../layouts/Layout.astro";
 import ImagePlaceholder from "../components/icons/ImagePlaceholder.astro";
+import TopContributors from "../components/TopContributors.astro";
 
 interface ProjectMember {
   name: string;
@@ -88,6 +89,14 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Top Contributors -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-4 text-center">
+          Top Contributors
+        </h2>
+        <TopContributors />
       </div>
 
       <!-- Projects Grid -->
