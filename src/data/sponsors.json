@@ -1,0 +1,38 @@
+{
+  "gold": [
+    {
+      "name": "Jump Trading",
+      "logo": "/images/sponsors/jump-trading.png",
+      "url": "https://www.jumptrading.com/"
+    },
+    {
+      "name": "BNY",
+      "logo": "/images/sponsors/bny.png",
+      "url": "https://www.bny.com/corporate/global/en.html"
+    }
+  ],
+  "silver": [
+    {
+      "name": "Hudson River Trading",
+      "logo": "/images/sponsors/hrt.png",
+      "url": "https://www.hudsonrivertrading.com/"
+    }
+  ],
+  "bronze": [
+    {
+      "name": "Jane Street",
+      "logo": "/images/sponsors/jane-street.png",
+      "url": "https://www.janestreet.com/"
+    },
+    {
+      "name": "Bloomberg",
+      "logo": "/images/sponsors/bloomberg.png",
+      "url": "https://www.bloomberg.com/"
+    },
+    {
+      "name": "Two Sigma",
+      "logo": "/images/sponsors/two-sigma.png",
+      "url": "https://www.twosigma.com/"
+    }
+  ]
+}
