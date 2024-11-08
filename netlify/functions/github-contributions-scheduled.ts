@@ -86,40 +86,6 @@ const getContributionLevel = (count: number, max: number): 0 | 1 | 2 | 3 | 4 => 
   return 4;
 };
 
-const fetchContributors = async (token: string): Promise<Contributor[]> => {
-  const contributors = new Map<string, Contributor>();
-  
-  const repos = await fetchAllPages(
-    'https://api.github.com/orgs/cmu-dsc/repos',
-    token
-  );
-
-  for (const repo of repos) {
-    const repoContributors = await fetchAllPages(
-      `https://api.github.com/repos/cmu-dsc/${repo.name}/contributors`,
-      token
-    );
-
-    repoContributors.forEach((contributor: any) => {
-      if (contributors.has(contributor.login)) {
-        const existing = contributors.get(contributor.login)!;
-        existing.contributions += contributor.contributions;
-      } else {
-        contributors.set(contributor.login, {
-          login: contributor.login,
-          avatar_url: contributor.avatar_url,
-          contributions: contributor.contributions,
-          html_url: contributor.html_url,
-        });
-      }
-    });
-  }
-
-  return Array.from(contributors.values())
-    .sort((a, b) => b.contributions - a.contributions)
-    .slice(0, 8); // Get top 8 contributors
-};
-
 export const handler: Handler = async (event, context) => {
   try {
     // Check rate limit
@@ -146,6 +112,7 @@ export const handler: Handler = async (event, context) => {
     );
 
     const contributionMap = generateDateRange();
+    const contributors = new Map<string, Contributor>();
     const oneYearAgo = new Date();
     oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
 
@@ -165,20 +132,80 @@ export const handler: Handler = async (event, context) => {
         )
       ]);
 
-      const processContribution = (date: string | undefined) => {
+      // Process commits
+      commits.forEach(commit => {
+        const date = commit?.commit?.author?.date?.split('T')[0];
         if (date && contributionMap.has(date)) {
           const contributionDate = new Date(date);
           if (contributionDate >= oneYearAgo) {
+            // Update contribution map
             contributionMap.set(date, contributionMap.get(date)! + 1);
+
+            // Update contributor stats
+            const author = commit?.author;
+            if (author) {
+              const current = contributors.get(author.login) || {
+                login: author.login,
+                avatar_url: author.avatar_url,
+                contributions: 0,
+                html_url: author.html_url,
+              };
+              current.contributions += 1;
+              contributors.set(author.login, current);
+            }
           }
         }
-      };
+      });
 
-      commits.forEach(commit => processContribution(commit?.commit?.author?.date?.split('T')[0]));
-      prs.forEach(pr => processContribution(pr?.created_at?.split('T')[0]));
+      // Process PRs
+      prs.forEach(pr => {
+        const date = pr?.created_at?.split('T')[0];
+        if (date && contributionMap.has(date)) {
+          const contributionDate = new Date(date);
+          if (contributionDate >= oneYearAgo) {
+            // Update contribution map
+            contributionMap.set(date, contributionMap.get(date)! + 1);
+
+            // Update contributor stats (PRs count as 2)
+            const author = pr.user;
+            if (author) {
+              const current = contributors.get(author.login) || {
+                login: author.login,
+                avatar_url: author.avatar_url,
+                contributions: 0,
+                html_url: author.html_url,
+              };
+              current.contributions += 2;
+              contributors.set(author.login, current);
+            }
+          }
+        }
+      });
+
+      // Process issues
       issues.forEach(issue => {
-        if (!issue.pull_request) {
-          processContribution(issue?.created_at?.split('T')[0]);
+        if (!issue.pull_request) { // Skip issues that are actually PRs
+          const date = issue?.created_at?.split('T')[0];
+          if (date && contributionMap.has(date)) {
+            const contributionDate = new Date(date);
+            if (contributionDate >= oneYearAgo) {
+              // Update contribution map
+              contributionMap.set(date, contributionMap.get(date)! + 1);
+
+              // Update contributor stats
+              const author = issue.user;
+              if (author) {
+                const current = contributors.get(author.login) || {
+                  login: author.login,
+                  avatar_url: author.avatar_url,
+                  contributions: 0,
+                  html_url: author.html_url,
+                };
+                current.contributions += 1;
+                contributors.set(author.login, current);
+              }
+            }
+          }
         }
       });
     }
@@ -192,9 +219,9 @@ export const handler: Handler = async (event, context) => {
       }))
       .sort((a, b) => a.date.localeCompare(b.date));
 
-    const [topContributors] = await Promise.all([
-      fetchContributors(process.env.GITHUB_TOKEN!),
-    ]);
+    const topContributors = Array.from(contributors.values())
+      .sort((a, b) => b.contributions - a.contributions)
+      .slice(0, 8);
 
     // Cache the results
     const cacheResponse = await fetch(
