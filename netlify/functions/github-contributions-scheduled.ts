@@ -221,7 +221,7 @@ export const handler: Handler = async (event, context) => {
 
     const topContributors = Array.from(contributors.values())
       .sort((a, b) => b.contributions - a.contributions)
-      .slice(0, 8);
+      .slice(0, 12);
 
     // Cache the results
     const cacheResponse = await fetch(

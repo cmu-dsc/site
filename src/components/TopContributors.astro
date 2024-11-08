@@ -31,33 +31,29 @@ try {
 }
 ---
 
-<div class="w-full md:w-[800px] mx-auto">
-  {
-    error ? (
-      <div class="text-sm text-red-600">{error.message}</div>
-    ) : (
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {contributors.map((contributor) => (
-          <a
-            href={contributor.html_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-col items-center p-4 bg-white/20 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/30 transition-colors"
-          >
-            <img
-              src={contributor.avatar_url}
-              alt={contributor.login}
-              class="w-16 h-16 rounded-full mb-2"
-            />
-            <div class="text-sm font-medium text-gray-700 text-center">
-              {contributor.login}
-            </div>
-            <div class="text-xs text-gray-500">
-              {contributor.contributions} contributions
-            </div>
-          </a>
-        ))}
+<div class="flex flex-wrap gap-4 items-center min-h-[91px]">
+  {contributors.slice(0, 12).map((contributor) => (
+    <a
+      href={contributor.html_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="relative group"
+    >
+      <img
+        src={contributor.avatar_url}
+        alt={contributor.login}
+        class="w-12 h-12 rounded-full ring-2 ring-white/10 group-hover:ring-white/30 transition-all"
+        loading="lazy"
+      />
+      <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
+        <div class="bg-gray-900 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+          <div class="font-medium">{contributor.login}</div>
+          <div class="text-gray-300">
+            {contributor.contributions} contributions
+          </div>
+        </div>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
       </div>
-    )
-  }
+    </a>
+  ))}
 </div>
