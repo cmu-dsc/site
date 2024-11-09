@@ -40,6 +40,18 @@
           "github": "Karenou"
         }
       ]
+    },
+    {
+      "title": "Monthly Data Challenges",
+      "description": "Posts from our members who solve our monthly data challenges.",
+      "thumbnail": "/images/projects/data_challenges.webp",
+      "website": "https://medium.com/cmu-data-science-club-data-challenges",
+      "leaders": [
+        {
+          "name": "Jessica Lee",
+          "role": "DSC President"
+        }
+      ]
     }
   ]
 }
