@@ -156,6 +156,9 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-sm text-gray-600 hover:text-blue-800 flex items-center gap-1"
+                        data-umami-event="Project Link Click"
+                        data-umami-event-type="Github"
+                        data-umami-event-sponsor={project.title}
                       >
                         <svg
                           class="w-4 h-4"
@@ -172,6 +175,9 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-sm text-gray-600 hover:text-blue-800 flex items-center gap-1"
+                        data-umami-event="Project Link Click"
+                        data-umami-event-type="Website"
+                        data-umami-event-sponsor={project.title}
                       >
                         <svg
                           class="w-4 h-4"
@@ -205,6 +211,8 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
                             target="_blank"
                             rel="noopener noreferrer"
                             class="hover:text-blue-600"
+                            data-umami-event="Project Leader Click"
+                            data-umami-event-sponsor={leader.name}
                           >
                             {leader.name}
                           </a>
