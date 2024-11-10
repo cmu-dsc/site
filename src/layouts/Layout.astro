@@ -16,11 +16,11 @@ const menuItems = [
   {
     href: "/projects",
     label: "Projects",
-    description: "Projects"
+    description: "Projects",
   },
   {
-    href: "/poker",
-    label: "Poker AI",
+    href: "/aipoker",
+    label: "AI Poker",
     description: "Learn about our AI competition",
   },
   {
@@ -45,17 +45,17 @@ const menuItems = [
     ></script>
     <meta
       name="description"
-      content="CMU Data Science Club - Empowering CMU students to explore, learn, and collaborate in data science through hands-on projects, workshops, and competitions."
+      content="CMU Data Science Club - Empowering CMU students in artificial intelligence, machine learning, and data science through hands-on projects, workshops, and competitions."
     />
     <meta
       name="keywords"
-      content="CMU, Data Science, Carnegie Mellon University, Student Organization, Data Analytics, Machine Learning, Deep Learning"
+      content="CMU, Data Science, Carnegie Mellon University, Student Organization, Data Analytics, Machine Learning, Artificial Intelligence, AI Club, Deep Learning, Pittsburgh AI"
     />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content={title} />
     <meta
       property="og:description"
-      content="CMU Data Science Club - Empowering CMU students in data science"
+      content="CMU Data Science Club - Empowering CMU students in artificial intelligence, machine learning, and data science"
     />
     <meta property="og:image" content="/images/dsc.svg" />
     <meta property="og:url" content="https://cmudsc.com" />
@@ -63,7 +63,7 @@ const menuItems = [
     <meta name="twitter:title" content={title} />
     <meta
       name="twitter:description"
-      content="CMU Data Science Club - Empowering CMU students in data science"
+      content="CMU Data Science Club - Empowering CMU students in artificial intelligence, machine learning, and data science"
     />
     <meta name="twitter:image" content="/images/dsc.svg" />
     <script
@@ -71,6 +71,37 @@ const menuItems = [
       defer
       src="https://cloud.umami.is/script.js"
       data-website-id="7899076f-1eca-4c1e-bb90-db959ce41077"></script>
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CMU Data Science Club",
+        "url": "https://cmudsc.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cmudsc.com/images/dsc.svg",
+          "width": "512",
+          "height": "512"
+        },
+        "description": "Empowering CMU students in artificial intelligence, machine learning, and data science through hands-on projects, workshops, and competitions.",
+        "sameAs": [
+          "https://github.com/cmu-dsc",
+          "https://instagram.com/cmudsc",
+          "https://discord.gg/cmudsc"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pittsburgh",
+          "addressRegion": "PA",
+          "postalCode": "15213",
+          "addressCountry": "US"
+        },
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "Carnegie Mellon University"
+        }
+      }
+    </script>
   </head>
 </html>
 <body class="bg-gray-50 relative">
@@ -82,14 +113,30 @@ const menuItems = [
   >
     <nav class="max-w-7xl mx-auto flex justify-between items-center">
       <div class="flex items-center group">
-        <a href="/" class="relative transform transition-all duration-300 hover:-rotate-6">
-          <img src="/images/dsc.svg" alt="CMU DSC Logo" class="h-10 w-10 mr-3" />
-          <div class="absolute inset-0 bg-blue-400/20 rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <a
+          href="/"
+          class="relative transform transition-all duration-300 hover:-rotate-6"
+        >
+          <img
+            src="/images/dsc.svg"
+            alt="CMU DSC Logo"
+            class="h-10 w-10 mr-3"
+          />
+          <div
+            class="absolute inset-0 bg-blue-400/20 rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
         </a>
-        <a href="/" class="text-[#082b57] font-bold text-lg relative overflow-hidden">
+        <a
+          href="/"
+          class="text-[#082b57] font-bold text-lg relative overflow-hidden"
+        >
           <span class="md:inline hidden">CMU Data Science Club</span>
           <span class="md:hidden">CMU DSC</span>
-          <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+          >
+          </div>
         </a>
       </div>
 
@@ -132,8 +179,12 @@ const menuItems = [
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-md opacity-0 group-hover:opacity-75 transition-opacity duration-300"></span>
-          <span class="relative bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/90 transition-all duration-300 text-sm font-medium">
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-md opacity-0 group-hover:opacity-75 transition-opacity duration-300"
+          ></span>
+          <span
+            class="relative bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/90 transition-all duration-300 text-sm font-medium"
+          >
             Join Discord
           </span>
         </a>
@@ -274,10 +325,11 @@ const menuItems = [
   <script is:inline>
     let lastScrollY = window.scrollY;
     const header = document.getElementById("header");
-    
+
     // Only apply hide/show behavior on non-mobile devices
     const handleScroll = () => {
-      if (window.innerWidth >= 768) { // md breakpoint in Tailwind
+      if (window.innerWidth >= 768) {
+        // md breakpoint in Tailwind
         if (lastScrollY < window.scrollY) {
           // Scrolling down
           header.style.transform = "translateY(-100%)";
