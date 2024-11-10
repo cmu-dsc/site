@@ -88,6 +88,15 @@
         "workshop",
         "technical"
       ]
+    },
+    {
+      "title": "How to Pitch Your Data",
+      "date": "2024-11-08",
+      "slides": "https://docs.google.com/presentation/d/14qSsM_N3deE_RvZf8PXyvjsAOAFwaTGR/edit?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
     }
   ]
 }
