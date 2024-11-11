@@ -44,6 +44,11 @@ def main():
     for input_path in input_dir.glob("*"):
         if input_path.suffix.lower() in (".png", ".jpg", ".jpeg", ".gif", ".webp"):
             output_path = output_dir / f"{input_path.stem}.webp"
+            
+            # Skip if WebP version already exists
+            if output_path.exists():
+                continue
+                
             print(f"Processing: {input_path.name}")
             optimize_image(str(input_path), str(output_path))
             print(f"Saved to: {output_path.name}")
