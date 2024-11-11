@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Create virtual environment if it doesn't exist
+python -m venv .venv 2>/dev/null || true
+
+# Activate virtual environment
+. .venv/bin/activate
+
+# Install dependencies
+pip install Pillow --quiet || true
+
+# Run the script
+python scripts/optimize_images.py
+git add public/optimized-images/
+
+# Deactivate virtual environment
+deactivate
