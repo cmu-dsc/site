@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "title": "TBA Project",
-      "description": "??",
+      "title": "CMUGPT",
+      "description": "A chatbot combining RAG with a course recommendation system to help students find courses and get accurate information about classes and university life.",
       "leaders": [
         {
           "name": "Preetham Manapuri",
