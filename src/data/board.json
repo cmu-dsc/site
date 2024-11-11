@@ -108,14 +108,16 @@
   {
     "name": "Tor Taepaisitphongse",
     "title": "Events Director",
-    "bio": "I'm a sophomore majoring in Information Systems.",
+    "image": "/images/board/tor.png",
+    "bio": "Hi! I'm Tor, a sophomore majoring in Information Systems + Statistics & Machine Learning. I'm interested in the use of AI and ML to facilitate decision-making and derive insights in domains such as public policy, supply chains, and more. I also love basketball, volleyball, soccer and photography.",
     "linkedin": "https://www.linkedin.com/in/ctae",
     "github": "https://github.com/Tor4848"
   },
   {
     "name": "Preetham Manapuri",
     "title": "Projects Director",
-    "bio": "I'm a freshman majoring in Computer Science.",
+    "image": "/images/board/preetham.png",
+    "bio": "Hi y'all! I'm a freshman studying Computer Science with a concentration in Machine Learning and Language Technologies. I'm super interested in NLP and reinforcement learning research. I spend my free time reading, listening to music, or hanging out with friends.",
     "linkedin": "https://www.linkedin.com/in/preetham-manapuri"
   },
   {
