@@ -118,9 +118,7 @@ const alumni = alumniData as AlumniMember[];
                       target="_blank"
                       rel="noopener noreferrer"
                       class="text-gray-600 hover:text-[#082b57] transition-colors"
-                      data-umami-event="Board Social Click"
-                      data-umami-event-platform="GitHub"
-                      data-umami-event-member={member.name}
+                      data-umami-event={`Board Social Click - ${member.name} (GitHub)`}
                     >
                       <div class="w-5 h-5" set:html={GithubIcon} />
                     </a>
@@ -131,9 +129,7 @@ const alumni = alumniData as AlumniMember[];
                       target="_blank"
                       rel="noopener noreferrer"
                       class="text-gray-600 hover:text-[#082b57] transition-colors"
-                      data-umami-event="Board Social Click"
-                      data-umami-event-platform="LinkedIn"
-                      data-umami-event-member={member.name}
+                      data-umami-event={`Board Social Click - ${member.name} (LinkedIn)`}
                     >
                       <div class="w-5 h-5" set:html={LinkedInIcon} />
                     </a>
@@ -216,9 +212,7 @@ const alumni = alumniData as AlumniMember[];
                       target="_blank"
                       rel="noopener noreferrer"
                       class="text-gray-600 hover:text-[#082b57] transition-colors"
-                      data-umami-event="Alumni Social Click"
-                      data-umami-event-platform="GitHub"
-                      data-umami-event-member={member.name}
+                      data-umami-event={`Alumni Social Click - ${member.name} (GitHub)`}
                     >
                       <div class="w-4 h-4" set:html={GithubIcon} />
                     </a>
@@ -229,9 +223,7 @@ const alumni = alumniData as AlumniMember[];
                       target="_blank"
                       rel="noopener noreferrer"
                       class="text-gray-600 hover:text-[#082b57] transition-colors"
-                      data-umami-event="Alumni Social Click"
-                      data-umami-event-platform="LinkedIn"
-                      data-umami-event-member={member.name}
+                      data-umami-event={`Alumni Social Click - ${member.name} (LinkedIn)`}
                     >
                       <div class="w-4 h-4" set:html={LinkedInIcon} />
                     </a>

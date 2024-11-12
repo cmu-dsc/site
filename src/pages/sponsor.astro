@@ -22,9 +22,7 @@ import sponsors from "../data/sponsors.json";
                 target="_blank"
                 rel="noopener noreferrer"
                 class="bg-white/20 backdrop-blur-sm w-full sm:w-80 h-40 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-8 border border-white/10"
-                data-umami-event="Sponsor Click"
-                data-umami-event-tier="gold"
-                data-umami-event-sponsor={sponsor.name}
+                data-umami-event={`Sponsor Click - ${sponsor.name} (Gold)`}
               >
                 <img
                   src={sponsor.logo}
@@ -52,9 +50,7 @@ import sponsors from "../data/sponsors.json";
                 target="_blank"
                 rel="noopener noreferrer"
                 class="bg-white/20 backdrop-blur-sm w-full sm:w-64 h-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-6 border border-white/10"
-                data-umami-event="Sponsor Click"
-                data-umami-event-tier="silver"
-                data-umami-event-sponsor={sponsor.name}
+                data-umami-event={`Sponsor Click - ${sponsor.name} (Silver)`}
               >
                 <img
                   src={sponsor.logo}
@@ -82,9 +78,7 @@ import sponsors from "../data/sponsors.json";
                 target="_blank"
                 rel="noopener noreferrer"
                 class="bg-white/20 backdrop-blur-sm w-full sm:w-48 h-24 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-4 border border-white/10"
-                data-umami-event="Sponsor Click"
-                data-umami-event-tier="bronze"
-                data-umami-event-sponsor={sponsor.name}
+                data-umami-event={`Sponsor Click - ${sponsor.name} (Bronze)`}
               >
                 <img
                   src={sponsor.logo}

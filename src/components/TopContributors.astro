@@ -38,8 +38,7 @@ try {
       target="_blank"
       rel="noopener noreferrer"
       class="relative group"
-      data-umami-event="Contributor Github Click"
-      data-umami-event-member={contributor.login}
+      data-umami-event={`Contributor Github Click - ${contributor.login}`}
     >
       <img
         src={contributor.avatar_url}
