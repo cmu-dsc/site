@@ -2,6 +2,7 @@
 import DiscordIcon from "../icons/discord.svg?raw";
 import GithubIcon from "../icons/github.svg?raw";
 import InstagramIcon from "../icons/instagram.svg?raw";
+import LinkedinIcon from "../icons/linkedin.svg?raw";
 import MailIcon from "../icons/mail.svg?raw";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -64,6 +65,15 @@ import Layout from "../layouts/Layout.astro";
 					data-umami-event="Social Click - Github"
 				>
 					<span class="w-8 h-8 block" set:html={GithubIcon} />
+				</a>
+				<a
+					href="https://www.linkedin.com/company/cmudsc/"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-umami-event="Social Click - LinkedIn"
+				>
+					<span class="w-8 h-8 block" set:html={LinkedinIcon} />
 				</a>
 			</div>
 		</div>
