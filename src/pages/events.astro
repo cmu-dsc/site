@@ -595,6 +595,10 @@ const tagNames = {
       const audioUrl = button.dataset.audioUrl;
       if (!audioUrl) return;
 
+      // Create a new audio element with preload attribute
+      const audioElement = new Audio(audioUrl);
+      audioElement.preload = "auto";
+
       // Find all buttons for this audio URL and update them together
       const allButtons = document.querySelectorAll(`[data-audio-url="${audioUrl}"]`);
       const progressContainer = button.closest('.audio-player');
@@ -613,7 +617,7 @@ const tagNames = {
           });
         }
 
-        currentAudio = new Audio(audioUrl);
+        currentAudio = audioElement;
         currentProgressBar = progressBar;
         currentTimeDisplay = timeDisplay;
         durationDisplay = durDisplay;
