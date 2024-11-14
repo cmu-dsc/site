@@ -522,18 +522,6 @@ const tagNames = {
     }
   </style>
 
-  <script>
-    // Update tagColors to use CSS variables
-    const tagColors = {
-      social: "bg-red-100/60 text-red-800",
-      workshop: "bg-green-100/60 text-green-800",
-      speaker: "bg-yellow-100/60 text-yellow-800",
-      competition: "bg-orange-100/60 text-orange-800",
-      career: "bg-blue-100/60 text-blue-800",
-      technical: "bg-purple-100/60 text-purple-800",
-    };
-  </script>
-
   <script is:inline type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -605,6 +593,11 @@ const tagNames = {
       const progressBar = progressContainer.querySelector('input[type="range"]');
       const timeDisplay = progressContainer.querySelector('.current-time');
       const durDisplay = progressContainer.querySelector('.duration');
+
+      // Initialize progress bar and duration display
+      progressBar.value = 0;
+      timeDisplay.textContent = "0:00";
+      durDisplay.textContent = "0:00";
 
       // If this is a new audio or different from current
       if (!currentAudio || currentAudio.src !== window.location.origin + audioUrl) {
