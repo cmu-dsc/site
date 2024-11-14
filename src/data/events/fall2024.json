@@ -19,7 +19,8 @@
       "tags": [
         "workshop",
         "technical"
-      ]
+      ],
+      "audioSummary": "/audio/pytorch-workshop.opus"
     },
     {
       "title": "Career Workshop",
@@ -39,7 +40,8 @@
       "tags": [
         "speaker",
         "career"
-      ]
+      ],
+      "audioSummary": "/audio/ian-watson.opus"
     },
     {
       "title": "DSC Alumni Career Panel",

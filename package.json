@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "bun run optimize-images && astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -18,5 +19,8 @@
     "node-fetch": "^3.3.2",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
   }
 }
