@@ -87,7 +87,8 @@
       "tags": [
         "workshop",
         "technical"
-      ]
+      ],
+      "audioSummary": "/audio/big-data-workshop.opus"
     },
     {
       "title": "How to Pitch Your Data",
@@ -97,7 +98,8 @@
       "tags": [
         "workshop",
         "technical"
-      ]
+      ],
+      "audioSummary": "/audio/data-viz-workshop.opus"
     }
   ]
 }

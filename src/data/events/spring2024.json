@@ -58,7 +58,8 @@
         "technical",
         "competition",
         "workshop"
-      ]
+      ],
+      "audioSummary": "/audio/rl-workshop.opus"
     },
     {
       "title": "Poker AI: Poker Workshop",

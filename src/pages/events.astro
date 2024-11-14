@@ -12,6 +12,7 @@ interface Event {
   slides?: string;
   notebook?: string;
   recording?: string;
+  audioSummary?: string;
   tags: TagType[];
 }
 
@@ -129,50 +130,108 @@ const tagNames = {
                         <p class="text-sm text-gray-600 mb-4">{event.description}</p>
                         
                         {/* Resources Section */}
-                        {(event.slides || event.notebook || event.recording) && (
-                          <div class="flex flex-wrap gap-3 mt-2">
-                            {event.slides && (
-                              <a
-                                href={event.slides}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
-                                data-umami-event={`Resource Download - ${event.title} (Slides)`}
-                              >
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                                Slides
-                              </a>
-                            )}
-                            {event.notebook && (
-                              <a
-                                href={event.notebook}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
-                                data-umami-event={`Resource Download - ${event.title} (Notebook)`}
-                              >
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                                Notebook
-                              </a>
-                            )}
-                            {event.recording && (
-                              <a
-                                href={event.recording}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
-                                data-umami-event={`Resource Download - ${event.title} (Recording)`}
-                              >
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                Recording
-                              </a>
+                        {(event.slides || event.notebook || event.recording || event.audioSummary) && (
+                          <div class="flex flex-col gap-6 mt-2">
+                            {/* Resource Buttons */}
+                            <div class="flex flex-wrap gap-3">
+                              {event.slides && (
+                                <a
+                                  href={event.slides}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
+                                  data-umami-event={`Resource Download - ${event.title} (Slides)`}
+                                >
+                                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                  </svg>
+                                  Slides
+                                </a>
+                              )}
+                              {event.notebook && (
+                                <a
+                                  href={event.notebook}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
+                                  data-umami-event={`Resource Download - ${event.title} (Notebook)`}
+                                >
+                                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                  </svg>
+                                  Notebook
+                                </a>
+                              )}
+                              {event.recording && (
+                                <a
+                                  href={event.recording}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
+                                  data-umami-event={`Resource Download - ${event.title} (Recording)`}
+                                >
+                                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  Recording
+                                </a>
+                              )}
+                              {event.audioSummary && (
+                                <button
+                                  class="inline-flex items-center gap-2 text-sm bg-[#082b57]/10 hover:bg-[#082b57]/20 text-[#082b57] px-3 py-1.5 rounded-full transition-colors"
+                                  onclick="togglePlayer(this)"
+                                  data-audio-url={event.audioSummary}
+                                >
+                                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 010-7.072m12.728 3.536a3 3 0 11-6 0 3 3 0 016 0z" />
+                                  </svg>
+                                  Listen to Summary
+                                </button>
+                              )}
+                            </div>
+
+                            {/* Audio Player */}
+                            {event.audioSummary && (
+                              <div class="audio-player hidden max-w-md flex items-center gap-3 text-[#082b57]">
+                                <button
+                                  class="custom-audio-btn flex-shrink-0 -mt-8"
+                                  data-audio-url={event.audioSummary}
+                                  onclick="toggleAudio(this)"
+                                >
+                                  <svg class="w-5 h-5 play-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  <svg class="w-5 h-5 pause-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </button>
+                                
+                                <div class="flex-1 audio-progress h-5 flex flex-col justify-center">
+                                  <input 
+                                    type="range" 
+                                    value="0" 
+                                    class="w-full h-1 bg-[#082b57]/10 rounded-lg appearance-none cursor-pointer"
+                                    oninput="updateAudioProgress(this)"
+                                  />
+                                  <div class="flex justify-between text-[10px] text-[#082b57]/60 mt-4">
+                                    <span class="current-time">0:00</span>
+                                    <span class="duration">0:00</span>
+                                  </div>
+                                </div>
+
+                                <a 
+                                  href={event.audioSummary} 
+                                  download
+                                  class="flex-shrink-0 -mt-8"
+                                  data-umami-event={`Audio Download - ${event.title}`}
+                                >
+                                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                  </svg>
+                                </a>
+                              </div>
                             )}
                           </div>
                         )}
@@ -257,6 +316,20 @@ const tagNames = {
       pointer-events: auto;
     }
 
+    .semester-content audio,
+    .semester-content summary,
+    .semester-content details {
+      pointer-events: auto !important;
+    }
+
+    .details summary:hover {
+      background-color: rgba(8, 43, 87, 0.2);
+    }
+
+    .audio::-webkit-media-controls-panel {
+      pointer-events: auto !important;
+    }
+
     .scrollbar-hide {
       -ms-overflow-style: none;
       scrollbar-width: none;
@@ -335,6 +408,118 @@ const tagNames = {
         transform: translateY(-2px);
       }
     }
+
+    /* Add to existing styles */
+    details > summary {
+      list-style: none;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    audio {
+      height: 32px;
+      border-radius: 20px;
+    }
+
+    /* Optional: Custom audio player styling for webkit browsers */
+    audio::-webkit-media-controls-panel {
+      background-color: rgba(8, 43, 87, 0.05);
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-mute-button {
+      border-radius: 50%;
+      background-color: #082b57;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      background: rgba(8, 43, 87, 0.1);
+      border-radius: 9999px;
+      height: 6px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: -4px;
+      background-color: #082b57;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-track {
+      background: rgba(8, 43, 87, 0.1);
+      border-radius: 9999px;
+      height: 6px;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      border: none;
+      background-color: #082b57;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Add to your existing styles */
+    .custom-audio-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      width: 100%;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      background: rgba(8, 43, 87, 0.1);
+      border-radius: 9999px;
+      height: 6px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: -4px;
+      background-color: #082b57;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-track {
+      background: rgba(8, 43, 87, 0.1);
+      border-radius: 9999px;
+      height: 6px;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      border: none;
+      background-color: #082b57;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
   </style>
 
   <script>
@@ -381,5 +566,140 @@ const tagNames = {
         }))
       )
   }
+  </script>
+
+  <script is:inline>
+    let currentAudio = null;
+    let currentProgressBar = null;
+    let currentTimeDisplay = null;
+    let durationDisplay = null;
+    let updateInterval = null;
+
+    function formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = Math.floor(seconds % 60);
+      return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    }
+
+    function updateTimeDisplay() {
+      if (currentAudio && currentTimeDisplay && durationDisplay) {
+        currentTimeDisplay.textContent = formatTime(currentAudio.currentTime);
+        durationDisplay.textContent = formatTime(currentAudio.duration);
+        if (currentProgressBar) {
+          currentProgressBar.value = (currentAudio.currentTime / currentAudio.duration) * 100;
+        }
+      }
+    }
+
+    function toggleAudio(button) {
+      const audioUrl = button.dataset.audioUrl;
+      if (!audioUrl) return;
+
+      // Find all buttons for this audio URL and update them together
+      const allButtons = document.querySelectorAll(`[data-audio-url="${audioUrl}"]`);
+      const progressContainer = button.closest('.audio-player');
+      const progressBar = progressContainer.querySelector('input[type="range"]');
+      const timeDisplay = progressContainer.querySelector('.current-time');
+      const durDisplay = progressContainer.querySelector('.duration');
+
+      // If this is a new audio or different from current
+      if (!currentAudio || currentAudio.src !== window.location.origin + audioUrl) {
+        if (currentAudio) {
+          currentAudio.pause();
+          clearInterval(updateInterval);
+          // Update all buttons for the previous audio to show play state
+          document.querySelectorAll('.custom-audio-btn').forEach(btn => {
+            updateButtonState(btn, false);
+          });
+        }
+
+        currentAudio = new Audio(audioUrl);
+        currentProgressBar = progressBar;
+        currentTimeDisplay = timeDisplay;
+        durationDisplay = durDisplay;
+
+        currentAudio.addEventListener('loadedmetadata', () => {
+          durationDisplay.textContent = formatTime(currentAudio.duration);
+        });
+
+        currentAudio.addEventListener('ended', () => {
+          updateButtonState(button, false);
+          progressContainer.classList.add('hidden');
+          clearInterval(updateInterval);
+        });
+
+        currentAudio.play();
+        // Update all buttons for this audio to show pause state
+        allButtons.forEach(btn => updateButtonState(btn, true));
+        updateInterval = setInterval(updateTimeDisplay, 100);
+      } else {
+        // Toggle play/pause for current audio
+        if (currentAudio.paused) {
+          currentAudio.play();
+          allButtons.forEach(btn => updateButtonState(btn, true));
+          updateInterval = setInterval(updateTimeDisplay, 100);
+        } else {
+          currentAudio.pause();
+          allButtons.forEach(btn => updateButtonState(btn, false));
+          clearInterval(updateInterval);
+        }
+      }
+    }
+
+    function updateAudioProgress(range) {
+      if (currentAudio) {
+        const time = (range.value / 100) * currentAudio.duration;
+        currentAudio.currentTime = time;
+        updateTimeDisplay();
+      }
+    }
+
+    function updateButtonState(button, isPlaying) {
+      // Find the icons within the button that was clicked
+      const playIcon = button.querySelector('.play-icon');
+      const pauseIcon = button.querySelector('.pause-icon');
+      
+      if (!playIcon || !pauseIcon) {
+        console.warn('Play/Pause icons not found in button:', button);
+        return;
+      }
+
+      if (isPlaying) {
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+      } else {
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+      }
+    }
+
+    function togglePlayer(button) {
+      const audioUrl = button.dataset.audioUrl;
+      const player = button.closest('.flex-col').querySelector('.audio-player');
+      
+      // Toggle player visibility
+      if (player.classList.contains('hidden')) {
+        // Hide all other players first
+        document.querySelectorAll('.audio-player').forEach(p => p.classList.add('hidden'));
+        player.classList.remove('hidden');
+      } else {
+        player.classList.add('hidden');
+        if (currentAudio?.src === window.location.origin + audioUrl) {
+          currentAudio.pause();
+          updateButtonState(player.querySelector('.custom-audio-btn'), false);
+          clearInterval(updateInterval);
+        }
+      }
+    }
+
+    // Add to cleanup
+    document.addEventListener('astro:before-swap', () => {
+      if (currentAudio) {
+        currentAudio.pause();
+        clearInterval(updateInterval);
+        currentAudio = null;
+      }
+      document.querySelectorAll('.audio-player').forEach(p => p.classList.add('hidden'));
+    });
   </script>
 </Layout>
