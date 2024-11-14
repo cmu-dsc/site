@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Contributor {
   login: string;
   avatar_url: string;
@@ -40,11 +42,12 @@ try {
       class="relative group"
       data-umami-event={`Contributor Github Click - ${contributor.login}`}
     >
-      <img
+      <Image
         src={contributor.avatar_url}
         alt={contributor.login}
+        width={48}
+        height={48}
         class="w-12 h-12 rounded-full ring-2 ring-white/10 group-hover:ring-white/30 transition-all"
-        loading="lazy"
       />
       <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
         <div class="bg-gray-900 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
