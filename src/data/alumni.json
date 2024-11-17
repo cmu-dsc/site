@@ -1,5 +1,35 @@
 [
   {
+    "name": "Yeonji Baek",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2026",
+    "image": "/images/alumni/yeonji.jpg",
+    "boardPositions": [
+      {
+        "title": "Social Director",
+        "semesters": [
+          "F24"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/yeonji-baek"
+  },
+  {
+    "name": "Bincheng Wang",
+    "major": "MS, Data Analytics for Science",
+    "gradYear": "2025",
+    "image": "/images/alumni/bingcheng.jpg",
+    "boardPositions": [
+      {
+        "title": "Workshops Co-Director",
+        "semesters": [
+          "F24"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/bingcheng-wang"
+  },
+  {
     "name": "Noelani Phillips",
     "major": "Statistics and Machine Learning",
     "gradYear": "2025",
@@ -22,7 +52,7 @@
     "currentTitle": "Data Science Engineer at Qorvo",
     "boardPositions": [
       {
-        "title": "Design Director",
+        "title": "Design Co-Director",
         "semesters": [
           "S24"
         ]
@@ -306,7 +336,7 @@
   },
   {
     "name": "Husni Almoubayyed",
-    "major": "PhD Physics",
+    "major": "PhD, Physics",
     "gradYear": "2021",
     "currentTitle": "AI Engineering Manager at Carnegie Learning",
     "image": "/images/alumni/husni.jpg",
