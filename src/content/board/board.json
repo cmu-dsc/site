@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Almutwakel Hassan",
+    "title": "President",
+    "image": "../../assets/board/al.png",
+    "bio": "Hello, I'm Al! I'm a senior majoring in Artificial Intelligence. I've worked on research in both robotics and NLP, and I am interested in integrating them. I also enjoy game development, ping pong, and chess!",
+    "github": "https://github.com/almutwakel",
+    "linkedin": "https://www.linkedin.com/in/almutwakel"
+  },
+  {
+    "name": "Clement Ou",
+    "title": "Outreach & Competitions Director",
+    "image": "../../assets/board/clement.jpg",
+    "bio": "I'm a senior studying Statistics and Machine Learning. I'm interested in using data science to build intelligent systems. I love to travel and eat!",
+    "github": "https://github.com/clementou",
+    "linkedin": "https://linkedin.com/in/clementou"
+  },
+  {
+    "name": "Grace Lin",
+    "title": "Vice President",
+    "image": "../../assets/board/grace.webp",
+    "bio": "I'm a junior in Statistics & Machine Learning. My interests are primarily in data science applications towards artificial intelligence and forecasting systems. I'm also a huge animal person and love meeting new people!",
+    "github": "https://github.com/gxlin2",
+    "linkedin": "https://www.linkedin.com/in/gracexlin"
+  },
+  {
+    "name": "Jei Park",
+    "title": "Branding Director",
+    "image": "../../assets/board/jei.png",
+    "bio": "I'm a masters student in MHCI. My interests lie in entrepreneurship, utilizing data science to analyze the market, and developing innovative, data-driven business strategies.",
+    "github": "https://github.com/jeih",
+    "linkedin": "https://www.linkedin.com/in/jehyo-jei-park"
+  },
+  {
+    "name": "Dongkyun Kim",
+    "title": "Workshop Co-Director",
+    "image": "../../assets/board/dk.jpg",
+    "bio": "I'm a senior studying Artificial Intelligence. I'm interested in mulitmodal deep learning and meta learning. In my free time, I like to go bouldering, play chess or do data science challenges. I also love meeting new people so feel free to hit me up!",
+    "github": "https://github.com/dongkyunk",
+    "linkedin": "https://www.linkedin.com/in/dongkyun-k"
+  },
+  {
+    "name": "Eyob Dagnachew",
+    "title": "Workshop Co-Director",
+    "image": "../../assets/board/eyob.jpg",
+    "bio": "Hello there! My name is Eyob, I'm a senior studying Stat/ML! Some of those ways I like to and have been working with Data Analysis and ML is through internships, research, and hackathons! other than tech I'm usually trying to find some more artistic outlets for my creativity, resulting in me having my camera and laptop in my backpack almost constantly.",
+    "github": "https://github.com/Ebot101",
+    "linkedin": "https://www.linkedin.com/in/eyob-dagnachew"
+  },
+  {
+    "name": "Varrshitha Kumar",
+    "title": "Design Co-Director",
+    "image": "../../assets/board/varr.jpeg",
+    "bio": "I am a sophomore studying Statistics and Machine Learning. I am interested in the applications of data science in healthcare and environmental chemistry research. I also enjoy playing field hockey and traveling!",
+    "github": "https://github.com/varrkumar",
+    "linkedin": "https://www.linkedin.com/in/varrkumar"
+  },
+  {
+    "name": "Bo Xie",
+    "title": "Design Co-Director",
+    "image": "../../assets/board/bo.png",
+    "bio": "I am a sophomore studying Information Systems. I love gazing at the stars, then falling asleep.",
+    "github": "https://github.com/bobofishbo",
+    "linkedin": "https://www.linkedin.com/in/bo-xie-918761291"
+  },
+  {
+    "name": "Emily Yu",
+    "title": "Development Director",
+    "image": "../../assets/board/emily.png",
+    "bio": "Hi! I'm currently a junior studying Information Systems, specifically interested in computational linguistics and the applications of spoken/written language in technology. In my free time, I'm a big fan of going on walks and street photography.",
+    "github": "https://github.com/emshyu",
+    "linkedin": "https://www.linkedin.com/in/emily-yu-a28148204"
+  },
+  {
+    "name": "Oliver Yun",
+    "title": "Finance Director",
+    "image": "../../assets/board/oliver.jpg",
+    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. I'm interested in exploring how AI can be applied to solve common problems in our everyday lives. In my free time, I like to swim and play piano.",
+    "github": "https://github.com/oliveryun11",
+    "linkedin": "https://www.linkedin.com/in/oliver-yun-474b77289"
+  },
+  {
+    "name": "Juny Kim",
+    "title": "Operations Director",
+    "image": "../../assets/board/juny.png",
+    "bio": "I'm a senior majoring in statistics and machine learning. I am interested in the application of AI to predict behaviors of complex systems. My hobbies include going to the gym and discovering new music.",
+    "github": "https://github.com/jkim999",
+    "linkedin": "https://www.linkedin.com/in/junykim1"
+  },
+  {
+    "name": "Vincent Huai",
+    "title": "Junior Outreach Director",
+    "image": "../../assets/board/vincent.jpeg",
+    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
+    "linkedin": "https://www.linkedin.com/in/vincent-huai"
+  },
+  {
+    "name": "Tor Taepaisitphongse",
+    "title": "Events Director",
+    "image": "../../assets/board/tor.png",
+    "bio": "Hi! I'm Tor, a sophomore majoring in Information Systems + Statistics & Machine Learning. I'm interested in the use of AI and ML to facilitate decision-making and derive insights in domains such as public policy, supply chains, and more. I also love basketball, volleyball, soccer and photography.",
+    "linkedin": "https://www.linkedin.com/in/ctae",
+    "github": "https://github.com/Tor4848"
+  },
+  {
+    "name": "Preetham Manapuri",
+    "title": "Projects Director",
+    "image": "../../assets/board/preetham.png",
+    "bio": "Hi y'all! I'm a freshman studying Computer Science with a concentration in Machine Learning and Language Technologies. I'm super interested in NLP and reinforcement learning research. I spend my free time reading, listening to music, or hanging out with friends.",
+    "linkedin": "https://www.linkedin.com/in/preetham-manapuri"
+  },
+  {
+    "name": "Claire Shen",
+    "title": "Junior Branding Director",
+    "image": "../../assets/board/claire.png",
+    "bio": "Hi! I'm Claire! I'm currently a freshman studying Statistics and Machine Learning. I'm interested in applying data science to neuroscience, particularly in predicting patterns in neurological diseases. In my free time, I love dancing (K-pop and jazz), oil painting, and spending hours with friends at a cat cafe!",
+    "linkedin": "https://www.linkedin.com/in/claire-shen-892133327"
+  }
+]
