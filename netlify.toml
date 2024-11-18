@@ -4,7 +4,7 @@
   status = 200
 
 [[redirects]]
-  from = "/archive/datathon/*"
+  from = "/archive/datathon-2024/*"
   to = "https://datathon-splash-2024.netlify.app/:splat"
   status = 200
 
