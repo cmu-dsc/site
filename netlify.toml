@@ -3,6 +3,17 @@
   to = "https://datathon-splash.netlify.app/:splat"
   status = 200
 
+[[redirects]]
+  from = "/anomaly/*"
+  to = "https://cmu-anomaly.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [build]
   command = "bun run build"
   publish = "dist"
@@ -18,16 +29,5 @@
   publish = "dist"
   framework = "astro"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [functions."github-contributions-scheduled"]
   schedule = "0 */6 * * *"
-
-[[redirects]]
-  from = "/anomaly/*"
-  to = "https://cmu-anomaly.netlify.app/:splat"
-  status = 200
-  force = true
