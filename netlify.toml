@@ -1,13 +1,12 @@
 [[redirects]]
-  from = "/datathon/*"
-  to = "https://datathon-splash.netlify.app/:splat"
-  status = 200
-
-[[redirects]]
   from = "/anomaly/*"
   to = "https://cmu-anomaly.netlify.app/:splat"
   status = 200
-  force = true
+
+[[redirects]]
+  from = "/archive/datathon/*"
+  to = "https://datathon-splash-2024.netlify.app/:splat"
+  status = 200
 
 [[redirects]]
   from = "/archive/pokerai-2024/*"
