@@ -1,33 +1,29 @@
 ---
-import fall2024 from "../data/events/fall2024.json";
-import spring2024 from "../data/events/spring2024.json";
-import spring2023 from "../data/events/spring2023.json";
-import fall2023 from "../data/events/fall2023.json";
+import { getCollection } from 'astro:content';
 import Layout from "../layouts/Layout.astro";
 
-interface Event {
-  title: string;
-  description: string;
-  date: string;
-  slides?: string;
-  notebook?: string;
-  recording?: string;
-  audioSummary?: string;
-  tags: TagType[];
-}
+// Get all events and transform them into the expected format
+const allEvents = await getCollection('events');
+const eventData = allEvents.map(entry => ({
+  semester: entry.data.semester,
+  events: entry.data.events
+}));
 
-interface SemesterData {
-  semester: string;
-  events: Event[];
-}
-
-const eventData: SemesterData[] = [fall2024, spring2024, fall2023, spring2023] as SemesterData[];
 // Sort events within each semester by date in descending order
 eventData.forEach((semester) => {
   semester.events.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 });
+
+// Sort semesters chronologically (newest first)
+eventData.sort((a, b) => {
+  const [aTerm, aYear] = a.semester.split(' ');
+  const [_bTerm, bYear] = b.semester.split(' ');
+  if (aYear !== bYear) return Number(bYear) - Number(aYear);
+  return aTerm === 'Fall' ? -1 : 1;
+});
+
 const semesters = eventData.map((data) => data.semester);
 
 const tagOrder = [
@@ -38,8 +34,6 @@ const tagOrder = [
   "career",
   "technical",
 ] as const;
-
-type TagType = (typeof tagOrder)[number];
 
 const tagColors = {
   social: "bg-red-100/60 text-red-800",
@@ -120,11 +114,13 @@ const tagNames = {
                       {/* Content Column */}
                       <div class="flex-1">
                         <div class="flex flex-wrap gap-2 mb-2">
-                          {event.tags.map((tag) => (
-                            <span class={`text-xs px-2 py-0.5 rounded-full ${tagColors[tag]}`}>
-                              {tagNames[tag]}
-                            </span>
-                          ))}
+                          {event.tags
+                            .sort((a, b) => tagOrder.indexOf(a) - tagOrder.indexOf(b))
+                            .map((tag) => (
+                              <span class={`text-xs px-2 py-0.5 rounded-full ${tagColors[tag]}`}>
+                                {tagNames[tag]}
+                              </span>
+                            ))}
                         </div>
                         <h3 class="font-medium text-lg text-[#082b57] mb-2">{event.title}</h3>
                         <p class="text-sm text-gray-600 mb-4">{event.description}</p>

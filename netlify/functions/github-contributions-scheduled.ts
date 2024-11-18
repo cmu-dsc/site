@@ -86,7 +86,7 @@ const getContributionLevel = (count: number, max: number): 0 | 1 | 2 | 3 | 4 => 
   return 4;
 };
 
-export const handler: Handler = async (event, context) => {
+export const handler: Handler = async (_event, _context) => {
   try {
     // Check rate limit
     const rateLimit = await fetch('https://api.github.com/rate_limit', {

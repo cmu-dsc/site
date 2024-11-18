@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 import MailIcon from "../icons/mail.svg?raw";
 import Layout from "../layouts/Layout.astro";
-import sponsors from "../data/sponsors.json";
+
+const { data: sponsors } = await getEntry("sponsors", "sponsors");
 ---
 
 <Layout title="Sponsors - CMU Data Science Club">
@@ -24,10 +27,14 @@ import sponsors from "../data/sponsors.json";
                 class="bg-white/20 backdrop-blur-sm w-full sm:w-80 h-40 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-8 border border-white/10"
                 data-umami-event={`Sponsor Click - ${sponsor.name} (Gold)`}
               >
-                <img
+                <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
+                  width={640}
+                  height={320}
                   class="max-w-full max-h-full object-contain"
+                  quality={90}
+                  format="webp"
                 />
               </a>
             ))
@@ -52,10 +59,14 @@ import sponsors from "../data/sponsors.json";
                 class="bg-white/20 backdrop-blur-sm w-full sm:w-64 h-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-6 border border-white/10"
                 data-umami-event={`Sponsor Click - ${sponsor.name} (Silver)`}
               >
-                <img
+                <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
+                  width={512}
+                  height={256}
                   class="max-w-full max-h-full object-contain"
+                  quality={90}
+                  format="webp"
                 />
               </a>
             ))
@@ -80,10 +91,14 @@ import sponsors from "../data/sponsors.json";
                 class="bg-white/20 backdrop-blur-sm w-full sm:w-48 h-24 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-4 border border-white/10"
                 data-umami-event={`Sponsor Click - ${sponsor.name} (Bronze)`}
               >
-                <img
+                <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
+                  width={384}
+                  height={192}
                   class="max-w-full max-h-full object-contain"
+                  quality={90}
+                  format="webp"
                 />
               </a>
             ))

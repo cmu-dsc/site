@@ -1,7 +1,7 @@
 - name: "Yeonji Baek"
   major: "Statistics and Machine Learning"
   gradYear: "2026"
-  image: "./images/yeonji.jpg"
+  image: "../../assets/alumni/yeonji.jpg"
   boardPositions:
     - title: "Social Director"
       semesters: ["F24"]
@@ -10,7 +10,7 @@
 - name: "Bincheng Wang"
   major: "MS, Data Analytics for Science"
   gradYear: "2025"
-  image: "./images/bingcheng.jpg"
+  image: "../../assets/alumni/bingcheng.jpg"
   boardPositions:
     - title: "Workshops Co-Director"
       semesters: ["F24"]
@@ -19,7 +19,7 @@
 - name: "Noelani Phillips"
   major: "Statistics and Machine Learning"
   gradYear: "2025"
-  image: "./images/noelani.jpg"
+  image: "../../assets/alumni/noelani.jpg"
   boardPositions:
     - title: "Mentorship Director"
       semesters: ["S24"]
@@ -28,7 +28,7 @@
 - name: "Suha Niyas"
   major: "Statistics"
   gradYear: "2024"
-  image: "./images/suha.jpg"
+  image: "../../assets/alumni/suha.jpg"
   currentTitle: "Data Science Engineer at Qorvo"
   boardPositions:
     - title: "Design Co-Director"
@@ -38,7 +38,7 @@
 - name: "Raaka Mukhopadhyay"
   major: "Statistics and Machine Learning"
   gradYear: "2024"
-  image: "./images/raaka.jpg"
+  image: "../../assets/alumni/raaka.jpg"
   currentTitle: "Project Coordinator at Five Rings"
   boardPositions:
     - title: "Co-President"
@@ -50,7 +50,7 @@
 - name: "Idris Wardere"
   major: "Statistics and Machine Learning"
   gradYear: "2025"
-  image: "./images/idris.jpg"
+  image: "../../assets/alumni/idris.jpg"
   boardPositions:
     - title: "Co-President"
       semesters: ["F23", "S23"]
@@ -59,7 +59,7 @@
 - name: "Mengrou Shou"
   major: "Computer Science"
   gradYear: "2024"
-  image: "./images/meng.jpg"
+  image: "../../assets/alumni/meng.jpg"
   boardPositions:
     - title: "VP of Internal Affairs"
       semesters: ["F23", "S23"]
@@ -70,7 +70,7 @@
 - name: "Anisha Chatterjee"
   major: "Artificial Intelligence"
   gradYear: "2025"
-  image: "./images/anisha.jpeg"
+  image: "../../assets/alumni/anisha.jpeg"
   boardPositions:
     - title: "VP of Events"
       semesters: ["F23", "S23"]
@@ -79,7 +79,7 @@
 - name: "Jeremy Li"
   major: "Statistics and Machine Learning"
   gradYear: "2025"
-  image: "./images/jeremy.jpg"
+  image: "../../assets/alumni/jeremy.jpg"
   boardPositions:
     - title: "VP of Communications"
       semesters: ["F23"]
@@ -90,7 +90,7 @@
 - name: "Jet Wu"
   major: "Statistics and Machine Learning"
   gradYear: "2026"
-  image: "./images/jet.jpg"
+  image: "../../assets/alumni/jet.jpg"
   boardPositions:
     - title: "VP of Events"
       semesters: ["S23"]
@@ -100,7 +100,7 @@
   major: "Economics, Statistics and Machine Learning"
   gradYear: "2022"
   currentTitle: "Senior Business Analyst at McKinsey"
-  image: "./images/jerry.jpg"
+  image: "../../assets/alumni/jerry.jpg"
   boardPositions:
     - title: "Co-President"
       semesters: ["S21", "F20"]
@@ -112,7 +112,7 @@
   major: "Math"
   gradYear: "2023"
   currentTitle: "PhD Student at U.C. Berkeley"
-  image: "./images/max.jpg"
+  image: "../../assets/alumni/max.jpg"
   boardPositions:
     - title: "VP of Projects"
       semesters: ["S21", "F20"]
@@ -122,7 +122,7 @@
   major: "Computer Science"
   gradYear: "2021"
   currentTitle: "PhD Student at U.C. Berkeley"
-  image: "./images/jessica.jpg"
+  image: "../../assets/alumni/jessica.jpg"
   boardPositions:
     - title: "President"
       semesters: ["S20", "F19", "S19"]
@@ -132,7 +132,7 @@
   major: "PhD, Physics"
   gradYear: "2021"
   currentTitle: "AI Engineering Manager at Carnegie Learning"
-  image: "./images/husni.jpg"
+  image: "../../assets/alumni/husni.jpg"
   boardPositions:
     - title: "VP of Projects"
       semesters: ["S20", "F19", "S19"]
@@ -142,7 +142,7 @@
   major: "Computational Finance"
   gradYear: "2021"
   currentTitle: "Quantitative Trader at GTS"
-  image: "./images/tony.jpeg"
+  image: "../../assets/alumni/tony.jpeg"
   boardPositions:
     - title: "VP of Finance"
       semesters: ["S20", "F19", "S19"]

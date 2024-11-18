@@ -12,7 +12,7 @@ interface NetlifyMetadata {
   last_updated?: number;
 }
 
-export const handler: Handler = async (event, context) => {
+export const handler: Handler = async (_event, _context) => {
   try {
     const cachedResponse = await fetch(
       `https://api.netlify.com/api/v1/sites/${process.env.SITE_ID}/metadata`,

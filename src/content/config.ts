@@ -44,8 +44,55 @@ const projects = defineCollection({
   }))
 });
 
+const sponsors = defineCollection({
+  type: 'data',
+  schema: ({ image }) => z.object({
+    gold: z.array(z.object({
+      name: z.string(),
+      logo: image(),
+      url: z.string().url()
+    })),
+    silver: z.array(z.object({
+      name: z.string(),
+      logo: image(),
+      url: z.string().url()
+    })),
+    bronze: z.array(z.object({
+      name: z.string(),
+      logo: image(),
+      url: z.string().url()
+    }))
+  })
+});
+
+const events = defineCollection({
+  type: 'data',
+  schema: z.object({
+    semester: z.string(),
+    events: z.array(z.object({
+      title: z.string(),
+      description: z.string(),
+      date: z.string(),
+      slides: z.string().url().optional(),
+      notebook: z.string().url().optional(),
+      recording: z.string().url().optional(),
+      audioSummary: z.string().optional(),
+      tags: z.array(z.enum([
+        'social',
+        'workshop',
+        'speaker',
+        'competition',
+        'career',
+        'technical'
+      ]))
+    }))
+  })
+});
+
 export const collections = {
   board,
   alumni,
-  projects
+  projects,
+  sponsors,
+  events
 };

@@ -13,7 +13,7 @@
   {
     "title": "Tetris AI",
     "description": "An AI agent that learns to play Tetris, optimizing piece placement and strategy.",
-    "thumbnail": "./images/tetris.webp",
+    "thumbnail": "../../assets/projects/tetris.webp",
     "github": "https://github.com/cmu-dsc/tetris",
     "leaders": [
       {
@@ -31,7 +31,7 @@
   {
     "title": "Chart Pattern Analysis",
     "description": "Developing algorithms to detect chart patterns for identifying trading opportunities in financial markets.",
-    "thumbnail": "./images/chart_pattern_analysis.png",
+    "thumbnail": "../../assets/projects/chart_pattern_analysis.png",
     "github": "https://github.com/cmu-dsc/chart_pattern_analysis",
     "leaders": [
       {
@@ -44,7 +44,7 @@
   {
     "title": "Monthly Data Challenges",
     "description": "Posts from our members who solve our monthly data challenges.",
-    "thumbnail": "./images/data_challenges.webp",
+    "thumbnail": "../../assets/projects/data_challenges.webp",
     "website": "https://medium.com/cmu-data-science-club-data-challenges",
     "leaders": [
       {

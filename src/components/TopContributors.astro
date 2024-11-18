@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Contributor {
   login: string;
@@ -9,7 +9,6 @@ interface Contributor {
 }
 
 let contributors: Contributor[] = [];
-let error: { type: string; message: string } | null = null;
 
 try {
   const baseUrl = "https://cmudsc.com";
@@ -26,38 +25,37 @@ try {
 
   contributors = await response.json();
 } catch (e) {
-  error = {
-    type: "GENERAL",
-    message: "Failed to load contributor data. Please try again later.",
-  };
+  console.error("Failed to load contributor data:", e);
 }
 ---
 
 <div class="flex flex-wrap gap-4 items-center min-h-[91px]">
-  {contributors.slice(0, 12).map((contributor) => (
-    <a
-      href={contributor.html_url}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="relative group"
-      data-umami-event={`Contributor Github Click - ${contributor.login}`}
-    >
-      <Image
-        src={contributor.avatar_url}
-        alt={contributor.login}
-        width={48}
-        height={48}
-        class="w-12 h-12 rounded-full ring-2 ring-white/10 group-hover:ring-white/30 transition-all"
-      />
-      <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
-        <div class="bg-gray-900 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
-          <div class="font-medium">{contributor.login}</div>
-          <div class="text-gray-300">
-            {contributor.contributions} contributions
+  {
+    contributors.slice(0, 12).map((contributor) => (
+      <a
+        href={contributor.html_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="relative group"
+        data-umami-event={`Contributor Github Click - ${contributor.login}`}
+      >
+        <Image
+          src={contributor.avatar_url}
+          alt={contributor.login}
+          width={48}
+          height={48}
+          class="w-12 h-12 rounded-full ring-2 ring-white/10 group-hover:ring-white/30 transition-all"
+        />
+        <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
+          <div class="bg-gray-900 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+            <div class="font-medium">{contributor.login}</div>
+            <div class="text-gray-300">
+              {contributor.contributions} contributions
+            </div>
           </div>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
         </div>
-        <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
-      </div>
-    </a>
-  ))}
+      </a>
+    ))
+  }
 </div>
