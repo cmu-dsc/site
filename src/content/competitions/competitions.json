@@ -1,0 +1,114 @@
+[
+  {
+    "title": "CMU Intercollegiate AI Poker Tournament 2025",
+    "description": "Build an AI poker agent and compete for $100,000 in prizes. Test your skills in machine learning and game theory against top university talent.",
+    "date": "February 9 - March 10, 2025",
+    "status": "upcoming",
+    "link": "https://poker.cmudsc.com",
+    "thumbnail": "../../assets/competitions/poker-2025.svg",
+    "highlights": [
+      "Compete for $100,000 prize pool with direct recruiting at Jump Trading",
+      "Open to all U.S. university students - finals held in Chicago",
+      "Build AI agents using Python to play heads-up poker matches"
+    ]
+  },
+  {
+    "title": "CMU Datathon 2024",
+    "description": "A week-long data science competition where participants analyze the environmental impact of AI in finance. Create innovative strategies to enhance the sustainability and eco-friendliness of AI applications.",
+    "date": "November 9-16, 2024",
+    "status": "past",
+    "link": "/archive/datathon-2024",
+    "thumbnail": "../../assets/competitions/datathon-2024.png",
+    "highlights": [
+      "Explore the intersection of AI, finance, and environmental sustainability",
+      "Organized by CMU DSC + Students Using Data for Social Good",
+      "Build models to measure and optimize AI's carbon footprint"
+    ],
+    "gallery": [
+      "../../assets/competitions/datathon-2024/1st_place.jpeg",
+      "../../assets/competitions/datathon-2024/2nd_place.jpg",
+      "../../assets/competitions/datathon-2024/3rd_place.jpg",
+      "../../assets/competitions/datathon-2024/team.jpg",
+      "../../assets/competitions/datathon-2024/opening.webp",
+      "../../assets/competitions/datathon-2024/presenting.webp"
+    ],
+    "winners": [
+      {
+        "place": 1,
+        "members": [
+          "Akhil Dua",
+          "Arihant Sheth",
+          "Mahima Jagadeesh Patel",
+          "Reuben George Mathew"
+        ],
+        "prize": "$2,000"
+      },
+      {
+        "place": 2,
+        "members": [
+          "Nachiketa Hebbar",
+          "Hemalatha Jayanne Gowda"
+        ],
+        "prize": "Honorable Mention"
+      },
+      {
+        "place": 3,
+        "members": [
+          "Stanley Ou",
+          "Andy Ouyang",
+          "Joyce Lam"
+        ],
+        "prize": "Honorable Mention"
+      }
+    ]
+  },
+  {
+    "title": "CMU Poker AI 2024",
+    "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
+    "date": "March 29-30, 2024",
+    "status": "past",
+    "link": "/archive/pokerai-2024",
+    "thumbnail": "../../assets/competitions/poker-2024.png",
+    "highlights": [
+      "Connect with top trading firms including Jump Trading, HRT, Jane Street",
+      "Learn game theory and AI strategies through expert workshops",
+      "No prior poker knowledge needed - just bring your coding skills"
+    ],
+    "gallery": [
+      "../../assets/competitions/poker-2024/audience.png",
+      "../../assets/competitions/poker-2024/opening.png",
+      "../../assets/competitions/poker-2024/rl_workshop.png",
+      "../../assets/competitions/poker-2024/team.png",
+      "../../assets/competitions/poker-2024/tuomas.png",
+      "../../assets/competitions/poker-2024/winners.png"
+    ],
+    "winners": [
+      {
+        "place": 1,
+        "members": [
+          "Vihan Karnala",
+          "Tanay Bennur",
+          "Arnav Paliwal",
+          "Aiden Dowd"
+        ],
+        "prize": "$3,000"
+      },
+      {
+        "place": 2,
+        "members": [
+          "Ina Pei"
+        ],
+        "prize": "$2,000"
+      },
+      {
+        "place": 3,
+        "members": [
+          "Oscar Ma",
+          "Shitian Lin",
+          "Zhijun Cao"
+        ],
+        "prize": "$1,000"
+      }
+    ]
+  }
+]

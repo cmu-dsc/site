@@ -1,0 +1,373 @@
+---
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const { data: allCompetitions } = await getEntry(
+  "competitions",
+  "competitions",
+);
+const upcoming = allCompetitions.filter((c) => c.status === "upcoming");
+const past = allCompetitions.filter((c) => c.status === "past");
+
+const firstUpcoming = upcoming[0];
+const isAboveFold = (
+  competition: (typeof allCompetitions)[0],
+  index: number,
+) => {
+  return competition === firstUpcoming || index === 0;
+};
+
+// Helper function for medal emojis
+const getPlaceEmoji = (place: number) => {
+  switch (place) {
+    case 1:
+      return "🥇";
+    case 2:
+      return "🥈";
+    case 3:
+      return "🥉";
+    default:
+      return "🏅";
+  }
+};
+---
+
+<Layout
+  title="Competitions"
+  description="Participate in our AI and data science competitions at CMU. From poker AI to datathons, showcase your skills and compete for prizes while learning from industry experts."
+>
+  <main class="min-h-screen p-8 pt-24">
+    <div class="max-w-6xl mx-auto space-y-16">
+      <!-- Upcoming Competitions -->
+      {
+        upcoming.length > 0 && (
+          <section>
+            <h2 class="text-3xl font-bold text-[#082b57] mb-8">
+              Upcoming Competitions
+            </h2>
+            <div class="grid gap-8">
+              {upcoming.map((competition, index) => (
+                <div
+                  class="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                  data-umami-event={`View Upcoming Competition - ${competition.title}`}
+                >
+                  <div class="grid md:grid-cols-[auto_1fr] gap-6">
+                    <div class="relative w-32 h-32 rounded-lg overflow-hidden">
+                      <Image
+                        src={competition.thumbnail}
+                        alt={competition.title}
+                        width={128}
+                        height={128}
+                        class="object-cover w-full h-full"
+                        loading={
+                          isAboveFold(competition, index) ? "eager" : "lazy"
+                        }
+                        format="webp"
+                      />
+                    </div>
+
+                    <div class="flex flex-col">
+                      <h3 class="text-2xl font-semibold text-[#082b57] mb-2">
+                        {competition.title}
+                      </h3>
+                      <p class="text-gray-600 mb-4">
+                        {competition.description}
+                      </p>
+
+                      <div class="mb-4">
+                        <h4 class="font-medium text-[#082b57] mb-2">
+                          Highlights:
+                        </h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                          {competition.highlights.map((highlight) => (
+                            <li>{highlight}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div class="flex gap-4 mt-auto">
+                        <a
+                          href={competition.link}
+                          class="inline-flex items-center gap-2 text-[#082b57] hover:text-[#082b57]/80 font-medium"
+                          target={
+                            competition.link.startsWith("http")
+                              ? "_blank"
+                              : undefined
+                          }
+                          rel={
+                            competition.link.startsWith("http")
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
+                          data-umami-event={`Competition Click - ${competition.title}`}
+                        >
+                          Learn More
+                          <svg
+                            class="w-4 h-4"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      <!-- Past Competitions -->
+      <section>
+        <h2 class="text-3xl font-bold text-[#082b57] mb-8">
+          Past Competitions
+        </h2>
+        <div class="grid gap-16">
+          {
+            past.map((competition) => (
+              <div class="space-y-8">
+                <div
+                  class="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                  data-umami-event={`View Past Competition - ${competition.title}`}
+                >
+                  <div class="grid md:grid-cols-[auto_1fr] gap-6">
+                    <div class="relative w-32 h-32 rounded-lg overflow-hidden">
+                      <Image
+                        src={competition.thumbnail}
+                        alt={competition.title}
+                        width={128}
+                        height={128}
+                        class="object-cover w-full h-full"
+                        loading="lazy"
+                        format="webp"
+                      />
+                    </div>
+
+                    <div class="flex flex-col">
+                      <h3 class="text-2xl font-semibold text-[#082b57] mb-2">
+                        {competition.title}
+                      </h3>
+                      <p class="text-gray-600 mb-4">
+                        {competition.description}
+                      </p>
+
+                      <div class="mb-4">
+                        <h4 class="font-medium text-[#082b57] mb-2">
+                          Highlights:
+                        </h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                          {competition.highlights.map((highlight) => (
+                            <li>{highlight}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {competition.winners && (
+                        <div class="mb-4">
+                          <h4 class="font-medium text-[#082b57] mb-2">
+                            Winners:
+                          </h4>
+                          <div class="space-y-2">
+                            {competition.winners.map((winner) => (
+                              <div class="flex items-start gap-2 text-gray-600">
+                                <span class="text-xl">
+                                  {getPlaceEmoji(winner.place)}
+                                </span>
+                                <div>
+                                  <div class="font-medium">
+                                    {winner.team} - {winner.prize}
+                                  </div>
+                                  <div class="text-sm">
+                                    {winner.members.join(", ")}
+                                  </div>
+                                  {winner.projectLink && (
+                                    <a
+                                      href={winner.projectLink}
+                                      class="text-sm text-blue-600 hover:text-blue-800"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      data-umami-event={`View Winner Project - ${competition.title} - ${winner.team}`}
+                                    >
+                                      View Project
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      <div class="flex gap-4 mt-auto">
+                        <a
+                          href={competition.link}
+                          class="inline-flex items-center gap-2 text-[#082b57] hover:text-[#082b57]/80 font-medium"
+                          target={
+                            competition.link.startsWith("http")
+                              ? "_blank"
+                              : undefined
+                          }
+                          rel={
+                            competition.link.startsWith("http")
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
+                          data-umami-event={`Competition Click - ${competition.title}`}
+                        >
+                          Learn More
+                          <svg
+                            class="w-4 h-4"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {competition.gallery && (
+                  <div class="space-y-4">
+                    <h4 class="text-xl font-medium text-[#082b57]">Gallery</h4>
+                    <div class="marquee">
+                      {competition.gallery.map((image) => (
+                        <div class="marquee__item">
+                          <div class="relative aspect-[4/3] rounded-lg overflow-hidden p-1">
+                            <Image
+                              src={image}
+                              alt="Competition photo"
+                              width={400}
+                              height={300}
+                              class="object-cover w-full h-full rounded-lg hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                              format="webp"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Glass effect styles */
+  .backdrop-blur-sm {
+    position: relative;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .backdrop-blur-sm::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    padding: 1px;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Add these new styles for the scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes scroll {
+    to {
+      inset-inline-start: calc(var(--marquee-item-width) * -1);
+    }
+  }
+
+  .marquee {
+    --marquee-item-width: 288px;
+    --marquee-item-height: 216px;
+    --marquee-duration: 30s;
+    --marquee-items: 6;
+
+    display: flex;
+    block-size: var(--marquee-item-height);
+    margin-block: 2rem;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .marquee__item {
+    --marquee-item-offset: max(
+      calc(var(--marquee-item-width) * var(--marquee-items)),
+      calc(100% + var(--marquee-item-width))
+    );
+    --marquee-delay: calc(
+      var(--marquee-duration) / var(--marquee-items) *
+        (var(--marquee-items) - var(--marquee-item-index)) * -1
+    );
+    position: absolute;
+    inset-inline-start: var(--marquee-item-offset);
+    transform: translateX(-50%);
+    animation: scroll linear var(--marquee-duration) var(--marquee-delay, 0s)
+      infinite;
+    width: var(--marquee-item-width);
+  }
+
+  .marquee__item:nth-of-type(1) {
+    --marquee-item-index: 1;
+  }
+  .marquee__item:nth-of-type(2) {
+    --marquee-item-index: 2;
+  }
+  .marquee__item:nth-of-type(3) {
+    --marquee-item-index: 3;
+  }
+  .marquee__item:nth-of-type(4) {
+    --marquee-item-index: 4;
+  }
+  .marquee__item:nth-of-type(5) {
+    --marquee-item-index: 5;
+  }
+  .marquee__item:nth-of-type(6) {
+    --marquee-item-index: 6;
+  }
+
+  /* Remove previous scroll animations */
+  .animate-scroll,
+  .animate-scroll-reverse {
+    animation: none;
+  }
+</style>

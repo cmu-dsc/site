@@ -89,10 +89,32 @@ const events = defineCollection({
   })
 });
 
+const competitions = defineCollection({
+  type: 'data',
+  schema: ({ image }) => z.array(z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.string(),
+    status: z.enum(['upcoming', 'past']),
+    link: z.string(),
+    thumbnail: image(),
+    highlights: z.array(z.string()),
+    gallery: z.array(image()).optional(),
+    winners: z.array(z.object({
+      place: z.number(),
+      team: z.string().optional(),
+      members: z.array(z.string()),
+      prize: z.string().optional(),
+      projectLink: z.string().url().optional()
+    })).optional()
+  }))
+});
+
 export const collections = {
   board,
   alumni,
   projects,
   sponsors,
-  events
+  events,
+  competitions
 };
