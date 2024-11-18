@@ -1,12 +1,20 @@
 ---
-import { Image } from "astro:assets";
-import logo from "../assets/dsc.svg";
-
 interface Props {
   title: string;
+  description?: string;
+  type?: "website" | "article";
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "CMU's premier AI and Data Science club. Join us for AI workshops, ML projects, and Data Science competitions at Carnegie Mellon University.",
+  type = "website",
+} = Astro.props;
+
+const formattedTitle =
+  title === "CMU Data Science Club"
+    ? title
+    : `${title} | CMU Data Science Club`;
 
 const menuItems = [
   { href: "/", label: "Home", description: "Return to homepage" },
@@ -41,34 +49,26 @@ const menuItems = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{formattedTitle}</title>
     <script
       is:inline
       src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"
     ></script>
-    <meta
-      name="description"
-      content="CMU's premier AI and Data Science club. Join us for AI workshops, ML projects, and research at Carnegie Mellon University."
-    />
+    <meta name="description" content={description} />
     <meta
       name="keywords"
       content="CMU AI Club, Carnegie Mellon AI, CMU Artificial Intelligence Club, CMU Machine Learning Club, CMU Data Science, Carnegie Mellon University, Student Organization, Data Analytics, Machine Learning, Artificial Intelligence, Deep Learning, Pittsburgh AI"
     />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content={title} />
-    <meta
-      property="og:description"
-      content="CMU Data Science Club - Empowering CMU students in artificial intelligence, machine learning, and data science"
-    />
-    <meta property="og:image" content="/images/dsc.svg" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={formattedTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/dsc.svg" />
     <meta property="og:url" content="https://cmudsc.com" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={title} />
-    <meta
-      name="twitter:description"
-      content="CMU Data Science Club - Empowering CMU students in artificial intelligence, machine learning, and data science"
-    />
-    <meta name="twitter:image" content="/images/dsc.svg" />
+    <meta name="twitter:title" content={formattedTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/dsc.svg" />
     <script
       is:inline
       defer
@@ -86,7 +86,7 @@ const menuItems = [
           "Carnegie Mellon Data Science Club"
         ],
         "logo": {
-          "url": "https://cmudsc.com/images/dsc.svg",
+          "url": "https://cmudsc.com/dsc.svg",
           "width": "512",
           "height": "512"
         },
@@ -110,12 +110,7 @@ const menuItems = [
         }
       }
     </script>
-    <link
-      rel="preload"
-      href="/images/dsc.svg"
-      as="image"
-      type="image/svg+xml"
-    />
+    <link rel="preload" href="/dsc.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
     <link
       rel="preload"
@@ -185,7 +180,7 @@ const menuItems = [
           href="/"
           class="relative transform transition-all duration-300 hover:-rotate-6"
         >
-          <Image src={logo} alt="CMU DSC Logo" class="h-16 w-16 mr-2" />
+          <img src="/dsc.svg" alt="CMU DSC Logo" class="h-16 w-16 mr-2" />
           <div
             class="absolute inset-0 bg-blue-400/20 rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >

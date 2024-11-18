@@ -7,7 +7,10 @@ import Layout from "../layouts/Layout.astro";
 const { data: sponsors } = await getEntry("sponsors", "sponsors");
 ---
 
-<Layout title="Sponsors - CMU Data Science Club">
+<Layout 
+  title="Sponsors"
+  description="Partner with CMU Data Science Club to connect with talented students in AI and machine learning. Learn about our sponsorship opportunities and how to support the next generation of data scientists."
+>
   <main class="min-h-screen p-8 pt-24">
     <div class="max-w-6xl mx-auto space-y-8">
       <!-- Gold Tier -->
