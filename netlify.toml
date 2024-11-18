@@ -25,3 +25,9 @@
 
 [functions."github-contributions-scheduled"]
   schedule = "0 */6 * * *"
+
+[[redirects]]
+  from = "/anomaly/*"
+  to = "https://cmu-anomaly.netlify.app/:splat"
+  status = 200
+  force = true
