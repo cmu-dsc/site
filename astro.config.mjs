@@ -3,9 +3,21 @@ import { defineConfig } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  site: 'https://cmudsc.com',
+  integrations: [
+    tailwind(),
+    sitemap({
+      customPages: [
+        'https://cmudsc.com/datathon',
+        'https://cmudsc.com/anomaly',
+        'https://poker.cmudsc.com',
+      ],
+    }),
+  ],
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto',
