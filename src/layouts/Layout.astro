@@ -122,6 +122,42 @@ const menuItems = [
   </head>
 </html>
 <body class="bg-gray-50 relative">
+  <!-- Add Poker Competition Banner -->
+  <div
+    id="poker-banner"
+    class="fixed bottom-4 right-4 z-50 transition-all duration-300 hidden"
+  >
+    <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col gap-3 max-w-xs border border-gray-200">
+      <div class="flex justify-between items-start">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🎉</span>
+          <h3 class="font-medium text-[#082b57]">AI Poker Competition</h3>
+        </div>
+        <button
+          onclick="dismissBanner()"
+          class="text-gray-400 hover:text-gray-600 transition-colors"
+          aria-label="Dismiss banner"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <p class="text-sm text-gray-600">
+        Build your agent and compete for $100,000 in our upcoming AI competition!
+      </p>
+      <a
+        href="https://poker.cmudsc.com"
+        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm text-center hover:opacity-90 transition-opacity"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-umami-event="Poker Banner CTA"
+      >
+        Learn More
+      </a>
+    </div>
+  </div>
+
   <div id="tsparticles" class="absolute inset-0 -z-10"></div>
 
   <header
@@ -409,5 +445,27 @@ const menuItems = [
         });
       }
     });
+  </script>
+
+  <script is:inline>
+    // Check localStorage immediately
+    if (localStorage.getItem('poker-banner-dismissed') !== 'true') {
+      // Only show banner if it hasn't been dismissed
+      document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('poker-banner');
+        if (banner) banner.classList.remove('hidden');
+      });
+    }
+
+    function dismissBanner() {
+      const banner = document.getElementById('poker-banner');
+      if (banner) {
+        banner.style.transform = 'translateY(100%)';
+        // Store dismissal in localStorage
+        localStorage.setItem('poker-banner-dismissed', 'true');
+        // Remove banner after animation
+        setTimeout(() => banner.remove(), 300);
+      }
+    }
   </script>
 </body>
