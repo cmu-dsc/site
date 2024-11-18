@@ -115,26 +115,33 @@ const menuItems = [
   </head>
 </html>
 <body class="bg-gray-50 relative">
-  <!-- Add Poker Competition Banner -->
+  <!-- Modified Top Banner -->
   <div
     id="poker-banner"
-    class="fixed bottom-4 right-4 z-50 transition-all duration-300 hidden"
+    class="w-full bg-[#082b57] text-white hidden fixed top-0 left-0 right-0 z-50"
   >
-    <div
-      class="bg-white rounded-2xl shadow-lg p-4 flex flex-col gap-3 max-w-xs border border-gray-200"
-    >
-      <div class="flex justify-between items-start">
-        <div class="flex items-center gap-2">
-          <span class="text-xl">🎉</span>
-          <h3 class="font-medium text-[#082b57]">AI Poker Competition</h3>
-        </div>
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center">
+      <div class="flex items-center gap-3">
+        <span class="text-xl">🏆</span>
+        <p class="text-sm text-white">
+          Join our AI Poker Competition and compete for a $100,000 prize pool! 
+          <a
+            href="https://poker.cmudsc.com"
+            class="underline hover:text-white/90 font-medium"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-umami-event="Poker Banner CTA"
+          >
+            Learn more →
+          </a>
+        </p>
         <button
           onclick="dismissBanner()"
-          class="text-gray-400 hover:text-gray-600 transition-colors"
+          class="text-white/60 hover:text-white transition-colors p-1"
           aria-label="Dismiss banner"
         >
           <svg
-            class="w-5 h-5"
+            class="w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -147,26 +154,13 @@ const menuItems = [
           </svg>
         </button>
       </div>
-      <p class="text-sm text-gray-600">
-        Build your agent and compete for $100,000 in our upcoming AI
-        competition!
-      </p>
-      <a
-        href="https://poker.cmudsc.com"
-        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm text-center hover:opacity-90 transition-opacity"
-        target="_blank"
-        rel="noopener noreferrer"
-        data-umami-event="Poker Banner CTA"
-      >
-        Learn More
-      </a>
     </div>
   </div>
 
   <div id="tsparticles" class="absolute inset-0 -z-10"></div>
 
   <header
-    class="fixed top-0 left-0 right-0 p-4 z-10 transition-all duration-300"
+    class="fixed left-0 right-0 p-4 z-10 transition-all duration-300"
     id="header"
   >
     <nav class="max-w-7xl mx-auto flex justify-between items-center">
@@ -451,17 +445,32 @@ const menuItems = [
   <script is:inline>
     // Check localStorage immediately
     if (localStorage.getItem("poker-banner-dismissed") !== "true") {
-      // Only show banner if it hasn't been dismissed
       document.addEventListener("DOMContentLoaded", () => {
         const banner = document.getElementById("poker-banner");
-        if (banner) banner.classList.remove("hidden");
+        const header = document.getElementById("header");
+        if (banner) {
+          banner.classList.remove("hidden");
+          // Add padding to body and adjust header position
+          document.body.style.paddingTop = banner.offsetHeight + "px";
+          if (header) {
+            header.style.top = banner.offsetHeight + "px";
+          }
+        }
       });
     }
 
     function dismissBanner() {
       const banner = document.getElementById("poker-banner");
+      const header = document.getElementById("header");
       if (banner) {
-        banner.style.transform = "translateY(100%)";
+        banner.style.opacity = "0";
+        banner.style.transform = "translateY(-100%)";
+        banner.style.transition = "all 300ms ease-in-out";
+        // Reset body padding and header position
+        document.body.style.paddingTop = "0px";
+        if (header) {
+          header.style.top = "0px";
+        }
         // Store dismissal in localStorage
         localStorage.setItem("poker-banner-dismissed", "true");
         // Remove banner after animation
