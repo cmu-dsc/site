@@ -102,6 +102,15 @@
         "technical"
       ],
       "audioSummary": "/audio/data-viz-workshop.opus"
+    },
+    {
+      "title": "NLP Workshop",
+      "description": "Join our introductory NLP workshop to explore some fundamental text processing techniques, such as n-gram models, Bag of Words, and TF-IDF. Learn how these techniques work, their role in text analysis, and how they can be used for feature extraction and representation in machine learning.",
+      "date": "2024-11-22",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
     }
   ]
 }
