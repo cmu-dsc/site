@@ -242,14 +242,14 @@ const menuItems = [
     <!-- Mobile Navigation -->
     <div
       id="mobile-menu"
-      class="fixed md:hidden top-0 right-0 h-screen w-full sm:w-80 bg-white/80 backdrop-blur-lg shadow-2xl transform translate-x-full transition-all duration-300 ease-in-out z-20"
+      class="fixed md:hidden top-0 right-0 h-[100dvh] w-full sm:w-80 bg-white/80 backdrop-blur-lg shadow-2xl transform translate-x-full transition-all duration-300 ease-in-out z-20"
     >
-      <div class="flex flex-col p-8 space-y-4 h-full relative">
+      <div class="flex flex-col p-8 h-full relative">
         <div class="w-full flex justify-between items-center mb-6">
           <span class="text-[#082b57] font-bold text-xl">Menu</span>
           <button
             id="close-menu-button"
-            class="text-[#082b57] p-2 hover:bg-[#082b57]/10 rounded-full transition-colors"
+            class="text-[#082b57] p-2 hover:bg-[#082b57]/10 rounded-full transition-colors -mr-2"
             aria-label="Close menu"
           >
             <svg
@@ -407,12 +407,15 @@ const menuItems = [
       function toggleMenu(open: boolean) {
         isMenuOpen = open;
         const backdrop = document.getElementById("menu-backdrop");
+        const banner = document.getElementById("poker-banner");
+        const bannerHeight = banner?.offsetHeight || 0;
 
         if (!mobileMenu || !backdrop) return;
 
         if (isMenuOpen) {
           document.body.style.overflow = "hidden";
           mobileMenu.style.transform = "translateX(0)";
+          mobileMenu.style.top = `${bannerHeight}px`;
           backdrop.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
           backdrop.style.pointerEvents = "auto";
         } else {
