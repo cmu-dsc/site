@@ -42,7 +42,7 @@ const getPlaceEmoji = (place: number) => {
       <!-- Upcoming Competitions -->
       {
         upcoming.length > 0 && (
-          <section>
+          <section class="pb-16 border-b border-[#082b57]/50">
             <h2 class="text-3xl font-bold text-[#082b57] mb-8">
               Upcoming Competitions
             </h2>
@@ -53,24 +53,55 @@ const getPlaceEmoji = (place: number) => {
                   data-umami-event={`View Upcoming Competition - ${competition.title}`}
                 >
                   <div class="grid md:grid-cols-[auto_1fr] gap-6">
-                    <div class="relative w-32 h-32 rounded-lg overflow-hidden">
+                    <a
+                      href={competition.link}
+                      class="relative w-32 h-32 rounded-lg overflow-hidden group"
+                      target={
+                        competition.link.startsWith("http")
+                          ? "_blank"
+                          : undefined
+                      }
+                      rel={
+                        competition.link.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      data-umami-event={`Competition Thumbnail Click - ${competition.title}`}
+                    >
                       <Image
                         src={competition.thumbnail}
                         alt={competition.title}
                         width={128}
                         height={128}
-                        class="object-cover w-full h-full"
+                        class="object-cover w-full h-full transition-all duration-300 group-hover:brightness-90"
                         loading={
                           isAboveFold(competition, index) ? "eager" : "lazy"
                         }
                         format="webp"
                       />
-                    </div>
+                      <div class="absolute inset-0 ring-2 ring-[#082b57]/0 group-hover:ring-[#082b57]/50 transition-all duration-300 rounded-lg" />
+                    </a>
 
                     <div class="flex flex-col">
-                      <h3 class="text-2xl font-semibold text-[#082b57] mb-2">
-                        {competition.title}
-                      </h3>
+                      <a
+                        href={competition.link}
+                        class="inline-block"
+                        target={
+                          competition.link.startsWith("http")
+                            ? "_blank"
+                            : undefined
+                        }
+                        rel={
+                          competition.link.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        data-umami-event={`Competition Title Click - ${competition.title}`}
+                      >
+                        <h3 class="text-2xl font-semibold text-[#082b57] mb-2">
+                          {competition.title}
+                        </h3>
+                      </a>
                       <p class="text-gray-600 mb-4">
                         {competition.description}
                       </p>
@@ -89,7 +120,7 @@ const getPlaceEmoji = (place: number) => {
                       <div class="flex gap-4 mt-auto">
                         <a
                           href={competition.link}
-                          class="inline-flex items-center gap-2 text-[#082b57] hover:text-[#082b57]/80 font-medium"
+                          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#082b57] text-white hover:bg-[#082b57]/90 transition-colors font-medium"
                           target={
                             competition.link.startsWith("http")
                               ? "_blank"
@@ -139,22 +170,53 @@ const getPlaceEmoji = (place: number) => {
                   data-umami-event={`View Past Competition - ${competition.title}`}
                 >
                   <div class="grid md:grid-cols-[auto_1fr] gap-6">
-                    <div class="relative w-32 h-32 rounded-lg overflow-hidden">
+                    <a
+                      href={competition.link}
+                      class="relative w-32 h-32 rounded-lg overflow-hidden group"
+                      target={
+                        competition.link.startsWith("http")
+                          ? "_blank"
+                          : undefined
+                      }
+                      rel={
+                        competition.link.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      data-umami-event={`Competition Thumbnail Click - ${competition.title}`}
+                    >
                       <Image
                         src={competition.thumbnail}
                         alt={competition.title}
                         width={128}
                         height={128}
-                        class="object-cover w-full h-full"
+                        class="object-cover w-full h-full transition-all duration-300 group-hover:brightness-90"
                         loading="lazy"
                         format="webp"
                       />
-                    </div>
+                      <div class="absolute inset-0 ring-2 ring-[#082b57]/0 group-hover:ring-[#082b57]/50 transition-all duration-300 rounded-lg" />
+                    </a>
 
                     <div class="flex flex-col">
-                      <h3 class="text-2xl font-semibold text-[#082b57] mb-2">
-                        {competition.title}
-                      </h3>
+                      <a
+                        href={competition.link}
+                        class="inline-block"
+                        target={
+                          competition.link.startsWith("http")
+                            ? "_blank"
+                            : undefined
+                        }
+                        rel={
+                          competition.link.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        data-umami-event={`Competition Title Click - ${competition.title}`}
+                      >
+                        <h3 class="text-2xl font-semibold text-[#082b57] mb-2">
+                          {competition.title}
+                        </h3>
+                      </a>
                       <p class="text-gray-600 mb-4">
                         {competition.description}
                       </p>
@@ -209,7 +271,7 @@ const getPlaceEmoji = (place: number) => {
                       <div class="flex gap-4 mt-auto">
                         <a
                           href={competition.link}
-                          class="inline-flex items-center gap-2 text-[#082b57] hover:text-[#082b57]/80 font-medium"
+                          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#082b57] text-white hover:bg-[#082b57]/90 transition-colors font-medium"
                           target={
                             competition.link.startsWith("http")
                               ? "_blank"

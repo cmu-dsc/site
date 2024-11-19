@@ -104,6 +104,15 @@
       "audioSummary": "/audio/data-viz-workshop.opus"
     },
     {
+      "title": "Joy Zhang, Airbnb: Artificial Intelligence: The Past, Present and Future",
+      "description": "Join Dr. Joy Zhang, Director of Engineering at Airbnb, as he shares insights from his journey through academia, startups, and big tech, discussing the evolution and future of AI technology.",
+      "date": "2024-11-15",
+      "tags": [
+        "speaker",
+        "technical"
+      ]
+    },
+    {
       "title": "NLP Workshop",
       "description": "Join our introductory NLP workshop to explore some fundamental text processing techniques, such as n-gram models, Bag of Words, and TF-IDF. Learn how these techniques work, their role in text analysis, and how they can be used for feature extraction and representation in machine learning.",
       "date": "2024-11-22",
