@@ -33,7 +33,7 @@
   },
   {
     "name": "Dongkyun Kim",
-    "title": "Workshop Co-Director",
+    "title": "Workshops Co-Director",
     "image": "../../assets/board/dk.jpg",
     "bio": "I'm a senior studying Artificial Intelligence. I'm interested in mulitmodal deep learning and meta learning. In my free time, I like to go bouldering, play chess or do data science challenges. I also love meeting new people so feel free to hit me up!",
     "github": "https://github.com/dongkyunk",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Eyob Dagnachew",
-    "title": "Workshop Co-Director",
+    "title": "Workshops Co-Director",
     "image": "../../assets/board/eyob.jpg",
     "bio": "Hello there! My name is Eyob, I'm a senior studying Stat/ML! Some of those ways I like to and have been working with Data Analysis and ML is through internships, research, and hackathons! other than tech I'm usually trying to find some more artistic outlets for my creativity, resulting in me having my camera and laptop in my backpack almost constantly.",
     "github": "https://github.com/Ebot101",
@@ -86,6 +86,13 @@
     "bio": "I'm a senior majoring in statistics and machine learning. I am interested in the application of AI to predict behaviors of complex systems. My hobbies include going to the gym and discovering new music.",
     "github": "https://github.com/jkim999",
     "linkedin": "https://www.linkedin.com/in/junykim1"
+  },
+  {
+    "name": "Bincheng Wang",
+    "title": "Workshops Co-Director",
+    "image": "../../assets/board/bingcheng.png",
+    "bio": "Hi, I'm Bingcheng. I'm a Master's student in Data Science, passionate about using data to uncover insights and decode the complexities of the world. I also love K-pop and musicals!",
+    "linkedin": "https://www.linkedin.com/in/bingcheng-wang"
   },
   {
     "name": "Vincent Huai",
