@@ -115,7 +115,7 @@ const menuItems = [
   </head>
 </html>
 <body class="bg-gray-50 relative">
-  <!-- Modified Top Banner -->
+  <!-- Temporarily disabled banner
   <div
     id="poker-banner"
     class="w-full bg-[#082b57] text-white hidden fixed top-0 left-0 right-0 z-50"
@@ -156,6 +156,7 @@ const menuItems = [
       </div>
     </div>
   </div>
+  -->
 
   <div id="tsparticles" class="absolute inset-0 -z-10"></div>
 
@@ -446,7 +447,8 @@ const menuItems = [
   </script>
 
   <script is:inline>
-    // Check localStorage immediately
+    // Temporarily disabled banner code
+    /*
     if (localStorage.getItem("poker-banner-dismissed") !== "true") {
       document.addEventListener("DOMContentLoaded", () => {
         const banner = document.getElementById("poker-banner");
@@ -480,5 +482,6 @@ const menuItems = [
         setTimeout(() => banner.remove(), 300);
       }
     }
+    */
   </script>
 </body>
