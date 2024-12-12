@@ -88,6 +88,8 @@ const getContributionLevel = (count: number, max: number): 0 | 1 | 2 | 3 | 4 => 
 
 export const handler: Handler = async (_event, _context) => {
   try {
+    console.log('Starting GitHub contributions update...');
+
     // Check rate limit
     const rateLimit = await fetch('https://api.github.com/rate_limit', {
       headers: {
@@ -97,6 +99,8 @@ export const handler: Handler = async (_event, _context) => {
     });
 
     const rateLimitData = await rateLimit.json() as RateLimitResponse;
+    console.log(`Rate limit remaining: ${rateLimitData.resources.core.remaining}`);
+
     if (rateLimitData.resources.core.remaining === 0) {
       throw new Error(`GitHub API rate limit exceeded. Resets at ${new Date(rateLimitData.resources.core.reset * 1000).toISOString()}`);
     }
@@ -110,6 +114,7 @@ export const handler: Handler = async (_event, _context) => {
       'https://api.github.com/orgs/cmu-dsc/repos',
       process.env.GITHUB_TOKEN
     );
+    console.log(`Processing ${repos.length} repositories...`);
 
     const contributionMap = generateDateRange();
     const contributors = new Map<string, Contributor>();
@@ -223,6 +228,8 @@ export const handler: Handler = async (_event, _context) => {
       .sort((a, b) => b.contributions - a.contributions)
       .slice(0, 12);
 
+    console.log(`Found ${topContributors.length} contributors with ${contributions.length} contribution days`);
+
     // Cache the results
     const cacheResponse = await fetch(
       `https://api.netlify.com/api/v1/sites/${process.env.SITE_ID}/metadata`,
@@ -244,6 +251,7 @@ export const handler: Handler = async (_event, _context) => {
       throw new Error('Failed to cache contributions data');
     }
 
+    console.log('Successfully updated contributions data');
     return { statusCode: 200 };
   } catch (error) {
     console.error('Failed to update contributions:', error);
