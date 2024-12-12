@@ -1,12 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import { getEntry } from "astro:content";
+import { getEntry, type CollectionEntry } from "astro:content";
 import GithubIcon from "../icons/github.svg?raw";
 import LinkedInIcon from "../icons/linkedin.svg?raw";
 import Layout from "../layouts/Layout.astro";
 
-const { data: board } = await getEntry("board", "board");
-const { data: alumni } = await getEntry("alumni", "alumni");
+const { data: board } = (await getEntry(
+  "board",
+  "board",
+)) as CollectionEntry<"board">;
+const { data: alumni } = (await getEntry(
+  "alumni",
+  "alumni",
+)) as CollectionEntry<"alumni">;
 
 function getOptimizedImageDimensions(src: ImageMetadata, targetSize = 600) {
   let width, height;
@@ -25,7 +31,7 @@ function getOptimizedImageDimensions(src: ImageMetadata, targetSize = 600) {
 }
 ---
 
-<Layout 
+<Layout
   title="Board Members"
   description="Meet our executive board and student leaders at CMU Data Science Club. Our team of passionate AI enthusiasts is dedicated to fostering a vibrant data science community at Carnegie Mellon."
 >

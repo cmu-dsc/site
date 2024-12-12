@@ -1,12 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import { getEntry } from "astro:content";
+import { getEntry, type CollectionEntry } from "astro:content";
 import GithubContributionGraph from "../components/GithubContributionGraph.astro";
 import ImagePlaceholder from "../components/icons/ImagePlaceholder.astro";
 import TopContributors from "../components/TopContributors.astro";
 import Layout from "../layouts/Layout.astro";
 
-const { data: projects } = await getEntry("projects", "projects");
+const { data: projects } = (await getEntry(
+  "projects",
+  "projects",
+)) as CollectionEntry<"projects">;
 
 const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
   switch (level) {
@@ -24,7 +27,7 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
 };
 ---
 
-<Layout 
+<Layout
   title="Projects"
   description="Explore our open-source AI projects at CMU Data Science Club, including CMUGPT, Tetris AI, and data analysis tools. Join our GitHub community and contribute to cutting-edge machine learning projects."
 >

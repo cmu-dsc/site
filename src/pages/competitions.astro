@@ -1,12 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import { getEntry } from "astro:content";
+import { getEntry, type CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 
-const { data: allCompetitions } = await getEntry(
-  "competitions",
-  "competitions",
-);
+const allCompetitions = (await getEntry("competitions", "competitions") as CollectionEntry<'competitions'>).data;
+
 const upcoming = allCompetitions.filter((c) => c.status === "upcoming");
 const past = allCompetitions.filter((c) => c.status === "past");
 
