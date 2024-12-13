@@ -122,5 +122,12 @@
     "image": "../../assets/board/claire.png",
     "bio": "Hi! I'm Claire! I'm currently a freshman studying Statistics and Machine Learning. I'm interested in applying data science to neuroscience, particularly in predicting patterns in neurological diseases. In my free time, I love dancing (K-pop and jazz), oil painting, and spending hours with friends at a cat cafe!",
     "linkedin": "https://www.linkedin.com/in/claire-shen-892133327"
+  },
+  {
+    "name": "Stephanie Yu",
+    "title": "Outreach Director",
+    "image": "../../assets/board/stephanie.jpg",
+    "bio": "Hi! I’m a junior studying Stat ML + Business. I am interested in data analytics/ data science particularly in the financial services industry. I love cooking, coffee shops, and meeting new people. Would love to chat with you guys!",
+    "linkedin": "https://www.linkedin.com/in/stephanie-yu/"
   }
 ]
