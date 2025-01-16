@@ -1,5 +1,59 @@
 [
   {
+    "name": "Almutwakel Hassan",
+    "major": "Artificial Intelligence",
+    "gradYear": "2025",
+    "image": "../../assets/alumni/al.png",
+    "github": "https://github.com/almutwakel",
+    "linkedin": "https://www.linkedin.com/in/almutwakel",
+    "boardPositions": [
+      {
+        "title": "President",
+        "semesters": ["S24", "F24"]
+      },
+      {
+        "title": "VP of Content",
+        "semesters": ["S23", "F23"]
+      }
+    ]
+  },
+  {
+    "name": "Clement Ou",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2025",
+    "image": "../../assets/alumni/clement.jpg",
+    "github": "https://github.com/clementou",
+    "linkedin": "https://linkedin.com/in/clementou",
+    "boardPositions": [
+      {
+        "title": "Competitions Director",
+        "semesters": ["S24", "F24"]
+      },
+      {
+        "title": "Outreach Director",
+        "semesters": ["F24"]
+      }
+    ]
+  },
+  {
+    "name": "Jei Park",
+    "major": "Statistics, Masters Human-Computer Interaction",
+    "gradYear": "2025",
+    "image": "../../assets/alumni/jei.png",
+    "github": "https://github.com/jeih",
+    "linkedin": "https://www.linkedin.com/in/jehyo-jei-park",
+    "boardPositions": [
+      {
+        "title": "Outreach Director",
+        "semesters": ["F23", "S24"]
+      },
+      {
+        "title": "Branding Director",
+        "semesters": ["F24"]
+      }
+    ]
+  },
+  {
     "name": "Yeonji Baek",
     "major": "Statistics and Machine Learning",
     "gradYear": "2026",
@@ -48,7 +102,7 @@
     "boardPositions": [
       {
         "title": "Co-President",
-        "semesters": ["F23", "S23"]
+        "semesters": ["S23", "F23"]
       },
       {
         "title": "VP of Marketing",
@@ -65,7 +119,7 @@
     "boardPositions": [
       {
         "title": "Co-President",
-        "semesters": ["F23", "S23"]
+        "semesters": ["S23", "F23"]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/idris-wardere"
@@ -78,7 +132,7 @@
     "boardPositions": [
       {
         "title": "VP of Internal Affairs",
-        "semesters": ["F23", "S23"]
+        "semesters": ["S23", "F23"]
       },
       {
         "title": "VP of Developments",
@@ -95,7 +149,7 @@
     "boardPositions": [
       {
         "title": "VP of Events",
-        "semesters": ["F23", "S23"]
+        "semesters": ["S23", "F23"]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/anisha-chatterjee"
@@ -139,11 +193,11 @@
     "boardPositions": [
       {
         "title": "Co-President",
-        "semesters": ["S21", "F20"]
+        "semesters": ["F20", "S21"]
       },
       {
         "title": "VP of Marketing",
-        "semesters": ["S20", "F19", "S19"]
+        "semesters": ["S19", "F19", "S20"]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/lijerryjr"
@@ -157,7 +211,7 @@
     "boardPositions": [
       {
         "title": "VP of Projects",
-        "semesters": ["S21", "F20"]
+        "semesters": ["F20", "S21"]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/max-hirsch"
@@ -171,7 +225,7 @@
     "boardPositions": [
       {
         "title": "President",
-        "semesters": ["S20", "F19", "S19"]
+        "semesters": ["S19", "F19", "S20"]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/jessica-annie-lee"
@@ -185,7 +239,7 @@
     "boardPositions": [
       {
         "title": "VP of Projects",
-        "semesters": ["S20", "F19", "S19"]
+        "semesters": ["S19", "F19", "S20"]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/husnialmoubayyed"
@@ -199,7 +253,7 @@
     "boardPositions": [
       {
         "title": "VP of Finance",
-        "semesters": ["S20", "F19", "S19"]
+        "semesters": ["S19", "F19", "S20"]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/zheyew"

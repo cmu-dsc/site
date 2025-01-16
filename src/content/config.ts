@@ -8,7 +8,11 @@ const board = defineCollection({
     image: image().optional(),
     bio: z.string(),
     github: z.string().optional(),
-    linkedin: z.string().optional()
+    linkedin: z.string().optional(),
+    previousPositions: z.array(z.object({
+      title: z.string(),
+      semesters: z.array(z.string())
+    })).optional()
   }))
 });
 
