@@ -78,20 +78,6 @@
     ]
   },
   {
-    "name": "Emily Yu",
-    "title": "Development Director",
-    "image": "../../assets/board/emily.png",
-    "bio": "Hi! I'm currently a junior studying Information Systems, specifically interested in computational linguistics and the applications of spoken/written language in technology. In my free time, I'm a big fan of going on walks and street photography.",
-    "github": "https://github.com/emshyu",
-    "linkedin": "https://www.linkedin.com/in/emily-yu-a28148204",
-    "previousPositions": [
-      {
-        "title": "Development Director",
-        "semesters": ["S24", "F24"]
-      }
-    ]
-  },
-  {
     "name": "Oliver Yun",
     "title": "Competitions Director",
     "image": "../../assets/board/oliver.jpg",

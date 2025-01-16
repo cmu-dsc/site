@@ -54,6 +54,20 @@
     ]
   },
   {
+    "name": "Emily Yu",
+    "major": "Information Systems",
+    "gradYear": "2025",
+    "image": "../../assets/alumni/emily.png",
+    "github": "https://github.com/emshyu",
+    "linkedin": "https://www.linkedin.com/in/emily-yu-a28148204",
+    "boardPositions": [
+      {
+        "title": "Development Director",
+        "semesters": ["S24", "F24"]
+      }
+    ]
+  },
+  {
     "name": "Yeonji Baek",
     "major": "Statistics and Machine Learning",
     "gradYear": "2026",
