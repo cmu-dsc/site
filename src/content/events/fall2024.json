@@ -113,6 +113,15 @@
       ]
     },
     {
+      "title": "Perplexity AI Tech Talk",
+      "description": "Perplexity AI is a cutting-edge search engine that delivers accurate, real-time answers in a conversational format, backed by citations from reliable sources. Join Nikhil Birmiwal, a Carnegie Mellon alum and Software Engineer at Perplexity, sharing insights into the technology behind Perplexity AI.",
+      "date": "2024-11-20",
+      "tags": [
+        "speaker",
+        "technical"
+      ]
+    },
+    {
       "title": "NLP Workshop",
       "description": "Join our introductory NLP workshop to explore some fundamental text processing techniques, such as n-gram models, Bag of Words, and TF-IDF. Learn how these techniques work, their role in text analysis, and how they can be used for feature extraction and representation in machine learning.",
       "date": "2024-11-22",
