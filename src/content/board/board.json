@@ -32,24 +32,6 @@
     ]
   },
   {
-    "name": "Dongkyun Kim",
-    "title": "Workshops Co-Director",
-    "image": "../../assets/board/dk.jpg",
-    "bio": "I'm a senior studying Artificial Intelligence. I'm interested in mulitmodal deep learning and meta learning. In my free time, I like to go bouldering, play chess or do data science challenges. I also love meeting new people so feel free to hit me up!",
-    "github": "https://github.com/dongkyunk",
-    "linkedin": "https://www.linkedin.com/in/dongkyun-k",
-    "previousPositions": [
-      {
-        "title": "Workshops Co-Director",
-        "semesters": ["S24", "F24"]
-      },
-      {
-        "title": "VP of Content",
-        "semesters": ["F22", "S23", "F23"]
-      }
-    ]
-  },
-  {
     "name": "Eyob Dagnachew",
     "title": "Workshops Co-Director",
     "image": "../../assets/board/eyob.jpg",

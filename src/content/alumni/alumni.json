@@ -275,5 +275,22 @@
       }
     ],
     "linkedin": "https://www.linkedin.com/in/zheyew"
+  },
+  {
+    "name": "Dongkyun Kim",
+    "major": "Artificial Intelligence",
+    "gradYear": "2024",
+    "image": "../../assets/board/dk.jpg",
+    "boardPositions": [
+      {
+        "title": "Workshops Co-Director",
+        "semesters": ["S24", "F24"]
+      },
+      {
+        "title": "VP of Content",
+        "semesters": ["F22", "S23", "F23"]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/dongkyun-k"
   }
 ]
