@@ -1,5 +1,18 @@
 [
   {
+    "title": "CMU Poker AI 2025",
+    "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
+    "date": "March 22-29, 2025",
+    "status": "upcoming",
+    "link": "https://poker.cmudsc.com/",
+    "thumbnail": "../../assets/competitions/poker-2025.svg",
+    "highlights": [
+      "Connect with recruiters and researchers from Jump Trading",
+      "Learn game theory and AI strategies through expert workshops",
+      "No prior poker knowledge needed - just bring your coding skills"
+    ]
+  },
+  {
     "title": "CMU AI Sustainability Datathon 2024",
     "description": "A week-long data science competition where participants analyze the environmental impact of AI in finance. Create innovative strategies to enhance the sustainability and eco-friendliness of AI applications.",
     "date": "November 9-16, 2024",

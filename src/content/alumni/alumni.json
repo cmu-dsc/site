@@ -4,7 +4,6 @@
     "major": "Artificial Intelligence",
     "gradYear": "2025",
     "image": "../../assets/alumni/al.png",
-    "github": "https://github.com/almutwakel",
     "linkedin": "https://www.linkedin.com/in/almutwakel",
     "boardPositions": [
       {
@@ -22,7 +21,6 @@
     "major": "Statistics and Machine Learning",
     "gradYear": "2025",
     "image": "../../assets/alumni/clement.jpg",
-    "github": "https://github.com/clementou",
     "linkedin": "https://linkedin.com/in/clementou",
     "boardPositions": [
       {
@@ -40,7 +38,6 @@
     "major": "Statistics, Masters Human-Computer Interaction",
     "gradYear": "2025",
     "image": "../../assets/alumni/jei.png",
-    "github": "https://github.com/jeih",
     "linkedin": "https://www.linkedin.com/in/jehyo-jei-park",
     "boardPositions": [
       {
@@ -58,7 +55,6 @@
     "major": "Information Systems",
     "gradYear": "2026",
     "image": "../../assets/alumni/emily.png",
-    "github": "https://github.com/emshyu",
     "linkedin": "https://www.linkedin.com/in/emily-yu-a28148204",
     "boardPositions": [
       {
@@ -66,6 +62,36 @@
         "semesters": ["S24", "F24"]
       }
     ]
+  },
+  {
+    "name": "Dongkyun Kim",
+    "major": "Artificial Intelligence",
+    "gradYear": "2025",
+    "image": "../../assets/alumni/dk.jpg",
+    "boardPositions": [
+      {
+        "title": "Workshops Co-Director",
+        "semesters": ["S24", "F24"]
+      },
+      {
+        "title": "VP of Content",
+        "semesters": ["F22", "S23", "F23"]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/dongkyun-k"
+  },
+  {
+    "name": "Eyob Dagnachew",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2025",
+    "image": "../../assets/alumni/eyob.jpg",
+    "boardPositions": [
+      {
+        "title": "Workshops Co-Director",
+        "semesters": ["S24", "F24"]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/eyob-dagnachew"
   },
   {
     "name": "Yeonji Baek",
@@ -129,6 +155,7 @@
     "name": "Idris Wardere",
     "major": "Statistics and Machine Learning",
     "gradYear": "2025",
+    "currentTitle": "Associate Data Scientist at Blizzard Entertainment",
     "image": "../../assets/alumni/idris.jpg",
     "boardPositions": [
       {
@@ -176,6 +203,7 @@
     "name": "Jeremy Li",
     "major": "Statistics and Machine Learning",
     "gradYear": "2025",
+    "currentTitle": "Data Scienctist at The Trade Desk",
     "image": "../../assets/alumni/jeremy.jpg",
     "boardPositions": [
       {
@@ -275,22 +303,5 @@
       }
     ],
     "linkedin": "https://www.linkedin.com/in/zheyew"
-  },
-  {
-    "name": "Dongkyun Kim",
-    "major": "Artificial Intelligence",
-    "gradYear": "2024",
-    "image": "../../assets/board/dk.jpg",
-    "boardPositions": [
-      {
-        "title": "Workshops Co-Director",
-        "semesters": ["S24", "F24"]
-      },
-      {
-        "title": "VP of Content",
-        "semesters": ["F22", "S23", "F23"]
-      }
-    ],
-    "linkedin": "https://www.linkedin.com/in/dongkyun-k"
   }
 ]
