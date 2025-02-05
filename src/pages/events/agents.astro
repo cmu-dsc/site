@@ -1,0 +1,162 @@
+---
+import { Image } from "astro:assets";
+import langchainLogo from "../../assets/sponsors/langchain.png";
+import lindyLogo from "../../assets/sponsors/lindy.webp";
+import replicateLogo from "../../assets/sponsors/replicate.svg";
+import weaviateLogo from "../../assets/sponsors/weaviate.svg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>AI Agents Day | CMU Data Science Club</title>
+    <meta
+      name="description"
+      content="Join us for AI Agents Day at Carnegie Mellon University. Learn about the latest developments in autonomous AI agents, LLM applications, and multi-agent systems from industry experts and researchers."
+    />
+  </head>
+  <body>
+    <main
+      class="min-h-screen bg-white text-black font-mono leading-[20px] grid-background"
+    >
+      <a
+        href="/"
+        class="fixed top-[40px] left-[40px] text-black hover:text-gray-600 transition-colors"
+        aria-label="Back to home"
+      >
+        ← back
+      </a>
+
+      <div class="max-w-4xl mx-auto p-[40px] pt-[120px]">
+        <!-- Hero Section -->
+        <div class="mb-[80px] space-y-[20px]">
+          <div class="text-sm text-gray-600 h-[20px]">
+            CMU DATA SCIENCE CLUB PRESENTS
+          </div>
+          <h1 class="text-4xl font-bold leading-[40px] h-[40px]">
+            AI AGENTS DAY
+          </h1>
+          <div class="text-xl text-blue-600 h-[20px]">APRIL 12, 2025</div>
+          <p
+            class="text-gray-600 max-w-2xl border-l-2 border-gray-300 pl-4 my-[40px] leading-[20px]"
+          >
+            Join us for a day exploring autonomous AI agents.
+          </p>
+          <a
+            href="#register"
+            class="inline-block bg-black text-white px-[20px] py-[10px] hover:bg-gray-800 transition-colors h-[40px]"
+            data-umami-event="Agents Day Registration Click"
+          >
+            REGISTER →
+          </a>
+        </div>
+
+        <!-- Schedule Section -->
+        <div class="mb-[80px] space-y-[20px]">
+          <h2
+            class="text-2xl border-b border-gray-300 pb-[10px] leading-[40px] h-[40px]"
+          >
+            SCHEDULE
+          </h2>
+          <div class="text-gray-600 py-[40px] leading-[20px]">
+            Full schedule to be announced.
+          </div>
+        </div>
+
+        <!-- Sponsors Section -->
+        <div class="mb-[80px] space-y-[20px]">
+          <h2
+            class="text-2xl border-b border-gray-300 pb-[10px] leading-[40px] h-[40px]"
+          >
+            SUPPORTED BY
+          </h2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-0 border border-gray-300"
+          >
+            <a
+              href="https://www.langchain.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
+            >
+              <Image
+                src={langchainLogo}
+                alt="LangChain"
+                class="w-full h-auto object-contain"
+                width={200}
+                height={80}
+              />
+            </a>
+            <a
+              href="https://www.lindy.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
+            >
+              <Image
+                src={lindyLogo}
+                alt="Lindy"
+                class="w-full h-auto object-contain"
+                width={200}
+                height={80}
+              />
+            </a>
+            <a
+              href="https://replicate.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
+            >
+              <Image
+                src={replicateLogo}
+                alt="Replicate"
+                class="w-full h-auto object-contain"
+                width={200}
+                height={80}
+              />
+            </a>
+            <a
+              href="https://weaviate.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
+            >
+              <Image
+                src={weaviateLogo}
+                alt="Weaviate"
+                class="w-full h-auto object-contain"
+                width={200}
+                height={80}
+              />
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="mt-[120px] pt-[40px] border-t border-gray-300 text-gray-600 text-sm"
+        >
+          <p class="leading-[20px]">CARNEGIE MELLON UNIVERSITY</p>
+          <p class="leading-[20px]">PITTSBURGH, PA</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  .grid-background {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.05) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0;
+  }
+</style>
