@@ -4,6 +4,8 @@ import langchainLogo from "../../assets/sponsors/langchain.png";
 import lindyLogo from "../../assets/sponsors/lindy.webp";
 import replicateLogo from "../../assets/sponsors/replicate.svg";
 import weaviateLogo from "../../assets/sponsors/weaviate.svg";
+import chromaLogo from "../../assets/sponsors/chroma.svg";
+import deepmindLogo from "../../assets/sponsors/deepmind.png";
 ---
 
 <html lang="en">
@@ -15,127 +17,164 @@ import weaviateLogo from "../../assets/sponsors/weaviate.svg";
       name="description"
       content="Join us for AI Agents Day at Carnegie Mellon University. Learn about the latest developments in autonomous AI agents, LLM applications, and multi-agent systems from industry experts and researchers."
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main
-      class="min-h-screen bg-white text-black font-mono leading-[20px] grid-background"
+      class="min-h-screen bg-black text-white font-['JetBrains_Mono'] leading-[20px]"
     >
       <a
         href="/"
-        class="fixed top-[40px] left-[40px] text-black hover:text-gray-600 transition-colors"
+        class="fixed top-[40px] left-[40px] text-white hover:text-gray-400 transition-colors"
         aria-label="Back to home"
       >
         ← back
       </a>
 
-      <div class="max-w-4xl mx-auto p-[40px] pt-[120px]">
+      <div class="h-full max-w-4xl mx-auto p-[40px] pt-[80px] flex flex-col gap-[60px]">
         <!-- Hero Section -->
-        <div class="mb-[80px] space-y-[20px]">
-          <div class="text-sm text-gray-600 h-[20px]">
+        <div class="flex-none space-y-[20px]">
+          <div class="text-sm text-gray-400 h-[20px]">
             CMU DATA SCIENCE CLUB PRESENTS
           </div>
           <h1 class="text-4xl font-bold leading-[40px] h-[40px]">
             AI AGENTS DAY
           </h1>
-          <div class="text-xl text-blue-600 h-[20px]">APRIL 12, 2025</div>
+          <div class="text-xl text-blue-400 h-[20px]">APRIL 12, 2025</div>
           <p
-            class="text-gray-600 max-w-2xl border-l-2 border-gray-300 pl-4 my-[40px] leading-[20px]"
+            class="text-gray-400 max-w-2xl border-l-2 border-gray-700 pl-4 my-[20px] leading-[20px]"
           >
             Join us for a day exploring autonomous AI agents.
           </p>
           <a
-            href="#register"
-            class="inline-block bg-black text-white px-[20px] py-[10px] hover:bg-gray-800 transition-colors h-[40px]"
+            href="https://lu.ma/tzy817vr"
+            class="inline-block bg-white text-black px-[20px] py-[10px] hover:bg-gray-200 transition-colors h-[40px]"
             data-umami-event="Agents Day Registration Click"
           >
             REGISTER →
           </a>
         </div>
 
-        <!-- Schedule Section -->
-        <div class="mb-[80px] space-y-[20px]">
-          <h2
-            class="text-2xl border-b border-gray-300 pb-[10px] leading-[40px] h-[40px]"
-          >
-            SCHEDULE
-          </h2>
-          <div class="text-gray-600 py-[40px] leading-[20px]">
-            Full schedule to be announced.
+        <!-- Schedule and Sponsors Sections -->
+        <div class="flex flex-col gap-[60px]">
+          <!-- Schedule Section -->
+          <div class="space-y-[20px]">
+            <h2
+              class="text-2xl border-b border-gray-700 pb-[10px] leading-[30px] h-[30px]"
+            >
+              SCHEDULE
+            </h2>
+            <div class="text-gray-400 space-y-[20px] leading-[20px]">
+              <div>11:00 AM - 12:00 PM · Kickoff Lecture</div>
+              <div>12:00 PM - 12:20 PM · Tool Tutorials</div>
+              <div>12:20 PM - 6:30 PM · Hacking Time</div>
+              <div>6:30 PM - 7:00 PM · Judging and Prizes</div>
+            </div>
+          </div>
+
+          <!-- Sponsors Section -->
+          <div class="space-y-[20px]">
+            <h2
+              class="text-2xl border-b border-gray-700 pb-[10px] leading-[30px] h-[30px]"
+            >
+              SUPPORTED BY
+            </h2>
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 gap-0 border border-gray-700"
+            >
+              <a
+                href="https://deepmind.google/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={deepmindLogo}
+                  alt="DeepMind"
+                  class="w-full h-auto object-contain"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://www.langchain.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={langchainLogo}
+                  alt="LangChain"
+                  class="w-full h-auto object-contain"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://www.lindy.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={lindyLogo}
+                  alt="Lindy"
+                  class="w-full h-auto object-contain"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://replicate.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={replicateLogo}
+                  alt="Replicate"
+                  class="w-full h-auto object-contain brightness-0 invert"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://weaviate.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={weaviateLogo}
+                  alt="Weaviate"
+                  class="w-full h-auto object-contain"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://trychroma.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={chromaLogo}
+                  alt="Chroma"
+                  class="w-full h-auto object-contain"
+                  width={400}
+                  height={160}
+                />
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Sponsors Section -->
-        <div class="mb-[80px] space-y-[20px]">
-          <h2
-            class="text-2xl border-b border-gray-300 pb-[10px] leading-[40px] h-[40px]"
-          >
-            SUPPORTED BY
-          </h2>
-          <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-0 border border-gray-300"
-          >
-            <a
-              href="https://www.langchain.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
-            >
-              <Image
-                src={langchainLogo}
-                alt="LangChain"
-                class="w-full h-auto object-contain"
-                width={200}
-                height={80}
-              />
-            </a>
-            <a
-              href="https://www.lindy.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
-            >
-              <Image
-                src={lindyLogo}
-                alt="Lindy"
-                class="w-full h-auto object-contain"
-                width={200}
-                height={80}
-              />
-            </a>
-            <a
-              href="https://replicate.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
-            >
-              <Image
-                src={replicateLogo}
-                alt="Replicate"
-                class="w-full h-auto object-contain"
-                width={200}
-                height={80}
-              />
-            </a>
-            <a
-              href="https://weaviate.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-center p-[20px] border border-gray-300 hover:bg-gray-50 transition-colors"
-            >
-              <Image
-                src={weaviateLogo}
-                alt="Weaviate"
-                class="w-full h-auto object-contain"
-                width={200}
-                height={80}
-              />
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="mt-[120px] pt-[40px] border-t border-gray-300 text-gray-600 text-sm"
-        >
+        <!-- Footer -->
+        <div class="flex-none pt-[20px] border-t border-gray-700 text-gray-400 text-sm">
           <p class="leading-[20px]">CARNEGIE MELLON UNIVERSITY</p>
           <p class="leading-[20px]">PITTSBURGH, PA</p>
         </div>
@@ -148,15 +187,4 @@ import weaviateLogo from "../../assets/sponsors/weaviate.svg";
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-
-  .grid-background {
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.05) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
-    background-position: 0 0;
-  }
 </style>
