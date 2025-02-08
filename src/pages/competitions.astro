@@ -1,9 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import { getEntry, type CollectionEntry } from "astro:content";
+import ImagePlaceholder from "../components/icons/ImagePlaceholder.astro";
 import Layout from "../layouts/Layout.astro";
 
-const allCompetitions = (await getEntry("competitions", "competitions") as CollectionEntry<'competitions'>).data;
+const allCompetitions = (
+  (await getEntry(
+    "competitions",
+    "competitions",
+  )) as CollectionEntry<"competitions">
+).data;
 
 const upcoming = allCompetitions.filter((c) => c.status === "upcoming");
 const past = allCompetitions.filter((c) => c.status === "past");
@@ -51,34 +57,24 @@ const getPlaceEmoji = (place: number) => {
                   data-umami-event={`View Upcoming Competition - ${competition.title}`}
                 >
                   <div class="grid md:grid-cols-[auto_1fr] gap-6">
-                    <a
-                      href={competition.link}
-                      class="relative w-32 h-32 rounded-lg overflow-hidden group"
-                      target={
-                        competition.link.startsWith("http")
-                          ? "_blank"
-                          : undefined
-                      }
-                      rel={
-                        competition.link.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
-                      data-umami-event={`Competition Thumbnail Click - ${competition.title}`}
-                    >
-                      <Image
-                        src={competition.thumbnail}
-                        alt={competition.title}
-                        width={128}
-                        height={128}
-                        class="object-cover w-full h-full transition-all duration-300 group-hover:brightness-90"
-                        loading={
-                          isAboveFold(competition, index) ? "eager" : "lazy"
-                        }
-                        format="webp"
-                      />
+                    <div class="relative w-32 h-32 rounded-lg overflow-hidden group">
+                      {competition.thumbnail ? (
+                        <Image
+                          src={competition.thumbnail}
+                          alt={competition.title}
+                          width={128}
+                          height={128}
+                          class="object-cover w-full h-full transition-all duration-300 group-hover:brightness-90"
+                          loading={
+                            isAboveFold(competition, index) ? "eager" : "lazy"
+                          }
+                          format="webp"
+                        />
+                      ) : (
+                        <ImagePlaceholder class="w-full h-full" />
+                      )}
                       <div class="absolute inset-0 ring-2 ring-[#082b57]/0 group-hover:ring-[#082b57]/50 transition-all duration-300 rounded-lg" />
-                    </a>
+                    </div>
 
                     <div class="flex flex-col">
                       <a
@@ -168,32 +164,22 @@ const getPlaceEmoji = (place: number) => {
                   data-umami-event={`View Past Competition - ${competition.title}`}
                 >
                   <div class="grid md:grid-cols-[auto_1fr] gap-6">
-                    <a
-                      href={competition.link}
-                      class="relative w-32 h-32 rounded-lg overflow-hidden group"
-                      target={
-                        competition.link.startsWith("http")
-                          ? "_blank"
-                          : undefined
-                      }
-                      rel={
-                        competition.link.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
-                      data-umami-event={`Competition Thumbnail Click - ${competition.title}`}
-                    >
-                      <Image
-                        src={competition.thumbnail}
-                        alt={competition.title}
-                        width={128}
-                        height={128}
-                        class="object-cover w-full h-full transition-all duration-300 group-hover:brightness-90"
-                        loading="lazy"
-                        format="webp"
-                      />
+                    <div class="relative w-32 h-32 rounded-lg overflow-hidden group">
+                      {competition.thumbnail ? (
+                        <Image
+                          src={competition.thumbnail}
+                          alt={competition.title}
+                          width={128}
+                          height={128}
+                          class="object-cover w-full h-full transition-all duration-300 group-hover:brightness-90"
+                          loading="lazy"
+                          format="webp"
+                        />
+                      ) : (
+                        <ImagePlaceholder class="w-full h-full" />
+                      )}
                       <div class="absolute inset-0 ring-2 ring-[#082b57]/0 group-hover:ring-[#082b57]/50 transition-all duration-300 rounded-lg" />
-                    </a>
+                    </div>
 
                     <div class="flex flex-col">
                       <a

@@ -2,7 +2,7 @@
   {
     "title": "CMU Poker AI 2025",
     "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
-    "date": "March 22-29, 2025",
+    "date": "March 22 - 29, 2025",
     "status": "upcoming",
     "link": "https://poker.cmudsc.com/",
     "thumbnail": "../../assets/competitions/poker-2025.svg",
@@ -10,6 +10,31 @@
       "Connect with recruiters and researchers from Jump Trading",
       "Learn game theory and AI strategies through expert workshops",
       "No prior poker knowledge needed - just bring your coding skills"
+    ]
+  },
+  {
+    "title": "CMU AI Agents Day",
+    "description": "A one-day mini-hackathon focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and create solutions to real-world problems.",
+    "date": "April 12, 2025",
+    "status": "upcoming",
+    "link": "/agents",
+    "highlights": [
+      "Learn about LLMs and AI agents through beginner-friendly workshops",
+      "Build projects using Langchain, vector databases, and API integrations",
+      "Win prizes and swag for the most innovative AI agent solutions"
+    ]
+  },
+  {
+    "title": "CMU Anomaly Hunter",
+    "description": "Build high-performance anomaly detection systems that balance accuracy, latency, and efficiency. Teams compete to detect anomalies in real-time data streams, with scoring based on both detection quality and system performance.",
+    "date": "Fall 2025",
+    "status": "upcoming",
+    "link": "/anomaly",
+    "thumbnail": "../../assets/competitions/anomaly.svg",
+    "highlights": [
+      "Develop real-time anomaly detection systems using industry-standard tools",
+      "Compete on accuracy, latency, and resource efficiency metrics",
+      "Learn practical skills in ML ops and distributed systems"
     ]
   },
   {

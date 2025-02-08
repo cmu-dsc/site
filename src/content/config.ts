@@ -101,7 +101,7 @@ const competitions = defineCollection({
     date: z.string(),
     status: z.enum(['upcoming', 'past']),
     link: z.string(),
-    thumbnail: image(),
+    thumbnail: image().optional(),
     highlights: z.array(z.string()),
     gallery: z.array(image()).optional(),
     winners: z.array(z.object({
