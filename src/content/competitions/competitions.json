@@ -2,27 +2,17 @@
   {
     "title": "CMU Poker AI 2025",
     "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
-    "date": "March 22 - 29, 2025",
+    "date": "March 22-29, 2025",
     "status": "upcoming",
     "link": "https://poker.cmudsc.com/",
-    "thumbnail": "../../assets/competitions/poker-2025.svg",
-    "highlights": [
-      "Connect with recruiters and researchers from Jump Trading",
-      "Learn game theory and AI strategies through expert workshops",
-      "No prior poker knowledge needed - just bring your coding skills"
-    ]
+    "thumbnail": "../../assets/competitions/poker-2025.svg"
   },
   {
     "title": "CMU AI Agents Day",
     "description": "A one-day mini-hackathon focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and create solutions to real-world problems.",
     "date": "April 12, 2025",
     "status": "upcoming",
-    "link": "/agents",
-    "highlights": [
-      "Learn about LLMs and AI agents through beginner-friendly workshops",
-      "Build projects using Langchain, vector databases, and API integrations",
-      "Win prizes and swag for the most innovative AI agent solutions"
-    ]
+    "link": "/agents"
   },
   {
     "title": "CMU Anomaly Hunter",
@@ -30,12 +20,7 @@
     "date": "Fall 2025",
     "status": "upcoming",
     "link": "/anomaly",
-    "thumbnail": "../../assets/competitions/anomaly.svg",
-    "highlights": [
-      "Develop real-time anomaly detection systems using industry-standard tools",
-      "Compete on accuracy, latency, and resource efficiency metrics",
-      "Learn practical skills in ML ops and distributed systems"
-    ]
+    "thumbnail": "../../assets/competitions/anomaly.svg"
   },
   {
     "title": "CMU AI Sustainability Datathon 2024",
@@ -44,11 +29,6 @@
     "status": "past",
     "link": "/archive/datathon-2024",
     "thumbnail": "../../assets/competitions/datathon-2024.png",
-    "highlights": [
-      "Explore the intersection of AI, finance, and environmental sustainability",
-      "Organized by CMU DSC + Students Using Data for Social Good",
-      "Build models to measure and optimize AI's carbon footprint"
-    ],
     "gallery": [
       "../../assets/competitions/datathon-2024/1st_place.jpeg",
       "../../assets/competitions/datathon-2024/2nd_place.jpg",
@@ -94,11 +74,6 @@
     "status": "past",
     "link": "/archive/pokerai-2024",
     "thumbnail": "../../assets/competitions/poker-2024.png",
-    "highlights": [
-      "Connect with top trading firms including Jump Trading, HRT, Jane Street",
-      "Learn game theory and AI strategies through expert workshops",
-      "No prior poker knowledge needed - just bring your coding skills"
-    ],
     "gallery": [
       "../../assets/competitions/poker-2024/audience.png",
       "../../assets/competitions/poker-2024/opening.png",

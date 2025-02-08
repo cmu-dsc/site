@@ -104,17 +104,6 @@ const getPlaceEmoji = (place: number) => {
                         {competition.date}
                       </p>
 
-                      <div class="mb-4">
-                        <h4 class="font-medium text-[#082b57] mb-2">
-                          Highlights:
-                        </h4>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1">
-                          {competition.highlights.map((highlight) => (
-                            <li>{highlight}</li>
-                          ))}
-                        </ul>
-                      </div>
-
                       <div class="flex gap-4 mt-auto">
                         <a
                           href={competition.link}
@@ -212,17 +201,6 @@ const getPlaceEmoji = (place: number) => {
                       <p class="text-gray-600 mb-4">
                         {competition.date}
                       </p>
-
-                      <div class="mb-4">
-                        <h4 class="font-medium text-[#082b57] mb-2">
-                          Highlights:
-                        </h4>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1">
-                          {competition.highlights.map((highlight) => (
-                            <li>{highlight}</li>
-                          ))}
-                        </ul>
-                      </div>
 
                       {competition.winners && (
                         <div class="mb-4">

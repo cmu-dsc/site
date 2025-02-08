@@ -1,0 +1,33 @@
+{
+    "semester": "Spring 2025",
+    "events": [
+      {
+        "title": "DSC S25 Intro Social",
+        "description": "Join us for our Spring 2025 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+        "date": "2025-01-24",
+        "tags": [
+          "social"
+        ]
+      },
+      {
+        "title": "Career Workshop",
+        "description": "Get tips on resume building, interview preparation, and navigating the data science job market.",
+        "date": "2025-01-31",
+        "tags": [
+          "career",
+          "workshop"
+        ]
+      },
+      {
+        "title": "Data Cleaning Workshop",
+        "description": "Learn how to clean and prepare data for analysis using Python and Pandas.",
+        "date": "2025-02-07",
+        "tags": [
+          "technical",
+          "workshop"
+        ],
+        "slides": "https://docs.google.com/presentation/d/1QKdWqjYqWTe6a-dgFPHetw-Sgx4kP5nx0mutA6nnzuY/edit?usp=sharing",
+        "notebook": "https://www.kaggle.com/code/alexisbcook/handling-missing-values#Figure-out-why-the-data-is-missing"
+      }
+    ]
+  }
