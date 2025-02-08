@@ -94,6 +94,19 @@
     "linkedin": "https://www.linkedin.com/in/eyob-dagnachew"
   },
   {
+    "name": "Juny Kim",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2025",
+    "image": "../../assets/alumni/juny.png",
+    "linkedin": "https://www.linkedin.com/in/junykim1",
+    "boardPositions": [
+      {
+        "title": "Operations Director",
+        "semesters": ["S24", "F24"]
+      }
+    ]
+  },
+  {
     "name": "Yeonji Baek",
     "major": "Statistics and Machine Learning",
     "gradYear": "2026",
@@ -124,7 +137,7 @@
     "major": "Statistics",
     "gradYear": "2024",
     "image": "../../assets/alumni/suha.jpg",
-    "currentTitle": "Data Science Engineer at Qorvo",
+    "currentTitle": "Data Science Engineer @ Qorvo",
     "boardPositions": [
       {
         "title": "Design Co-Director",
@@ -138,7 +151,7 @@
     "major": "Statistics and Machine Learning",
     "gradYear": "2024",
     "image": "../../assets/alumni/raaka.jpg",
-    "currentTitle": "Project Coordinator at Five Rings",
+    "currentTitle": "Project Coordinator @ Five Rings",
     "boardPositions": [
       {
         "title": "Co-President",
@@ -155,7 +168,7 @@
     "name": "Idris Wardere",
     "major": "Statistics and Machine Learning",
     "gradYear": "2025",
-    "currentTitle": "Associate Data Scientist at Blizzard Entertainment",
+    "currentTitle": "Associate Data Scientist @ Blizzard Entertainment",
     "image": "../../assets/alumni/idris.jpg",
     "boardPositions": [
       {
@@ -203,7 +216,7 @@
     "name": "Jeremy Li",
     "major": "Statistics and Machine Learning",
     "gradYear": "2025",
-    "currentTitle": "Data Scienctist at The Trade Desk",
+    "currentTitle": "Data Scienctist @ The Trade Desk",
     "image": "../../assets/alumni/jeremy.jpg",
     "boardPositions": [
       {
@@ -234,7 +247,7 @@
     "name": "Jerry Li",
     "major": "Economics, Statistics and Machine Learning",
     "gradYear": "2022",
-    "currentTitle": "Senior Business Analyst at McKinsey",
+    "currentTitle": "Senior Business Analyst @ McKinsey",
     "image": "../../assets/alumni/jerry.jpg",
     "boardPositions": [
       {
@@ -252,7 +265,7 @@
     "name": "Max Hirsch",
     "major": "Math",
     "gradYear": "2023",
-    "currentTitle": "PhD Student at U.C. Berkeley",
+    "currentTitle": "PhD Student @ U.C. Berkeley",
     "image": "../../assets/alumni/max.jpg",
     "boardPositions": [
       {
@@ -266,7 +279,7 @@
     "name": "Jessica Lee",
     "major": "Computer Science",
     "gradYear": "2021",
-    "currentTitle": "PhD Student at U.C. Berkeley",
+    "currentTitle": "PhD Student @ U.C. Berkeley",
     "image": "../../assets/alumni/jessica.jpg",
     "boardPositions": [
       {
@@ -280,7 +293,7 @@
     "name": "Husni Almoubayyed",
     "major": "PhD, Physics",
     "gradYear": "2021",
-    "currentTitle": "AI Engineering Manager at Carnegie Learning",
+    "currentTitle": "AI Engineering Manager @ Carnegie Learning",
     "image": "../../assets/alumni/husni.jpg",
     "boardPositions": [
       {
@@ -294,7 +307,7 @@
     "name": "Tony Wang",
     "major": "Computational Finance",
     "gradYear": "2021",
-    "currentTitle": "Quantitative Trader at GTS",
+    "currentTitle": "Quantitative Trader @ GTS",
     "image": "../../assets/alumni/tony.jpeg",
     "boardPositions": [
       {

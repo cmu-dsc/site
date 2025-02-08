@@ -60,20 +60,6 @@
     ]
   },
   {
-    "name": "Juny Kim",
-    "title": "Operations Director",
-    "image": "../../assets/board/juny.png",
-    "bio": "I'm a senior majoring in statistics and machine learning. I am interested in the application of AI to predict behaviors of complex systems. My hobbies include going to the gym and discovering new music.",
-    "github": "https://github.com/jkim999",
-    "linkedin": "https://www.linkedin.com/in/junykim1",
-    "previousPositions": [
-      {
-        "title": "Operations Director",
-        "semesters": ["S24", "F24"]
-      }
-    ]
-  },
-  {
     "name": "Bincheng Wang",
     "title": "Workshops Co-Director",
     "image": "../../assets/board/bingcheng.png",
