@@ -6,6 +6,7 @@ import replicateLogo from "../assets/sponsors/replicate.svg";
 import weaviateLogo from "../assets/sponsors/weaviate.svg";
 import chromaLogo from "../assets/sponsors/chroma.svg";
 import deepmindLogo from "../assets/sponsors/deepmind.png";
+import llamaIndexLogo from "../assets/sponsors/llamaIndex.svg";
 ---
 
 <html lang="en">
@@ -34,7 +35,9 @@ import deepmindLogo from "../assets/sponsors/deepmind.png";
         ← back
       </a>
 
-      <div class="h-full max-w-4xl mx-auto p-[40px] pt-[80px] flex flex-col gap-[60px]">
+      <div
+        class="h-full max-w-4xl mx-auto p-[40px] pt-[80px] flex flex-col gap-[60px]"
+      >
         <!-- Hero Section -->
         <div class="flex-none space-y-[20px]">
           <div class="text-sm text-gray-400 h-[20px]">
@@ -99,7 +102,21 @@ import deepmindLogo from "../assets/sponsors/deepmind.png";
                   height={160}
                 />
               </a>
-              <!-- <a
+              <a
+                href="https://www.llamaindex.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={llamaIndexLogo}
+                  alt="LlamaIndex"
+                  class="w-full h-auto object-contain"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
                 href="https://replicate.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -112,7 +129,7 @@ import deepmindLogo from "../assets/sponsors/deepmind.png";
                   width={400}
                   height={160}
                 />
-              </a> -->
+              </a>
               <a
                 href="https://www.langchain.com"
                 target="_blank"
@@ -174,7 +191,9 @@ import deepmindLogo from "../assets/sponsors/deepmind.png";
         </div>
 
         <!-- Footer -->
-        <div class="flex-none pt-[20px] border-t border-gray-700 text-gray-400 text-sm">
+        <div
+          class="flex-none pt-[20px] border-t border-gray-700 text-gray-400 text-sm"
+        >
           <p class="leading-[20px]">CARNEGIE MELLON UNIVERSITY</p>
           <p class="leading-[20px]">PITTSBURGH, PA</p>
         </div>
