@@ -1,22 +1,23 @@
 ---
 import { Image } from "astro:assets";
-import langchainLogo from "../assets/sponsors/langchain.png";
-import lindyLogo from "../assets/sponsors/lindy.webp";
-import replicateLogo from "../assets/sponsors/replicate.svg";
-import weaviateLogo from "../assets/sponsors/weaviate.svg";
+import azureLogo from "../assets/sponsors/azure.png";
 import chromaLogo from "../assets/sponsors/chroma.svg";
 import deepmindLogo from "../assets/sponsors/deepmind.png";
+import langchainLogo from "../assets/sponsors/langchain.png";
+import lindyLogo from "../assets/sponsors/lindy.webp";
 import llamaIndexLogo from "../assets/sponsors/llamaindex.svg";
+import mistralLogo from "../assets/sponsors/mistral.png";
+import replicateLogo from "../assets/sponsors/replicate.svg";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>AI Agents Day | CMU Data Science Club</title>
+    <title>AI Agents Weekend | CMU Data Science Club</title>
     <meta
       name="description"
-      content="Join us for AI Agents Day at Carnegie Mellon University. Learn about the latest developments in autonomous AI agents, LLM applications, and multi-agent systems from industry experts and researchers."
+      content="Join us for AI Agents Weekend at Carnegie Mellon University. Learn about the latest developments in autonomous AI agents, LLM applications, and multi-agent systems from industry experts and researchers."
     />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
@@ -44,37 +45,104 @@ import llamaIndexLogo from "../assets/sponsors/llamaindex.svg";
             CMU DATA SCIENCE CLUB PRESENTS
           </div>
           <h1 class="text-4xl font-bold leading-[40px] h-[40px]">
-            AI AGENTS DAY
+            AI AGENTS WEEKEND
           </h1>
-          <div class="text-xl text-blue-400 h-[20px]">APRIL 12, 2025</div>
+          <div class="text-xl text-blue-400 h-[20px]">APRIL 11-13, 2025</div>
           <p
             class="text-gray-400 max-w-2xl border-l-2 border-gray-700 pl-4 my-[20px] leading-[20px]"
           >
-            Join us for a day exploring autonomous AI agents.
+            Join us for a weekend exploring autonomous AI agents.
           </p>
           <a
             href="https://lu.ma/tzy817vr"
             class="inline-block bg-white text-black px-[20px] py-[10px] hover:bg-gray-200 transition-colors h-[40px]"
-            data-umami-event="Agents Day Registration Click"
+            data-umami-event="Agents Weekend Registration Click"
           >
             REGISTER →
           </a>
         </div>
 
         <!-- Schedule and Sponsors Sections -->
-        <div class="flex flex-col gap-[60px]">
+        <div class="flex flex-col gap-[40px]">
           <!-- Schedule Section -->
-          <div class="space-y-[20px]">
+          <div class="space-y-[40px]">
             <h2
               class="text-2xl border-b border-gray-700 pb-[10px] leading-[30px] h-[30px]"
             >
               SCHEDULE
             </h2>
-            <div class="text-gray-400 space-y-[20px] leading-[20px]">
-              <div>11:00 AM - 12:00 PM · Kickoff Lecture</div>
-              <div>12:00 PM - 12:20 PM · Tool Tutorials</div>
-              <div>12:20 PM - 6:30 PM · Hacking Time</div>
-              <div>6:30 PM - 7:00 PM · Judging and Prizes</div>
+            <div class="text-gray-400 space-y-[20px]">
+              {/* Friday */}
+              <details class="group">
+                <summary
+                  class="text-white mb-[10px] cursor-pointer hover:text-gray-300 transition-colors list-none flex items-center gap-2"
+                >
+                  <span
+                    class="inline-block w-4 text-gray-400 transform group-open:rotate-90 transition-transform"
+                    >▶</span
+                  >
+                  FRIDAY, APRIL 11
+                </summary>
+                <div
+                  class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
+                >
+                  <div>
+                    5:00 PM - 6:00 PM · Intro to LLMs Workshop & Team Formation
+                  </div>
+                </div>
+              </details>
+
+              {/* Saturday */}
+              <details class="group">
+                <summary
+                  class="text-white mb-[10px] cursor-pointer hover:text-gray-300 transition-colors list-none flex items-center gap-2"
+                >
+                  <span
+                    class="inline-block w-4 text-gray-400 transform group-open:rotate-90 transition-transform"
+                    >▶</span
+                  >
+                  SATURDAY, APRIL 12
+                </summary>
+                <div
+                  class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
+                >
+                  <div>1:00 PM - 3:00 PM · Check-in</div>
+                  <div>2:00 PM - 2:15 PM · Opening Announcements</div>
+                  <div>
+                    2:15 PM - 2:45 PM · DeepMind Keynote: AI Studio & Gemini
+                  </div>
+                  <div class="text-blue-400">2:45 PM · Hacking Begins</div>
+                  <div>2:45 PM - 3:05 PM · LlamaIndex Tutorial</div>
+                  <div>3:15 PM - 3:30 PM · Replicate Tutorial</div>
+                  <div>3:40 PM - 4:00 PM · Vector DB Tutorial</div>
+                  <div>3:40 PM - 4:00 PM · Fine Tuning Tutorial</div>
+                  <div>4:10 PM - 4:30 PM · Integrations Tutorial</div>
+                  <div>4:10 PM - 4:30 PM · Deployment & Ops Tutorial</div>
+                  <div>5:30 PM - 6:30 PM · Dinner</div>
+                </div>
+              </details>
+
+              {/* Sunday */}
+              <details class="group">
+                <summary
+                  class="text-white mb-[10px] cursor-pointer hover:text-gray-300 transition-colors list-none flex items-none gap-2"
+                >
+                  <span
+                    class="inline-block w-4 text-gray-400 transform group-open:rotate-90 transition-transform"
+                    >▶</span
+                  >
+                  SUNDAY, APRIL 13
+                </summary>
+                <div
+                  class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
+                >
+                  <div>3:00 PM - 4:00 PM · Project Presentations</div>
+                  <div>4:00 PM - 5:00 PM · Azure AI Fireside Chat</div>
+                  <div>5:00 PM - 5:30 PM · Final Presentations</div>
+                  <div>5:30 PM - 6:00 PM · Judging</div>
+                  <div>6:00 PM - 6:30 PM · Prize Ceremony</div>
+                </div>
+              </details>
             </div>
           </div>
 
@@ -134,6 +202,34 @@ import llamaIndexLogo from "../assets/sponsors/llamaindex.svg";
                   src={replicateLogo}
                   alt="Replicate"
                   class="w-full h-auto object-contain brightness-0 invert"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://mistral.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={mistralLogo}
+                  alt="Mistral"
+                  class="w-full h-auto object-contain"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://azure.microsoft.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={azureLogo}
+                  alt="Azure"
+                  class="w-full h-auto object-contain"
                   width={400}
                   height={160}
                 />
