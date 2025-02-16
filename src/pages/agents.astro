@@ -2,14 +2,14 @@
 import { Image } from "astro:assets";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/700.css";
-import azureLogo from "../assets/sponsors/azure.png";
-import chromaLogo from "../assets/sponsors/chroma.svg";
-import deepmindLogo from "../assets/sponsors/deepmind.png";
-import langchainLogo from "../assets/sponsors/langchain.png";
-import lindyLogo from "../assets/sponsors/lindy.webp";
-import llamaIndexLogo from "../assets/sponsors/llamaindex.svg";
-import mistralLogo from "../assets/sponsors/mistral.png";
-import replicateLogo from "../assets/sponsors/replicate.svg";
+import azureLogo from "../assets/sponsors/agents/azure.png";
+import chromaLogo from "../assets/sponsors/agents/chroma.svg";
+import deepmindLogo from "../assets/sponsors/agents/deepmind.png";
+import langchainLogo from "../assets/sponsors/agents/langchain.png";
+import lindyLogo from "../assets/sponsors/agents/lindy.webp";
+import llamaIndexLogo from "../assets/sponsors/agents/llamaindex.svg";
+import mistralLogo from "../assets/sponsors/agents/mistral.png";
+import replicateLogo from "../assets/sponsors/agents/replicate.svg";
 ---
 
 <html lang="en">
@@ -45,11 +45,15 @@ import replicateLogo from "../assets/sponsors/replicate.svg";
           <h1 class="text-4xl font-bold leading-[40px] h-[40px]">
             AI AGENTS WEEKEND
           </h1>
-          <div class="text-xl text-blue-400 h-[20px]">APRIL 11-13, 2025</div>
+          <div class="text-xl text-blue-400 h-[20px]">APRIL 12-13, 2025</div>
           <p
             class="text-gray-400 max-w-2xl border-l-2 border-gray-700 pl-4 my-[20px] leading-[20px]"
           >
-            Join us for a weekend exploring autonomous AI agents.
+            Join us for a weekend exploring autonomous AI agents. For research
+            talks and posters, check out the <a
+              href="https://cmu-agent-workshop.github.io/"
+              class="text-blue-400 hover:text-blue-300">CMU Agent Workshop</a
+            > on April 10-11.
           </p>
           <a
             href="https://lu.ma/tzy817vr"
@@ -70,26 +74,6 @@ import replicateLogo from "../assets/sponsors/replicate.svg";
               SCHEDULE
             </h2>
             <div class="text-gray-400 space-y-[20px]">
-              {/* Friday */}
-              <details class="group">
-                <summary
-                  class="text-white mb-[10px] cursor-pointer hover:text-gray-300 transition-colors list-none flex items-center gap-2"
-                >
-                  <span
-                    class="inline-block w-4 text-gray-400 transform group-open:rotate-90 transition-transform"
-                    >▶</span
-                  >
-                  FRIDAY, APRIL 11
-                </summary>
-                <div
-                  class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
-                >
-                  <div>
-                    5:00 PM - 6:00 PM · Intro to LLMs Workshop & Team Formation
-                  </div>
-                </div>
-              </details>
-
               {/* Saturday */}
               <details class="group">
                 <summary
@@ -104,19 +88,22 @@ import replicateLogo from "../assets/sponsors/replicate.svg";
                 <div
                   class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
                 >
-                  <div>1:00 PM - 3:00 PM · Check-in</div>
-                  <div>2:00 PM - 2:15 PM · Opening Announcements</div>
+                  <div>2:00 PM - 3:00 PM · Check-in</div>
                   <div>
-                    2:15 PM - 2:45 PM · DeepMind Keynote: AI Studio & Gemini
+                    2:30 PM - 3:00 PM · DeepMind Keynote: AI Studio & Gemini
                   </div>
-                  <div class="text-blue-400">2:45 PM · Hacking Begins</div>
-                  <div>2:45 PM - 3:05 PM · LlamaIndex Tutorial</div>
-                  <div>3:15 PM - 3:30 PM · Replicate Tutorial</div>
-                  <div>3:40 PM - 4:00 PM · Vector DB Tutorial</div>
-                  <div>3:40 PM - 4:00 PM · Fine Tuning Tutorial</div>
-                  <div>4:10 PM - 4:30 PM · Integrations Tutorial</div>
-                  <div>4:10 PM - 4:30 PM · Deployment & Ops Tutorial</div>
-                  <div>5:30 PM - 6:30 PM · Dinner</div>
+                  <div class="text-blue-400">3:00 PM · Hacking Begins</div>
+                  <div>3:05 PM - 3:30 PM · LlamaIndex Tutorial</div>
+                  <div>3:35 PM - 4:00 PM · Replicate Tutorial</div>
+                  <div>4:05 PM - 4:30 PM · Vector DB Tutorial</div>
+                  <div>4:05 PM - 4:30 PM · Fine Tuning Tutorial</div>
+                  <div>4:35 PM - 5:00 PM · Integrations Tutorial</div>
+                  <div>4:35 PM - 5:00 PM · Deployment & Ops Tutorial</div>
+                  <div>5:00 PM - 6:00 PM · Replicate Tabling</div>
+                  <div>6:00 PM - 7:00 PM · Dinner</div>
+                  <div>
+                    6:00 PM - 7:00 PM · Replicate Product & Startup Talk
+                  </div>
                 </div>
               </details>
 
