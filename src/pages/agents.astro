@@ -1,7 +1,7 @@
 ---
-import { Image } from "astro:assets";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/700.css";
+import { Image } from "astro:assets";
 import azureLogo from "../assets/sponsors/agents/azure.png";
 import chromaLogo from "../assets/sponsors/agents/chroma.svg";
 import deepmindLogo from "../assets/sponsors/agents/deepmind.png";
@@ -9,6 +9,7 @@ import langchainLogo from "../assets/sponsors/agents/langchain.png";
 import lindyLogo from "../assets/sponsors/agents/lindy.webp";
 import llamaIndexLogo from "../assets/sponsors/agents/llamaindex.svg";
 import mistralLogo from "../assets/sponsors/agents/mistral.png";
+import modalLogo from "../assets/sponsors/agents/modal.svg";
 import replicateLogo from "../assets/sponsors/agents/replicate.svg";
 ---
 
@@ -186,6 +187,20 @@ import replicateLogo from "../assets/sponsors/agents/replicate.svg";
                 <Image
                   src={replicateLogo}
                   alt="Replicate"
+                  class="w-full h-auto object-contain brightness-0 invert"
+                  width={400}
+                  height={160}
+                />
+              </a>
+              <a
+                href="https://modal.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={modalLogo}
+                  alt="Modal"
                   class="w-full h-auto object-contain brightness-0 invert"
                   width={400}
                   height={160}
