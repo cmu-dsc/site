@@ -29,6 +29,15 @@
         ],
         "slides": "https://docs.google.com/presentation/d/1QKdWqjYqWTe6a-dgFPHetw-Sgx4kP5nx0mutA6nnzuY/edit?usp=sharing",
         "notebook": "https://www.kaggle.com/code/alexisbcook/handling-missing-values#Figure-out-why-the-data-is-missing"
+      },
+      {
+        "title": "Breaking into ML Research - Maxwell Jones",
+        "description": "Learn about how to break into machine learning research and what it takes to succeed in the field from Maxwell Jones, a CMU PhD student.",
+        "date": "2025-02-14",
+        "tags": [
+          "career"
+        ],
+        "slides": "https://docs.google.com/presentation/d/1TOBirb_RLdrxyGTfUpBXI0z7Es6lkBPk/edit?usp=sharing&ouid=112940713841014349015&rtpof=true&sd=true"
       }
     ]
   }
