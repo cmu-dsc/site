@@ -8,11 +8,17 @@
     "boardPositions": [
       {
         "title": "President",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       },
       {
         "title": "VP of Content",
-        "semesters": ["S23", "F23"]
+        "semesters": [
+          "S23",
+          "F23"
+        ]
       }
     ]
   },
@@ -25,11 +31,16 @@
     "boardPositions": [
       {
         "title": "Competitions Director",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       },
       {
         "title": "Outreach Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
   },
@@ -42,11 +53,16 @@
     "boardPositions": [
       {
         "title": "Outreach Director",
-        "semesters": ["F23", "S24"]
+        "semesters": [
+          "F23",
+          "S24"
+        ]
       },
       {
         "title": "Branding Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
   },
@@ -59,7 +75,10 @@
     "boardPositions": [
       {
         "title": "Development Director",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       }
     ]
   },
@@ -71,11 +90,18 @@
     "boardPositions": [
       {
         "title": "Workshops Co-Director",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       },
       {
         "title": "VP of Content",
-        "semesters": ["F22", "S23", "F23"]
+        "semesters": [
+          "F22",
+          "S23",
+          "F23"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/dongkyun-k"
@@ -88,7 +114,10 @@
     "boardPositions": [
       {
         "title": "Workshops Co-Director",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/eyob-dagnachew"
@@ -102,7 +131,10 @@
     "boardPositions": [
       {
         "title": "Operations Director",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       }
     ]
   },
@@ -114,7 +146,9 @@
     "boardPositions": [
       {
         "title": "Social Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/yeonji-baek"
@@ -127,7 +161,9 @@
     "boardPositions": [
       {
         "title": "Mentorship Director",
-        "semesters": ["S24"]
+        "semesters": [
+          "S24"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/noelaniphillips2025"
@@ -141,7 +177,9 @@
     "boardPositions": [
       {
         "title": "Design Co-Director",
-        "semesters": ["S24"]
+        "semesters": [
+          "S24"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/suha-niyas"
@@ -155,11 +193,16 @@
     "boardPositions": [
       {
         "title": "Co-President",
-        "semesters": ["S23", "F23"]
+        "semesters": [
+          "S23",
+          "F23"
+        ]
       },
       {
         "title": "VP of Marketing",
-        "semesters": ["F21"]
+        "semesters": [
+          "F21"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/raaka"
@@ -173,11 +216,16 @@
     "boardPositions": [
       {
         "title": "Co-President",
-        "semesters": ["S23", "F23"]
+        "semesters": [
+          "S23",
+          "F23"
+        ]
       },
       {
         "title": "VP of Socials",
-        "semesters": ["F22"]
+        "semesters": [
+          "F22"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/idris-wardere"
@@ -190,11 +238,16 @@
     "boardPositions": [
       {
         "title": "VP of Internal Affairs",
-        "semesters": ["S23", "F23"]
+        "semesters": [
+          "S23",
+          "F23"
+        ]
       },
       {
         "title": "VP of Developments",
-        "semesters": ["F21"]
+        "semesters": [
+          "F21"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/mshou"
@@ -207,7 +260,10 @@
     "boardPositions": [
       {
         "title": "VP of Events",
-        "semesters": ["S23", "F23"]
+        "semesters": [
+          "S23",
+          "F23"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/anisha-chatterjee"
@@ -221,11 +277,15 @@
     "boardPositions": [
       {
         "title": "VP of Communications",
-        "semesters": ["F23"]
+        "semesters": [
+          "F23"
+        ]
       },
       {
         "title": "VP of Events",
-        "semesters": ["S23"]
+        "semesters": [
+          "S23"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/jiabin-jeremy-li"
@@ -238,7 +298,9 @@
     "boardPositions": [
       {
         "title": "VP of Events",
-        "semesters": ["S23"]
+        "semesters": [
+          "S23"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/jet-wu-cmu"
@@ -252,11 +314,18 @@
     "boardPositions": [
       {
         "title": "Co-President",
-        "semesters": ["F20", "S21"]
+        "semesters": [
+          "F20",
+          "S21"
+        ]
       },
       {
         "title": "VP of Marketing",
-        "semesters": ["S19", "F19", "S20"]
+        "semesters": [
+          "S19",
+          "F19",
+          "S20"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/lijerryjr"
@@ -270,7 +339,10 @@
     "boardPositions": [
       {
         "title": "VP of Projects",
-        "semesters": ["F20", "S21"]
+        "semesters": [
+          "F20",
+          "S21"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/max-hirsch"
@@ -284,7 +356,11 @@
     "boardPositions": [
       {
         "title": "President",
-        "semesters": ["S19", "F19", "S20"]
+        "semesters": [
+          "S19",
+          "F19",
+          "S20"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/jessica-annie-lee"
@@ -298,7 +374,11 @@
     "boardPositions": [
       {
         "title": "VP of Projects",
-        "semesters": ["S19", "F19", "S20"]
+        "semesters": [
+          "S19",
+          "F19",
+          "S20"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/husnialmoubayyed"
@@ -312,9 +392,28 @@
     "boardPositions": [
       {
         "title": "VP of Finance",
-        "semesters": ["S19", "F19", "S20"]
+        "semesters": [
+          "S19",
+          "F19",
+          "S20"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/zheyew"
+  },
+  {
+    "name": "Stephanie Yu",
+    "major": "Stat ML + Business",
+    "gradYear": "2026",
+    "boardPositions": [
+      {
+        "title": "Outreach Director",
+        "semesters": [
+          "F24"
+        ]
+      }
+    ],
+    "image": "../../assets/board/stephanie.jpg",
+    "linkedin": "https://www.linkedin.com/in/stephanie-yu/"
   }
 ]

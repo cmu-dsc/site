@@ -9,11 +9,15 @@
     "previousPositions": [
       {
         "title": "Vice President",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       },
       {
         "title": "Internal Affairs Director",
-        "semesters": ["S24"]
+        "semesters": [
+          "S24"
+        ]
       }
     ]
   },
@@ -27,7 +31,9 @@
     "previousPositions": [
       {
         "title": "Design Co-Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
   },
@@ -41,7 +47,10 @@
     "previousPositions": [
       {
         "title": "Design Co-Director",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       }
     ]
   },
@@ -55,7 +64,10 @@
     "previousPositions": [
       {
         "title": "Finance Director",
-        "semesters": ["S24", "F24"]
+        "semesters": [
+          "S24",
+          "F24"
+        ]
       }
     ]
   },
@@ -68,7 +80,9 @@
     "previousPositions": [
       {
         "title": "Workshops Co-Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
   },
@@ -81,7 +95,9 @@
     "previousPositions": [
       {
         "title": "Junior Outreach Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
   },
@@ -95,7 +111,9 @@
     "previousPositions": [
       {
         "title": "Events Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
   },
@@ -108,7 +126,9 @@
     "previousPositions": [
       {
         "title": "Projects Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
   },
@@ -121,15 +141,10 @@
     "previousPositions": [
       {
         "title": "Junior Branding Director",
-        "semesters": ["F24"]
+        "semesters": [
+          "F24"
+        ]
       }
     ]
-  },
-  {
-    "name": "Stephanie Yu",
-    "title": "Outreach Director",
-    "image": "../../assets/board/stephanie.jpg",
-    "bio": "Hi! I’m a junior studying Stat ML + Business. I am interested in data analytics/ data science particularly in the financial services industry. I love cooking, coffee shops, and meeting new people. Would love to chat with you guys!",
-    "linkedin": "https://www.linkedin.com/in/stephanie-yu/"
   }
 ]
