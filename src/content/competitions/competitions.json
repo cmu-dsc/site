@@ -12,7 +12,8 @@
     "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and create solutions to real-world problems.",
     "date": "April 12-13, 2025",
     "status": "upcoming",
-    "link": "/agents"
+    "link": "/agents",
+    "thumbnail": "../../assets/competitions/agents.svg"
   },
   {
     "title": "CMU Anomaly Hunter",
