@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && bun run cp_sitemap",
+    "cp_sitemap": "cp dist/sitemap-index.xml public/sitemap-index.xml && cp dist/sitemap-0.xml public/sitemap-0.xml",
     "preview": "astro preview",
     "astro": "astro"
   },
