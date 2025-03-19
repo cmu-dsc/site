@@ -1,43 +1,81 @@
 {
-    "semester": "Spring 2025",
-    "events": [
-      {
-        "title": "DSC S25 Intro Social",
-        "description": "Join us for our Spring 2025 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
-        "date": "2025-01-24",
-        "tags": [
-          "social"
-        ]
-      },
-      {
-        "title": "Career Workshop",
-        "description": "Get tips on resume building, interview preparation, and navigating the data science job market.",
-        "date": "2025-01-31",
-        "tags": [
-          "career",
-          "workshop"
-        ],
-        "slides": "https://www.canva.com/design/DAGdzF_vJpg/BZ6HVzu7xxOngEXlJuBBww/edit"
-      },
-      {
-        "title": "Data Cleaning Workshop",
-        "description": "Learn how to clean and prepare data for analysis using Python and Pandas.",
-        "date": "2025-02-07",
-        "tags": [
-          "technical",
-          "workshop"
-        ],
-        "slides": "https://docs.google.com/presentation/d/1QKdWqjYqWTe6a-dgFPHetw-Sgx4kP5nx0mutA6nnzuY/edit?usp=sharing",
-        "notebook": "https://www.kaggle.com/code/alexisbcook/handling-missing-values#Figure-out-why-the-data-is-missing"
-      },
-      {
-        "title": "Breaking into ML Research - Maxwell Jones",
-        "description": "Learn about how to break into machine learning research and what it takes to succeed in the field from Maxwell Jones, a CMU PhD student.",
-        "date": "2025-02-14",
-        "tags": [
-          "career"
-        ],
-        "slides": "https://docs.google.com/presentation/d/1TOBirb_RLdrxyGTfUpBXI0z7Es6lkBPk/edit?usp=sharing&ouid=112940713841014349015&rtpof=true&sd=true"
-      }
-    ]
-  }
+  "semester": "Spring 2025",
+  "events": [
+    {
+      "title": "DSC S25 Intro Social",
+      "description": "Join us for our Spring 2025 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "date": "2025-01-24",
+      "tags": [
+        "social"
+      ]
+    },
+    {
+      "title": "Career Workshop",
+      "description": "Get tips on resume building, interview preparation, and navigating the data science job market.",
+      "date": "2025-01-31",
+      "tags": [
+        "career",
+        "workshop"
+      ],
+      "slides": "https://www.canva.com/design/DAGdzF_vJpg/BZ6HVzu7xxOngEXlJuBBww/edit"
+    },
+    {
+      "title": "Data Cleaning Workshop",
+      "description": "Learn how to clean and prepare data for analysis using Python and Pandas.",
+      "date": "2025-02-07",
+      "tags": [
+        "technical",
+        "workshop"
+      ],
+      "slides": "https://docs.google.com/presentation/d/1QKdWqjYqWTe6a-dgFPHetw-Sgx4kP5nx0mutA6nnzuY/edit?usp=sharing",
+      "notebook": "https://www.kaggle.com/code/alexisbcook/handling-missing-values#Figure-out-why-the-data-is-missing"
+    },
+    {
+      "title": "Breaking into ML Research - Maxwell Jones",
+      "description": "Learn about how to break into machine learning research and what it takes to succeed in the field from Maxwell Jones, a CMU PhD student.",
+      "date": "2025-02-14",
+      "tags": [
+        "career"
+      ],
+      "slides": "https://docs.google.com/presentation/d/1TOBirb_RLdrxyGTfUpBXI0z7Es6lkBPk/edit?usp=sharing&ouid=112940713841014349015&rtpof=true&sd=true"
+    },
+    {
+      "title": "MLOps in Industry: Naval Katoch, PPG",
+      "description": "​Join us for a talk with Naval Katoch, Machine Learning Operations Lead at PPG Industries. With over 6 years of experience leading AI initiatives at PPG and previous experience at IBM Watson Health, Naval brings unique insights from applying machine learning across healthcare, pharmaceutical, and manufacturing domains. As a CMU alumnus (M.S. Information Systems Management '16), Naval has driven digital transformation through AI, optimizing everything from plant operations to supply chains.",
+      "date": "2025-02-24",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "title": "Inside Deep Research: Zhiqing Sun, OpenAI",
+      "description": "​Join us for an insightful session with Zhiqing Sun, Research Lead of OpenAI's Deep Research project and recent PhD graduate from CMU's Language Technologies Institute. Zhiqing will discuss the development of Deep Research, OpenAI's latest breakthrough in agentic AI systems, and share perspectives on the future of AI agents and post-training alignment. ​As a researcher specializing in scalable alignment of foundation models, Zhiqing brings unique expertise in enhancing AI system reliability through minimal supervision. We're excited to welcome him back to CMU for this special talk.",
+      "date": "2025-02-27",
+      "tags": [
+        "career",
+        "technical"
+      ],
+      "slides": "https://t.co/D1AZ6QHqB0"
+    },
+    {
+      "title": "Building the Future of the Terminal: Ian Hodge, Warp",
+      "description": "Join us for an insightful fireside chat with Ian Hodge, an early engineer at Warp, a startup redefining the command-line experience with AI-powered workflows, built-in collaboration, and a modern UI. ​Ian will give a live demo of Warp and share his journey from big tech (Facebook) to startups, reflecting on what it was like to watch Warp grow from a small team of engineers to a mid-stage startup. He’ll discuss what it’s like working in a team that gets to decide what they build, how they prioritize features, and how decisions get made in a fast-moving startup environment. He’ll also dive into the technical details behind Warp’s recently launched Agent Mode, an AI-powered terminal assistant, explaining how they designed and built it. To wrap up, Ian will share advice for students—what they should focus on in college, how to approach career decisions, and what to consider when deciding between big tech and startups.",
+      "date": "2025-03-14",
+      "tags": [
+        "career",
+        "technical"
+      ]
+    },
+    {
+      "title": "Monte Carlo Workshop",
+      "description": "Learn how to use Monte Carlo simulations to model complex systems and make informed decisions for the upcoming PokerAI competition!",
+      "date": "2025-03-19",
+      "tags": [
+        "technical",
+        "workshop"
+      ],
+      "slides": "https://docs.google.com/presentation/d/14rPZqQadfoXliDmfabgjo3P90tX4ee-2W4Io6bdKxwQ/edit?usp=sharing",
+      "notebook": "https://drive.google.com/file/d/1Z-pGNtGRBE0kHGJ-kNy1BOdfacKKcnvt/view?usp=sharing"
+    }
+  ]
+}
