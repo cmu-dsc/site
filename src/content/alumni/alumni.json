@@ -1,5 +1,20 @@
 [
   {
+    "name": "Stephanie Yu",
+    "major": "Stat ML + Business",
+    "gradYear": "2026",
+    "boardPositions": [
+      {
+        "title": "Outreach Director",
+        "semesters": [
+          "F24"
+        ]
+      }
+    ],
+    "image": "../../assets/board/stephanie.jpg",
+    "linkedin": "https://www.linkedin.com/in/stephanie-yu/"
+  },
+  {
     "name": "Almutwakel Hassan",
     "major": "Artificial Intelligence",
     "gradYear": "2025",
@@ -400,20 +415,5 @@
       }
     ],
     "linkedin": "https://www.linkedin.com/in/zheyew"
-  },
-  {
-    "name": "Stephanie Yu",
-    "major": "Stat ML + Business",
-    "gradYear": "2026",
-    "boardPositions": [
-      {
-        "title": "Outreach Director",
-        "semesters": [
-          "F24"
-        ]
-      }
-    ],
-    "image": "../../assets/board/stephanie.jpg",
-    "linkedin": "https://www.linkedin.com/in/stephanie-yu/"
   }
 ]

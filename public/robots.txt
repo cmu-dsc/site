@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://cmudsc.com/sitemap.xml
+Sitemap: https://cmudsc.com/sitemap-index.xml
