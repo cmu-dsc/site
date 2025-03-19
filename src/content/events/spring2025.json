@@ -41,7 +41,7 @@
     },
     {
       "title": "MLOps in Industry: Naval Katoch, PPG",
-      "description": "​Join us for a talk with Naval Katoch, Machine Learning Operations Lead at PPG Industries. With over 6 years of experience leading AI initiatives at PPG and previous experience at IBM Watson Health, Naval brings unique insights from applying machine learning across healthcare, pharmaceutical, and manufacturing domains. As a CMU alumnus (M.S. Information Systems Management '16), Naval has driven digital transformation through AI, optimizing everything from plant operations to supply chains.",
+      "description": "Naval Katoch, Machine Learning Operations Lead at PPG Industries, shared valuable insights from his 6+ years driving AI initiatives in manufacturing and optimization during our recent talk, drawing on his experience as a CMU graduate.",
       "date": "2025-02-24",
       "tags": [
         "career"
@@ -49,7 +49,7 @@
     },
     {
       "title": "Inside Deep Research: Zhiqing Sun, OpenAI",
-      "description": "​Join us for an insightful session with Zhiqing Sun, Research Lead of OpenAI's Deep Research project and recent PhD graduate from CMU's Language Technologies Institute. Zhiqing will discuss the development of Deep Research, OpenAI's latest breakthrough in agentic AI systems, and share perspectives on the future of AI agents and post-training alignment. ​As a researcher specializing in scalable alignment of foundation models, Zhiqing brings unique expertise in enhancing AI system reliability through minimal supervision. We're excited to welcome him back to CMU for this special talk.",
+      "description": "Zhiqing Sun, Research Lead of OpenAI's Deep Research project and CMU PhD graduate, recently shared insights on agentic AI systems and the future of AI alignment, drawing from his expertise in enhancing AI reliability through minimal supervision and his insights from his PhD research.",
       "date": "2025-02-27",
       "tags": [
         "career",
@@ -59,7 +59,7 @@
     },
     {
       "title": "Building the Future of the Terminal: Ian Hodge, Warp",
-      "description": "Join us for an insightful fireside chat with Ian Hodge, an early engineer at Warp, a startup redefining the command-line experience with AI-powered workflows, built-in collaboration, and a modern UI. ​Ian will give a live demo of Warp and share his journey from big tech (Facebook) to startups, reflecting on what it was like to watch Warp grow from a small team of engineers to a mid-stage startup. He’ll discuss what it’s like working in a team that gets to decide what they build, how they prioritize features, and how decisions get made in a fast-moving startup environment. He’ll also dive into the technical details behind Warp’s recently launched Agent Mode, an AI-powered terminal assistant, explaining how they designed and built it. To wrap up, Ian will share advice for students—what they should focus on in college, how to approach career decisions, and what to consider when deciding between big tech and startups.",
+      "description": "Ian Hodge, an early engineer at terminal startup Warp, demonstrated the company's AI-powered command-line experience and shared insights from his journey from Facebook to watching Warp grow from a small team to a mid-stage startup, offering advice on career decisions and explaining the technical details behind their recently launched AI terminal assistant.",
       "date": "2025-03-14",
       "tags": [
         "career",
