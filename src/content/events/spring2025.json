@@ -76,6 +76,16 @@
       ],
       "slides": "https://docs.google.com/presentation/d/14rPZqQadfoXliDmfabgjo3P90tX4ee-2W4Io6bdKxwQ/edit?usp=sharing",
       "notebook": "https://drive.google.com/file/d/1Z-pGNtGRBE0kHGJ-kNy1BOdfacKKcnvt/view?usp=sharing"
+    },
+    {
+      "title": "Poker/Game Theory Workshop",
+      "description": "Learn the basics of poker, game theory, and tips on where to start building your PokerAI bot!",
+      "date": "2025-03-21",
+      "tags": [
+        "technical",
+        "workshop"
+      ],
+      "slides": "https://docs.google.com/presentation/d/1XlnelRBBYEgPz-zEavRA-iYGXvbQkHlh2uoD3v-Xv_M/edit?usp=sharing"
     }
   ]
 }
