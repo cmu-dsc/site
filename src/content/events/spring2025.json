@@ -83,9 +83,19 @@
       "date": "2025-03-21",
       "tags": [
         "technical",
-        "workshop"
+        "workshop",
+        "competition"
       ],
       "slides": "https://docs.google.com/presentation/d/1XlnelRBBYEgPz-zEavRA-iYGXvbQkHlh2uoD3v-Xv_M/edit?usp=sharing"
+    },
+    {
+      "title": "PokerAI Competition Opener",
+      "description": "Join us for the opening of our PokerAI competition! Compete against your peers to build the best poker-playing AI bot.",
+      "date": "2025-03-22",
+      "tags": [
+        "competition"
+      ],
+      "slides": "https://docs.google.com/presentation/d/14iDHopipj4dRjjb_u8xQQNbWMWBLnH8NmquFvaIE6qI/edit?usp=sharing"
     }
   ]
 }
