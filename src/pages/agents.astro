@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import azureLogo from "../assets/sponsors/agents/azure.png";
 import chromaLogo from "../assets/sponsors/agents/chroma.svg";
 import deepmindLogo from "../assets/sponsors/agents/deepmind.png";
+import googleCloudLogo from "../assets/sponsors/agents/google-cloud.svg";
 import langchainLogo from "../assets/sponsors/agents/langchain.png";
 import lindyLogo from "../assets/sponsors/agents/lindy.webp";
 import llamaIndexLogo from "../assets/sponsors/agents/llamaindex.svg";
@@ -176,6 +177,23 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={deepmindLogo}
                   alt="DeepMind"
+                  class="w-1/2 h-auto object-contain"
+                  width={500}
+                  height={200}
+                />
+              </a>
+            </div>
+
+            <div class="border border-gray-700 mt-[20px]">
+              <a
+                href="https://cloud.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center p-[30px] hover:bg-gray-900 transition-colors"
+              >
+                <Image
+                  src={googleCloudLogo}
+                  alt="Google Cloud"
                   class="w-1/2 h-auto object-contain"
                   width={500}
                   height={200}
