@@ -38,23 +38,6 @@
     ]
   },
   {
-    "name": "Varrshitha Kumar",
-    "title": "Design Director",
-    "image": "../../assets/board/varr.jpeg",
-    "bio": "I am a sophomore studying Statistics and Machine Learning. I am interested in the applications of data science in healthcare and environmental chemistry research. I also enjoy playing field hockey and traveling!",
-    "github": "https://github.com/varrkumar",
-    "linkedin": "https://www.linkedin.com/in/varrkumar",
-    "previousPositions": [
-      {
-        "title": "Design Co-Director",
-        "semesters": [
-          "S24",
-          "F24"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Oliver Yun",
     "title": "Competitions Director",
     "image": "../../assets/board/oliver.jpg",
@@ -73,28 +56,13 @@
   },
   {
     "name": "Bincheng Wang",
-    "title": "Workshops Co-Director",
+    "title": "Workshops Director",
     "image": "../../assets/board/bingcheng.png",
     "bio": "Hi, I'm Bingcheng. I'm a Master's student in Data Science, passionate about using data to uncover insights and decode the complexities of the world. I also love K-pop and musicals!",
     "linkedin": "https://www.linkedin.com/in/bingcheng-wang",
     "previousPositions": [
       {
-        "title": "Workshops Co-Director",
-        "semesters": [
-          "F24"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Vincent Huai",
-    "title": "Finance Director",
-    "image": "../../assets/board/vincent.jpeg",
-    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
-    "linkedin": "https://www.linkedin.com/in/vincent-huai",
-    "previousPositions": [
-      {
-        "title": "Junior Outreach Director",
+        "title": "Workshops Director",
         "semesters": [
           "F24"
         ]
@@ -134,6 +102,38 @@
     ]
   },
   {
+    "name": "Varrshitha Kumar",
+    "title": "Design Director",
+    "image": "../../assets/board/varr.jpeg",
+    "bio": "I am a sophomore studying Statistics and Machine Learning. I am interested in the applications of data science in healthcare and environmental chemistry research. I also enjoy playing field hockey and traveling!",
+    "github": "https://github.com/varrkumar",
+    "linkedin": "https://www.linkedin.com/in/varrkumar",
+    "previousPositions": [
+      {
+        "title": "Design Co-Director",
+        "semesters": [
+          "S24",
+          "F24"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vincent Huai",
+    "title": "Finance Director",
+    "image": "../../assets/board/vincent.jpeg",
+    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
+    "linkedin": "https://www.linkedin.com/in/vincent-huai",
+    "previousPositions": [
+      {
+        "title": "Junior Outreach Director",
+        "semesters": [
+          "F24"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Claire Shen",
     "title": "Branding Director",
     "image": "../../assets/board/claire.png",
@@ -147,5 +147,19 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Neil Purohit",
+    "title": "Technical Director",
+    "image": "../../assets/board/neil_p.jpeg",
+    "bio": "I am a freshman majoring in Statistics & Machine Learning . I'm interested in exploring the intersection between big data & machine learning and how they are used to catalyze emerging industries such as Big Pharma and Algorithmic Trading. In my free time, I like to lift and play soccer! Fun fact: I can name the capital of every country.",
+    "linkedin": "https://www.linkedin.com/in/neilpurohit06/"
+  },
+  {
+    "name": "Anna Lin",
+    "title": "Outreach Director",
+    "image": "../../assets/board/anna.png",
+    "bio": "Hi! I’m Anna, a freshman majoring in Information Systems. I’m interested in the intersection of technology and healthcare, especially the ways data can be used to improve patient care and health outcomes. In my free time, I love dancing and spending quality time with friends and family!",
+    "linkedin": "https://www.linkedin.com/in/anna-lin888/"
   }
 ]
