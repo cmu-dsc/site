@@ -119,6 +119,13 @@
     ]
   },
   {
+    "name": "Vivianne Lee",
+    "title": "Design Director",
+    "image": "../../assets/board/vivianne.png",
+    "bio": "Hi! I’m Vivianne, a sophomore majoring in Decision Science + HCI. I’m interested in how data science can leverage decision-making, specifically in the realm of UI/UX design. I love cats and concerts.",
+    "linkedin": "https://www.linkedin.com/in/vivianne-lee-9764932b4/"
+  },
+  {
     "name": "Vincent Huai",
     "title": "Finance Director",
     "image": "../../assets/board/vincent.jpeg",
