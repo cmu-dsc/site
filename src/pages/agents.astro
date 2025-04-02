@@ -2,7 +2,6 @@
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/700.css";
 import { Image } from "astro:assets";
-import azureLogo from "../assets/sponsors/agents/azure.png";
 import chromaLogo from "../assets/sponsors/agents/chroma.svg";
 import deepmindLogo from "../assets/sponsors/agents/deepmind.png";
 import googleCloudLogo from "../assets/sponsors/agents/google-cloud.svg";
@@ -14,7 +13,6 @@ import modalLogo from "../assets/sponsors/agents/modal.svg";
 import replicateLogo from "../assets/sponsors/agents/replicate.svg";
 import perplexityLogo from "../assets/sponsors/agents/perplexity.png";
 import exaLogo from "../assets/sponsors/agents/exa.png";
-// Import social icons
 import LinkedinIcon from "../icons/linkedin.svg?raw";
 import TwitterIcon from "../icons/twitter.svg?raw";
 import WebsiteIcon from "../icons/website.svg?raw";
@@ -63,7 +61,9 @@ import WebsiteIcon from "../icons/website.svg?raw";
           <p
             class="text-gray-400 max-w-2xl border-l-2 border-gray-700 pl-4 my-[20px] leading-[20px]"
           >
-            Join us for a weekend exploring autonomous AI agents. Compete for $4,000 in cash prizes, plus credits and swag for winners. All participants receive $750 in credits. Work in teams of up to 4.
+            Join us for a weekend exploring autonomous AI agents. Compete for
+            $4,000 in cash prizes, plus credits and swag for winners. All
+            participants receive $750 in credits. Work in teams of up to 4.
           </p>
           <p class="text-gray-500 italic text-sm max-w-2xl leading-[20px]">
             For research talks and posters, check out the <a
@@ -127,18 +127,40 @@ import WebsiteIcon from "../icons/website.svg?raw";
                 <div
                   class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
                 >
-                  <div>2:00 PM - 3:00 PM · <span class="text-white">Check-in</span></div>
                   <div>
-                    2:30 PM - 3:00 PM · <span class="text-white">DeepMind Keynote: AI Studio & Gemini</span>
-                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                    2:00 PM - 3:00 PM · <span class="text-white">Check-in</span>
+                  </div>
+                  <div>
+                    2:30 PM - 3:00 PM · <span class="text-white"
+                      >DeepMind Keynote: AI Studio & Gemini</span
+                    >
+                    <div
+                      class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded"
+                    >
                       <div class="flex items-center gap-2">
-                        <span class="text-blue-300 font-semibold">Paige Bailey</span>
-                        <span class="text-gray-500">DevEx Engineering Lead @ DeepMind</span>
+                        <span class="text-blue-300 font-semibold"
+                          >Paige Bailey</span
+                        >
+                        <span class="text-gray-500"
+                          >DevEx Engineering Lead @ DeepMind</span
+                        >
                         <div class="flex items-center gap-1 ml-auto">
-                          <a href="https://x.com/DynamicWebPaige" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="Twitter">
+                          <a
+                            href="https://x.com/DynamicWebPaige"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="Twitter"
+                          >
                             <div class="h-4 w-4" set:html={TwitterIcon} />
                           </a>
-                          <a href="https://www.linkedin.com/in/dynamicwebpaige/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                          <a
+                            href="https://www.linkedin.com/in/dynamicwebpaige/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="LinkedIn"
+                          >
                             <div class="h-4 w-4" set:html={LinkedinIcon} />
                           </a>
                         </div>
@@ -146,83 +168,179 @@ import WebsiteIcon from "../icons/website.svg?raw";
                     </div>
                   </div>
                   <div class="text-blue-400">3:00 PM · Hacking Begins</div>
-                  <div>3:00 PM - 3:30 PM · <span class="text-white">Deepmind Tutorial</span>
-                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                  <div>
+                    3:00 PM - 3:30 PM · <span class="text-white"
+                      >Deepmind Tutorial</span
+                    >
+                    <div
+                      class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded"
+                    >
                       <div class="flex items-center gap-2">
-                        <span class="text-blue-300 font-semibold">Paige Bailey</span>
-                        <span class="text-gray-500">DevEx Engineering Lead @ DeepMind</span>
+                        <span class="text-blue-300 font-semibold"
+                          >Paige Bailey</span
+                        >
+                        <span class="text-gray-500"
+                          >DevEx Engineering Lead @ DeepMind</span
+                        >
                         <div class="flex items-center gap-1 ml-auto">
-                          <a href="https://x.com/DynamicWebPaige" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="Twitter">
+                          <a
+                            href="https://x.com/DynamicWebPaige"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="Twitter"
+                          >
                             <div class="h-4 w-4" set:html={TwitterIcon} />
                           </a>
-                          <a href="https://www.linkedin.com/in/dynamicwebpaige/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                          <a
+                            href="https://www.linkedin.com/in/dynamicwebpaige/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="LinkedIn"
+                          >
                             <div class="h-4 w-4" set:html={LinkedinIcon} />
                           </a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div>3:35 PM - 4:00 PM · <span class="text-white">LlamaIndex Tutorial</span>
-                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                  <div>
+                    3:35 PM - 4:00 PM · <span class="text-white"
+                      >LlamaIndex Tutorial</span
+                    >
+                    <div
+                      class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded"
+                    >
                       <div class="flex items-center gap-2">
-                        <span class="text-blue-300 font-semibold">Laurie Voss</span>
-                        <span class="text-gray-500">VP Developer Relations @ LlamaIndex</span>
+                        <span class="text-blue-300 font-semibold"
+                          >Laurie Voss</span
+                        >
+                        <span class="text-gray-500"
+                          >VP Developer Relations @ LlamaIndex</span
+                        >
                         <div class="flex items-center gap-1 ml-auto">
-                          <a href="https://seldo.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="Website">
+                          <a
+                            href="https://seldo.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="Website"
+                          >
                             <div class="h-4 w-4" set:html={WebsiteIcon} />
                           </a>
-                          <a href="https://www.linkedin.com/in/seldo/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                          <a
+                            href="https://www.linkedin.com/in/seldo/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="LinkedIn"
+                          >
                             <div class="h-4 w-4" set:html={LinkedinIcon} />
                           </a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div>4:05 PM - 4:30 PM · <span class="text-white">Replicate Tutorial</span>
-                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                  <div>
+                    4:05 PM - 4:30 PM · <span class="text-white"
+                      >Replicate Tutorial</span
+                    >
+                    <div
+                      class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded"
+                    >
                       <div class="flex items-center gap-2">
-                        <span class="text-blue-300 font-semibold">Pranav Sekhar</span>
+                        <span class="text-blue-300 font-semibold"
+                          >Pranav Sekhar</span
+                        >
                         <span class="text-gray-500">Growth @ Replicate</span>
                         <div class="flex items-center gap-1 ml-auto">
-                          <a href="https://www.linkedin.com/in/pranavsekhar/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                          <a
+                            href="https://www.linkedin.com/in/pranavsekhar/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="LinkedIn"
+                          >
                             <div class="h-4 w-4" set:html={LinkedinIcon} />
                           </a>
                         </div>
                       </div>
                       <div class="flex items-center gap-2 mt-2">
-                        <span class="text-blue-300 font-semibold">Dan Buch</span>
-                        <span class="text-gray-500">Staff Software Engineer @ Replicate</span>
+                        <span class="text-blue-300 font-semibold">Dan Buch</span
+                        >
+                        <span class="text-gray-500"
+                          >Staff Software Engineer @ Replicate</span
+                        >
                         <div class="flex items-center gap-1 ml-auto">
-                          <a href="https://www.linkedin.com/in/dbuch/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                          <a
+                            href="https://www.linkedin.com/in/dbuch/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="LinkedIn"
+                          >
                             <div class="h-4 w-4" set:html={LinkedinIcon} />
                           </a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div>4:35 PM - 5:00 PM · <span class="text-white">Exa Tutorial</span>
-                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
-                      <div class="flex items-center gap-2">
-                        <span class="text-blue-300 font-semibold">Ishan Goswami</span>
-                        <span class="text-gray-500">Software Engineer @ Exa</span>
-                        <div class="flex items-center gap-1 ml-auto">
-                          <a href="https://www.linkedin.com/in/theishangoswami/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
-                            <div class="h-4 w-4" set:html={LinkedinIcon} />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>5:00 PM - 6:00 PM · <span class="text-white">Sponsor Tabling</span></div>
-                  <div>6:00 PM - 7:00 PM · <span class="text-white">Dinner</span></div>
                   <div>
-                    6:00 PM - 7:00 PM · <span class="text-white">Replicate Product & Startup Talk</span>
-                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                    4:35 PM - 5:00 PM · <span class="text-white"
+                      >Exa Tutorial</span
+                    >
+                    <div
+                      class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded"
+                    >
                       <div class="flex items-center gap-2">
-                        <span class="text-blue-300 font-semibold">Pranav Sekhar</span>
+                        <span class="text-blue-300 font-semibold"
+                          >Ishan Goswami</span
+                        >
+                        <span class="text-gray-500"
+                          >Software Engineer @ Exa</span
+                        >
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a
+                            href="https://www.linkedin.com/in/theishangoswami/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="LinkedIn"
+                          >
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    5:00 PM - 6:00 PM · <span class="text-white"
+                      >Sponsor Tabling</span>
+                  </div>
+                  <div>
+                    6:00 PM - 7:00 PM · <span class="text-white">Dinner</span>
+                  </div>
+                  <div>
+                    6:00 PM - 7:00 PM · <span class="text-white"
+                      >Replicate Product & Startup Talk</span
+                    >
+                    <div
+                      class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <span class="text-blue-300 font-semibold"
+                          >Pranav Sekhar</span
+                        >
                         <span class="text-gray-500">Growth @ Replicate</span>
                         <div class="flex items-center gap-1 ml-auto">
-                          <a href="https://www.linkedin.com/in/pranavsekhar/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                          <a
+                            href="https://www.linkedin.com/in/pranavsekhar/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300"
+                            title="LinkedIn"
+                          >
                             <div class="h-4 w-4" set:html={LinkedinIcon} />
                           </a>
                         </div>
@@ -246,10 +364,21 @@ import WebsiteIcon from "../icons/website.svg?raw";
                 <div
                   class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
                 >
-                  <div>3:00 PM - 4:00 PM · <span class="text-white">Project Presentations</span></div>
-                  <div>4:00 PM - 4:30 PM · <span class="text-white">Final Presentations</span></div>
-                  <div>4:30 PM - 5:00 PM · <span class="text-white">Judging</span></div>
-                  <div>5:00 PM - 6:00 PM · <span class="text-white">Prize Ceremony</span></div>
+                  <div>
+                    3:00 PM - 4:00 PM · <span class="text-white"
+                      >Project Presentations</span>
+                  </div>
+                  <div>
+                    4:00 PM - 4:30 PM · <span class="text-white"
+                      >Final Presentations</span>
+                  </div>
+                  <div>
+                    4:30 PM - 5:00 PM · <span class="text-white">Judging</span>
+                  </div>
+                  <div>
+                    5:00 PM - 6:00 PM · <span class="text-white"
+                      >Prize Ceremony</span>
+                  </div>
                 </div>
               </details>
               {/* CMU Agent Workshop */}
@@ -383,20 +512,6 @@ import WebsiteIcon from "../icons/website.svg?raw";
                   height={160}
                 />
               </a>
-              <!-- <a
-                                href="https://azure.microsoft.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="flex items-center justify-center p-[20px] border border-gray-700 hover:bg-gray-900 transition-colors"
-                            >
-                                <Image
-                                    src={azureLogo}
-                                    alt="Azure"
-                                    class="h-12 w-auto object-contain"
-                                    width={400}
-                                    height={160}
-                                />
-                            </a> -->
               <a
                 href="https://www.langchain.com"
                 target="_blank"
