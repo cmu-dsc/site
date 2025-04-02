@@ -14,6 +14,10 @@ import modalLogo from "../assets/sponsors/agents/modal.svg";
 import replicateLogo from "../assets/sponsors/agents/replicate.svg";
 import perplexityLogo from "../assets/sponsors/agents/perplexity.png";
 import exaLogo from "../assets/sponsors/agents/exa.png";
+// Import social icons
+import LinkedinIcon from "../icons/linkedin.svg?raw";
+import TwitterIcon from "../icons/twitter.svg?raw";
+import WebsiteIcon from "../icons/website.svg?raw";
 ---
 
 <html lang="en">
@@ -55,6 +59,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
             AI AGENTS WEEKEND
           </h1>
           <div class="text-xl text-blue-400 h-[20px]">APRIL 12-13, 2025</div>
+          <div class="text-gray-400 h-[20px]">POSNER HALL A35</div>
           <p
             class="text-gray-400 max-w-2xl border-l-2 border-gray-700 pl-4 my-[20px] leading-[20px]"
           >
@@ -120,19 +125,107 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <div
                   class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
                 >
-                  <div>2:00 PM - 3:00 PM · Check-in</div>
+                  <div>2:00 PM - 3:00 PM · <span class="text-white">Check-in</span></div>
                   <div>
-                    2:30 PM - 3:00 PM · DeepMind Keynote: AI Studio & Gemini
+                    2:30 PM - 3:00 PM · <span class="text-white">DeepMind Keynote: AI Studio & Gemini</span>
+                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                      <div class="flex items-center gap-2">
+                        <span class="text-blue-300 font-semibold">Paige Bailey</span>
+                        <span class="text-gray-500">DevEx Engineering Lead @ DeepMind</span>
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a href="https://x.com/DynamicWebPaige" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="Twitter">
+                            <div class="h-4 w-4" set:html={TwitterIcon} />
+                          </a>
+                          <a href="https://www.linkedin.com/in/dynamicwebpaige/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="text-blue-400">3:00 PM · Hacking Begins</div>
-                  <div>3:00 PM - 3:30 PM · Deepmind Tutorial</div>
-                  <div>3:35 PM - 4:00 PM · LlamaIndex Tutorial</div>
-                  <div>4:05 PM - 4:30 PM · Replicate Tutorial</div>
-                  <div>4:35 PM - 5:00 PM · Exa Tutorial</div>
-                  <div>5:00 PM - 6:00 PM · Sponsor Tabling</div>
-                  <div>6:00 PM - 7:00 PM · Dinner</div>
+                  <div>3:00 PM - 3:30 PM · <span class="text-white">Deepmind Tutorial</span>
+                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                      <div class="flex items-center gap-2">
+                        <span class="text-blue-300 font-semibold">Paige Bailey</span>
+                        <span class="text-gray-500">DevEx Engineering Lead @ DeepMind</span>
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a href="https://x.com/DynamicWebPaige" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="Twitter">
+                            <div class="h-4 w-4" set:html={TwitterIcon} />
+                          </a>
+                          <a href="https://www.linkedin.com/in/dynamicwebpaige/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>3:35 PM - 4:00 PM · <span class="text-white">LlamaIndex Tutorial</span>
+                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                      <div class="flex items-center gap-2">
+                        <span class="text-blue-300 font-semibold">Laurie Voss</span>
+                        <span class="text-gray-500">VP Developer Relations @ LlamaIndex</span>
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a href="https://seldo.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="Website">
+                            <div class="h-4 w-4" set:html={WebsiteIcon} />
+                          </a>
+                          <a href="https://www.linkedin.com/in/seldo/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>4:05 PM - 4:30 PM · <span class="text-white">Replicate Tutorial</span>
+                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                      <div class="flex items-center gap-2">
+                        <span class="text-blue-300 font-semibold">Pranav Sekhar</span>
+                        <span class="text-gray-500">Growth @ Replicate</span>
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a href="https://www.linkedin.com/in/pranavsekhar/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2 mt-2">
+                        <span class="text-blue-300 font-semibold">Dan Buch</span>
+                        <span class="text-gray-500">Staff Software Engineer @ Replicate</span>
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a href="https://www.linkedin.com/in/dbuch/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>4:35 PM - 5:00 PM · <span class="text-white">Exa Tutorial</span>
+                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                      <div class="flex items-center gap-2">
+                        <span class="text-blue-300 font-semibold">Ishan Goswami</span>
+                        <span class="text-gray-500">Software Engineer @ Exa</span>
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a href="https://www.linkedin.com/in/theishangoswami/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>5:00 PM - 6:00 PM · <span class="text-white">Sponsor Tabling</span></div>
+                  <div>6:00 PM - 7:00 PM · <span class="text-white">Dinner</span></div>
                   <div>
-                    6:00 PM - 7:00 PM · Replicate Product & Startup Talk
+                    6:00 PM - 7:00 PM · <span class="text-white">Replicate Product & Startup Talk</span>
+                    <div class="pl-4 mt-1 text-sm bg-gray-900 bg-opacity-30 p-2 rounded">
+                      <div class="flex items-center gap-2">
+                        <span class="text-blue-300 font-semibold">Pranav Sekhar</span>
+                        <span class="text-gray-500">Growth @ Replicate</span>
+                        <div class="flex items-center gap-1 ml-auto">
+                          <a href="https://www.linkedin.com/in/pranavsekhar/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300" title="LinkedIn">
+                            <div class="h-4 w-4" set:html={LinkedinIcon} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </details>
@@ -151,10 +244,10 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <div
                   class="space-y-[10px] pl-8 border-l border-gray-700 mt-[10px]"
                 >
-                  <div>3:00 PM - 4:00 PM · Project Presentations</div>
-                  <div>4:00 PM - 4:30 PM · Final Presentations</div>
-                  <div>4:30 PM - 5:00 PM · Judging</div>
-                  <div>5:00 PM - 6:00 PM · Prize Ceremony</div>
+                  <div>3:00 PM - 4:00 PM · <span class="text-white">Project Presentations</span></div>
+                  <div>4:00 PM - 4:30 PM · <span class="text-white">Final Presentations</span></div>
+                  <div>4:30 PM - 5:00 PM · <span class="text-white">Judging</span></div>
+                  <div>5:00 PM - 6:00 PM · <span class="text-white">Prize Ceremony</span></div>
                 </div>
               </details>
               {/* CMU Agent Workshop */}
@@ -227,7 +320,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={llamaIndexLogo}
                   alt="LlamaIndex"
-                  class="w-full h-auto object-contain"
+                  class="h-12 w-auto object-contain"
                   width={400}
                   height={160}
                 />
@@ -241,7 +334,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={replicateLogo}
                   alt="Replicate"
-                  class="w-full h-auto object-contain brightness-0 invert"
+                  class="h-12 w-auto object-contain brightness-0 invert"
                   width={400}
                   height={160}
                 />
@@ -255,7 +348,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={modalLogo}
                   alt="Modal"
-                  class="w-full h-auto object-contain brightness-0 invert"
+                  class="h-12 w-auto object-contain brightness-0 invert"
                   width={400}
                   height={160}
                 />
@@ -269,7 +362,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={exaLogo}
                   alt="Exa"
-                  class="w-full h-auto object-contain brightness-0 invert"
+                  class="h-12 w-auto object-contain brightness-0 invert"
                   width={400}
                   height={160}
                 />
@@ -283,7 +376,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={mistralLogo}
                   alt="Mistral"
-                  class="w-full h-auto object-contain"
+                  class="h-12 w-auto object-contain"
                   width={400}
                   height={160}
                 />
@@ -297,7 +390,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                                 <Image
                                     src={azureLogo}
                                     alt="Azure"
-                                    class="w-full h-auto object-contain"
+                                    class="h-12 w-auto object-contain"
                                     width={400}
                                     height={160}
                                 />
@@ -311,7 +404,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={langchainLogo}
                   alt="LangChain"
-                  class="w-full h-auto object-contain"
+                  class="h-12 w-auto object-contain"
                   width={400}
                   height={160}
                 />
@@ -325,7 +418,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={lindyLogo}
                   alt="Lindy"
-                  class="w-full h-auto object-contain"
+                  class="h-12 w-auto object-contain"
                   width={400}
                   height={160}
                 />
@@ -339,7 +432,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={weaviateLogo}
                   alt="Weaviate"
-                  class="w-full h-auto object-contain"
+                  class="h-12 w-auto object-contain"
                   width={400}
                   height={160}
                 />
@@ -353,7 +446,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={chromaLogo}
                   alt="Chroma"
-                  class="w-full h-auto object-contain"
+                  class="h-12 w-auto object-contain"
                   width={400}
                   height={160}
                 />
@@ -368,7 +461,7 @@ import exaLogo from "../assets/sponsors/agents/exa.png";
                 <Image
                   src={perplexityLogo}
                   alt="Perplexity"
-                  class="w-full h-auto object-contain"
+                  class="h-12 w-auto object-contain"
                   width={400}
                   height={160}
                 />
