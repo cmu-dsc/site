@@ -321,6 +321,66 @@
     "linkedin": "https://www.linkedin.com/in/jet-wu-cmu"
   },
   {
+    "name": "Bonnie Chan",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2023",
+    "currentTitle": "Senior MTS @ AT&T",
+    "image": "../../assets/alumni/bonnie.jpg",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "F21", "S22", "F22"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/chan-bonnie/"
+  },
+  {
+    "name": "Owen Mo",
+    "major": "Computer Science",
+    "gradYear": "2023",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "F21", "S22", "F22"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Roshan Ram",
+    "major": "Information Systems",
+    "gradYear": "2023",
+    "currentTitle": "AI Engineer @ Bland AI",
+    "image": "../../assets/alumni/roshan.jpeg",
+    "boardPositions": [
+      {
+        "title": "VP of Projects",
+        "semesters": [
+          "F20", "S21"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/roshanr11/"
+  },
+  {
+    "name": "Qiyun Chen",
+    "major": "Statistics and Machine Learning",
+    "currentTitle": "Quantitative Researcher @ Two Sigma",
+    "gradYear": "2022",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "F20", "S21"
+        ]
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/qiyun-chen-313a16193/"
+  },
+  {
     "name": "Jerry Li",
     "major": "Economics, Statistics and Machine Learning",
     "gradYear": "2022",
