@@ -7,7 +7,7 @@
       {
         "title": "Outreach Director",
         "semesters": [
-          "F24"
+          "S25"
         ]
       }
     ],
@@ -34,6 +34,12 @@
           "S23",
           "F23"
         ]
+      },
+      {
+        "title": "Advisor",
+        "semesters": [
+          "S25"
+        ]
       }
     ]
   },
@@ -56,6 +62,12 @@
         "semesters": [
           "F24"
         ]
+      },
+      {
+        "title": "Advisor",
+        "semesters": [
+          "S25"
+        ]
       }
     ]
   },
@@ -77,6 +89,12 @@
         "title": "Branding Director",
         "semesters": [
           "F24"
+        ]
+      },
+      {
+        "title": "Advisor",
+        "semesters": [
+          "S25"
         ]
       }
     ]
@@ -117,6 +135,12 @@
           "S23",
           "F23"
         ]
+      },
+      {
+        "title": "Advisor",
+        "semesters": [
+          "S25"
+        ]
       }
     ],
     "linkedin": "https://www.linkedin.com/in/dongkyun-k"
@@ -132,6 +156,12 @@
         "semesters": [
           "S24",
           "F24"
+        ]
+      },
+      {
+        "title": "Advisor",
+        "semesters": [
+          "S25"
         ]
       }
     ],
@@ -149,6 +179,12 @@
         "semesters": [
           "S24",
           "F24"
+        ]
+      },
+      {
+        "title": "Advisor",
+        "semesters": [
+          "S25"
         ]
       }
     ]
@@ -353,7 +389,7 @@
     "name": "Roshan Ram",
     "major": "Information Systems",
     "gradYear": "2023",
-    "currentTitle": "AI Engineer @ Bland AI",
+    "currentTitle": "ML Engineer @ Bland AI",
     "image": "../../assets/alumni/roshan.jpeg",
     "boardPositions": [
       {
