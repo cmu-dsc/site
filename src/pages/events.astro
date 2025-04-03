@@ -52,6 +52,39 @@ const tagNames = {
   career: "Career",
   technical: "Technical",
 } as const;
+
+// Generate structured data object
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": eventData.flatMap((semester, semesterIndex) => 
+    semester.events.map((event, eventIndex) => ({
+      "@type": "ListItem",
+      // Calculate global position if needed, or keep simple index per semester
+      "position": semesterIndex * 1000 + eventIndex + 1, // Example: simple global position
+      "item": {
+        "@type": "Event",
+        "name": event.title,
+        "description": event.description,
+        "startDate": event.date,
+        "location": {
+          "@type": "Place",
+          "name": "Carnegie Mellon University",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Pittsburgh",
+            "addressRegion": "PA",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "CMU Data Science Club"
+        }
+      }
+    }))
+  )
+};
 ---
 
 <Layout 
@@ -521,39 +554,7 @@ const tagNames = {
     }
   </style>
 
-  <script is:inline type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": 
-      eventData.flatMap(semester => 
-        semester.events.map((event, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "Event",
-            "name": event.title,
-            "description": event.description,
-            "startDate": event.date,
-            "location": {
-              "@type": "Place",
-              "name": "Carnegie Mellon University",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Pittsburgh",
-                "addressRegion": "PA",
-                "addressCountry": "US"
-              }
-            },
-            "organizer": {
-              "@type": "Organization",
-              "name": "CMU Data Science Club"
-            }
-          }
-        }))
-      )
-  }
-  </script>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <script is:inline>
     let currentAudio = null;
