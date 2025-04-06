@@ -5,6 +5,7 @@ import GithubContributionGraph from "../components/GithubContributionGraph.astro
 import ImagePlaceholder from "../components/icons/ImagePlaceholder.astro";
 import TopContributors from "../components/TopContributors.astro";
 import Layout from "../layouts/Layout.astro";
+import sudsLogo from "../assets/suds.png"; // Import the logo
 
 const { data: projects } = (await getEntry(
   "projects",
@@ -36,6 +37,28 @@ const getContributionColor = (level: 0 | 1 | 2 | 3 | 4): string => {
       <h1 class="text-4xl font-bold text-[#082b57] mb-8 text-center">
         Our Projects
       </h1>
+
+      <!-- SUDS Sister Club Section -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-10 p-6 border border-white/10 rounded-lg max-w-3xl mx-auto bg-white/20 backdrop-blur-sm">
+        <Image
+          src={sudsLogo}
+          alt="SUDS Logo"
+          width={80}
+          height={80}
+          format="webp"
+          quality={90}
+          class="object-contain rounded-md flex-shrink-0"
+        />
+        <p class="text-center md:text-left text-[#082b57]/90">
+          Check out our sister club, <a
+            href="https://suds-cmu.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-blue-700 hover:underline"
+            >Students Using Data for Social Good (SUDS)</a
+          >, who apply data science to projects for non-profits and government organizations!
+        </p>
+      </div>
 
       <!-- GitHub Activity -->
       <div class="mb-8">
