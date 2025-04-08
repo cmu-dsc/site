@@ -10,7 +10,7 @@
 
 [[redirects]]
   from = "/archive/pokerai-2024/*"
-  to = "https://pokerai-landing-2024.netlify.app/:splat"
+  to = "https://poker-splash-2024.netlify.app/:splat"
   status = 200
   force = true
 
