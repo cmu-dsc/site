@@ -3,7 +3,7 @@
   "events": [
     {
       "title": "DSC S25 Intro Social",
-      "description": "Join us for our Spring 2025 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "description": "Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts at the Spring 2025 intro social.",
       "date": "2025-01-24",
       "tags": [
         "social"
@@ -32,7 +32,7 @@
     },
     {
       "title": "Breaking into ML Research - Maxwell Jones",
-      "description": "Learn about how to break into machine learning research and what it takes to succeed in the field from Maxwell Jones, a CMU PhD student.",
+      "description": "Hear from Maxwell Jones (CMU PhD) on breaking into machine learning research and succeeding in the field.",
       "date": "2025-02-14",
       "tags": [
         "career"
@@ -41,7 +41,7 @@
     },
     {
       "title": "MLOps in Industry: Naval Katoch, PPG",
-      "description": "Naval Katoch, Machine Learning Operations Lead at PPG Industries, shared valuable insights from his 6+ years driving AI initiatives in manufacturing and optimization during our recent talk, drawing on his experience as a CMU graduate.",
+      "description": "Learn about MLOps in industry from Naval Katoch (ML Ops Lead, PPG), drawing on 6+ years driving AI initiatives.",
       "date": "2025-02-24",
       "tags": [
         "career"
@@ -49,7 +49,7 @@
     },
     {
       "title": "Inside Deep Research: Zhiqing Sun, OpenAI",
-      "description": "Zhiqing Sun, Research Lead of OpenAI's Deep Research project and CMU PhD graduate, recently shared insights on agentic AI systems and the future of AI alignment, drawing from his expertise in enhancing AI reliability through minimal supervision and his insights from his PhD research.",
+      "description": "Explore agentic AI systems and AI alignment with Zhiqing Sun (Research Lead, OpenAI Deep Research & CMU PhD).",
       "date": "2025-02-27",
       "tags": [
         "career",
@@ -59,7 +59,7 @@
     },
     {
       "title": "Building the Future of the Terminal: Ian Hodge, Warp",
-      "description": "Ian Hodge, an early engineer at terminal startup Warp, demonstrated the company's AI-powered command-line experience and shared insights from his journey from Facebook to watching Warp grow from a small team to a mid-stage startup, offering advice on career decisions and explaining the technical details behind their recently launched AI terminal assistant.",
+      "description": "Discover Warp's AI-powered terminal and startup insights from early engineer Ian Hodge (ex-Facebook).",
       "date": "2025-03-14",
       "tags": [
         "career",
@@ -67,18 +67,19 @@
       ]
     },
     {
-      "title": "Monte Carlo Workshop",
+      "title": "Poker AI: Monte Carlo Workshop",
       "description": "Learn how to use Monte Carlo simulations to model complex systems and make informed decisions for the upcoming PokerAI competition!",
       "date": "2025-03-19",
       "tags": [
         "technical",
-        "workshop"
+        "workshop",
+        "competition"
       ],
       "slides": "https://docs.google.com/presentation/d/14rPZqQadfoXliDmfabgjo3P90tX4ee-2W4Io6bdKxwQ/edit?usp=sharing",
       "notebook": "https://drive.google.com/file/d/1Z-pGNtGRBE0kHGJ-kNy1BOdfacKKcnvt/view?usp=sharing"
     },
     {
-      "title": "Poker/Game Theory Workshop",
+      "title": "Poker AI: Poker/Game Theory Workshop",
       "description": "Learn the basics of poker, game theory, and tips on where to start building your PokerAI bot!",
       "date": "2025-03-21",
       "tags": [
@@ -96,6 +97,17 @@
         "competition"
       ],
       "slides": "https://docs.google.com/presentation/d/14iDHopipj4dRjjb_u8xQQNbWMWBLnH8NmquFvaIE6qI/edit?usp=sharing"
+    },
+    {
+      "title": "PokerAI: Reinforcement Learning Workshop",
+      "description": "Learn about how to use reinforcement learning to build a poker-playing AI bot!",
+      "date": "2025-03-24",
+      "tags": [
+        "competition",
+        "technical",
+        "workshop"
+      ],
+      "slides": "https://docs.google.com/presentation/d/1oXVN7eigs-SDLvYRd0dG945fDzB51Ze-B6fqPoEc2Fs/edit?usp=sharing"
     }
   ]
 }

@@ -22,7 +22,7 @@
     },
     {
       "title": "DSC S24 Intro Social",
-      "description": "Join us for our Spring 2024 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "description": "Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts at the Spring 2024 intro social.",
       "date": "2024-02-16",
       "tags": [
         "social"
@@ -40,7 +40,7 @@
     },
     {
       "title": "Climatehack.AI Workshop",
-      "description": "Join us as a CMU team that qualified for the Climatehack.AI finals presents their approach to weather prediction and shares insights from their competition experience.",
+      "description": "Hear from a CMU team that qualified for the Climatehack.AI finals on their approach to weather prediction.",
       "date": "2024-03-15",
       "tags": [
         "workshop",
@@ -63,7 +63,7 @@
     },
     {
       "title": "Poker AI: Poker Workshop",
-      "description": "Learn poker fundamentals, game theory optimal play, and strategies that will help you develop stronger poker AI agents.",
+      "description": "Learn poker fundamentals, game theory optimal play, and strategies to develop stronger poker AI agents.",
       "date": "2024-03-29",
       "slides": "https://docs.google.com/presentation/d/1uETchM2ZeU-GrrFKMF1HxdKPYubtTH4oQ_NyD7ux5CA/edit?usp=sharing",
       "recording": "https://cmu.zoom.us/j/98360847053?pwd=ZXJiWDdNZlJ4RzFSbUdRMDA5YXFGQT09",
@@ -75,7 +75,7 @@
     },
     {
       "title": "Poker AI: Sam Ganzfried",
-      "description": "Join us for a talk with Sam Ganzfried, an expert in game theory and poker AI, as he discusses advanced poker AI strategies.",
+      "description": "Hear from Sam Ganzfried (game theory & poker AI expert) on advanced poker AI strategies.",
       "date": "2024-03-29",
       "slides": "https://drive.google.com/file/d/1EeZlP7PfAZPQv2eqBWjdPfLTSL2Lk6UV/view?usp=sharing",
       "recording": "https://drive.google.com/file/d/1hj5oERrFyN4qenGxkN5v0CWv0QZeVo2O/view?usp=sharing",
@@ -87,7 +87,7 @@
     },
     {
       "title": "Poker AI: Jump Trading",
-      "description": "Learn about how poker strategies and game theory are applied in quantitative trading from Jump Trading professionals.",
+      "description": "Learn how poker strategies and game theory apply to quantitative trading from Jump Trading professionals.",
       "date": "2024-03-30",
       "tags": [
         "career",
@@ -96,7 +96,7 @@
     },
     {
       "title": "Poker AI: Tuomas Sandholm",
-      "description": "Special guest lecture by Prof. Tuomas Sandholm on the development of Libratus and the future of poker AI.",
+      "description": "Hear Prof. Tuomas Sandholm discuss the development of Libratus and the future of poker AI.",
       "date": "2024-03-30",
       "tags": [
         "technical",
@@ -115,7 +115,7 @@
     },
     {
       "title": "Youssef Kallel, Apple: MLE Career Talk",
-      "description": "Join us for an insightful talk with Youssef Kallel about his experience as a Machine Learning Engineer at Apple.",
+      "description": "Hear from Youssef Kallel about his experience as a Machine Learning Engineer at Apple.",
       "date": "2024-04-15",
       "tags": [
         "career",
@@ -133,7 +133,7 @@
     },
     {
       "title": "Mentor-Mentee Social GBM",
-      "description": "Connect with your DSC mentors and mentees while enjoying food and fun activities with the data science community.",
+      "description": "Connect with DSC mentors and mentees while enjoying food and fun activities with the data science community.",
       "date": "2024-05-03",
       "tags": [
         "social"

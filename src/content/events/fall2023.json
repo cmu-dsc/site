@@ -3,7 +3,7 @@
   "events": [
     {
       "title": "DSC F23 Intro Social",
-      "description": "Join us for our Fall 2023 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "description": "Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts at the Fall 2023 intro social.",
       "date": "2023-09-12",
       "tags": [
         "social"
@@ -22,7 +22,7 @@
     },
     {
       "title": "Nick Singh, DataLemur: Acing the Data Science Interview",
-      "description": "Learn interview strategies and tips from Nick Singh, author of 'Ace the Data Science Interview'.",
+      "description": "Learn interview strategies and tips from Nick Singh, author of \"Ace the Data Science Interview\".",
       "date": "2023-09-26",
       "tags": [
         "speaker",
