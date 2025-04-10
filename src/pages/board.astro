@@ -41,7 +41,7 @@ function getOptimizedImageDimensions(src: ImageMetadata, targetSize = 600) {
         Our Board
       </h1>
 
-      <!-- Simplified Tabs -->
+      <!-- Tabs -->
       <div class="relative mb-8 -mx-8">
         <div class="overflow-x-auto scrollbar-hide px-8">
           <div class="flex justify-center gap-4 border-b">
@@ -209,6 +209,23 @@ function getOptimizedImageDimensions(src: ImageMetadata, targetSize = 600) {
             </div>
           ))
         }
+      </div>
+      <div class="mt-12 text-center"> {/* Adjusted top margin, removed card styles */}
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-3"> {/* Smaller heading */}
+          Interested in Joining Our Board?
+        </h2>
+        <p class="text-base text-[#082b57]/80 mb-3"> {/* Smaller text */}
+          We recruit new members throughout the school year. If you're passionate about data science and leadership, we'd love to hear from you.
+        </p>
+        <p class="text-base text-[#082b57]/80"> {/* Smaller text */}
+          Feel free to email us at: <a
+            href="mailto:datascienceclub@cmu.edu"
+            class="font-medium text-[#082b57] hover:underline"
+            data-umami-event="Board Interest Email Click"
+          >
+            datascienceclub@cmu.edu
+          </a>
+        </p>
       </div>
     </div>
   </main>

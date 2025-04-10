@@ -55,21 +55,6 @@
     ]
   },
   {
-    "name": "Bincheng Wang",
-    "title": "Workshops Director",
-    "image": "../../assets/board/bingcheng.png",
-    "bio": "Hi, I'm Bingcheng. I'm a Master's student in Data Science, passionate about using data to uncover insights and decode the complexities of the world. I also love K-pop and musicals!",
-    "linkedin": "https://www.linkedin.com/in/bingcheng-wang",
-    "previousPositions": [
-      {
-        "title": "Workshops Director",
-        "semesters": [
-          "F24"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Tor Taepaisitphongse",
     "title": "Events Director",
     "image": "../../assets/board/tor.png",
@@ -79,22 +64,6 @@
     "previousPositions": [
       {
         "title": "Events Director",
-        "semesters": [
-          "F24"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Preetham Manapuri",
-    "title": "Projects Director",
-    "image": "../../assets/board/preetham.png",
-    "bio": "Hi y'all! I'm a freshman studying Computer Science with a concentration in Machine Learning and Language Technologies. I'm super interested in NLP and reinforcement learning research. I spend my free time reading, listening to music, or hanging out with friends.",
-    "linkedin": "https://www.linkedin.com/in/preetham-manapuri",
-    "github": "https://github.com/pmanapuri",
-    "previousPositions": [
-      {
-        "title": "Projects Director",
         "semesters": [
           "F24"
         ]
@@ -119,21 +88,15 @@
     ]
   },
   {
-    "name": "Vivianne Lee",
-    "title": "Design Director",
-    "image": "../../assets/board/vivianne.png",
-    "bio": "Hi! I’m Vivianne, a sophomore majoring in Decision Science + HCI. I’m interested in how data science can leverage decision-making, specifically in the realm of UI/UX design. I love cats and concerts.",
-    "linkedin": "https://www.linkedin.com/in/vivianne-lee-9764932b4/"
-  },
-  {
-    "name": "Vincent Huai",
-    "title": "Finance Director",
-    "image": "../../assets/board/vincent.jpeg",
-    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
-    "linkedin": "https://www.linkedin.com/in/vincent-huai",
+    "name": "Preetham Manapuri",
+    "title": "Projects Director",
+    "image": "../../assets/board/preetham.png",
+    "bio": "Hi y'all! I'm a freshman studying Computer Science with a concentration in Machine Learning and Language Technologies. I'm super interested in NLP and reinforcement learning research. I spend my free time reading, listening to music, or hanging out with friends.",
+    "linkedin": "https://www.linkedin.com/in/preetham-manapuri",
+    "github": "https://github.com/pmanapuri",
     "previousPositions": [
       {
-        "title": "Junior Outreach Director",
+        "title": "Projects Director",
         "semesters": [
           "F24"
         ]
@@ -169,5 +132,42 @@
     "image": "../../assets/board/anna.png",
     "bio": "Hi! I’m Anna, a freshman majoring in Information Systems. I’m interested in the intersection of technology and healthcare, especially the ways data can be used to improve patient care and health outcomes. In my free time, I love dancing and spending quality time with friends and family!",
     "linkedin": "https://www.linkedin.com/in/anna-lin888/"
+  },
+  {
+    "name": "Vivianne Lee",
+    "title": "Design Director",
+    "image": "../../assets/board/vivianne.png",
+    "bio": "Hi! I’m Vivianne, a sophomore majoring in Decision Science + HCI. I’m interested in how data science can leverage decision-making, specifically in the realm of UI/UX design. I love cats and concerts.",
+    "linkedin": "https://www.linkedin.com/in/vivianne-lee-9764932b4/"
+  },
+  {
+    "name": "Bincheng Wang",
+    "title": "Workshops Director",
+    "image": "../../assets/board/bingcheng.png",
+    "bio": "Hi, I'm Bingcheng. I'm a Master's student in Data Science, passionate about using data to uncover insights and decode the complexities of the world. I also love K-pop and musicals!",
+    "linkedin": "https://www.linkedin.com/in/bingcheng-wang",
+    "previousPositions": [
+      {
+        "title": "Workshops Director",
+        "semesters": [
+          "F24"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vincent Huai",
+    "title": "Finance Director",
+    "image": "../../assets/board/vincent.jpeg",
+    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
+    "linkedin": "https://www.linkedin.com/in/vincent-huai",
+    "previousPositions": [
+      {
+        "title": "Junior Outreach Director",
+        "semesters": [
+          "F24"
+        ]
+      }
+    ]
   }
 ]

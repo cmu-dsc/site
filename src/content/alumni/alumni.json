@@ -125,7 +125,8 @@
         "title": "Workshops Co-Director",
         "semesters": [
           "S24",
-          "F24"
+          "F24",
+          "S25"
         ]
       },
       {
@@ -134,12 +135,6 @@
           "F22",
           "S23",
           "F23"
-        ]
-      },
-      {
-        "title": "Advisor",
-        "semesters": [
-          "S25"
         ]
       }
     ],
@@ -155,12 +150,7 @@
         "title": "Workshops Co-Director",
         "semesters": [
           "S24",
-          "F24"
-        ]
-      },
-      {
-        "title": "Advisor",
-        "semesters": [
+          "F24",
           "S25"
         ]
       }
@@ -179,12 +169,6 @@
         "semesters": [
           "S24",
           "F24"
-        ]
-      },
-      {
-        "title": "Advisor",
-        "semesters": [
-          "S25"
         ]
       }
     ]
