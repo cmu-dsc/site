@@ -141,21 +141,6 @@
     "linkedin": "https://www.linkedin.com/in/vivianne-lee-9764932b4/"
   },
   {
-    "name": "Bingcheng Wang",
-    "title": "Workshops Director",
-    "image": "../../assets/board/bingcheng.png",
-    "bio": "Hi, I'm Bingcheng. I'm a Master's student in Data Science, passionate about using data to uncover insights and decode the complexities of the world. I also love K-pop and musicals!",
-    "linkedin": "https://www.linkedin.com/in/bingcheng-wang",
-    "previousPositions": [
-      {
-        "title": "Workshops Director",
-        "semesters": [
-          "F24"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Vincent Huai",
     "title": "Finance Director",
     "image": "../../assets/board/vincent.jpeg",

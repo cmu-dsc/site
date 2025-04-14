@@ -1,5 +1,20 @@
 [
   {
+    "name": "Bingcheng Wang",
+    "image": "../../assets/alumni/bingcheng.png",
+    "gradYear": "2025",
+    "major": "Masters Data Analytics for Science",
+    "linkedin": "https://www.linkedin.com/in/bingcheng-wang",
+    "boardPositions": [
+      {
+        "title": "Workshops Director",
+        "semesters": [
+          "F24", "S25"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Stephanie Yu",
     "major": "Business, Statistics and Machine Learning",
     "gradYear": "2026",
