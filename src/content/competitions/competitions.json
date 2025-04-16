@@ -3,9 +3,80 @@
     "title": "CMU AI Agents Weekend",
     "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and create solutions to real-world problems.",
     "date": "April 12-13, 2025",
-    "status": "upcoming",
+    "status": "past",
     "link": "/agents",
-    "thumbnail": "../../assets/competitions/agents.svg"
+    "thumbnail": "../../assets/competitions/agents.svg",
+    "gallery": [
+      "../../assets/competitions/agents-2025/room pic.png",
+      "../../assets/competitions/agents-2025/Paige from DeepMind.png",
+      "../../assets/competitions/agents-2025/grand prize winner (autonomiq).png",
+      "../../assets/competitions/agents-2025/best use of llamaIndex (lesearch).png",
+      "../../assets/competitions/agents-2025/most ambitious (tweetcred).png",
+      "../../assets/competitions/agents-2025/most effective (promominer).png"
+    ],
+    "winners": [
+      {
+        "place": 1,
+        "prize": "DeepMind Grand Prize $1500 (AutonomIQ)",
+        "members": [
+          "Pranav Venkatram",
+          "Saksham Bhutani",
+          "Siddhartha Vanjari",
+          "Om Anavekar"
+        ]
+      },
+      {
+        "place": 2,
+        "prize": "Best Use of LlamaIndex $1000 (LeSearch)",
+        "members": [
+          "Gunjan Dhanuka",
+          "Rishi Shah",
+          "Harsh Shah"
+        ]
+      },
+      {
+        "place": 3,
+        "prize": "Most Novel $500 (1B1T)",
+        "members": [
+          "Ifeanyi Ene"
+        ]
+      },
+      {
+        "place": 3,
+        "prize": "Most Ambitious $500 (TweetCred)",
+        "members": [
+          "Aryan Jain",
+          "Michael Chen",
+          "Jason Wei",
+          "Gene Yang"
+        ]
+      },
+      {
+        "place": 3,
+        "prize": "Most Effective $500 (PromoMiner)",
+        "members": [
+          "Nivedhitha Dhanasekaran",
+          "Sriya Ravi"
+        ]
+      },
+      {
+        "place": 3,
+        "prize": "Best Use of Mistral $1000 Credits (ScottyScheduler)",
+        "members": [
+          "Kiruthika Raja",
+          "Madhavi Gulavani",
+          "Prith Sharma",
+          "Ananya Sane"
+        ]
+      },
+      {
+        "place": 3,
+        "prize": "Best Use of Replicate $250 AirBnb, $250 Credits (ShadowGram)",
+        "members": [
+          "Abhishek Sankar"
+        ]
+      }
+    ]
   },
   {
     "title": "CMU Poker AI 2025",
@@ -15,12 +86,13 @@
     "link": "/archive/pokerai-2025",
     "thumbnail": "../../assets/competitions/poker-2025.svg",
     "gallery": [
-      "../../assets/competitions/poker-2025/IMG_0655.jpg",
+      "../../assets/competitions/poker-2025/pokerAI25_room.jpg",
+      "../../assets/competitions/poker-2025/jump_dsc.png",
+      "../../assets/competitions/poker-2025/pokerAI25_jumptable.png",
       "../../assets/competitions/poker-2025/IMG_0657.jpg",
       "../../assets/competitions/poker-2025/IMG_0660.jpg",
       "../../assets/competitions/poker-2025/IMG_7339.jpg",
       "../../assets/competitions/poker-2025/IMG_7349.jpg"
-      
     ],
     "winners": [
       {
