@@ -32,7 +32,7 @@ const getPlaceEmoji = (place: number) => {
     case 3:
       return "🥉";
     default:
-      return "🏅";
+      return "🏆";
   }
 };
 ---
@@ -200,37 +200,71 @@ const getPlaceEmoji = (place: number) => {
 
                       {competition.winners && (
                         <div class="mb-4">
-                          <h4 class="font-medium text-[#082b57] mb-2">
-                            Winners:
-                          </h4>
-                          <div class="space-y-2">
-                            {competition.winners.map((winner) => (
-                              <div class="flex items-start gap-2 text-gray-600">
-                                <span class="text-xl">
-                                  {getPlaceEmoji(winner.place)}
-                                </span>
-                                <div>
-                                  <div class="font-medium">
-                                    {winner.team} - {winner.prize}
+                          <details class="group">
+                            <summary class="font-medium text-[#082b57] mb-2 list-none cursor-pointer flex items-center gap-1 group-open:mb-2">
+                              <svg
+                                class="w-4 h-4 group-open:rotate-90 transition-transform"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                              Winners:
+                            </summary>
+                            <div class="space-y-2 pl-5">
+                              {competition.winners.map((winner) => (
+                                <div class="flex items-start gap-2 text-gray-600">
+                                  <span class="text-xl pt-0.5">
+                                    {getPlaceEmoji(winner.place)}
+                                  </span>
+                                  <div>
+                                    <div class="font-medium">
+                                      {winner.team && `${winner.team} - `}
+                                      {winner.prize}
+                                    </div>
+                                    <div class="text-sm">
+                                      {winner.members.map((member, i) => (
+                                        <>
+                                          {member.linkedin ? (
+                                            <a
+                                              href={member.linkedin}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              class="text-blue-600 hover:text-blue-800 hover:underline"
+                                              title={`LinkedIn - ${member.name}`}
+                                              data-umami-event={`View Winner LinkedIn - ${competition.title} - ${member.name}`}
+                                            >
+                                              {member.name}
+                                            </a>
+                                          ) : (
+                                            member.name
+                                          )}
+                                          {i < winner.members.length - 1
+                                            ? ", "
+                                            : ""}
+                                        </>
+                                      ))}
+                                    </div>
+                                    {winner.projectLink && (
+                                      <a
+                                        href={winner.projectLink}
+                                        class="text-sm text-blue-600 hover:text-blue-800"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        data-umami-event={`View Winner Project - ${competition.title} - ${winner.team}`}
+                                      >
+                                        View Project
+                                      </a>
+                                    )}
                                   </div>
-                                  <div class="text-sm">
-                                    {winner.members.join(", ")}
-                                  </div>
-                                  {winner.projectLink && (
-                                    <a
-                                      href={winner.projectLink}
-                                      class="text-sm text-blue-600 hover:text-blue-800"
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      data-umami-event={`View Winner Project - ${competition.title} - ${winner.team}`}
-                                    >
-                                      View Project
-                                    </a>
-                                  )}
                                 </div>
-                              </div>
-                            ))}
-                          </div>
+                              ))}
+                            </div>
+                          </details>
                         </div>
                       )}
 

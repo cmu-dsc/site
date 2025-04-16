@@ -19,61 +19,116 @@
         "place": 1,
         "prize": "DeepMind Grand Prize $1500 (AutonomIQ)",
         "members": [
-          "Pranav Venkatram",
-          "Saksham Bhutani",
-          "Siddhartha Vanjari",
-          "Om Anavekar"
+          {
+            "name": "Pranav Venkatram",
+            "linkedin": "https://www.linkedin.com/in/pranav-venkatram/"
+          },
+          {
+            "name": "Saksham Bhutani",
+            "linkedin": "https://www.linkedin.com/in/sakshambhutani2001/"
+          },
+          {
+            "name": "Siddhartha Vanjari",
+            "linkedin": "https://www.linkedin.com/in/siddhartha-vanjari/"
+          },
+          {
+            "name": "Om Anavekar",
+            "linkedin": "https://www.linkedin.com/in/om-anavekar/"
+          }
         ]
       },
       {
         "place": 2,
         "prize": "Best Use of LlamaIndex $1000 (LeSearch)",
         "members": [
-          "Gunjan Dhanuka",
-          "Rishi Shah",
-          "Harsh Shah"
+          {
+            "name": "Gunjan Dhanuka",
+            "linkedin": "https://www.linkedin.com/in/gunjan-dhanuka/"
+          },
+          {
+            "name": "Rishi Shah",
+            "linkedin": "https://www.linkedin.com/in/rishi-shah1001/"
+          },
+          {
+            "name": "Harsh Shah",
+            "linkedin": "https://www.linkedin.com/in/connecthshah/"
+          }
         ]
       },
       {
-        "place": 3,
+        "place": 4,
         "prize": "Most Novel $500 (1B1T)",
         "members": [
-          "Ifeanyi Ene"
+          {
+            "name": "Ifeanyi Ene",
+            "linkedin": "https://www.linkedin.com/in/ifeanyi-e-562665116/"
+          }
         ]
       },
       {
-        "place": 3,
+        "place": 4,
         "prize": "Most Ambitious $500 (TweetCred)",
         "members": [
-          "Aryan Jain",
-          "Michael Chen",
-          "Jason Wei",
-          "Gene Yang"
+          {
+            "name": "Aryan Jain",
+            "linkedin": "https://www.linkedin.com/in/aryanjain1/"
+          },
+          {
+            "name": "Michael Chen",
+            "linkedin": "https://www.linkedin.com/in/michael-chen-820931214/"
+          },
+          {
+            "name": "Jason Wei",
+            "linkedin": "https://www.linkedin.com/in/jason-w-wei/"
+          },
+          {
+            "name": "Gene Yang",
+            "linkedin": "https://www.linkedin.com/in/gene-yang-6b509a280/"
+          }
         ]
       },
       {
-        "place": 3,
+        "place": 4,
         "prize": "Most Effective $500 (PromoMiner)",
         "members": [
-          "Nivedhitha Dhanasekaran",
-          "Sriya Ravi"
+          {
+            "name": "Nivedhitha Dhanasekaran",
+            "linkedin": "https://www.linkedin.com/in/nivedhitha-dhanasekaran/"
+          },
+          {
+            "name": "Sriya Ravi",
+            "linkedin": "https://www.linkedin.com/in/sriya-ravi/"
+          }
         ]
       },
       {
-        "place": 3,
+        "place": 4,
         "prize": "Best Use of Mistral $1000 Credits (ScottyScheduler)",
         "members": [
-          "Kiruthika Raja",
-          "Madhavi Gulavani",
-          "Prith Sharma",
-          "Ananya Sane"
+          {
+            "name": "Kiruthika Raja"
+          },
+          {
+            "name": "Madhavi Gulavani"
+          },
+          {
+            "name": "Prith Sharma",
+            "linkedin": "https://www.linkedin.com/in/parthsprofile/"
+          },
+          {
+            "name": "Ananya Sane",
+            "linkedin": "https://www.linkedin.com/in/ananya-sane/"
+          }
         ]
       },
       {
-        "place": 3,
+        "place": 4,
         "prize": "Best Use of Replicate $250 AirBnb, $250 Credits (ShadowGram)",
         "members": [
-          "Abhishek Sankar"
+          {
+            "name": "Abhishek Sankar",
+            "linkedin": "https://www.linkedin.com/in/abhishek-sankar-in/"
+          }
         ]
       }
     ]
@@ -98,23 +153,38 @@
       {
         "place": 1,
         "members": [
-          "Jerry Cheng",
-          "Yizhou Wang"
+          {
+            "name": "Jerry Cheng",
+            "linkedin": "https://www.linkedin.com/in/jcheng1103/"
+          },
+          {
+            "name": "Yizhou Wang",
+            "linkedin": "https://www.linkedin.com/in/yizhou-wang-6881b8245/"
+          }
         ],
         "prize": "$3,000"
       },
       {
         "place": 2,
         "members": [
-          "Ziduo Yi",
-          "Sumukh Venkatesh"
+          {
+            "name": "Ziduo Yi",
+            "linkedin": "https://www.linkedin.com/in/ziduo-yi-65b393281/"
+          },
+          {
+            "name": "Sumukh Venkatesh",
+            "linkedin": "https://www.linkedin.com/in/sumukh-venkatesh-9154b3295/"
+          }
         ],
         "prize": "$2,000"
       },
       {
         "place": 3,
         "members": [
-          "Guan-Wei Wu"
+          {
+            "name": "Guan-Wei Wu",
+            "linkedin": "https://www.linkedin.com/in/gwwu/"
+          }
         ],
         "prize": "$1,000"
       }
@@ -139,27 +209,54 @@
       {
         "place": 1,
         "members": [
-          "Akhil Dua",
-          "Arihant Sheth",
-          "Mahima Jagadeesh Patel",
-          "Reuben George Mathew"
+          {
+            "name": "Akhil Dua",
+            "linkedin": "https://www.linkedin.com/in/akhil--dua/"
+          },
+          {
+            "name": "Arihant Sheth",
+            "linkedin": "https://www.linkedin.com/in/arihantsheth/"
+          },
+          {
+            "name": "Mahima Jagadeesh Patel",
+            "linkedin": "https://www.linkedin.com/in/mahima-jagadeesh-patel-8641441a3/"
+          },
+          {
+            "name": "Reuben George Mathew",
+            "linkedin": "https://www.linkedin.com/in/iamreubengm/"
+          }
         ],
         "prize": "$2,000"
       },
       {
         "place": 2,
         "members": [
-          "Nachiketa Hebbar",
-          "Hemalatha Jayanne Gowda"
+          {
+            "name": "Nachiketa Hebbar",
+            "linkedin": "https://www.linkedin.com/in/nachiketa-hebbar-86186515b/"
+          },
+          {
+            "name": "Hemalatha Jayanne Gowda",
+            "linkedin": "https://www.linkedin.com/in/hemalatha-jayanne-gowda/"
+          }
         ],
         "prize": "Honorable Mention"
       },
       {
         "place": 3,
         "members": [
-          "Stanley Ou",
-          "Andy Ouyang",
-          "Joyce Lam"
+          {
+            "name": "Stanley Ou",
+            "linkedin": "https://www.linkedin.com/in/stanleyo03/"
+          },
+          {
+            "name": "Andy Ouyang",
+            "linkedin": "https://www.linkedin.com/in/andy-ouyang2299/"
+          },
+          {
+            "name": "Joyce Lam",
+            "linkedin": "https://www.linkedin.com/in/joyce-lam-7bb6a2257/"
+          }
         ],
         "prize": "Honorable Mention"
       }
@@ -184,26 +281,49 @@
       {
         "place": 1,
         "members": [
-          "Vihan Karnala",
-          "Tanay Bennur",
-          "Arnav Paliwal",
-          "Aiden Dowd"
+          {
+            "name": "Vihan Karnala",
+            "linkedin": "https://www.linkedin.com/in/vihank/"
+          },
+          {
+            "name": "Tanay Bennur",
+            "linkedin": "https://www.linkedin.com/in/tanay-bennur/"
+          },
+          {
+            "name": "Arnav Paliwal",
+            "linkedin": "https://www.linkedin.com/in/arnav-paliwal-273824187/"
+          },
+          {
+            "name": "Aiden Dowd",
+            "linkedin": "https://www.linkedin.com/in/aiden-dowd/"
+          }
         ],
         "prize": "$3,000"
       },
       {
         "place": 2,
         "members": [
-          "Ina Pei"
+          {
+            "name": "Violet Ai"
+          }
         ],
         "prize": "$2,000"
       },
       {
         "place": 3,
         "members": [
-          "Oscar Ma",
-          "Shitian Lin",
-          "Zhijun Cao"
+          {
+            "name": "Oscar Ma",
+            "linkedin": "https://www.linkedin.com/in/oscarmama/"
+          },
+          {
+            "name": "Shitian Lin",
+            "linkedin": "https://www.linkedin.com/in/shitian-steve-lin/"
+          },
+          {
+            "name": "Zhijun Cao",
+            "linkedin": "https://www.linkedin.com/in/zhijun-cao/"
+          }
         ],
         "prize": "$1,000"
       }

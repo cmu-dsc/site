@@ -106,7 +106,10 @@ const competitions = defineCollection({
     winners: z.array(z.object({
       place: z.number(),
       team: z.string().optional(),
-      members: z.array(z.string()),
+      members: z.array(z.object({
+        name: z.string(),
+        linkedin: z.string().url().optional()
+      })),
       prize: z.string().optional(),
       projectLink: z.string().url().optional()
     })).optional()
