@@ -375,11 +375,29 @@
     "name": "Owen Mo",
     "major": "Computer Science",
     "gradYear": "2023",
+    "image": "../../assets/alumni/owen.jpeg",
+    "linkedin": "https://www.linkedin.com/in/mochangheng/",
     "boardPositions": [
       {
         "title": "Co-President",
         "semesters": [
           "F21", "S22", "F22"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fiona Xie",
+    "major": "Artificial Intelligence",
+    "gradYear": "2023",
+    "image": "../../assets/alumni/fiona.jpeg",
+    "linkedin": "https://www.linkedin.com/in/fiona-xie/",
+    "currentTitle": "Software Engineer @ Netflix",
+    "boardPositions": [
+      {
+        "title": "Co-President",
+        "semesters": [
+          "S23"
         ]
       }
     ]
