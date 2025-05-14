@@ -35,6 +35,7 @@
     "gradYear": "2025",
     "image": "../../assets/alumni/al.png",
     "linkedin": "https://www.linkedin.com/in/almutwakel",
+    "currentTitle": "Founding Engineer @ True3D",
     "boardPositions": [
       {
         "title": "President",
@@ -64,6 +65,7 @@
     "gradYear": "2025",
     "image": "../../assets/alumni/clement.jpg",
     "linkedin": "https://linkedin.com/in/clementou",
+    "currentTitle": "Founding Engineer @ Roe AI",
     "boardPositions": [
       {
         "title": "Competitions Director",
@@ -135,6 +137,7 @@
     "major": "Artificial Intelligence",
     "gradYear": "2025",
     "image": "../../assets/alumni/dk.jpg",
+    "currentTitle": "Quantitative Researcher @ Jump Trading",
     "boardPositions": [
       {
         "title": "Workshops Co-Director",
@@ -160,6 +163,7 @@
     "major": "Statistics and Machine Learning",
     "gradYear": "2025",
     "image": "../../assets/alumni/eyob.jpg",
+    "currentTitle": "Software Engineer @ IBM",
     "boardPositions": [
       {
         "title": "Workshops Co-Director",
