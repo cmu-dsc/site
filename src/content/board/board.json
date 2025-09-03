@@ -1,5 +1,13 @@
 [
   {
+    "name": "Taro",
+    "title": "Superintendent",
+    "image": "../../assets/board/taro.png",
+    "bio": "woof!",
+    "github": "https://github.com/gxlin2",
+    "linkedin": "https://www.linkedin.com/in/gracexlin"
+  },
+  {
     "name": "Grace Lin",
     "title": "President",
     "image": "../../assets/board/grace.webp",
@@ -128,10 +136,17 @@
   },
   {
     "name": "Anna Lin",
-    "title": "Outreach Director",
+    "title": "Outreach Co-Director",
     "image": "../../assets/board/anna.png",
     "bio": "Hi! I’m Anna, a freshman majoring in Information Systems. I’m interested in the intersection of technology and healthcare, especially the ways data can be used to improve patient care and health outcomes. In my free time, I love dancing and spending quality time with friends and family!",
     "linkedin": "https://www.linkedin.com/in/anna-lin888/"
+  },
+  {
+    "name": "Neil Raman",
+    "title": "Outreach Co-Director",
+    "image": "../../assets/board/neil_r.png",
+    "bio": "Hi! I'm Neil, and I'm a freshman majoring in Information Systems with an additional major in Economics. My interests are pretty spread out, and range from computational biology/chemistry, applied AI/ML in healthcare, and researching foundational models in robotics, driverless cars, and space exploration. In my free time, I play badminton, the piano, and sing!",
+    "linkedin": "https://www.linkedin.com/in/neil-raman21/"
   },
   {
     "name": "Vivianne Lee",
@@ -154,5 +169,12 @@
         ]
       }
     ]
+  }, 
+  {
+    "name": "Michelle Ou",
+    "title": "Client Outreach Director",
+    "image": "../../assets/board/michelle.png",
+    "bio": "I am a freshman studying statistics and machine learning. I really like how data analysis can be applied in multiple fields, especially in finance and tech areas. In my free time, I love table tennis, baseball, and movies. Give me a day off, and you’ll find me on the beach, gazing at the sea.",
+    "linkedin": "https://www.linkedin.com/in/michelle-yang-ou/"
   }
 ]
