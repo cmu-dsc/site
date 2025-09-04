@@ -10,8 +10,8 @@
   {
     "name": "Grace Lin",
     "title": "President",
-    "image": "../../assets/board/grace.webp",
-    "bio": "I'm a junior in Statistics & Machine Learning. My interests are primarily in data science applications towards artificial intelligence and forecasting systems. I'm also a huge animal person and love meeting new people!",
+    "image": "../../assets/board/grace.png",
+    "bio": "I'm a senior in Statistics & Machine Learning. My interests are primarily in data science applications towards artificial intelligence and forecasting systems. I'm also a huge animal person and love meeting new people!",
     "github": "https://github.com/gxlin2",
     "linkedin": "https://www.linkedin.com/in/gracexlin",
     "previousPositions": [
@@ -33,7 +33,7 @@
     "name": "Bo Xie",
     "title": "Vice President",
     "image": "../../assets/board/bo.png",
-    "bio": "I am a sophomore studying Information Systems. I love gazing at the stars, then falling asleep.",
+    "bio": "I am a junior studying Information Systems. I love gazing at the stars, then falling asleep.",
     "github": "https://github.com/bobofishbo",
     "linkedin": "https://www.linkedin.com/in/bo-xie-918761291",
     "previousPositions": [
@@ -49,7 +49,7 @@
     "name": "Oliver Yun",
     "title": "Competitions Director",
     "image": "../../assets/board/oliver.jpg",
-    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. I'm interested in exploring how AI can be applied to solve common problems in our everyday lives. In my free time, I like to swim and play piano.",
+    "bio": "I'm a junior majoring in Computer Science. I'm interested in AI alignment and transparency. In my free time, I like to swim and play piano.",
     "github": "https://github.com/oliveryun11",
     "linkedin": "https://www.linkedin.com/in/oliver-yun-474b77289",
     "previousPositions": [
@@ -66,7 +66,7 @@
     "name": "Tor Taepaisitphongse",
     "title": "Events Director",
     "image": "../../assets/board/tor.png",
-    "bio": "Hi! I'm Tor, a sophomore majoring in Information Systems + Statistics & Machine Learning. I'm interested in the use of AI and ML to facilitate decision-making and derive insights in domains such as public policy, supply chains, and more. I also love basketball, volleyball, soccer and photography.",
+    "bio": "Hi! I'm Tor, a junior majoring in Information Systems + Statistics & Machine Learning. I'm interested in the use of AI and ML to facilitate decision-making and derive insights in domains such as public policy, supply chains, and more. I also love basketball, volleyball, soccer and photography.",
     "linkedin": "https://www.linkedin.com/in/ctae",
     "github": "https://github.com/Tor4848",
     "previousPositions": [
@@ -82,7 +82,7 @@
     "name": "Varrshitha Kumar",
     "title": "Design Director",
     "image": "../../assets/board/varr.jpeg",
-    "bio": "I am a sophomore studying Statistics and Machine Learning. I am interested in the applications of data science in healthcare and environmental chemistry research. I also enjoy playing field hockey and traveling!",
+    "bio": "I am a junior studying Statistics and Machine Learning. I am interested in the applications of data science in healthcare and environmental chemistry research. I also enjoy playing field hockey and traveling!",
     "github": "https://github.com/varrkumar",
     "linkedin": "https://www.linkedin.com/in/varrkumar",
     "previousPositions": [
@@ -99,7 +99,7 @@
     "name": "Preetham Manapuri",
     "title": "Projects Director",
     "image": "../../assets/board/preetham.png",
-    "bio": "Hi y'all! I'm a freshman studying Computer Science with a concentration in Machine Learning and Language Technologies. I'm super interested in NLP and reinforcement learning research. I spend my free time reading, listening to music, or hanging out with friends.",
+    "bio": "Hi y'all! I'm a sophomore studying Computer Science with a concentration in Machine Learning and Language Technologies. I'm super interested in NLP and reinforcement learning research. I spend my free time reading, listening to music, or hanging out with friends.",
     "linkedin": "https://www.linkedin.com/in/preetham-manapuri",
     "github": "https://github.com/pmanapuri",
     "previousPositions": [
@@ -115,7 +115,7 @@
     "name": "Claire Shen",
     "title": "Branding Director",
     "image": "../../assets/board/claire.png",
-    "bio": "Hi! I'm Claire! I'm currently a freshman studying Statistics and Machine Learning. I'm interested in applying data science to neuroscience, particularly in predicting patterns in neurological diseases. In my free time, I love dancing (K-pop and jazz), oil painting, and spending hours with friends at a cat cafe!",
+    "bio": "Hi! I'm Claire! I'm currently a sophomore studying Statistics and Machine Learning. I'm interested in applying data science to neuroscience, particularly in predicting patterns in neurological diseases. In my free time, I love dancing (K-pop and jazz), oil painting, and spending hours with friends at a cat cafe!",
     "linkedin": "https://www.linkedin.com/in/claire-shen-892133327",
     "previousPositions": [
       {
@@ -130,7 +130,7 @@
     "name": "Neil Purohit",
     "title": "Technical Director",
     "image": "../../assets/board/neil_p.jpeg",
-    "bio": "I am a freshman majoring in Statistics & Machine Learning . I'm interested in exploring the intersection between big data & machine learning and how they are used to catalyze emerging industries such as Big Pharma and Algorithmic Trading. In my free time, I like to lift and play soccer! Fun fact: I can name the capital of every country.",
+    "bio": "I am a sophomore majoring in Statistics & Machine Learning . I'm interested in exploring the intersection between big data & machine learning and how they are used to catalyze emerging industries such as Big Pharma and Algorithmic Trading. In my free time, I like to lift and play soccer! Fun fact: I can name the capital of every country.",
     "linkedin": "https://www.linkedin.com/in/neilpurohit06/",
     "github": "https://github.com/NeilP06"
   },
@@ -138,28 +138,28 @@
     "name": "Anna Lin",
     "title": "Outreach Co-Director",
     "image": "../../assets/board/anna.png",
-    "bio": "Hi! I’m Anna, a freshman majoring in Information Systems. I’m interested in the intersection of technology and healthcare, especially the ways data can be used to improve patient care and health outcomes. In my free time, I love dancing and spending quality time with friends and family!",
+    "bio": "Hi! I’m Anna, a sophomore majoring in Information Systems. I’m interested in the intersection of technology and healthcare, especially the ways data can be used to improve patient care and health outcomes. In my free time, I love dancing and spending quality time with friends and family!",
     "linkedin": "https://www.linkedin.com/in/anna-lin888/"
   },
   {
     "name": "Neil Raman",
     "title": "Outreach Co-Director",
     "image": "../../assets/board/neil_r.png",
-    "bio": "Hi! I'm Neil, and I'm a freshman majoring in Information Systems with an additional major in Economics. My interests are pretty spread out, and range from computational biology/chemistry, applied AI/ML in healthcare, and researching foundational models in robotics, driverless cars, and space exploration. In my free time, I play badminton, the piano, and sing!",
+    "bio": "Hi! I'm Neil, and I'm a sophomore majoring in Information Systems with an additional major in Economics. My interests are pretty spread out, and range from computational biology/chemistry, applied AI/ML in healthcare, and researching foundational models in robotics, driverless cars, and space exploration. In my free time, I play badminton, the piano, and sing!",
     "linkedin": "https://www.linkedin.com/in/neil-raman21/"
   },
   {
     "name": "Vivianne Lee",
     "title": "Design Director",
     "image": "../../assets/board/vivianne.png",
-    "bio": "Hi! I’m Vivianne, a sophomore majoring in Decision Science + HCI. I’m interested in how data science can leverage decision-making, specifically in the realm of UI/UX design. I love cats and concerts.",
+    "bio": "Hi! I’m Vivianne, a junior majoring in Decision Science + HCI. I’m interested in how data science can leverage decision-making, specifically in the realm of UI/UX design. I love cats and concerts.",
     "linkedin": "https://www.linkedin.com/in/vivianne-lee-9764932b4/"
   },
   {
     "name": "Vincent Huai",
     "title": "Finance Director",
     "image": "../../assets/board/vincent.jpeg",
-    "bio": "I'm a sophomore majoring in Statistics and Machine Learning. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
+    "bio": "I'm a junior majoring in Computer Science. My interests lie in the applications of data science for real world problems, and I love to spend my time reading books and drawing.",
     "linkedin": "https://www.linkedin.com/in/vincent-huai",
     "previousPositions": [
       {
@@ -174,7 +174,7 @@
     "name": "Michelle Ou",
     "title": "Client Outreach Director",
     "image": "../../assets/board/michelle.png",
-    "bio": "I am a freshman studying statistics and machine learning. I really like how data analysis can be applied in multiple fields, especially in finance and tech areas. In my free time, I love table tennis, baseball, and movies. Give me a day off, and you’ll find me on the beach, gazing at the sea.",
+    "bio": "I am a sophomore studying statistics and machine learning. I really like how data analysis can be applied in multiple fields, especially in finance and tech areas. In my free time, I love table tennis, baseball, and movies. Give me a day off, and you’ll find me on the beach, gazing at the sea.",
     "linkedin": "https://www.linkedin.com/in/michelle-yang-ou/"
   }
 ]
