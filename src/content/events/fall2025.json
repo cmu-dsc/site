@@ -1,0 +1,14 @@
+{
+    "semester": "Fall 2025",
+    "events": [
+        {
+            "title": "DSC F25 Intro Social",
+            "description": "Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts at the Fall 2025 intro social.",
+            "date": "2025-09-05",
+            "tags": [
+                "social"
+            ],
+            "slides": "https://docs.google.com/presentation/d/1tHi00cLaiE8qqu5SmveI_SEbu_gACmiJnuqoZAc9j88/edit?usp=sharing"
+        }
+    ]
+}
