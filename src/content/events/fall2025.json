@@ -9,6 +9,15 @@
                 "social"
             ],
             "slides": "https://docs.google.com/presentation/d/1tHi00cLaiE8qqu5SmveI_SEbu_gACmiJnuqoZAc9j88/edit?usp=sharing"
+        },
+        {
+            "title": "PyTorch Workshop",
+            "description": "Learn how to build and train a basic neural network using PyTorch.",
+            "date": "2025-09-19",
+            "tags": [
+                "workshop",
+                "technical"
+            ]
         }
     ]
 }
