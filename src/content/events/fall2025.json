@@ -19,6 +19,15 @@
                 "technical"
             ],
             "slides": "https://docs.google.com/presentation/d/16cMvQWJYOFegZpfsD48JRiYQPtolbO9bfXp3GffGmI4/edit?usp=sharing"
+        },
+        {
+            "title": "Duolingo: Breaking Into Data Science",
+            "description": "Learn how to build and train a basic neural network using PyTorch.",
+            "date": "2025-10-03",
+            "tags": [
+                "career",
+                "speaker"
+            ]
         }
     ]
 }
