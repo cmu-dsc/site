@@ -22,12 +22,13 @@
         },
         {
             "title": "Duolingo: Breaking Into Data Science",
-            "description": "Learn how to build and train a basic neural network using PyTorch.",
+            "description": "Connor O'Keefe (CMU '23) answers questions about his journey from Business and Stat&ML at CMU to Data Science at Duolingo.",
             "date": "2025-10-03",
             "tags": [
                 "career",
                 "speaker"
-            ]
+            ],
+            "slides": "https://docs.google.com/presentation/d/1IP8VJMiRrYu0WbTxWnm2Elg9CetlGCImXu7-pRI-0xA/edit?usp=sharing"
         }
     ]
 }
