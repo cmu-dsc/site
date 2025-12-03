@@ -65,7 +65,7 @@
     "gradYear": "2025",
     "image": "../../assets/alumni/clement.jpg",
     "linkedin": "https://linkedin.com/in/clementou/",
-    "currentTitle": "Software Engineer @ Sierra",
+    "currentTitle": "Agent Engineer @ Sierra",
     "boardPositions": [
       {
         "title": "Competitions Director",
@@ -310,6 +310,7 @@
     "name": "Anisha Chatterjee",
     "major": "Artificial Intelligence",
     "gradYear": "2025",
+    "currentTitle": "Software Engineer @ Datadog",
     "image": "../../assets/alumni/anisha.jpeg",
     "boardPositions": [
       {
@@ -396,7 +397,7 @@
     "gradYear": "2023",
     "image": "../../assets/alumni/fiona.jpeg",
     "linkedin": "https://www.linkedin.com/in/fiona-xie/",
-    "currentTitle": "Software Engineer @ Netflix",
+    "currentTitle": "PhD Student @ Purdue University",
     "boardPositions": [
       {
         "title": "Co-President",
@@ -410,7 +411,7 @@
     "name": "Roshan Ram",
     "major": "Information Systems",
     "gradYear": "2023",
-    "currentTitle": "ML Engineer @ Bland AI",
+    "currentTitle": "Senior ML Engineer @ Salesforce",
     "image": "../../assets/alumni/roshan.jpeg",
     "boardPositions": [
       {
