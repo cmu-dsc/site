@@ -1,5 +1,15 @@
 [
   {
+    "title": "CMU Datathon 2026",
+    "description": "A data science competition where participants analyze real-world datasets and create innovative solutions. Compete for prizes while learning from industry experts and researchers.",
+    "date": "TBD",
+    "status": "upcoming",
+    "link": "/datathon-2026",
+    "thumbnail": "../../assets/competitions/datathon-2026.png",
+    "gallery": [],
+    "winners": []
+  },
+  {
     "title": "CMU AI Agents Weekend",
     "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and create solutions to real-world problems.",
     "date": "April 12-13, 2025",

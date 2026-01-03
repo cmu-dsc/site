@@ -1,0 +1,14 @@
+{
+  "semester": "Spring 2026",
+  "events": [
+    {
+      "title": "Humanitarian Data Challenge",
+      "description": "Join us for a weekend datathon at CMU dedicated to solving critical challenges in global aid distribution. Working with real-world datasets from the United Nations and powered by Databricks, participants will develop analytical tools to improve how humanitarian resources are allocated and audited.",
+      "date": "2026-01-24",
+      "tags": [
+        "competition"
+      ]
+    }
+  ]
+}
+
