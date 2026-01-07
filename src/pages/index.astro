@@ -94,54 +94,6 @@ const featuredCompetition = upcoming[0]; // Get the first upcoming competition
 			</div>
 		</div>
 
-		{/* Featured Upcoming Competition */}
-		{featuredCompetition && (
-			<div class="w-full max-w-3xl mx-auto mb-12">
-				<div class="bg-gradient-to-br from-[#E8F5E9] to-white rounded-xl p-8 border-2 border-[#2E7D32]/20 shadow-lg">
-					<div class="flex flex-col md:flex-row gap-6 items-center">
-						{featuredCompetition.thumbnail && (
-							<div class="flex-shrink-0">
-								<Image
-									src={featuredCompetition.thumbnail}
-									alt={featuredCompetition.title}
-									width={120}
-									height={120}
-									class="rounded-lg object-cover"
-								/>
-							</div>
-						)}
-						<div class="flex-1 text-center md:text-left">
-							<div class="inline-block bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
-								UPCOMING COMPETITION
-							</div>
-							<h2 class="text-2xl md:text-3xl font-bold text-[#082b57] mb-2">
-								{featuredCompetition.title}
-							</h2>
-							<p class="text-gray-700 mb-4 leading-relaxed">
-								{featuredCompetition.description}
-							</p>
-							<div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-								<a
-									href={featuredCompetition.link}
-									class="inline-block bg-[#2E7D32] text-white px-6 py-3 rounded-lg hover:bg-[#1B5E20] transition-colors font-semibold text-center"
-									data-umami-event="Homepage Competition Click"
-								>
-									Learn More →
-								</a>
-								<a
-									href="/competitions"
-									class="inline-block bg-white text-[#082b57] px-6 py-3 rounded-lg border-2 border-[#082b57] hover:bg-[#082b57] hover:text-white transition-colors font-semibold text-center"
-									data-umami-event="View All Competitions"
-								>
-									View All Competitions
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		)}
-
 		<iframe
 			src="https://lu.ma/embed/calendar/cal-cfbbkSaJOwbvylo/events?lt=light"
 			width="100%"
