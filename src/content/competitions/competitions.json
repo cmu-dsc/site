@@ -7,7 +7,11 @@
     "status": "past",
     "link": "/datathon-2026",
     "thumbnail": "../../assets/competitions/datathon-2026.png",
-    "gallery": [],
+    "gallery": [
+      "../../assets/competitions/datathon-2026/Datathon26_1.png",
+      "../../assets/competitions/datathon-2026/Datathon26_2.jpg",
+      "../../assets/competitions/datathon-2026/Datathon26_3.jpg"
+    ],
     "winners": [
       {
         "place": 1,
