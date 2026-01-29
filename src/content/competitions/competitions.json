@@ -2,17 +2,86 @@
   {
     "title": "CMU Datathon 2026",
     "description": "A data science competition where participants analyze real-world datasets and create innovative solutions. Compete for prizes while learning from industry experts and researchers.",
-    "date": "TBD",
-    "status": "upcoming",
+    "date": "Jan 24-25, 2026",
+    "sponsors": "Sponsors: Databricks, United Nations",
+    "status": "past",
     "link": "/datathon-2026",
     "thumbnail": "../../assets/competitions/datathon-2026.png",
     "gallery": [],
-    "winners": []
+    "winners": [
+      {
+        "place": 1,
+        "prize": "$1000",
+        "members": [
+          {
+            "name": "Kabir Singh",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Todd Dong",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Dheeraj Vislawath",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Abhinav Akkiraju",
+            "linkedin": "https://www.linkedin.com/"
+          }
+        ]
+      },
+      {
+        "place": 2,
+        "prize": "$600",
+        "members": [
+          {
+            "name": "Parin Pengpun",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Adrian Zhuang",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Stanley Wang",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Ian Shi",
+            "linkedin": "https://www.linkedin.com/"
+          }
+        ]
+      },
+      {
+        "place": 2,
+        "prize": "$400",
+        "members": [
+          {
+            "name": "Hagen Qian",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Michael Perry",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Thomas Du",
+            "linkedin": "https://www.linkedin.com/"
+          },
+          {
+            "name": "Jack Oakenfull",
+            "linkedin": "https://www.linkedin.com/"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "CMU AI Agents Weekend",
     "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and create solutions to real-world problems.",
     "date": "April 12-13, 2025",
+    "sponsors": "Sponsors: DeepMind, Google Cloud",
     "status": "past",
     "link": "/agents",
     "thumbnail": "../../assets/competitions/agents.svg",
@@ -147,6 +216,7 @@
     "title": "CMU Poker AI 2025",
     "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers. We ran over 32 million hands of poker, and used 15,000 CPU core hours for this competition.",
     "date": "March 22-29, 2025",
+    "sponsors": "",
     "status": "past",
     "link": "/archive/pokerai-2025",
     "thumbnail": "../../assets/competitions/poker-2025.svg",
@@ -204,6 +274,7 @@
     "title": "CMU AI Sustainability Datathon 2024",
     "description": "A week-long data science competition where participants analyze the environmental impact of AI in finance. Create innovative strategies to enhance the sustainability and eco-friendliness of AI applications.",
     "date": "November 9-16, 2024",
+    "sponsors": "",
     "status": "past",
     "link": "/archive/datathon-2024",
     "thumbnail": "../../assets/competitions/datathon-2024.png",
@@ -276,6 +347,7 @@
     "title": "CMU Poker AI 2024",
     "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
     "date": "March 29-30, 2024",
+    "sponsors": "",
     "status": "past",
     "link": "/archive/pokerai-2024",
     "thumbnail": "../../assets/competitions/poker-2024.png",

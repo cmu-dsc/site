@@ -99,6 +99,7 @@ const competitions = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.string(),
+    sponsors: z.string(),
     status: z.enum(['upcoming', 'past']),
     link: z.string(),
     thumbnail: image().optional(),
