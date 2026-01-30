@@ -10,7 +10,12 @@
     "gallery": [
       "../../assets/competitions/datathon-2026/Datathon26_1.png",
       "../../assets/competitions/datathon-2026/Datathon26_2.jpg",
-      "../../assets/competitions/datathon-2026/Datathon26_3.jpg"
+      "../../assets/competitions/datathon-2026/Datathon26_3.jpg",
+      "../../assets/competitions/datathon-2026/Datathon26_4.jpg",
+      "../../assets/competitions/datathon-2026/Datathon26_5.jpg",
+      "../../assets/competitions/datathon-2026/Datathon26_6.jpg",
+      "../../assets/competitions/datathon-2026/Datathon26_7.jpg",
+      "../../assets/competitions/datathon-2026/Datathon26_8.jpg"
     ],
     "winners": [
       {
@@ -19,19 +24,19 @@
         "members": [
           {
             "name": "Kabir Singh",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/kabirsinghct/"
           },
           {
             "name": "Todd Dong",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/todd-dong-795732324/"
           },
           {
             "name": "Dheeraj Vislawath",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/dheeraj-vislawath/"
           },
           {
             "name": "Abhinav Akkiraju",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/abhinav-akkiraju-664539233/"
           }
         ]
       },
@@ -41,7 +46,7 @@
         "members": [
           {
             "name": "Parin Pengpun",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/parinthapat-pengpun/"
           },
           {
             "name": "Adrian Zhuang",
@@ -53,7 +58,7 @@
           },
           {
             "name": "Ian Shi",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/ianshi/"
           }
         ]
       },
@@ -63,19 +68,19 @@
         "members": [
           {
             "name": "Hagen Qian",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/hagen-qian/"
           },
           {
             "name": "Michael Perry",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/michael--perry/"
           },
           {
             "name": "Thomas Du",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/thomasdu5/"
           },
           {
             "name": "Jack Oakenfull",
-            "linkedin": "https://www.linkedin.com/"
+            "linkedin": "https://www.linkedin.com/in/jackoakenfull/"
           }
         ]
       }
