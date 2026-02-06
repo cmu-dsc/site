@@ -1,5 +1,43 @@
 [
   {
+    "name": "Neil Raman",
+    "major": "Information Systems and Economics",
+    "gradYear": "2028",
+    "title": "Outreach Co-Director",
+    "image": "../../assets/alumni/neil_r.png",
+    "bio": "Hi! I'm Neil, and I'm a sophomore majoring in Information Systems with an additional major in Economics. My interests are pretty spread out, and range from computational biology/chemistry, applied AI/ML in healthcare, and researching foundational models in robotics, driverless cars, and space exploration. In my free time, I play badminton, the piano, and sing!",
+    "linkedin": "https://www.linkedin.com/in/neil-raman21/",
+    "boardPositions": [
+      { "title": "Outreach Co-Director", "semesters": ["F25"] }
+    ]
+  },
+  {
+    "name": "Preetham Manapuri",
+    "major": "Computer Science",
+    "gradYear": "2028",
+    "title": "Projects Director",
+    "image": "../../assets/alumni/preetham.png",
+    "bio": "Hi y'all! I'm a sophomore studying Computer Science with a concentration in Machine Learning and Language Technologies. I'm super interested in NLP and reinforcement learning research. I spend my free time reading, listening to music, or hanging out with friends.",
+    "linkedin": "https://www.linkedin.com/in/preetham-manapuri",
+    "github": "https://github.com/pmanapuri",
+    "boardPositions": [
+      { "title": "Projects Director", "semesters": ["F24"] }
+    ]
+  },
+  {
+    "name": "Varrshitha Kumar",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2027",
+    "title": "Design Director",
+    "image": "../../assets/alumni/varr.jpeg",
+    "bio": "I am a junior studying Statistics and Machine Learning. I am interested in the applications of data science in healthcare and environmental chemistry research. I also enjoy playing field hockey and traveling!",
+    "github": "https://github.com/varrkumar",
+    "linkedin": "https://www.linkedin.com/in/varrkumar",
+    "boardPositions": [
+      { "title": "Design Co-Director", "semesters": ["S24", "F24"] }
+    ]
+  },
+  {
     "name": "Bingcheng Wang",
     "image": "../../assets/alumni/bingcheng.png",
     "gradYear": "2025",
@@ -27,7 +65,7 @@
         ]
       }
     ],
-    "image": "../../assets/board/stephanie.jpg",
+    "image": "../../assets/alumni/stephanie.jpg",
     "linkedin": "https://www.linkedin.com/in/stephanie-yu/"
   },
   {
