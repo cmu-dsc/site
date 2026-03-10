@@ -102,6 +102,8 @@ const getPlaceEmoji = (place: number) => {
 
                       <p class="text-gray-600 mb-4">{competition.date}</p>
 
+                      {competition.sponsors && <p class="text-black mb-4">Sponsors: {competition.sponsors}</p>}
+
                       <div class="flex gap-4 mt-auto">
                         <a
                           href={competition.link}
@@ -196,7 +198,7 @@ const getPlaceEmoji = (place: number) => {
 
                       <p class="text-gray-600 mb-4">{competition.date}</p>
                       
-                      <p class="text-black">{competition.sponsors}</p>
+                      {competition.sponsors && <p class="text-black mb-4">Sponsors: {competition.sponsors}</p>}
 
 
                       {competition.winners && (

@@ -1,0 +1,690 @@
+---
+import { Image } from "astro:assets";
+import competitionLogo from "../components/pokerai/icons/competition-logo.svg";
+import jumpLogo from "../components/pokerai/icons/jump-new-logo.png";
+import EmailIcon from "../components/pokerai/icons/EmailIcon.astro";
+import GithubIcon from "../components/pokerai/icons/GithubIcon.astro";
+import LargeDiscordIcon from "../components/pokerai/icons/LargeDiscordIcon.astro";
+import SmallDiscordIcon from "../components/pokerai/icons/SmallDiscordIcon.astro";
+import SEO from "../components/pokerai/SEO.astro";
+import TeamMember from "../components/pokerai/TeamMember.astro";
+import leadershipData from "../content/pokerai/leadership.json";
+
+// Import current board member images
+import boImg from "../assets/board/bo.png";
+import neilImg from "../assets/board/neil_p.jpeg";
+import oliverImg from "../assets/board/oliver.jpg";
+import brianImg from "../assets/board/brian_lam.jpg";
+import andrewImg from "../assets/board/andrew_hu.jpg";
+import graceImg from "../assets/board/grace.jpg";
+
+// Import alumni/advisory board images
+import clementImg from "../assets/alumni/clement.jpg";
+
+import "./styles/animations.css";
+import "./styles/global.css";
+import "./styles/about.css";
+import "./styles/prize.css";
+import "./styles/rules.css";
+import "./styles/sponsors.css";
+import "./styles/timeline.css";
+
+// Map image imports to names
+const imageMap: Record<string, any> = {
+  "Bo Xie": boImg,
+  "Neil Purohit": neilImg,
+  "Oliver Yun": oliverImg,
+  "Brian Lam": brianImg,
+  "Andrew Hu": andrewImg,
+  "Grace Lin": graceImg,
+  "Clement Ou": clementImg,
+};
+
+// Transform leadership data to use imported images
+const leadership = leadershipData.map(member => ({
+  ...member,
+  image: imageMap[member.name] || member.image
+}));
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- <link rel="icon" type="image/x-icon" href="https://poker-splash-2025.netlify.app/favicon.ico" /> -->
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>CMU AI Poker Tournament</title>
+		<SEO
+			title="CMU AI Poker Tournament"
+			description="Build an AI poker agent and compete for $6,000 in prizes. Test your skills in machine learning and game theory against other university students. Hosted by CMU Data Science Club."
+		/>
+
+		<!-- Additional Meta Tags -->
+		<meta
+			name="keywords"
+			content="poker AI, machine learning competition, collegiate competition, Jump Trading, CMU, data science, game theory, artificial intelligence, AI poker contest"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="CMU Data Science Club" />
+
+		<!-- Structured Data -->
+		<script is:inline type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Event",
+				"name": "CMU AI Poker Tournament",
+				"description": "Build an AI poker agent and compete for $6,000 in prizes. Test your skills in machine learning and game theory against other CMU students.",
+				"startDate": "2025-03-14",
+				"endDate": "2025-03-22",
+				"location": {
+					"@type": "Place",
+					"name": "Jump Trading Chicago Office",
+					"address": {
+						"@type": "PostalAddress",
+						"streetAddress": "600 W Chicago Ave",
+						"addressLocality": "Chicago",
+						"addressRegion": "IL",
+						"postalCode": "60654",
+						"addressCountry": "US"
+					}
+				},
+				"organizer": {
+					"@type": "Organization",
+					"name": "CMU Data Science Club",
+					"url": "https://cmudsc.com"
+				},
+				"sponsor": {
+					"@type": "Organization",
+					"name": "Jump Trading",
+					"url": "https://jumptrading.com"
+				},
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD",
+					"availability": "https://schema.org/InStock"
+				}
+			}
+		</script>
+		<script
+			is:inline
+			defer
+			src="https://umami.cmudsc.com/script.js"
+			data-website-id="4c1a9665-a7ca-4e44-8fd9-e7eee962ad28"></script>
+	</head>
+	<body>
+		<main>
+			<div class="background-particles" id="particles"></div>
+			<section
+				class="min-h-screen max-h-screen flex flex-col justify-start items-center relative overflow-hidden bg-gradient-to-b from-background-dark to-background-darker p-8"
+			>
+				<div
+					class="w-full max-w-7xl flex flex-col justify-start items-center pt-[8vh]"
+				>
+					<div class="w-full flex justify-center mb-8 animate-logo">
+						<div class="max-w-[300px] w-full">
+							<Image
+								src={competitionLogo}
+								alt="AI Poker Tournament Logo"
+								class="w-full h-auto block"
+							/>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<h1
+							class="font-outfit font-bold text-5xl md:text-[3.5rem] text-primary tracking-[-0.02em] m-0 animate-title"
+						>
+							CMU AI Poker Tournament
+						</h1>
+						<div
+							class="font-space-grotesk text-2xl sm:text-3xl md:text-4xl tracking-[0.5rem] sm:tracking-[1rem] font-medium my-4 animate-suits"
+						>
+							♠ 20 ♥ 26 ♦
+						</div>
+						<div class="flex items-center justify-center gap-2 animate-sponsor">
+							<span class="text-white">Sponsored by</span>
+							<a
+								href="https://jumptrading.com"
+								data-umami-event="Jump Trading Logo Click"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="transition-transform hover:scale-110"
+							>
+								<Image
+									src={jumpLogo}
+									alt="Jump Trading"
+									class="h-14 w-auto"
+									format="webp"
+								/>
+							</a>
+						</div>
+
+						<div class="flex justify-center gap-4 mt-8 animate-buttons">
+							<a
+								href="https://aipoker.cmudsc.com/"
+								class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-semibold text-lg text-white bg-primary hover:bg-primary-hover transition-all hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,51,51,0.6),0_0_40px_rgba(255,51,51,0.4),0_0_60px_rgba(255,51,51,0.2)] min-w-[130px] hover:scale-105"
+							>
+								Register Now
+							</a>
+							<a
+								href="https://discord.gg/69v9A9adh9"
+								class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-semibold text-lg text-white bg-[#5865F2] hover:bg-[#4752c4] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(88,101,242,0.6),0_0_40px_rgba(88,101,242,0.4),0_0_60px_rgba(88,101,242,0.2)] min-w-[130px] hover:scale-105"
+							>
+								<LargeDiscordIcon />
+								Join Discord
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about-section">
+				<div class="about-content">
+					<div class="about-header">
+						<h2>About the Competition</h2>
+						<p class="lead">
+							Build an AI poker agent and compete for $6,000 in prizes. Test
+							your skills in machine learning and game theory against other
+							CMU students.
+						</p>
+					</div>
+
+					<div class="features-grid">
+						<div class="feature-card">
+							<h3 class="feature-title">Career Opportunities</h3>
+							<p class="feature-description">
+								Direct recruiting opportunities with Jump Trading for top
+								performers. Network with industry professionals and get noticed 
+								by potential employers.
+							</p>
+						</div>
+
+						<div class="feature-card">
+							<h3 class="feature-title">Hybrid Format</h3>
+							<p class="feature-description">
+								Compete online during the main competition. Opening ceremony,
+								closing ceremony, office hours, workshops, and recruiter events
+								all held in-person on campus.
+							</p>
+						</div>
+					</div>
+
+					<div class="partner-showcase">
+						<div class="partner-grid">
+							<a
+								href="https://jumptrading.com"
+								class="partner-item"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src="https://poker-splash-2025.netlify.app/images/logos/jump-trading.png"
+									alt="Jump Trading Logo"
+									class="company-logo"
+								/>
+							</a>
+							<a
+								href="https://cmudsc.com"
+								class="partner-item"
+								target="_blank"
+								rel="noopener"
+							>
+								<img
+									src="https://poker-splash-2025.netlify.app/images/logos/cmudsc.png"
+									alt="CMU Data Science Club Logo"
+									class="org-logo"
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="prize-section">
+				<div class="prize-content">
+					<h2>Prize Pool</h2>
+					<div class="prize-box" id="prize-box">
+						<div class="prize-amount">
+							$<span id="prize-value">6,000</span>
+						</div>
+						<div class="total-text">Total Prize Pool</div>
+					</div>
+					<div class="additional-prize">
+						Plus recruiting opportunities at Jump Trading
+					</div>
+					<div id="slot-machine" style="display: none;">
+						<div class="slot-machine-container">
+							<div class="slot-display">🎰 🎰 🎰</div>
+							<div class="lever-container">
+								<div class="lever">
+									<div class="lever-ball"></div>
+									<div class="lever-stick"></div>
+									<div class="lever-base"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					import { initializePrize } from "../components/pokerai/prize";
+					document.addEventListener("DOMContentLoaded", initializePrize);
+				</script>
+			</section>
+
+			<section class="rules-section">
+				<div class="rules-content">
+					<h2>Competition Rules</h2>
+					<div class="rules-grid">
+						<div class="rule-box">
+							<h3>Eligibility</h3>
+							<ul>
+								<li>Open to all CMU students</li>
+								<li>Teams of up to 2 members allowed</li>
+							</ul>
+						</div>
+						<div class="rule-box">
+							<h3>Technical Requirements</h3>
+							<ul>
+								<li>Agents must be implemented in Python</li>
+								<li>Use of external libraries limited to approved set</li>
+								<li>Additional libraries may be requested for approval</li>
+							</ul>
+						</div>
+						<div class="rule-box">
+							<h3>Match Format</h3>
+							<ul>
+								<li>Matches are heads-up (1v1)</li>
+								<li>Each match consists of 1000 hands</li>
+								<li>Players start each hand with a fresh bankroll</li>
+								<li>Winner is determined by total net gain across the match</li>
+							</ul>
+						</div>
+						<div class="rule-box">
+							<h3>Tournament Structure</h3>
+							<ul>
+								<li>
+									Teams play matches automatically throughout the day during the
+									online phase
+								</li>
+								<li>Match requests can be made to any opponents</li>
+								<li>Highest ELO teams advance to the finals on March 22</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="timeline-section">
+				<div class="timeline-content">
+					<h2>Competition Timeline</h2>
+					<div class="timeline">
+
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 14 @ 11AM</div>
+							<div class="timeline-card">
+								<h3>Check-in</h3>
+								<p>
+									Check in to the tournament and talk to our sponsors from Jump Trading.
+								</p>
+							</div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 14 @ 12:30PM</div>
+							<div class="timeline-card">
+								<h3>Competition Begins</h3>
+								<p>
+									This year's game variant and rules, competition framework, and
+									documentation are announced at the opening ceremony. 
+								</p>
+							</div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 14 @ 1:30PM</div>
+							<div class="timeline-card">
+								<h3>Team Matching</h3>
+								<p>
+									Get matched with a teammate if you don't have one already.
+								</p>
+							</div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 14 @ 3-5PM</div>
+							<div class="timeline-card">
+								<h3>Office Hours</h3>
+								<p>
+									Get help from the organizing team and our sponsors from Jump Trading on any aspect of the competition, from understanding the rules to debugging your code.
+								</p>
+							</div>
+						</div>
+
+						
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 18 @ 5PM</div>
+							<div class="timeline-card">
+								<h3>Poker/Game Theory Workshop</h3>
+								<p>
+									Learn about poker, game theory, and basic Reinforcement Learning to prepare for the
+									competition. Room TBD.
+								</p>
+							</div>
+						</div>
+						
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 18 @ 5:30PM</div>
+							<div class="timeline-card">
+								<h3>Post-Workshop Office Hours</h3>
+								<p>
+									Follow-up office hours to answer any questions teams have after the workshop.
+								</p>
+							</div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 21 @ 11:59PM</div>
+							<div class="timeline-card">
+								<h3>Submission Deadline</h3>
+								<p>
+									All teams must submit their final AI agents by <strong> Mar. 21 at 11:59PM.</strong> 
+									No submissions will be accepted after the deadline.
+								</p>
+							</div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-date">Mar. 22 @ 4PM</div>
+							<div class="timeline-card">
+								<h3>Closing Ceremony</h3>
+								<p>Final round is held live, winners are announced, and food is provided.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bg-[#222] py-16 px-8">
+				<div class="max-w-[1000px] mx-auto">
+					<h2 class="text-4xl text-primary text-center mb-12">
+						Frequently Asked Questions
+					</h2>
+					<div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								What programming languages can I use?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								You can use Python 3.12. Many common external libraries will be
+								available for use. If you'd like to use any others, you can
+								request them in our Discord.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								How many people can be on a team?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								Teams can be between 1 and 2 CMU students.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								What poker variant will be used?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								The specific poker variant will be revealed when the competition
+								starts. It will be more complex than standard no-limit Texas
+								Hold 'em.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								What are the prizes?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								The prize pool will be $3,000 for first place, $2,000 for second
+								place, and $1,000 for third place.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								Is there a registration fee?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								No, participation in the competition is completely free.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								What frameworks are supported?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								You only need to implement a simple interface we provide that
+								tells your bot when it's your turn to act. You're free to use
+								any approach you want - from simple rules to deep learning. For
+								those interested in reinforcement learning, the game engine also
+								implements the OpenAI Gym interface, and we'll provide example
+								code for getting started with RL approaches.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								How does matchmaking work?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								Matches will be run continuously with approximately 20 matches
+								per day per team. Teams can request a limited number of
+								additional matches against higher elo opponents each day.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								Can I prepare my bot before knowing the variant?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								Yes, you can do whatever you want before the competition, but
+								you will likely have to make significant changes to work with
+								the custom variant.
+							</p>
+						</details>
+
+						<details
+							class="bg-gradient-to-br from-[#2a2a2a] to-[#222] rounded-xl p-6 border border-white/10 shadow-lg hover:from-[#2d2d2d] hover:to-[#252525] transition-colors group"
+						>
+							<summary
+								class="text-lg font-medium text-primary hover:text-primary-hover cursor-pointer pr-8 relative list-none"
+							>
+								What resources are provided?
+								<span
+									class="absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-primary transition-transform group-open:rotate-45"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-white/90 leading-relaxed">
+								We provide a complete development framework, documentation,
+								example bots, and office hours with the organizing team. You'll
+								also have access to our Discord community for support.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>Leadership</h2>
+				<div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-6">
+					{leadership.map((member) => <TeamMember member={member} />)}
+				</div>
+			</section>
+
+			<div class="relative z-10 bg-[#1a1a1a] py-12 px-6 -mt-8">
+				<div class="max-w-6xl mx-auto flex flex-wrap gap-12 md:flex-row flex-col items-center md:items-start">
+					<div class="flex-1 min-w-[250px] flex flex-col items-center md:items-start">
+						<h3 class="text-primary text-lg mb-4">Contact Us</h3>
+						<ul class="list-none p-0 m-0 flex flex-col items-center md:items-start gap-2.5">
+							<li class="flex items-center gap-2 text-white/80 text-sm">
+								<EmailIcon />
+								<a href="mailto:pokerai@cmudsc.com" class="text-white/80 hover:text-primary-hover transition-colors">
+									pokerai@cmudsc.com
+								</a>
+							</li>
+							<li class="flex items-center gap-2 text-white/80 text-sm">
+								<GithubIcon />
+								<a href="https://github.com/cmu-dsc" target="_blank" class="text-white/80 hover:text-primary-hover transition-colors">
+									GitHub Org
+								</a>
+							</li>
+							<li class="flex items-center gap-2 text-white/80 text-sm">
+								<SmallDiscordIcon />
+								<a href="https://discord.gg/zCvq2ejkk5" target="_blank" class="text-white/80 hover:text-primary-hover transition-colors">
+									Join our Discord
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="flex-1 min-w-[250px] flex flex-col items-center md:items-start">
+						<h3 class="text-primary text-lg mb-4">Address</h3>
+						<ul class="list-none p-0 m-0 flex flex-col items-center md:items-start gap-2.5">
+							<li class="text-white/80 text-sm">Carnegie Mellon University</li>
+							<li class="text-white/80 text-sm">5000 Forbes Avenue</li>
+							<li class="text-white/80 text-sm">Pittsburgh, PA 15213</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="w-full text-center mt-12 pt-6 border-t border-white/10">
+					<div class="mb-4 flex justify-center gap-4">
+						<a href="/terms" class="text-white/60 hover:text-primary-hover transition-colors">Terms of Use</a>
+						<span class="text-white/60">•</span>
+						<a href="/privacy" class="text-white/60 hover:text-primary-hover transition-colors">Privacy Policy</a>
+					</div>
+					<p class="text-white/60 text-sm">
+						© {new Date().getFullYear()} CMU Data Science Club. All rights reserved.
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// Create floating card suit particles
+			function createParticle() {
+				const particles = document.getElementById('particles');
+				if (!particles) return;
+
+				const suits = ['♠', '♥', '♣', '♦'];
+				const colors = ['rgba(255, 51, 51, 0.15)', 'rgba(255, 51, 51, 0.1)', 'rgba(255, 255, 255, 0.1)'];
+
+				const particle = document.createElement('div');
+				const suit = suits[Math.floor(Math.random() * suits.length)];
+				const color = colors[Math.floor(Math.random() * colors.length)];
+
+				particle.textContent = suit;
+				particle.style.position = 'absolute';
+				particle.style.fontSize = `${Math.random() * 2 + 1}rem`;
+				particle.style.color = color;
+				particle.style.left = `${Math.random() * 100}%`;
+				particle.style.top = `${Math.random() * 100}%`;
+				particle.style.pointerEvents = 'none';
+				particle.style.userSelect = 'none';
+
+				const duration = Math.random() * 10 + 15;
+				const xMove = (Math.random() - 0.5) * 200;
+				const yMove = -(Math.random() * 150 + 50);
+
+				particle.style.animation = `particleFloat ${duration}s linear infinite`;
+				particle.style.setProperty('--x-move', `${xMove}px`);
+				particle.style.setProperty('--y-move', `${yMove}px`);
+				particle.style.animationDelay = `${Math.random() * 5}s`;
+
+				particles.appendChild(particle);
+
+				// Limit total particles
+				if (particles.children.length > 15) {
+					particles.removeChild(particles.children[0]);
+				}
+			}
+
+			// Create initial particles
+			for (let i = 0; i < 12; i++) {
+				setTimeout(createParticle, i * 500);
+			}
+
+			// Add new particles periodically
+			setInterval(createParticle, 3000);
+		</script>
+	</body>
+</html>

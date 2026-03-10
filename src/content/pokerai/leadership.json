@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Bo Xie",
+    "role": "DSC President",
+    "image": "../../assets/team/bo.png",
+    "github": "https://github.com/bobofishbo",
+    "linkedin": "https://www.linkedin.com/in/bo-xie-918761291"
+  },
+  {
+    "name": "Neil Purohit",
+    "role": "DSC Vice President",
+    "image": "../../assets/board/neil_p.jpeg",
+    "github": "https://github.com/NeilP06",
+    "linkedin": "https://www.linkedin.com/in/neilpurohit06/"
+  },
+  {
+    "name": "Oliver Yun",
+    "role": "Competitions Lead",
+    "image": "../../assets/team/oliver.jpg",
+    "github": "https://github.com/oliveryun11",
+    "linkedin": "https://www.linkedin.com/in/oliver-yun-474b77289"
+  },
+  {
+    "name": "Brian Lam",
+    "role": "Competitions Developer",
+    "image": "../../assets/board/brian_lam.jpg",
+    "github": "https://github.com/brainlame",
+    "linkedin": "https://www.linkedin.com/in/brianlam123/"
+  },
+  {
+    "name": "Andrew Hu",
+    "role": "Workshops Director",
+    "image": "../../assets/board/andrew_hu.jpg",
+    "github": "https://github.com/Andrew-Hu-0705",
+    "linkedin": "https://www.linkedin.com/in/andrew-hu-a6856830a/"
+  },
+  {
+    "name": "Grace Lin",
+    "role": "DSC Advisory Board",
+    "image": "../../assets/team/grace.webp",
+    "github": "https://github.com/gxlin2",
+    "linkedin": "https://www.linkedin.com/in/gracexlin/"
+  },
+  {
+    "name": "Clement Ou",
+    "role": "Founder, DSC Advisory Board",
+    "image": "../../assets/team/clement.jpg",
+    "github": "https://github.com/clementou",
+    "linkedin": "https://linkedin.com/in/clementou"
+  }
+]

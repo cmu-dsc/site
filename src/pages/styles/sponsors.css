@@ -1,0 +1,60 @@
+.partner-showcase {
+  margin-top: 6rem;
+  padding: 3rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), transparent);
+  border-radius: 20px;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.partner-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  padding: 2rem;
+  width: fit-content;
+}
+
+.partner-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.partner-item:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.partner-item img.org-logo {
+  width: 200px;
+  height: 138px;
+  object-fit: contain;
+}
+
+.partner-item img.company-logo {
+  width: 191px;
+  height: 138px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .partner-grid {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .partner-item img.org-logo {
+    width: 145px;
+    height: 100px;
+  }
+
+  .partner-item img.company-logo {
+    width: 138px;
+    height: 100px;
+  }
+}

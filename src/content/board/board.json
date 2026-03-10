@@ -93,26 +93,28 @@
     ]
   },
   {
-    "name": "Brian",
+    "name": "Brian Lam",
     "title": "Competitions Director",
     "image": "../../assets/board/brian_lam.jpg",
-    "bio": "Hi, I'm a freshman in Information Systems, looking to get an additional major in CS. I'm mainly interested in ML prediction algorithms and quant, and on the side I run a tutoring startup as well as play badminton, basketball, and poker."
+    "bio": "Hi, I'm a freshman in Information Systems, looking to get an additional major in CS. I'm mainly interested in ML prediction algorithms and quant, and on the side I run a tutoring startup as well as play badminton, basketball, and poker.",
+    "linkedin": "https://www.linkedin.com/in/brianlam123/"
   },
   {
-    "name": "Andrew",
+    "name": "Andrew Hu",
     "title": "Workshops Director",
     "image": "../../assets/board/andrew_hu.jpg",
-    "bio": "Hi! I'm Andrew, a freshman studying Statistics & Machine Learning. I'm interested in applying AI and machine learning to address real-world issues. In my free time, I like playing golf and watching sports."
+    "bio": "Hi! I'm Andrew, a freshman studying Statistics & Machine Learning. I'm interested in applying AI and machine learning to address real-world issues. In my free time, I like playing golf and watching sports.",
+    "linkedin": "https://www.linkedin.com/in/andrew-hu-a6856830a/"
   },
   {
-    "name": "Shreya",
+    "name": "Shreya Prashantha",
     "title": "Finance Director",
     "image": "../../assets/board/shreya.jpg",
     "bio": "Hi! I’m Shreya, a freshman studying Information Systems + Statistics & ML. I’m interested in data science/ML’s applications across many fields, but especially in finance, supply chains, and forecasting. In my free time I love cafe-hopping and binging sitcoms.",
     "linkedin": "https://www.linkedin.com/in/shreyaprashantha/"
   },
   {
-    "name": "Spandan",
+    "name": "Spandan Chandra",
     "title": "Outreach Director",
     "image": "../../assets/board/spandan.jpg",
     "bio": "I am a sophomore majoring in Statistics & Machine Learning, interested in the applications of AI and ML in healthcare, finance, and energy, especially in topics like causal inference and forecasting. In my free time, I enjoy playing sports and performing with the violin!",

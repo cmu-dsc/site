@@ -1,0 +1,111 @@
+/* Rules Section Container */
+.rules-section {
+  background-color: #222;
+  padding: 4rem 2rem;
+}
+
+.rules-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rules-content h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Rules Grid */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Rule Box */
+.rule-box {
+  background: linear-gradient(145deg, #222222, #2a2a2a);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.rule-box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 51, 51, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.rule-box:hover::after {
+  opacity: 1;
+}
+
+.rule-box h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rule-box ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+
+.rule-box li {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.rule-box li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: -1.5rem;
+}
+
+.rule-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 77, 77, 0.15);
+  border-color: rgba(255, 77, 77, 0.3);
+}
+
+.rule-box li:hover {
+  transform: translateX(10px);
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rule-box {
+    padding: 1.5rem;
+  }
+
+  .rule-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .rule-box li {
+    font-size: 1rem;
+  }
+}

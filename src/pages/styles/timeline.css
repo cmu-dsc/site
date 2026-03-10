@@ -1,0 +1,246 @@
+/* Timeline Section Container */
+.timeline-section {
+  background-color: #1a1a1a;
+  padding: 4rem 2rem;
+}
+
+/* Timeline Layout */
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Timeline Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #FF3333;
+}
+
+/* Timeline Events */
+.timeline-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.timeline-event:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Event Content */
+.timeline-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-content h2 {
+  font-size: 2.5rem;
+  color: #FF3333;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Event Details */
+.event-date {
+  font-size: 1.25rem;
+  color: #FF3333;
+  margin-bottom: 0.5rem;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.event-description {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Timeline Dots */
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: #FF3333;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-line {
+      left: 0;
+  }
+  
+  .timeline-event {
+      flex-direction: column;
+      margin-left: 20px;
+  }
+  
+  .timeline-event:nth-child(even) {
+      flex-direction: column;
+  }
+  
+  .timeline-content {
+      width: 100%;
+      margin: 1rem 0;
+  }
+  
+  .timeline-dot {
+      left: 0;
+  }
+  
+  .event-date {
+      font-size: 1.1rem;
+  }
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 150px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 77, 77, 0.8),
+    rgba(255, 77, 77, 0.3)
+  );
+}
+
+/* Timeline Items */
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  align-items: flex-start;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 145px;
+  top: 0.75rem;  /* Adjusted to align with date text */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #FF3333;
+  box-shadow: 0 0 0 4px rgba(196, 18, 48, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 51, 51, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 51, 51, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 51, 51, 0);
+  }
+}
+
+/* Timeline Date */
+.timeline-date {
+  width: 130px;
+  font-size: 0.95rem;
+  color: #FF3333;
+  text-align: right;
+  padding-top: calc(0.75rem - 3px);  /* Reduced from 6px to 2px for better alignment */
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Timeline Card */
+.timeline-card {
+  flex: 1;
+  background: linear-gradient(145deg, #222222, #2a2a2a);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-left: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(196, 18, 48, 0.15);
+  border-color: rgba(196, 18, 48, 0.3);
+}
+
+.timeline-card h3 {
+  color: #FF3333;
+  font-size: 1.2rem;  /* Reduced from 1.3rem */
+  margin-bottom: 0.35rem;  /* Reduced from 0.5rem */
+}
+
+.timeline-card p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;  /* Reduced from 1.5 */
+  font-size: 0.95rem;  /* Reduced from 1rem */
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 51, 51, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.timeline-card:hover::before {
+  transform: translateX(100%);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .timeline::before {
+    left: 0.25rem;  /* Adjusted from 1rem to align with dot */
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 2rem;
+  }
+
+  .timeline-item::before {
+    left: -2.075rem;  /* Adjusted to align with line */
+    top: 0.75rem;
+  }
+
+  .timeline-date {
+    width: auto;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .timeline-card {
+    margin-left: 0;
+  }
+}

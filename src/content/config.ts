@@ -16,6 +16,17 @@ const board = defineCollection({
   }))
 });
 
+const leadership = defineCollection({
+  type: 'data',
+  schema: z.array(z.object({
+    name: z.string(),
+    role: z.string(),
+    image: z.string(),
+    github: z.string().optional(),
+    linkedin: z.string().optional()
+  }))
+});
+
 const alumni = defineCollection({
   type: 'data',
   schema: ({ image }) => z.array(z.object({
@@ -119,6 +130,7 @@ const competitions = defineCollection({
 
 export const collections = {
   board,
+  leadership,
   alumni,
   projects,
   sponsors,

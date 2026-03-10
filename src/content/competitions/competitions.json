@@ -1,9 +1,40 @@
 [
   {
+    "title": "CMU Poker AI 2025",
+    "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
+    "date": "March 14-22, 2026",
+    "sponsors": "Jump Trading",
+    "status": "upcoming",
+    "link": "/pokerai-2026",
+    "thumbnail": "../../assets/competitions/poker-2026.svg",
+    "gallery": [
+    ],
+    "winners": [
+      {
+        "place": 1,
+        "members": [
+        ],
+        "prize": "$3,000"
+      },
+      {
+        "place": 2,
+        "members": [
+        ],
+        "prize": "$2,000"
+      },
+      {
+        "place": 3,
+        "members": [
+        ],
+        "prize": "$1,000"
+      }
+    ]
+  },
+  {
     "title": "CMU Datathon 2026",
     "description": "A data science competition where participants analyze real-world datasets and create innovative solutions. Compete for prizes while learning from industry experts and researchers.",
     "date": "Jan 24-25, 2026",
-    "sponsors": "Sponsors: Databricks, United Nations",
+    "sponsors": "Databricks, United Nations",
     "status": "past",
     "link": "/datathon-2026",
     "thumbnail": "../../assets/competitions/datathon-2026.png",
@@ -90,7 +121,7 @@
     "title": "CMU AI Agents Weekend",
     "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and create solutions to real-world problems.",
     "date": "April 12-13, 2025",
-    "sponsors": "Sponsors: DeepMind, Google Cloud",
+    "sponsors": "DeepMind, Google Cloud",
     "status": "past",
     "link": "/agents",
     "thumbnail": "../../assets/competitions/agents.svg",

@@ -1,0 +1,78 @@
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&family=Outfit:wght@400&family=Inter:wght@200&family=Unbounded:wght@600&display=swap');
+
+:root {
+  --primary-color: #FF3333;
+  /* Your red color */
+  --primary-color-hover: #FF4D4D;
+  /* Slightly lighter version for hover states */
+  --primary-color-dark: #CC2929;
+  /* Darker version */
+  --primary-color-light: rgba(255, 51, 51, 0.15);
+  /* Transparent version */
+}
+
+/* Base styles that apply to the whole site */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Common utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Common section styles */
+section {
+  padding: 4rem 2rem;
+}
+
+/* Common heading styles */
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Special treatment for secondary headings */
+.feature-title,
+.faq-item summary,
+.footer-info h3,
+.rule-box h3 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Special treatment for the main title */
+.title-main h1 {
+  font-family: 'Outfit', 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Card symbols can use Space Grotesk for a cleaner look */
+.card-symbols {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 500;
+}
