@@ -27,12 +27,6 @@
   status = 200
   force = true
 
-[[redirects]]
-  from = "/pokerai-2026/*"
-  to = "https://poker-splash-2026.netlify.app/:splat"
-  status = 200
-  force = true
-
 [build]
   command = "bun run build"
   publish = "dist"
