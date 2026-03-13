@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import competitionLogo from "../components/pokerai/icons/competition-logo.svg";
-import jumpLogo from "../components/pokerai/icons/jump-new-logo.png";
+import jumpLogo from "../components/pokerai/icons/jump-trading.svg";
 import EmailIcon from "../components/pokerai/icons/EmailIcon.astro";
 import GithubIcon from "../components/pokerai/icons/GithubIcon.astro";
 import LargeDiscordIcon from "../components/pokerai/icons/LargeDiscordIcon.astro";
@@ -20,6 +20,7 @@ import graceImg from "../assets/board/grace.jpg";
 
 // Import alumni/advisory board images
 import clementImg from "../assets/alumni/clement.jpg";
+import alImg from "../assets/alumni/al.png";
 
 import "./styles/animations.css";
 import "./styles/global.css";
@@ -38,6 +39,7 @@ const imageMap: Record<string, any> = {
   "Andrew Hu": andrewImg,
   "Grace Lin": graceImg,
   "Clement Ou": clementImg,
+  "Almutwakel": alImg,
 };
 
 // Transform leadership data to use imported images
@@ -138,7 +140,7 @@ const leadership = leadershipData.map(member => ({
 							CMU AI Poker Tournament
 						</h1>
 						<div
-							class="font-space-grotesk text-2xl sm:text-3xl md:text-4xl tracking-[0.5rem] sm:tracking-[1rem] font-medium my-4 animate-suits"
+							class="font-space-grotesk text-2xl sm:text-3xl md:text-4xl tracking-[0.5rem] sm:tracking-[1rem] font-medium mt-10 mb-4 animate-suits"
 						>
 							♠ 20 ♥ 26 ♦
 						</div>
@@ -162,8 +164,8 @@ const leadership = leadershipData.map(member => ({
 
 						<div class="flex justify-center gap-4 mt-8 animate-buttons">
 							<a
-								href="https://aipoker.cmudsc.com/"
-								class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-semibold text-lg text-white bg-primary hover:bg-primary-hover transition-all hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,51,51,0.6),0_0_40px_rgba(255,51,51,0.4),0_0_60px_rgba(255,51,51,0.2)] min-w-[130px] hover:scale-105"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfoOJG4_cEA_8ct4ZrCB5xZ5uBHJUsYt4L4chIJ4LGccKekTA/viewform?usp=header"
+								class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-semibold text-lg text-white bg-[#FF3333] hover:bg-[#FF4D4D] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,51,51,0.6),0_0_40px_rgba(255,51,51,0.4),0_0_60px_rgba(255,51,51,0.2)] min-w-[130px] hover:scale-105"
 							>
 								Register Now
 							</a>
@@ -219,7 +221,7 @@ const leadership = leadershipData.map(member => ({
 								rel="noopener noreferrer"
 							>
 								<img
-									src="https://poker-splash-2025.netlify.app/images/logos/jump-trading.png"
+									src={jumpLogo.src}
 									alt="Jump Trading Logo"
 									class="company-logo"
 								/>

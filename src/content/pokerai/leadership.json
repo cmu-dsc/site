@@ -18,7 +18,7 @@
     "role": "Competitions Lead",
     "image": "../../assets/team/oliver.jpg",
     "github": "https://github.com/oliveryun11",
-    "linkedin": "https://www.linkedin.com/in/oliver-yun-474b77289"
+    "linkedin": "https://www.linkedin.com/in/oliveryun11"
   },
   {
     "name": "Brian Lam",
@@ -47,5 +47,12 @@
     "image": "../../assets/team/clement.jpg",
     "github": "https://github.com/clementou",
     "linkedin": "https://linkedin.com/in/clementou"
+  },
+  {
+    "name": "Almutwakel",
+    "role": "Founder, DSC Advisory Board",
+    "image": "../../assets/team/al.jpg",
+    "github": "https://github.com/almutwakel",
+    "linkedin": "https://www.linkedin.com/in/almutwakel/"
   }
 ]

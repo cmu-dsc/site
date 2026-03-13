@@ -36,8 +36,9 @@
 }
 
 .partner-item img.company-logo {
-  width: 191px;
-  height: 138px;
+  width: 260px;
+  height: auto;
+  max-height: 188px;
   object-fit: contain;
 }
 
@@ -54,7 +55,8 @@
   }
 
   .partner-item img.company-logo {
-    width: 138px;
-    height: 100px;
+    width: 190px;
+    height: auto;
+    max-height: 138px;
   }
 }

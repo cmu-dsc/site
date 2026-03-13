@@ -14,6 +14,13 @@
   status = 200
   force = true
 
+# Exact base path (required; /* does not match /archive/pokerai-2025 with nothing after)
+[[redirects]]
+  from = "/archive/pokerai-2025"
+  to = "https://poker-splash-2025.netlify.app/"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/archive/pokerai-2025/*"
   to = "https://poker-splash-2025.netlify.app/:splat"
