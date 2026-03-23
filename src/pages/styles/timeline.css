@@ -157,16 +157,39 @@
   }
 }
 
+/* Timeline date + location block */
+.timeline-meta {
+  width: 130px;
+  flex-shrink: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
 /* Timeline Date */
 .timeline-date {
   width: 130px;
   font-size: 0.95rem;
   color: #FF3333;
   text-align: right;
-  padding-top: calc(0.75rem - 3px);  /* Reduced from 6px to 2px for better alignment */
+  padding-top: calc(0.75rem - 3px);
   font-weight: 500;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.timeline-meta .timeline-date {
+  width: auto;
+}
+
+/* Timeline Location (under date) */
+.timeline-location {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 /* Timeline Card */
@@ -238,6 +261,12 @@
     width: auto;
     text-align: left;
     padding-top: 0;
+  }
+
+  .timeline-meta {
+    width: auto;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .timeline-card {
