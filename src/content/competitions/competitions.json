@@ -8,6 +8,11 @@
     "link": "/pokerai-2026",
     "thumbnail": "../../assets/competitions/poker-2026.svg",
     "gallery": [
+      "../../assets/competitions/poker-2026/IMG_2683.jpg",
+      "../../assets/competitions/poker-2026/IMG_2684.jpg",
+      "../../assets/competitions/poker-2026/IMG_2685.jpg",
+      "../../assets/competitions/poker-2026/IMG_2690.jpg",
+      "../../assets/competitions/poker-2026/IMG_9896.jpg"
     ],
     "winners": [
       {
@@ -28,8 +33,7 @@
             "linkedin": "https://www.linkedin.com/in/ziduo-yi-65b393281/"
           },
           {
-            "name": "Owen Yu",
-            "linkedin": "/"
+            "name": "Owen Yu"
           }
         ],
         "prize": "$2,000"
@@ -42,8 +46,7 @@
             "linkedin": "https://www.linkedin.com/in/liuirene256/"
           },
           {
-            "name": "William Chien",
-            "linkedin": "/"
+            "name": "William Chien"
           }
         ],
         "prize": "$1,000"
