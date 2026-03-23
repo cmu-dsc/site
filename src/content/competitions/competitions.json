@@ -1,10 +1,10 @@
 [
   {
-    "title": "CMU Poker AI 2025",
+    "title": "CMU Poker AI 2026",
     "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
     "date": "March 14-22, 2026",
     "sponsors": "Jump Trading",
-    "status": "upcoming",
+    "status": "past",
     "link": "/pokerai-2026",
     "thumbnail": "../../assets/competitions/poker-2026.svg",
     "gallery": [
@@ -13,18 +13,38 @@
       {
         "place": 1,
         "members": [
+          {
+            "name": "Pranav Takrani",
+            "linkedin": "https://www.linkedin.com/in/pranav-takrani/"
+          }
         ],
         "prize": "$3,000"
       },
       {
         "place": 2,
         "members": [
+          {
+            "name": "Ziduo Yi",
+            "linkedin": "https://www.linkedin.com/in/ziduo-yi-65b393281/"
+          },
+          {
+            "name": "Owen Yu",
+            "linkedin": "/"
+          }
         ],
         "prize": "$2,000"
       },
       {
         "place": 3,
         "members": [
+          {
+            "name": "Irene Liu",
+            "linkedin": "https://www.linkedin.com/in/liuirene256/"
+          },
+          {
+            "name": "William Chien",
+            "linkedin": "/"
+          }
         ],
         "prize": "$1,000"
       }
