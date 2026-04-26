@@ -1,5 +1,76 @@
 [
   {
+    "title": "CMU AI Agents Weekend 2026",
+    "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and network with our sponsors and industry experts.",
+    "date": "April 18-19, 2026",
+    "sponsors": "Capital One, LlamaIndex, Chroma, Ship, Tavily",
+    "status": "past",
+    "link": "/",
+    "thumbnail": "../../assets/competitions/agents.svg",
+    "winners": [
+      {
+        "place": 1,
+        "members": [
+          {
+            "name": "Richard Zhu"
+          },
+          {
+            "name": "Eric Jin"
+          }
+        ],
+        "prize": "Grand Prize: $1,000"
+      },
+      {
+        "place": 2,
+        "members": [
+          {
+            "name": "Sam Matthew"
+          },
+          {
+            "name": "Darren Pinto"
+          }
+        ],
+        "prize": "Most Ambitious: $500"
+      },
+      {
+        "place": 3,
+        "members": [
+          {
+            "name": "Miriam Bundy"
+          }
+        ],
+        "prize": "Most Novel: $500"
+      },
+      {
+        "place": 3,
+        "members": [
+          {
+            "name": "Nathan Weng"
+          },
+          {
+            "name": "Song Joon"
+          },
+          {
+            "name": "Sky Zhou"
+          },
+          {
+            "name": "gcuatle"
+          }
+        ],
+        "prize": "Best Use of LlamaIndex" 
+      },
+      {
+        "place": 3,
+        "members": [
+          {
+            "name": "Sander Schulman"
+          }
+        ],
+        "prize": "Honorable Mention"
+      }
+    ]
+  },
+  {
     "title": "CMU Poker AI 2026",
     "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
     "date": "March 14-22, 2026",
