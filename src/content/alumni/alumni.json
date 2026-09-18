@@ -1,5 +1,19 @@
 [
   {
+    "name": "Grace Lin",
+    "major": "Statistics and Machine Learning",
+    "gradYear": "2026",
+    "title": "Advisory Board Member",
+    "image": "../../assets/board/grace.jpg",
+    "bio": "I studied Statistics & Machine Learning, and have since been an advisory board member at DSC. My interests are primarily in data science applications towards artificial intelligence and forecasting systems. I'm also a huge animal person and love meeting new people!",
+    "linkedin": "https://www.linkedin.com/in/gracexlin",
+    "boardPositions": [
+      { "title": "President", "semesters": ["F25"] },
+      { "title": "Vice President", "semesters": ["F24"] },
+      { "title": "Internal Affairs Director", "semesters": ["S24"] }
+    ]
+  },
+  {
     "name": "Neil Raman",
     "major": "Information Systems and Economics",
     "gradYear": "2028",

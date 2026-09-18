@@ -1,5 +1,41 @@
 [
   {
+    "title": "CMU Datathon, Fall 2026",
+    "description": "A data science competition where participants analyze real-world datasets and create innovative solutions. Compete for prizes while learning from industry experts and researchers.",
+    "date": "November 2026 (TBD)",
+    "sponsors": "Databricks, United Nations",
+    "status": "upcoming",
+    "link": "/datathon-2026",
+    "thumbnail": "../../assets/competitions/datathon-2026.png"
+  },
+  {
+    "title": "CMU Freshman Hackathon 2027",
+    "description": "A hackathon open to freshmen only. An ideal environment to learn, build, and compete as a newer developer!",
+    "date": "January 2027 (TBD)",
+    "sponsors": "TBD",
+    "status": "upcoming",
+    "link": "/",
+    "thumbnail": ""
+  },
+  {
+    "title": "CMU Poker AI 2027",
+    "description": "Build an AI agent to play heads-up poker. Compete for $6,000 in prizes and learn from industry experts and researchers.",
+    "date": "March 2027 (TBD)",
+    "sponsors": "Jump Trading",
+    "status": "upcoming",
+    "link": "/pokerai-2026",
+    "thumbnail": "../../assets/competitions/poker-2026.svg"
+  },
+  {
+    "title": "CMU AI Agents Weekend 2027",
+    "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and network with our sponsors and industry experts.",
+    "date": "April 2027 (TBD)",
+    "sponsors": "Capital One, LlamaIndex",
+    "status": "upcoming",
+    "link": "/",
+    "thumbnail": "../../assets/competitions/agents.svg"
+  },
+  {
     "title": "CMU AI Agents Weekend 2026",
     "description": "A weekend-long event focused on building innovative AI agents. Learn about LLMs, experiment with cutting-edge AI frameworks, and network with our sponsors and industry experts.",
     "date": "April 18-19, 2026",
