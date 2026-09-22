@@ -1,0 +1,41 @@
+{
+    "semester": "Fall 2026",
+    "events": [
+        {
+            "title": "Version Control",
+            "description": "Learn the basics of Git and version control, with free pizza.",
+            "date": "2026-09-25",
+            "tags": [
+                "technical"
+            ],
+            "slides": "http://slides.google.com/"
+        },
+        {
+            "title": "Phonic AI Tech talk",
+            "description": "",
+            "date": "2026-09-17",
+            "tags": [
+                "career"
+            ],
+            "slides": "http://slides.google.com/"
+        },
+        {
+            "title": "Coinbase Recruiting Session",
+            "description": "",
+            "date": "2026-09-18",
+            "tags": [
+                "career"
+            ],
+            "slides": "http://slides.google.com/"
+        },
+        {
+            "title": "DSC Resume Workshop",
+            "description": "",
+            "date": "2026-09-11",
+            "tags": [
+                "career", "social"
+            ],
+            "slides": "http://slides.google.com/"
+        }
+    ]
+}
