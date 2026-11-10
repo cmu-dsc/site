@@ -1,0 +1,291 @@
+---
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/700.css";
+import { Image } from "astro:assets";
+import dscLogo from "../assets/competitions/datathon-2026/dsclogo.png";
+import databricksLogo from "../assets/competitions/datathon-2026/databricks-symbol-color.svg";
+
+const registerUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSedj5yMGOP_iOLqLnkh6CXJK4PK7KkYodQhjJcbpaE_yulFzQ/viewform";
+
+const schedule = [
+  {
+    abbr: "FRI",
+    date: "Nov 20",
+    title: "Team matching + pre-event workshops (DSC)",
+  },
+  {
+    abbr: "SAT",
+    date: "Nov 21",
+    title: "Opening ceremony + talks",
+  },
+  {
+    abbr: "SUN",
+    date: "Nov 22",
+    title: "Submissions & prize presentations",
+  },
+];
+
+const criteria = [
+  {
+    title: "Exploration",
+    body: "Uncover novel datasets and provide insightful analysis.",
+  },
+  {
+    title: "Modeling",
+    body: "Develop advanced models to find meaningful data relationships.",
+  },
+  {
+    title: "Impact",
+    body: "Propose actionable and impactful policies.",
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CMU Datathon | CMU Data Science Club</title>
+    <meta
+      name="description"
+      content="DSC x Databricks present the CMU Datathon, Fall 2026. Turn messy healthcare data into decisions that save lives. November 20–22."
+    />
+    <script
+      is:inline
+      defer
+      src="https://umami.cmudsc.com/script.js"
+      data-website-id="4c1a9665-a7ca-4e44-8fd9-e7eee962ad28"></script>
+  </head>
+  <body>
+    <main class="min-h-screen bg-white text-[#0B2A5B]">
+      <a
+        href="/"
+        class="fixed top-6 left-6 text-[#0B2A5B]/70 hover:text-[#0B2A5B] transition-colors z-10 font-['JetBrains_Mono'] text-sm"
+        aria-label="Back to home"
+      >
+        ← back
+      </a>
+
+      <!-- Hero -->
+      <section class="bg-[#EEF2F8]">
+        <div class="max-w-5xl mx-auto px-6 pt-20 pb-12 md:px-12 md:pt-24 md:pb-16">
+          <div class="flex items-center gap-4 mb-10 md:mb-14">
+            <Image
+              src={dscLogo}
+              alt="CMU Data Science Club"
+              width={44}
+              height={44}
+              class="object-contain"
+            />
+            <span class="font-['JetBrains_Mono'] font-bold text-sm md:text-base tracking-widest">
+              CMU DATA SCIENCE CLUB
+            </span>
+            <span class="font-['JetBrains_Mono'] font-bold" aria-hidden="true">×</span>
+            <Image
+              src={databricksLogo}
+              alt=""
+              width={44}
+              height={44}
+              class="object-contain"
+            />
+            <span class="font-['JetBrains_Mono'] font-bold text-sm md:text-base tracking-widest">
+              DATABRICKS
+            </span>
+          </div>
+
+          <h1 class="font-extrabold tracking-tight leading-[0.95] text-6xl sm:text-8xl md:text-9xl">
+            CMU<br />DATATHON
+          </h1>
+          <div class="h-1.5 w-48 md:w-72 bg-[#A259F7] mt-6 md:mt-8"></div>
+
+          <div class="mt-8 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div>
+              <p class="font-['JetBrains_Mono'] font-bold tracking-[0.3em] text-sm md:text-base">
+                FALL 2026
+              </p>
+              <p class="mt-3 text-lg md:text-xl text-[#5B6577] max-w-sm leading-snug">
+                Turn messy healthcare data into decisions that save lives.
+              </p>
+            </div>
+            <div class="bg-[#0B2A5B] text-white text-center px-10 py-6 md:min-w-[320px]">
+              <div class="text-5xl md:text-6xl font-extrabold tracking-tight">
+                $2,000
+              </div>
+              <div class="mt-2 font-bold tracking-[0.3em] text-sm md:text-base">
+                PRIZE POOL
+              </div>
+              <div class="h-1 w-4/5 bg-[#A259F7] mx-auto mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="max-w-5xl mx-auto px-6 md:px-12">
+        <!-- Dates + register -->
+        <section class="pt-10 md:pt-14 pb-14">
+          <h2 class="font-extrabold tracking-tight leading-none text-6xl sm:text-7xl md:text-8xl">
+            NOV 20–22
+          </h2>
+          <div class="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-[#5B6577]">
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-[#A259F7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <span class="font-medium">Teams up to 4</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-[#A259F7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422A12.083 12.083 0 0121 17.5M12 14L5.84 10.578A12.083 12.083 0 003 17.5M12 14v7" />
+              </svg>
+              <span class="font-medium">CMU students only</span>
+            </div>
+          </div>
+          <a
+            href={registerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block mt-8 bg-[#0B2A5B] text-white px-10 py-4 hover:bg-[#A259F7] transition-colors font-bold text-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-[#A259F7]/50"
+          >
+            Register now
+          </a>
+        </section>
+
+        <!-- Schedule -->
+        <section class="pb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8">
+            Schedule
+          </h2>
+          <div class="relative">
+            <div class="absolute left-7 top-7 bottom-7 w-1 -translate-x-1/2 bg-[#A259F7]" aria-hidden="true"></div>
+            <ol class="space-y-10">
+              {
+                schedule.map((day) => (
+                  <li class="relative flex items-center gap-6">
+                    <div class="relative z-10 w-14 h-14 shrink-0 bg-[#0B2A5B] text-white flex items-center justify-center font-bold text-sm">
+                      {day.abbr}
+                    </div>
+                    <div>
+                      <h3 class="text-xl md:text-2xl font-bold">{day.date}</h3>
+                      <p class="text-[#5B6577] md:text-lg">{day.title}</p>
+                    </div>
+                  </li>
+                ))
+              }
+            </ol>
+          </div>
+          <p class="mt-8 text-[#5B6577]">
+            Times and locations will be announced soon.
+          </p>
+        </section>
+
+        <!-- Challenge Topic and Who Can Participate -->
+        <section class="grid md:grid-cols-2 gap-10 md:gap-14 pb-16">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+              Challenge topic
+            </h2>
+            <p class="text-[#3D4A60] leading-relaxed text-lg">
+              Healthcare data is messy, incomplete, and high stakes. In this datathon, you will clean, explore, and model real healthcare data, then turn what you find into decisions that could save lives.
+            </p>
+            <!-- TODO: add the specific problem statements and datasets once finalized -->
+          </div>
+          <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+              Who can participate?
+            </h2>
+            <p class="text-[#3D4A60] leading-relaxed text-lg">
+              This datathon is exclusively for CMU students. Both graduate students and undergraduate students are eligible. Form teams of up to 4 members.
+            </p>
+          </div>
+        </section>
+
+        <!-- Prizes and Perks -->
+        <section class="pb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">
+            Prizes and perks
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-[#0B2A5B] text-white p-8">
+              <div class="text-5xl md:text-6xl font-extrabold tracking-tight">$2,000</div>
+              <div class="h-1 w-24 bg-[#A259F7] my-3"></div>
+              <p class="text-white/85 text-lg">
+                Prize pool, split among the winning teams.
+              </p>
+            </div>
+            <div class="bg-[#EEF2F8] p-8 flex items-center">
+              <p class="text-lg text-[#3D4A60]">
+                Free food and t-shirts for all participants.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Judging Criteria -->
+        <section class="pb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8">
+            Judging criteria
+          </h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            {
+              criteria.map((c) => (
+                <div class="border-t-4 border-[#A259F7] bg-[#EEF2F8] p-6">
+                  <h3 class="text-xl font-bold mb-2">{c.title}</h3>
+                  <p class="text-[#3D4A60]">{c.body}</p>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+
+        <!-- Submission Materials -->
+        <section class="pb-20">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+            Submission materials
+          </h2>
+          <p class="text-lg text-[#3D4A60] mb-8 max-w-2xl">
+            Submissions are due on Sunday, November 22. The exact deadline and the submission form will be announced soon.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-[#EEF2F8] p-6">
+              <h3 class="text-xl font-bold mb-3">Code submission</h3>
+              <p class="text-[#3D4A60]">
+                Submit your code and analysis through the submission form.
+              </p>
+            </div>
+            <div class="bg-[#EEF2F8] p-6">
+              <h3 class="text-xl font-bold mb-3">Video presentation</h3>
+              <p class="text-[#3D4A60]">
+                Submit your video presentation through the submission form.
+              </p>
+            </div>
+          </div>
+          <!-- TODO: add the submission form link and exact deadline once decided -->
+        </section>
+      </div>
+
+      <!-- Footer Call to Action -->
+      <section class="bg-[#0B2A5B] w-full p-8 md:p-12 text-center">
+        <div class="max-w-5xl mx-auto">
+          <p class="text-white text-xl md:text-2xl font-bold mb-6 leading-snug">
+            Turn messy healthcare data into decisions that save lives.
+          </p>
+          <a
+            href={registerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-[#A259F7] text-white px-10 py-4 hover:bg-white hover:text-[#0B2A5B] transition-colors font-bold text-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60"
+          >
+            Register now
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+</style>

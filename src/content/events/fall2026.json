@@ -2,6 +2,42 @@
     "semester": "Fall 2026",
     "events": [
         {
+            "title": "Working With Data",
+            "description": "Learn the basics of Numpy and Pandas to work with real-world data of all types.",
+            "date": "2026-11-20",
+            "tags": [
+                "technical"
+            ],
+            "slides": "http://slides.google.com/"
+        },
+        {
+            "title": "[Guest Speaker]",
+            "description": "Learn the basics of Numpy and Pandas to work with real-world data of all types.",
+            "date": "2026-11-13",
+            "tags": [
+                "technical"
+            ],
+            "slides": "http://slides.google.com/"
+        },
+        {
+            "title": "Big Data Workshop",
+            "description": "Learn the basics of Numpy and Pandas to work with real-world data of all types.",
+            "date": "2026-11-06",
+            "tags": [
+                "technical"
+            ],
+            "slides": "http://slides.google.com/"
+        },
+        {
+            "title": "2077 AI Recruiting Session",
+            "description": "Learn the basics of Git and version control, with free pizza.",
+            "date": "2026-10-30",
+            "tags": [
+                "technical"
+            ],
+            "slides": "http://slides.google.com/"
+        },
+        {
             "title": "Version Control",
             "description": "Learn the basics of Git and version control, with free pizza.",
             "date": "2026-09-25",
