@@ -13,16 +13,28 @@ const schedule = [
     abbr: "FRI",
     date: "Nov 20",
     title: "Team matching + pre-event workshops (DSC)",
+    events: [],
   },
   {
     abbr: "SAT",
     date: "Nov 21",
-    title: "Opening ceremony + talks",
+    title: "Opening day",
+    events: [
+      { time: "10:00 AM", name: "Check-in begins" },
+      { time: "11:00 AM – 12:00 PM", name: "Opening presentation and announcements" },
+      { time: "12:00 PM", name: "Lunch" },
+      { time: "2:00 – 6:00 PM", name: "Office hours" },
+    ],
   },
   {
     abbr: "SUN",
     date: "Nov 22",
-    title: "Submissions & prize presentations",
+    title: "Submissions, judging + awards",
+    events: [
+      { time: "12:00 PM", name: "Submission deadline (code, analysis + video presentation)" },
+      { time: "1:00 – 4:00 PM", name: "Submission judging" },
+      { time: "4:10 – 5:00 PM", name: "Closing ceremony + winners’ presentations" },
+    ],
   },
 ];
 
@@ -141,6 +153,9 @@ const criteria = [
               <span class="font-medium">CMU students only</span>
             </div>
           </div>
+          <p class="mt-5 font-['JetBrains_Mono'] font-bold text-[#0B2A5B]">
+            Location: Posner Hall A35
+          </p>
           <a
             href={registerUrl}
             target="_blank"
@@ -165,9 +180,21 @@ const criteria = [
                     <div class="relative z-10 w-14 h-14 shrink-0 bg-[#0B2A5B] text-white flex items-center justify-center font-bold text-sm">
                       {day.abbr}
                     </div>
-                    <div>
+                    <div class="flex-1">
                       <h3 class="text-xl md:text-2xl font-bold">{day.date}</h3>
                       <p class="text-[#5B6577] md:text-lg">{day.title}</p>
+                      {day.events.length > 0 && (
+                        <ul class="mt-3 space-y-2">
+                          {day.events.map((event) => (
+                            <li class="flex flex-col sm:flex-row sm:gap-4 text-[#3D4A60]">
+                              <span class="font-['JetBrains_Mono'] font-bold text-sm sm:w-48 shrink-0">
+                                {event.time}
+                              </span>
+                              <span>{event.name}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </li>
                 ))
@@ -175,7 +202,7 @@ const criteria = [
             </ol>
           </div>
           <p class="mt-8 text-[#5B6577]">
-            Times and locations will be announced soon.
+            Location: <strong>Posner Hall A35</strong>. Sunday’s submission deadline is tentative and subject to confirmation.
           </p>
         </section>
 
@@ -244,7 +271,7 @@ const criteria = [
             Submission materials
           </h2>
           <p class="text-lg text-[#3D4A60] mb-8 max-w-2xl">
-            Submissions are due on Sunday, November 22. The exact deadline and the submission form will be announced soon.
+            Submissions are tentatively due Sunday, November 22 at 12:30 PM. Include your code, analysis, and video presentation. The final deadline and submission form will be confirmed soon.
           </p>
           <div class="grid md:grid-cols-2 gap-6">
             <div class="bg-[#EEF2F8] p-6">
