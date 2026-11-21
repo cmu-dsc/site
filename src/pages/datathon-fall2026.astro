@@ -7,6 +7,8 @@ import databricksLogo from "../assets/competitions/datathon-2026/databricks-symb
 
 const registerUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSedj5yMGOP_iOLqLnkh6CXJK4PK7KkYodQhjJcbpaE_yulFzQ/viewform";
+const challengeUrl = "https://tinyurl.com/cmu-challenge-2026";
+const submitUrl = "https://forms.gle/jSauvMcZqT1pyqaN7";
 
 const schedule = [
   {
@@ -21,7 +23,7 @@ const schedule = [
     title: "Opening day",
     events: [
       { time: "10:00 AM", name: "Check-in begins" },
-      { time: "11:00 AM – 12:00 PM", name: "Opening presentation and announcements" },
+      { time: "11:00 AM", name: "Opening presentation and announcements" },
       { time: "12:00 PM", name: "Lunch" },
       { time: "2:00 – 6:00 PM", name: "Office hours" },
     ],
@@ -156,13 +158,21 @@ const criteria = [
           <p class="mt-5 font-['JetBrains_Mono'] font-bold text-[#0B2A5B]">
             Location: Posner Hall A35
           </p>
-          <a
+          <!-- <a
             href={registerUrl}
             target="_blank"
             rel="noopener noreferrer"
             class="inline-block mt-8 bg-[#0B2A5B] text-white px-10 py-4 hover:bg-[#A259F7] transition-colors font-bold text-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-[#A259F7]/50"
           >
             Register now
+          </a> -->
+          <a
+            href={challengeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={`inline-block mt-8 bg-[#581093] text-white px-10 py-4 font-bold text-lg text-center transition-colors hover:bg-[#be81e7] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#A259F7]/50`}
+          >
+            View Challenge and Dataset
           </a>
         </section>
 
@@ -242,7 +252,7 @@ const criteria = [
             </div>
             <div class="bg-[#EEF2F8] p-8 flex items-center">
               <p class="text-lg text-[#3D4A60]">
-                Free food and t-shirts for all participants.
+                Free food and T-shirts for all participants.
               </p>
             </div>
           </div>
@@ -273,6 +283,14 @@ const criteria = [
           <p class="text-lg text-[#3D4A60] mb-8 max-w-2xl">
             Submissions are tentatively due Sunday, November 22 at 12:30 PM. Include your code, analysis, and video presentation. The final deadline and submission form will be confirmed soon.
           </p>
+          <a
+            href={submitUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-[#581093] text-white px-8 py-3 mb-8 hover:bg-[#be81e7] transition-colors font-bold text-lg shadow-lg"
+          >
+            Submit Your Project
+          </a>
           <div class="grid md:grid-cols-2 gap-6">
             <div class="bg-[#EEF2F8] p-6">
               <h3 class="text-xl font-bold mb-3">Code submission</h3>
@@ -292,7 +310,7 @@ const criteria = [
       </div>
 
       <!-- Footer Call to Action -->
-      <section class="bg-[#0B2A5B] w-full p-8 md:p-12 text-center">
+      <!-- <section class="bg-[#0B2A5B] w-full p-8 md:p-12 text-center">
         <div class="max-w-5xl mx-auto">
           <p class="text-white text-xl md:text-2xl font-bold mb-6 leading-snug">
             Turn messy healthcare data into decisions that save lives.
@@ -306,7 +324,7 @@ const criteria = [
             Register now
           </a>
         </div>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>
